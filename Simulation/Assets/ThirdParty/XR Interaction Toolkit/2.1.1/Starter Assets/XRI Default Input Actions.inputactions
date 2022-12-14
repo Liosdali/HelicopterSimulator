@@ -1373,34 +1373,6 @@
                     "isPartOfComposite": false
                 }
             ]
-        },
-        {
-            "name": "Menu",
-            "id": "021fbf73-26ca-4e01-8b6d-3a3421d3d10d",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "e4dcb916-1737-4e68-8550-967f39fc40f4",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "29566fdb-f43b-46be-b946-c8ad0f3f4cf6",
-                    "path": "<XRController>{LeftHand}/menuButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
         }
     ],
     "controlSchemes": [

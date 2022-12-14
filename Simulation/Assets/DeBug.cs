@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-//import UnityEngine.SceneManagement;
 
-public class DeBUG : MonoBehaviour
+public class DeBug : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,20 +15,8 @@ public class DeBUG : MonoBehaviour
     {
         
     }
-
-    public void deBugActive()
+    public void deBug()
     {
-        Debug.Log("Debug aktif");
+        Debug.Log("Debug Aktif");
     }
-    public  void deBuDeactive()
-    {
-        Debug.Log("Debug pasif");
-    }
-    public void reStartLevel()
-    {
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
-    }
-
-
 }
