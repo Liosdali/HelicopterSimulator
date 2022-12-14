@@ -242,6 +242,16 @@ public class SilantroButton : MonoBehaviour
         if (state == CurrentState.ButtonOn) { TurnKnobOff(); }
         else { TurnKnobOn(); }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("PlayerHand"))
+        {
+            //If Player Touches it will change the 
+            //switch_Hit = true;
+            ToggleButton();
+        }
+    }
 }
 
 

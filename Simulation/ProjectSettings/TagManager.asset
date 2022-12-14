@@ -7,6 +7,8 @@ TagManager:
   - Teleport
   - Ground
   - PlayerHand
+  - Hook
+  - Deliverable
   layers:
   - Default
   - TransparentFX
@@ -22,8 +24,8 @@ TagManager:
   - Human
   - Munition
   - VR_Equipment
-  - 
-  - 
+  - Hook
+  - Deliverable
   - 
   - 
   - 

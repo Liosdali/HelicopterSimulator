@@ -166,7 +166,7 @@ namespace Oyedoyin.RotaryWing
             // Tell base Initialization process is done
             FinishInitialization();
             isInitialized = true;
-            TurnOnEngines();
+            //TurnOnEngines();
         }
         /// <summary>
         /// 
