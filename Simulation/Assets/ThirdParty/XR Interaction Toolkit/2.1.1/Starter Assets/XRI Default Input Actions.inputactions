@@ -1373,6 +1373,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "XRI Wrist Menu",
+            "id": "5591d0f3-87c0-4cf3-99bb-d7e10bb312bc",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "fd500caf-244a-4f54-8b0b-44041c70731d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f1fbbbf0-781f-4e62-8aa6-b2e02ad6831e",
+                    "path": "<XRController>{LeftHand}/menuButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
