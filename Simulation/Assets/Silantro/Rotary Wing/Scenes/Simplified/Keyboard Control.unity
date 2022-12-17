@@ -5307,6 +5307,7 @@ MonoBehaviour:
     forceUnit: 0
     torqueUnit: 0
     m_vehicle: {fileID: 0}
+    m_lowfi: {fileID: 0}
     speed: {fileID: 8002428153137232699}
     altitude: {fileID: 8002743867589382599}
     fuel: {fileID: 8002336996546534025}

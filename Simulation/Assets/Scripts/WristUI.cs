@@ -9,7 +9,7 @@ public class WristUI : MonoBehaviour
     private void Start()
     {
         _wristUICanvas = GetComponent<Canvas>();
-        _menu = inputActions.FindActionMap("XRI LeftHand").FindAction("Menu");
+        _menu = inputActions.FindActionMap("XRI Wrist Menu").FindAction("Menu");
         _menu.Enable();
         _menu.performed += ToggleMenu;
         _wristUICanvas.enabled = !_wristUICanvas.enabled;

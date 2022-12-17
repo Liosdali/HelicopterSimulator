@@ -1379,7 +1379,7 @@
             "id": "5591d0f3-87c0-4cf3-99bb-d7e10bb312bc",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Menu",
                     "type": "Button",
                     "id": "fd500caf-244a-4f54-8b0b-44041c70731d",
                     "expectedControlType": "Button",
@@ -1396,7 +1396,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

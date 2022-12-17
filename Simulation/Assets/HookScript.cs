@@ -22,6 +22,7 @@ public class HookScript : MonoBehaviour
         {
             hookTransform.position = new Vector3(transform.position.x, transform.position.y -15, transform.position.z);
         }
+
     }
 
     public void HookFunction ()

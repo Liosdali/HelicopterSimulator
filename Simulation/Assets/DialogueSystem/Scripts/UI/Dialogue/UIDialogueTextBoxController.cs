@@ -1,6 +1,9 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
+
+
 
 public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 {
@@ -37,8 +40,16 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
     private void Update()
     {
-        if (m_ListenToInput && Input.GetButtonDown("Submit"))
+
+        var rightHandDevices = new List<UnityEngine.XR.InputDevice>();
+        UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.RightHand, rightHandDevices);
+        UnityEngine.XR.InputDevice device = rightHandDevices[0];
+        Debug.Log(string.Format("Device name '{0}' with role '{1}'", device.name, device.role.ToString()));
+        bool triggerValue;
+
+        if (m_ListenToInput && device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && triggerValue)
         {
+            Debug.Log("Trigger button is pressed.");
             m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
         }
     }
