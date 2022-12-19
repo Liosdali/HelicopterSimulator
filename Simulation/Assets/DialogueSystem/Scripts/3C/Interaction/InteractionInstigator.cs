@@ -26,6 +26,7 @@ public class InteractionInstigator : MonoBehaviour
         if (interactable != null)
         {
             m_NearbyInteractables.Add(interactable);
+            Debug.Log(other.gameObject.name);
         }
     }
 
