@@ -9,5 +9,8 @@ public class Interactable : MonoBehaviour
     public void DoInteraction()
     {
         m_OnInteraction.Invoke();
+        
     }
 }
+
+//
