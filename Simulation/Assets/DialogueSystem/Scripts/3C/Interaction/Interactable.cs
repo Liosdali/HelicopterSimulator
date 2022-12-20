@@ -4,6 +4,9 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     [SerializeField]
+    private GameObject dialogueBox;
+
+    [SerializeField]
     UnityEvent m_OnInteraction;
 
     public void DoInteraction()
@@ -12,14 +15,20 @@ public class Interactable : MonoBehaviour
         
     }
 
-
+    private void Start()
+    {
+        dialogueBox.SetActive(false);
+    }
 
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Human"))
+        Debug.Log(other.gameObject.tag);
+        if (other.gameObject.CompareTag("PlayerHand"))
         {
+            Debug.Log("HADÝSE MÝ MÝNE TUGAY MI");
+            dialogueBox.SetActive(true);
             DoInteraction();
         }
     }
