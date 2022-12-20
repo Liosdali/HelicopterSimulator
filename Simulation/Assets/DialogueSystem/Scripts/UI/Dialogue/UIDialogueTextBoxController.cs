@@ -38,6 +38,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         m_DialogueChannel.OnDialogueNodeStart -= OnDialogueNodeStart;
     }
 
+    private float waitSeconds = 1.0f;
     private void Update()
     {
          
@@ -46,11 +47,14 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         UnityEngine.XR.InputDevice device = rightHandDevices[0];
         Debug.Log(string.Format("Device name '{0}' with role '{1}'", device.name, device.role.ToString()));
         bool triggerValue;
-        if (m_ListenToInput && device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && triggerValue)
+        if ((waitSeconds < 0.0f)  && m_ListenToInput && device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && triggerValue)
         {
+            waitSeconds = 1.0f;
             Debug.Log("Next Dialogue");
             m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
         }
+
+        waitSeconds -= Time.deltaTime;
     }
 
     private void OnDialogueNodeStart(DialogueNode node)
