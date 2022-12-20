@@ -11,6 +11,18 @@ public class Interactable : MonoBehaviour
         m_OnInteraction.Invoke();
         
     }
+
+
+
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Human"))
+        {
+            DoInteraction();
+        }
+    }
 }
 
 //
