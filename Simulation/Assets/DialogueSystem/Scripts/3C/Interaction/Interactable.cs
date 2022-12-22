@@ -27,7 +27,6 @@ public class Interactable : MonoBehaviour
         Debug.Log(other.gameObject.tag);
         if (other.gameObject.CompareTag("PlayerHand"))
         {
-            Debug.Log("HADÝSE MÝ MÝNE TUGAY MI");
             dialogueBox.SetActive(true);
             DoInteraction();
         }
