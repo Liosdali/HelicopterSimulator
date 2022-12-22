@@ -5,30 +5,32 @@ using UnityEngine;
 public class AnimationTrigger : MonoBehaviour
 {
     [SerializeField] private Animator myDoor = null;
-   
-    [SerializeField] private bool openTrigger = false;
-    [SerializeField] private bool closeTrigger = false;
+
 
     private void OnTriggerEnter(Collider other)
     {
 
         if (other.CompareTag("PlayerHand"))
         {
-            Debug.Log("Animasyon Baþlamalý");
-            
-                //myDoor.Play("DoorOpen", 0, 0.0f); gameObject.SetActive(false);
-                myDoor.SetTrigger("DoorOpen");
+           
+                Debug.Log("Animasyon Baþladý");
+            //   myDoor.Play("DoorOpen", 0, 0.0f); gameObject.SetActive(false);
+            //  myDoor.SetBool("Door",true);
+            myDoor.SetTrigger("Open");
         }
 
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("PlayerHand")) 
-        { 
+        if (other.CompareTag("PlayerHand"))
+        {
 
-                //myDoor.Play("DoorOpen", 0, 0.0f); gameObject.SetActive(true);
-                myDoor.SetTrigger("DoorClose");
+            Debug.Log("Animasyon Bitti");
+            //  myDoor.Play("DoorClose", 0, 0.0f); gameObject.SetActive(false);
+            //myDoor.SetBool("Door",false);
+            myDoor.SetTrigger("Close");
         }
+
     }
 
 }
