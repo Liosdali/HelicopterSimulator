@@ -6,7 +6,7 @@ public abstract class DialogueNode : ScriptableObject
     private NarrationLine m_DialogueLine;
 
     public NarrationLine DialogueLine => m_DialogueLine;
-
+    //public
     public abstract bool CanBeFollowedByNode(DialogueNode node);
     public abstract void Accept(DialogueNodeVisitor visitor);
 }
