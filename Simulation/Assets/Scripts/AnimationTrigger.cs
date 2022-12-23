@@ -23,6 +23,8 @@ public class AnimationTrigger : MonoBehaviour
                 pilot.transform.rotation = pilotSeat.rotation;
                 //Destroy(locomotionSystem.GetComponent<DeviceBasedContinuousMoveProvider>());
                 GetComponent<BoxCollider>().enabled = false;
+                //Sesler düzeltilecek 
+
                 Destroy(gameObject);
             } 
             else
