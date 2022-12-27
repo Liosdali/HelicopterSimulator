@@ -21,11 +21,9 @@ public class AnimationTrigger : MonoBehaviour
             {
                 pilot.transform.position = pilotSeat.position;
                 pilot.transform.rotation = pilotSeat.rotation;
-                //Destroy(locomotionSystem.GetComponent<DeviceBasedContinuousMoveProvider>());
-                GetComponent<BoxCollider>().enabled = false;
-                //Sesler düzeltilecek 
-
-                Destroy(gameObject);
+                Destroy(locomotionSystem.GetComponent<DeviceBasedContinuousMoveProvider>());
+                //GetComponent<BoxCollider>().enabled = false;
+                //Destroy(gameObject);
             } 
             else
                 waitSeconds -= Time.deltaTime;
@@ -54,6 +52,8 @@ public class AnimationTrigger : MonoBehaviour
             //  myDoor.Play("DoorClose", 0, 0.0f); gameObject.SetActive(false);
             //myDoor.SetBool("Door",false);
             myDoor.SetTrigger("Close");
+            GetComponent<BoxCollider>().enabled = false;
+            Destroy(gameObject);
         }
 
     }
