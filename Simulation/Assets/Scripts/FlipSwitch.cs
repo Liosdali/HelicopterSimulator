@@ -5,12 +5,6 @@ using UnityEngine.Events;
 
 public class FlipSwitch : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
 
     private bool switch_Hit = false;
 
