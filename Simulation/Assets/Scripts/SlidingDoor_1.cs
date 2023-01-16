@@ -9,7 +9,6 @@ public class SlidingDoor_1 : MonoBehaviour
 
     private bool _lowerDoor = false;
     private Vector3 _raisedPosition;
-
     void Start()
     {
         _raisedPosition = transform.position;
