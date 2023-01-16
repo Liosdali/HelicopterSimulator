@@ -13,13 +13,6 @@ public class HookScript : MonoBehaviour
     [SerializeField]
     private GameObject dropObject;
 
-    // Start is called before the first frame update
-
-    //Script to be updated
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
