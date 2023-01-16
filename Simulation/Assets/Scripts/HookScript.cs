@@ -14,6 +14,8 @@ public class HookScript : MonoBehaviour
     private GameObject dropObject;
 
     // Start is called before the first frame update
+
+    //Script to be updated
     void Start()
     {
         
