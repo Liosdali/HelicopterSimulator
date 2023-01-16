@@ -6,15 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class DeBUG : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
-
     public void deBugActive()
     {
         Debug.Log("Debug aktif");
