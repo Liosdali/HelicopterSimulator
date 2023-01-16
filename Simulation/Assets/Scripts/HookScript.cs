@@ -5,9 +5,13 @@ using UnityEngine;
 public class HookScript : MonoBehaviour
 {
 
-
+    [SerializeField]
+    private Transform dropPos;
     private Transform hookTransform = null;
     private bool hook_Enabled = false;
+
+    [SerializeField]
+    private GameObject dropObject;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +35,7 @@ public class HookScript : MonoBehaviour
         hook_Enabled = true;
     }
 
+    private bool triggered = false;
 
     private void OnTriggerStay(Collider other)
     {
@@ -40,8 +45,24 @@ public class HookScript : MonoBehaviour
             {
                 hookTransform = other.GetComponentInParent<BoxCollider>().gameObject.transform;
                 Debug.Log(other.GetComponentInParent<BoxCollider>().gameObject.name);
+                other.GetComponent<MeshRenderer>().enabled = false;
                 other.gameObject.GetComponent<CapsuleCollider>().gameObject.SetActive(false);
+                dropObject.SetActive(true);
                 //hookTransform = other.gameObject.transform;
+            }
+        }
+        else if (other.CompareTag("Drop"))
+        {
+            if (!triggered)
+            {
+                triggered = true;
+                hookTransform = dropPos;
+
+                hookTransform = null;
+                hookTransform.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                hookTransform.gameObject.GetComponent<Rigidbody>().useGravity = true;
+                dropObject.GetComponent<Rigidbody>().useGravity = true;
+                dropObject.SetActive(false);
             }
         }
     }
