@@ -10,7 +10,7 @@ public class LocomotionManager : MonoBehaviour
 
     private TeleportationProvider _teleportationProvider;
     private ContinuousMoveProviderBase _continuousMoveProvider;
-    // Start is called before the first frame update
+
     void Start()
     {
         _teleportationProvider = GetComponent<TeleportationProvider>();
