@@ -15,7 +15,6 @@ public class WristUI : MonoBehaviour
         _wristUICanvas.enabled = !_wristUICanvas.enabled;
 
     }
-
     private void OnDestroy()
     {
         _menu.performed -= ToggleMenu;
