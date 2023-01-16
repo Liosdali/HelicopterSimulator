@@ -71,6 +71,7 @@ public class TeleportationControllerFixed : MonoBehaviour
         _teleportActivate.performed -= OnTeleportActivate;
         _teleportCancel.performed -= OnTeleportCancel;
     }
+
     //We use the Update function to check for when a teleportation event has occured. 
     //The checks needed to ensure a succesful teleport event are
     //-Teleporting is currently active
@@ -78,6 +79,7 @@ public class TeleportationControllerFixed : MonoBehaviour
     //-The Thumbstick isn't being pressed
     //-The rayInteractor is hitting a valid target
     //If those pass, we make a teleportation request to the Teleport Provider
+
     void Update()
     {
 
