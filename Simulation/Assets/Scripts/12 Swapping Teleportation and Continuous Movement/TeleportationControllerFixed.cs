@@ -23,13 +23,13 @@ public class TeleportationControllerFixed : MonoBehaviour
     // Stores the target controller from the editor
     public ControllerType targetController;
 
-    //References our Input Actions that we are using
+    // References our Input Actions that we are using
     public InputActionAsset inputAction;
 
-    //References the rayInteractor to be enabled/disabled later
+    // References the rayInteractor to be enabled/disabled later
     public XRRayInteractor rayInteractor;
 
-    //References the Teleportation Provider so we can use it to teleport the Player in the event of a succesful teleport call
+    // References the Teleportation Provider so we can use it to teleport the Player in the event of a succesful teleport call
     public TeleportationProvider teleportationProvider;
 
 
