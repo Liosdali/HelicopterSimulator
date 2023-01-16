@@ -5,6 +5,8 @@ using UnityEngine;
 public class TeleportPlayer : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    //No need for the script
     void Start()
     {
         
