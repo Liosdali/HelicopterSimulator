@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 // Allows us to use the Input System to get values for the thumbstick
 using UnityEngine.InputSystem;
+
 // Allows us to use the Interaction Toolkit to enable and disable our rays
 using UnityEngine.XR.Interaction.Toolkit;
 
