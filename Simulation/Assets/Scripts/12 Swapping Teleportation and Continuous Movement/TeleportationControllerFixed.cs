@@ -10,7 +10,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class TeleportationControllerFixed : MonoBehaviour
 {
-    //Used to determine current active state of the Teleportation System
+    // Used to determine current active state of the Teleportation System
     private static bool _teleportIsActive = false;
 
     //Creates an enum that will determine if we're using the right or left controller
