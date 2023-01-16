@@ -20,7 +20,7 @@ public class TeleportationControllerFixed : MonoBehaviour
         LeftHand
     }
 
-    //Stores the target controller from the editor
+    // Stores the target controller from the editor
     public ControllerType targetController;
 
     //References our Input Actions that we are using
