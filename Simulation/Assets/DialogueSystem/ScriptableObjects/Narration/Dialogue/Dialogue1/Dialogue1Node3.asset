@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Dialogue1Node3
   m_EditorClassIdentifier: 
   m_DialogueLine: {fileID: 11400000, guid: 31f78a07556f40c4ebc0ddd69196f679, type: 2}
+  m_AudioSource: {fileID: 0}
+  m_AudioClip: {fileID: 8300000, guid: 46bef51b1e71eb44a9d0fcc7ff26f826, type: 3}
   m_NextNode: {fileID: 11400000, guid: 6e576de104d00ce458c651913c7fcdc0, type: 2}
