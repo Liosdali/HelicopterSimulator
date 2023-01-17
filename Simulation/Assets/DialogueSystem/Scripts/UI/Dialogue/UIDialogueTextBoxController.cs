@@ -48,7 +48,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     private void Update()
     {
 
-        var rightHandDevices = new List<UnityEngine.XR.InputDevice>();
+        List<UnityEngine.XR.InputDevice> rightHandDevices = new List<UnityEngine.XR.InputDevice>();
         UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.RightHand, rightHandDevices);
         UnityEngine.XR.InputDevice device = rightHandDevices[0];
         Debug.Log(string.Format("Device name '{0}' with role '{1}'", device.name, device.role.ToString()));
