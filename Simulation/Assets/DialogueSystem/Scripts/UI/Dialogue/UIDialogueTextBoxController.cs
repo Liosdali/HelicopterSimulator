@@ -55,9 +55,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         bool triggerValue;
         if ((waitSeconds < 0.0f) && m_ListenToInput && device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out triggerValue) && triggerValue)
         {
-
             waitSeconds = 1.0f;
-
             Debug.Log("Next Dialogue");
             m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
             if (index >= m_AudioSource.Length)
