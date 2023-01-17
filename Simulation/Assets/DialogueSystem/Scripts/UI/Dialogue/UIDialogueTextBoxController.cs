@@ -25,6 +25,10 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
     [SerializeField]
     public AudioSource[] m_AudioSource;
+
+
+    public AudioSource m_DialogueSource;
+
     private void Awake()
     {
         m_DialogueChannel.OnDialogueNodeStart += OnDialogueNodeStart;
@@ -35,6 +39,8 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         //m_AudioSource = GameObject.FindSceneObjectsOfType(typeof(AudioSource)) as AudioSource[];
         gameObject.SetActive(false);
         m_ChoicesBoxTransform.gameObject.SetActive(false);
+
+        m_DialogueSource =GetComponent<AudioSource>();
     }
 
     private void OnDestroy()
@@ -56,18 +62,22 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         if ((waitSeconds < 0.0f) && m_ListenToInput && device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out triggerValue) && triggerValue)
         {
             waitSeconds = 1.0f;
+            m_DialogueSource.Stop();
+            Debug.Log("Ýsim burada = " + m_NextNode.m_AudioClip.name);
+            m_DialogueSource.clip = m_NextNode.m_AudioClip;
+            m_DialogueSource.Play();
             Debug.Log("Next Dialogue");
             m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
             if (index >= m_AudioSource.Length)
                 return;
-            StopAudio(index);
-            index++;
-            //m_AudioSource = new AudioSource();
-            //m_AudioSource = new AudioSource();
-            //m_AudioSource.clip = m_NextNode.DialogueLine.audioClip;
-            PlayAudio(index);
+
+
+
+            //StopAudio(index);
             //index++;
 
+            //PlayAudio(index);
+            //index++;
         }
 
         waitSeconds -= Time.deltaTime;

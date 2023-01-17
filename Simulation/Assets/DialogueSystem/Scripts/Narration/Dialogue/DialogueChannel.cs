@@ -31,7 +31,6 @@ public class DialogueChannel : ScriptableObject
     public void RaiseRequestDialogueNode(DialogueNode node)
     {
         OnDialogueNodeRequested?.Invoke(node);
-        //node.DialogueLine.PlayAudio();
     }
 
     public void RaiseDialogueNodeStart(DialogueNode node)
