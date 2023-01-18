@@ -61,45 +61,21 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         bool triggerValue;
         if ((waitSeconds < 0.0f) && m_ListenToInput && device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out triggerValue) && triggerValue)
         {
-            waitSeconds = 1.0f;
-            m_DialogueSource.Stop();
-            Debug.Log("Ýsim burada = " + m_NextNode.m_AudioClip.name);
-            m_DialogueSource.clip = m_NextNode.m_AudioClip;
-            m_DialogueSource.Play();
-            Debug.Log("Next Dialogue");
-            m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
-            if (index >= m_AudioSource.Length)
-                return;
-
-
-
-            //StopAudio(index);
-            //index++;
-
-            //PlayAudio(index);
-            //index++;
+            PlayAudio();
         }
 
         waitSeconds -= Time.deltaTime;
     }
-    private bool playing = false;
-    public void PlayAudio(int index)
-    {
-        if (m_AudioSource != null && m_AudioSource[index].clip != null)
-        {
-            m_AudioSource[0].Stop();
-            Debug.Log("Radio Starting to Play" + m_AudioSource[index].clip.name);
-            m_AudioSource[index].Play();
-        }
-    }
 
-
-    public void StopAudio(int index)
+    public void PlayAudio()
     {
-        if (m_AudioSource != null)
-        {
-            m_AudioSource[index].Stop();
-        }
+        waitSeconds = 1.0f;
+        m_DialogueSource.Stop();
+        Debug.Log("Ýsim burada = " + m_NextNode.GetAudioClip().name);
+        m_DialogueSource.clip = m_NextNode.GetAudioClip();
+        m_DialogueSource.Play();
+        Debug.Log("Next Dialogue");
+        m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
     }
 
     private void OnDialogueNodeStart(DialogueNode node)

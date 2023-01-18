@@ -13,34 +13,11 @@ public abstract class DialogueNode : ScriptableObject
     public abstract void Accept(DialogueNodeVisitor visitor);
 
 
-
-
-    //Private
     [SerializeField]
-    private AudioSource m_AudioSource;
+    private AudioClip m_AudioClip;
 
-    [SerializeField]
-    public AudioClip m_AudioClip;
-
-
-    //
-
-
-    public void AssignAudio()
+    public AudioClip GetAudioClip()
     {
-        m_AudioSource.clip = m_AudioClip;
-    }
-
-
-    public void PlayAudio()
-    {
-        Debug.Log("Playing Audio"); // + m_FirstNode.name);
-        m_AudioSource.Play();
-    }
-
-    public void StopAudio()
-    {
-        Debug.Log("Stopping Audio"); //+ m_FirstNode.name);
-        m_AudioSource.Stop();
+        return m_AudioClip;
     }
 }

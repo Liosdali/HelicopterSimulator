@@ -17,9 +17,4 @@ public class BasicDialogueNode : DialogueNode
     {
         visitor.Visit(this);
     }
-
-    public BasicDialogueNode()
-    {
-        AssignAudio();
-    }
 }
