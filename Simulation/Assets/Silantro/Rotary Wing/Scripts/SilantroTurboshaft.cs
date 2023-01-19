@@ -375,6 +375,7 @@ namespace Oyedoyin.RotaryWing
             GUI.color = backgroundColor;
             EditorGUILayout.PropertyField(serializedObject.FindProperty("engineIdentifier"), new GUIContent(" "));
             GUILayout.Space(3f);
+            
             EditorGUILayout.PropertyField(serializedObject.FindProperty("enginePosition"), new GUIContent("Position"));
             GUILayout.Space(3f);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("engineNumber"), new GUIContent("Number"));
@@ -411,6 +412,8 @@ namespace Oyedoyin.RotaryWing
             EditorGUILayout.PropertyField(serializedObject.FindProperty("startTorque"), new GUIContent("Start Torque (Nm)"));
             GUILayout.Space(3f);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("accelerationTorque"), new GUIContent("Acceleration Torque (Nm)"));
+            GUILayout.Space(3f);
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("throttle"), new GUIContent(" Throttle"));
             GUILayout.Space(3f);
             EditorGUILayout.LabelField("Start RPM Threshold ", prop.accelerationRPM.ToString("0.00") + " RPM");
             GUILayout.Space(3f);
