@@ -416,7 +416,7 @@ namespace Oyedoyin.RotaryWing
             GUILayout.Space(3f);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("accelerationTorque"), new GUIContent("Acceleration Torque (Nm)"));
             GUILayout.Space(3f);
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("throttle"), new GUIContent(" Throttle"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("throttle"), new GUIContent("Throttle"));
             GUILayout.Space(3f);
             EditorGUILayout.LabelField("Start RPM Threshold ", prop.accelerationRPM.ToString("0.00") + " RPM");
             GUILayout.Space(3f);
