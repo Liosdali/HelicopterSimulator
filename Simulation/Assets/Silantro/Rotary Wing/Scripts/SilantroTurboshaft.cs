@@ -315,6 +315,7 @@ namespace Oyedoyin.RotaryWing
                 start = stop = false;
             }
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -334,6 +335,7 @@ namespace Oyedoyin.RotaryWing
         /// <summary>
         /// 
         /// </summary>
+        ///
         protected void ConvertPower()
         {
             if (powerUnit == PowerUnit.KW) { RatedPower = 1000 * setPower; }
