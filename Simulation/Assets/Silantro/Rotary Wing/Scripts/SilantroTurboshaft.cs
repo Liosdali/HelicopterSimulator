@@ -142,6 +142,9 @@ namespace Oyedoyin.RotaryWing
             if (ignitionInterior && interiorMode == EngineCore.InteriorMode.Active) { Handler.SetupSoundSource(soundPoint.transform, ignitionInterior, "_interior_sound_point", 50f, false, false, out interiorSource); }
             if (ignitionExterior) { Handler.SetupSoundSource(soundPoint.transform, ignitionExterior, "_exterior_sound_point", 150f, false, false, out exteriorSource); }
 
+            //audiosource ses kıs
+
+
             ConvertPower();
         }
         /// <summary>
