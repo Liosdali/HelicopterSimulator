@@ -2,31 +2,31 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 
 
 public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 {
+    //-------------------------------------------------------------SerializeField
     [SerializeField]
     private TextMeshProUGUI m_SpeakerText;
     [SerializeField]
     private TextMeshProUGUI m_DialogueText;
-
     [SerializeField]
     private RectTransform m_ChoicesBoxTransform;
     [SerializeField]
     private UIDialogueChoiceController m_ChoiceControllerPrefab;
-
     [SerializeField]
     private DialogueChannel m_DialogueChannel;
 
+    //-------------------------------------------------------------InputMapping
+    private InputAction _selectmenu;
+    public InputActionAsset inputActions;
+    //------------------------------------------------------------DialogueMapping
     private bool m_ListenToInput = false;
     private DialogueNode m_NextNode = null;
-
-    [SerializeField]
-    public AudioSource[] m_AudioSource;
-
-
+    //-------------------------------------------------------------Audio
     public AudioSource m_DialogueSource;
 
     private void Awake()
@@ -49,33 +49,37 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         m_DialogueChannel.OnDialogueNodeStart -= OnDialogueNodeStart;
     }
 
-    private float waitSeconds = 1.0f;
-    int index = 0;
-    private void Update()
+    private void Start()
+    {
+        _selectmenu = inputActions.FindActionMap("XRI Wrist Menu").FindAction("DialogueSkip");
+        _selectmenu.Enable();
+        _selectmenu.performed += ToggleSelectMenu;
+    }
+
+    public void ToggleSelectMenu(InputAction.CallbackContext context)
     {
 
-        List<UnityEngine.XR.InputDevice> rightHandDevices = new List<UnityEngine.XR.InputDevice>();
-        UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.RightHand, rightHandDevices);
-        UnityEngine.XR.InputDevice device = rightHandDevices[0];
-        UnityEngine.XR.InputDeviceCharacteristics device4 = UnityEngine.XR.InputDeviceCharacteristics.Right;
-        
-        Debug.Log(string.Format("Device name '{0}' with role '{1}'", device.name, device.role.ToString()));
-        bool triggerValue;
-        if ((waitSeconds < 0.0f) && m_ListenToInput && device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out triggerValue) && triggerValue)
+        if (m_ListenToInput)
         {
             PlayAudio();
         }
+    }
 
-        waitSeconds -= Time.deltaTime;
+    private void Update()
+    {
+       // waitSeconds -= Time.deltaTime; 
     }
 
     public void PlayAudio()
     {
-        waitSeconds = 1.0f;
         m_DialogueSource.Stop();
-        Debug.Log("Ýsim burada = " + m_NextNode.GetAudioClip().name);
-        m_DialogueSource.clip = m_NextNode.GetAudioClip();
-        m_DialogueSource.Play();
+
+        if (m_NextNode != null)
+        {
+            Debug.Log("Ýsim burada = " + m_NextNode.GetAudioClip().name);
+            m_DialogueSource.clip = m_NextNode.GetAudioClip();
+            m_DialogueSource.Play();
+        }
         Debug.Log("Next Dialogue");
         m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
     }
