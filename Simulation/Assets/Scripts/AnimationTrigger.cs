@@ -13,15 +13,21 @@ public class AnimationTrigger : MonoBehaviour
 
     private float waitSeconds = 3.0f;
     private bool teleport = false;
+
+    public void teleportPlayer()
+    {
+        Debug.Log("düננננme");
+        pilot.transform.position = pilotSeat.position;
+        pilot.transform.rotation = pilotSeat.rotation;
+        Destroy(locomotionSystem.GetComponent<DeviceBasedContinuousMoveProvider>());
+    }
     private void Update()
     {
         if (teleport)
         {
             if (waitSeconds <= 0)
             {
-                pilot.transform.position = pilotSeat.position;
-                pilot.transform.rotation = pilotSeat.rotation;
-                Destroy(locomotionSystem.GetComponent<DeviceBasedContinuousMoveProvider>());
+                teleportPlayer();
             } 
             else
                 waitSeconds -= Time.deltaTime;

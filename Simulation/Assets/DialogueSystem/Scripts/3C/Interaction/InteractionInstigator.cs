@@ -13,6 +13,7 @@ public class InteractionInstigator : MonoBehaviour
 
     private void Update()
     {
+        //---------------------- INPUTU ÇEVÝR
         var rightHandDevices = new List<UnityEngine.XR.InputDevice>();
         UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.RightHand, rightHandDevices);
         UnityEngine.XR.InputDevice device = rightHandDevices[0];
