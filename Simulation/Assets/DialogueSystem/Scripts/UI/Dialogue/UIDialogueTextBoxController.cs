@@ -73,9 +73,13 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     {
         waitSeconds = 1.0f;
         m_DialogueSource.Stop();
-        Debug.Log("Ýsim burada = " + m_NextNode.GetAudioClip().name);
-        m_DialogueSource.clip = m_NextNode.GetAudioClip();
-        m_DialogueSource.Play();
+
+        if (m_NextNode != null)
+        {
+            Debug.Log("Ýsim burada = " + m_NextNode.GetAudioClip().name);
+            m_DialogueSource.clip = m_NextNode.GetAudioClip();
+            m_DialogueSource.Play();
+        }
         Debug.Log("Next Dialogue");
         m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
     }
