@@ -164,7 +164,11 @@ namespace Oyedoyin.RotaryWing
 
             // Update
             double Ωtarget;
-            if (state == State.RUN) { Ωtarget = Ω0 * (idleRatio + (1.0 - idleRatio) * throttle); }
+            if (state == State.RUN) 
+            {
+                Ωtarget = Ω0 * (idleRatio + (1.0 - idleRatio) * throttle);
+                Debug.Log("Throttle level = " + throttle + "\nTarget Omega = " + Ωtarget);
+            }
             else { Ωtarget = 0; }
             m_state.y = Ω - Ωtarget;
 
@@ -230,6 +234,8 @@ namespace Oyedoyin.RotaryWing
             if (state == State.RUN)
             {
                 double kE = k_eng;
+
+                //Kinetic energy formula
                 m_derivative.x = -kE * Kd / (τE * J) * _state.x - kE * Kp / τE * _state.y - kE * Ki / τE * _state.z + kE * Kd / (τE * J) * Qload;
                 m_derivative.y = 1.0 / J * _state.x - 1.0 / J * Qload;
                 m_derivative.z = _state.y;
