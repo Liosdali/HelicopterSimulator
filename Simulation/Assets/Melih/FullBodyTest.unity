@@ -39560,6 +39560,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 320601763}
     - target: {fileID: 7434135237558879005, guid: cc5efc289ef4761489160864d06b79d3, type: 3}
+      propertyPath: m_HeadBodyOffset.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434135237558879005, guid: cc5efc289ef4761489160864d06b79d3, type: 3}
       propertyPath: m_LeftHand.vrTarget
       value: 
       objectReference: {fileID: 2719126338538397772}
