@@ -7673,9 +7673,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d36269e157db04488c5d23d126ac6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SourceTransform: {fileID: 0}
-  m_TargetTransform: {fileID: 0}
-  m_LookRange: 0
+  m_SourceTransform: {fileID: 753136528}
+  m_TargetTransform: {fileID: 2719126339064359674}
+  m_LookRange: 100000
+--- !u!4 &753136528 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6515712193588681746, guid: df64a15297e2a104498b2708403e4203, type: 3}
+  m_PrefabInstance: {fileID: 753136525}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &788496465 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1766490383188478063, guid: a93f80d252523a14d9206681c7713ce8, type: 3}
