@@ -32,13 +32,15 @@ public class LookAtScript : MonoBehaviour
 
     private void Update()
     {
-        if (m_Start)
-        {
+        //if (m_Start)
+        //{
+            
             if (Vector3.Distance(m_SourceTransform.position, m_TargetTransform.position) < m_LookRange)
             {
+                Debug.Log("Start Looking");
                 m_SourceTransform.LookAt(m_TargetTransform);
             }
-        }
+        //}
     }
 
     // Update is called once per frame
