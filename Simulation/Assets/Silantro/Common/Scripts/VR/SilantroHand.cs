@@ -28,6 +28,11 @@ namespace Oyedoyin.Common
         public HandType m_handType = HandType.Right;
         public Animator m_animator;
 
+
+        public Animator _PilotAnimator;
+
+
+
         [Header("Animator Keys")]
         public string m_gripName = "Grip";
         public string m_triggerName = "Trigger";
@@ -43,6 +48,28 @@ namespace Oyedoyin.Common
         /// <summary>
         /// 
         /// </summary>
+        /// 
+
+
+        private string _GripName;
+        private float _GripValue;
+
+        private string _TriggerName;
+        private float _TriggerValue;
+
+
+        private void Start()
+        {
+            if (m_handType == HandType.Right)
+            {
+                _GripName = "Grip_Right";
+                _TriggerName = "Trigger_Right";
+                return;
+            }
+
+            _GripName = "Grip_Left";
+            _TriggerName = "Trigger_Left";
+        }
         protected void Update()
         {
 
@@ -61,15 +88,24 @@ namespace Oyedoyin.Common
                 {
                     m_currentGrip = Mathf.MoveTowards(m_currentGrip,
                         gripValue, Time.deltaTime * m_speed);
+
+                    _GripValue = Mathf.MoveTowards(_GripValue,
+                        gripValue, Time.deltaTime * m_speed);
+
+
                     m_animator.SetFloat(m_gripName, m_currentGrip);
+                    _PilotAnimator.SetFloat(_GripName, m_currentGrip);
                 }
 
                 //-------------------------------------------- Trigger
                 if (m_currentTrigger != triggerValue)
                 {
-                    m_currentTrigger = Mathf.MoveTowards(m_currentTrigger,
-                        triggerValue, Time.deltaTime * m_speed);
+                    // Setting trigger value for the hand  
+                    m_currentTrigger = Mathf.MoveTowards(m_currentTrigger,triggerValue, Time.deltaTime * m_speed);           
+                    _TriggerValue = Mathf.MoveTowards(_TriggerValue,triggerValue, Time.deltaTime * m_speed);
+                    
                     m_animator.SetFloat(m_triggerName, m_currentTrigger);
+                    _PilotAnimator.SetFloat(_TriggerName, m_currentTrigger);
                 }
             }
         }
