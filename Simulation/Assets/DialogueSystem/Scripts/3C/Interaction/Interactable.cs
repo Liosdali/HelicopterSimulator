@@ -20,8 +20,6 @@ public class Interactable : MonoBehaviour
         dialogueBox.SetActive(false);
     }
 
-
-
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject.tag);
