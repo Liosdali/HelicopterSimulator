@@ -12,10 +12,13 @@ public class LookAtScript : MonoBehaviour
     private Transform m_TargetTransform;
 
 
+
     public float m_LookRange;
 
     private bool m_Check = true;
     private bool m_Start = false;
+
+
     private void Start()
     {
         // Checking null objects
@@ -27,13 +30,16 @@ public class LookAtScript : MonoBehaviour
 
 
 
-    //private void update()
-    //{
-    //    if (m_Start)
-    //    {
-    //        m_SourceTransform.LookAt(m_TargetTransform);
-    //    }
-    //}
+    private void Update()
+    {
+        if (m_Start)
+        {
+            if (Vector3.Distance(m_SourceTransform.position, m_TargetTransform.position) < m_LookRange)
+            {
+                m_SourceTransform.LookAt(m_TargetTransform);
+            }
+        }
+    }
 
     // Update is called once per frame
     public void LookAt()
