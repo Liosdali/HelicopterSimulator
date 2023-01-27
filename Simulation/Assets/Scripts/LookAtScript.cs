@@ -19,6 +19,10 @@ public class LookAtScript : MonoBehaviour
     private bool m_Start = false;
 
 
+
+    [SerializeField] private Vector3 _UpperLimit;
+    [SerializeField] private Vector3 _LowerLimit;
+
     private void Start()
     {
         // Checking null objects
@@ -36,6 +40,11 @@ public class LookAtScript : MonoBehaviour
             {
                 Debug.Log("Start Looking");
                 m_SourceTransform.LookAt(m_TargetTransform);
+                if (m_SourceTransform.rotation.y < -45 || m_SourceTransform.rotation.y > 45)
+                {
+                    m_SourceTransform.rotation = Quaternion.identity;
+
+                }
             }
         //}
     }
