@@ -349,6 +349,7 @@ namespace Oyedoyin.RotaryWing.LowFidelity
 
 
 
+
             //---------------------------------------- Controls
             ϴ1sMax = Mathf.Abs(maximumRollCyclic) * Mathf.Deg2Rad;
             ϴ1sMin = Mathf.Abs(minimumRollCyclic) * Mathf.Deg2Rad;
