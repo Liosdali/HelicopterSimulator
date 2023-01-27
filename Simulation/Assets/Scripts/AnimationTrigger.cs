@@ -18,7 +18,6 @@ public class AnimationTrigger : MonoBehaviour
     {
         pilot.transform.position = pilotSeat.position;
         pilot.transform.rotation = pilotSeat.rotation;
-        Destroy(locomotionSystem.GetComponent<DeviceBasedContinuousMoveProvider>());
     }
     private void Update()
     {
@@ -39,6 +38,7 @@ public class AnimationTrigger : MonoBehaviour
         {
            teleport = true;
            myDoor.SetTrigger("Open");
+           Destroy(locomotionSystem.GetComponent<DeviceBasedContinuousMoveProvider>());
         }
 
     }
