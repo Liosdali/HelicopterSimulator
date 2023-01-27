@@ -43,7 +43,6 @@ public class LookAtScript : MonoBehaviour
                 if (m_SourceTransform.rotation.y < -45 || m_SourceTransform.rotation.y > 45)
                 {
                     m_SourceTransform.rotation = Quaternion.identity;
-
                 }
             }
         //}
