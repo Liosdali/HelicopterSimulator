@@ -8,7 +8,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 #endif
 
 
-
 /// <summary>
 /// 
 /// </summary>

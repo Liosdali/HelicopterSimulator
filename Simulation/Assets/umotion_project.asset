@@ -36,11 +36,11 @@ MonoBehaviour:
     TimelineViewMode:
       valueInternal: 0
     FramesScrollPosition:
-      valueInternal: 63.23827
+      valueInternal: -40
     FramesZoom:
-      valueInternal: 0.6165953
+      valueInternal: 0.35481358
     PropertiesScrollPosition:
-      valueInternal: 647
+      valueInternal: 118
     PropertiesZoom:
       valueInternal: 1
     CurveYScrollPosition:
@@ -145,7 +145,7 @@ MonoBehaviour:
     AnimWindowSyncFrameOffset:
       valueInternal: 0
     RotationToolAssistantMode:
-      valueInternal: 1
+      valueInternal: 0
   Settings:
     RigType:
       valueInternal: 1
@@ -260,9 +260,9 @@ MonoBehaviour:
       valueInternal: 0
     LocalPositionChannelList:
     - CurrentValue:
-        valueInternal: -104.4816
+        valueInternal: -103.29
       ReferencePoseValue:
-        valueInternal: -104.4816
+        valueInternal: -103.29
       PoseValueList: []
       ChannelPerClipList:
       - LayerList:
@@ -287,12 +287,12 @@ MonoBehaviour:
           newKeyListSerialized: 00000000
       - LayerList:
         - CurrentOriginalValue:
-            valueInternal: -104.4816
+            valueInternal: -103.29
           newKeyListSerialized: 00000000
     - CurrentValue:
-        valueInternal: -7.5253425
+        valueInternal: -2.98
       ReferencePoseValue:
-        valueInternal: -7.5253425
+        valueInternal: -2.98
       PoseValueList: []
       ChannelPerClipList:
       - LayerList:
@@ -317,12 +317,12 @@ MonoBehaviour:
           newKeyListSerialized: 00000000
       - LayerList:
         - CurrentOriginalValue:
-            valueInternal: -7.5253425
+            valueInternal: -2.98
           newKeyListSerialized: 00000000
     - CurrentValue:
-        valueInternal: -259.70255
+        valueInternal: -254.93
       ReferencePoseValue:
-        valueInternal: -259.70255
+        valueInternal: -254.93
       PoseValueList: []
       ChannelPerClipList:
       - LayerList:
@@ -347,7 +347,7 @@ MonoBehaviour:
           newKeyListSerialized: 00000000
       - LayerList:
         - CurrentOriginalValue:
-            valueInternal: -259.70255
+            valueInternal: -254.93
           newKeyListSerialized: 00000000
     LocalRotationSelected:
       valueInternal: 0
@@ -24085,7 +24085,7 @@ MonoBehaviour:
             valueInternal: 0
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0
@@ -24590,7 +24590,7 @@ MonoBehaviour:
             valueInternal: 0.036640625
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0
@@ -25095,7 +25095,7 @@ MonoBehaviour:
             valueInternal: 0
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0
@@ -25600,7 +25600,7 @@ MonoBehaviour:
             valueInternal: 0
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0
@@ -26105,7 +26105,7 @@ MonoBehaviour:
             valueInternal: 0.00583313
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0
@@ -26610,7 +26610,7 @@ MonoBehaviour:
             valueInternal: 0
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0
@@ -27115,7 +27115,7 @@ MonoBehaviour:
             valueInternal: 0
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0
@@ -27620,7 +27620,7 @@ MonoBehaviour:
             valueInternal: -0.04543991
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0
@@ -28125,7 +28125,7 @@ MonoBehaviour:
             valueInternal: -0.000000076293944
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0
@@ -28630,7 +28630,7 @@ MonoBehaviour:
             valueInternal: -0.000000076293944
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0
@@ -29135,7 +29135,7 @@ MonoBehaviour:
             valueInternal: -0.021833114
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0
@@ -29640,7 +29640,7 @@ MonoBehaviour:
             valueInternal: 0
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0
@@ -30145,7 +30145,7 @@ MonoBehaviour:
             valueInternal: 0
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0
@@ -30650,7 +30650,7 @@ MonoBehaviour:
             valueInternal: 0.032520752
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0
@@ -31155,7 +31155,7 @@ MonoBehaviour:
             valueInternal: 0
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0
@@ -31660,7 +31660,7 @@ MonoBehaviour:
             valueInternal: -0.000000038146972
           newKeyListSerialized: 00000000
     LocalRotationSelected:
-      valueInternal: 1
+      valueInternal: 0
     RotationModePerClip:
     - valueInternal: 0
     - valueInternal: 0

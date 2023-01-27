@@ -16,7 +16,6 @@ public class AnimationTrigger : MonoBehaviour
 
     public void teleportPlayer()
     {
-        Debug.Log("düððððme");
         pilot.transform.position = pilotSeat.position;
         pilot.transform.rotation = pilotSeat.rotation;
         Destroy(locomotionSystem.GetComponent<DeviceBasedContinuousMoveProvider>());
@@ -39,10 +38,7 @@ public class AnimationTrigger : MonoBehaviour
         if (other.CompareTag("PlayerHand"))
         {
            teleport = true;
-                Debug.Log("Animasyon Baþladý");
-            //   myDoor.Play("DoorOpen", 0, 0.0f); gameObject.SetActive(false);
-            //  myDoor.SetBool("Door",true);
-            myDoor.SetTrigger("Open");
+           myDoor.SetTrigger("Open");
         }
 
     }
@@ -52,11 +48,10 @@ public class AnimationTrigger : MonoBehaviour
         {
             teleport = false;
             waitSeconds = 3.0f;
-            Debug.Log("Animasyon Bitti");
-            //  myDoor.Play("DoorClose", 0, 0.0f); gameObject.SetActive(false);
-            //myDoor.SetBool("Door",false);
             myDoor.SetTrigger("Close");
             GetComponent<BoxCollider>().enabled = false;
+
+            // Destroying object to free some memory space
             Destroy(gameObject);
         }
 

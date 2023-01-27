@@ -16,8 +16,9 @@ public class LookAtScript : MonoBehaviour
     public float m_LookRange;
 
     private bool m_Check = true;
-    private bool m_Start = false;
 
+    [SerializeField] private Vector3 _UpperLimit;
+    [SerializeField] private Vector3 _LowerLimit;
 
     private void Start()
     {
@@ -27,20 +28,21 @@ public class LookAtScript : MonoBehaviour
             m_Check = false;
         }
     }
-
-
-
     private void Update()
     {
-        //if (m_Start)
-        //{
+        if (m_Check)
+        {
             
             if (Vector3.Distance(m_SourceTransform.position, m_TargetTransform.position) < m_LookRange)
             {
                 Debug.Log("Start Looking");
                 m_SourceTransform.LookAt(m_TargetTransform);
+                if (m_SourceTransform.rotation.y < -45 || m_SourceTransform.rotation.y > 45)
+                {
+                    m_SourceTransform.rotation = Quaternion.identity;
+                }
             }
-        //}
+        }
     }
 
     // Update is called once per frame
