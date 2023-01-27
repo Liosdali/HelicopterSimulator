@@ -386,8 +386,6 @@ namespace Oyedoyin.RotaryWing.LowFidelity
         // ----------------------------------------------------------------------------------------------------------------------------------------------------------
         protected void UpdateControls()
         {
-
-
             if (inputType == InputType.Keyboard || inputType == InputType.Mouse)
             {
 
