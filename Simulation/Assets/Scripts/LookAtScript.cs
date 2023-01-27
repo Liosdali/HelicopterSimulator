@@ -27,9 +27,6 @@ public class LookAtScript : MonoBehaviour
             m_Check = false;
         }
     }
-
-
-
     private void Update()
     {
         //if (m_Start)
