@@ -26,7 +26,7 @@ public class HookScript : MonoBehaviour
 
     public void HookFunction ()
     {
-        Debug.Log(hook_Enabled);
+        Debug.Log("--Heli Hook Enabled--");
         hook_Enabled = true;
     }
 
