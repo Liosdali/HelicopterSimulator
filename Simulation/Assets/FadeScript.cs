@@ -1,0 +1,75 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FadeScript : MonoBehaviour
+{
+
+    [SerializeField] private float _FadeDuration = 2f;
+    [SerializeField] private Color _FadeColor = Color.black;
+    [SerializeField] private bool _fadeOnStart = true;
+
+    private float _time;
+    
+    private Renderer _renderer;
+
+
+    public static FadeScript instance;
+
+    // Getting renderer component in the start of the scene
+    void Start()
+    {
+        _renderer = GetComponent<Renderer>();
+        
+        instance = this;
+        if (_fadeOnStart)
+        {
+            TeleportPlayer.Instance.teleportPlayer();
+            FadeOut();
+            
+        }
+    }
+
+    public void FadeIn()
+    {
+        FadeFunction(1, 0);
+    }
+    public void FadeOut()
+    {
+        FadeFunction(0, 1);
+    }
+
+    private void FadeFunction(float alphaIn, float alphaOut)
+    {
+        StartCoroutine(FadeCourutine(alphaIn, alphaOut));
+    }
+
+    private IEnumerator FadeCourutine(float alphaIn, float alphaOut)
+    {
+
+        float timer = 0f;
+
+        while (timer <= _FadeDuration) {
+
+            Debug.Log("Fade + + ");
+            timer += Time.deltaTime;
+            Color _fadeColor = _FadeColor;
+
+            _fadeColor.a = Mathf.Lerp(alphaIn, alphaOut, timer / _FadeDuration);
+
+            _renderer.material.SetColor("_Color", _fadeColor);
+
+            yield return null;
+        }
+
+
+
+        Color fadeColor2 = _FadeColor;
+
+        fadeColor2.a = alphaOut;
+
+        _renderer.material.SetColor("_Color", fadeColor2);
+
+
+    }
+}
