@@ -13,12 +13,15 @@ public class FadeScript : MonoBehaviour
     
     private Renderer _renderer;
 
+
+    public static FadeScript instance;
+
     // Getting renderer component in the start of the scene
     void Start()
     {
         _renderer = GetComponent<Renderer>();
         
-
+        instance = this;
         if (_fadeOnStart)
         {
             FadeOut();

@@ -31,6 +31,8 @@ public class AnimationTrigger : MonoBehaviour
                 waitSeconds -= Time.deltaTime;
         }
     }
+
+
     private void OnTriggerEnter(Collider other)
     {
 
