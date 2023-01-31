@@ -18403,6 +18403,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5356403106057518579, guid: 66a7b21b9d082fb4ebe7dde8450ca465, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 480b0fe4f35aa7c4ba9920e52663dc6c, type: 2}
+    - target: {fileID: 5356403106057518580, guid: 66a7b21b9d082fb4ebe7dde8450ca465, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5356403106057518580, guid: 66a7b21b9d082fb4ebe7dde8450ca465, type: 3}
       propertyPath: solver.leftArm.target
       value: 
