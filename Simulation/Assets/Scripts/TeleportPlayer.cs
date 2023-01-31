@@ -10,12 +10,21 @@ public class TeleportPlayer : MonoBehaviour
     [SerializeField] private GameObject locomotionSystem;
     [SerializeField] private bool _locomotiveStatus;
 
+    public static TeleportPlayer Instance;
+
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+
+
     public void teleportPlayer()
     {
         locomotionSystem.SetActive(_locomotiveStatus);
         _pilot.transform.position = _targetTransform.position;
         _pilot.transform.rotation = _targetTransform.rotation;
-        FadeScript.instance.FadeIn();
-
+        //FadeScript.instance.FadeIn();
     }
 }

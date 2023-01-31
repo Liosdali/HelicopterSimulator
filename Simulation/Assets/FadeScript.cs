@@ -24,7 +24,9 @@ public class FadeScript : MonoBehaviour
         instance = this;
         if (_fadeOnStart)
         {
+            TeleportPlayer.Instance.teleportPlayer();
             FadeOut();
+            
         }
     }
 
