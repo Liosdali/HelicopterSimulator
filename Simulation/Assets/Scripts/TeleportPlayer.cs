@@ -10,8 +10,6 @@ public class TeleportPlayer : MonoBehaviour
     [SerializeField] private GameObject locomotionSystem;
     [SerializeField] private bool _locomotiveStatus;
 
-    
-
     public void teleportPlayer()
     {
         locomotionSystem.SetActive(_locomotiveStatus);
