@@ -10613,6 +10613,105 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &793674923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 793674924}
+  - component: {fileID: 793674927}
+  - component: {fileID: 793674926}
+  - component: {fileID: 793674925}
+  m_Layer: 11
+  m_Name: FaderScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &793674924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793674923}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.015}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2719126338292808952}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &793674925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793674923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86fd3c968ba873f4c9651da70411dd74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _FadeDuration: 3
+  _FadeColor: {r: 0, g: 0, b: 0, a: 1}
+  _fadeOnStart: 1
+--- !u!23 &793674926
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793674923}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c64ece65bdccab04fb048540932cbf63, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &793674927
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793674923}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &800257086
 GameObject:
   m_ObjectHideFlags: 0
@@ -42770,6 +42869,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1801966800}
+  - {fileID: 793674924}
   m_Father: {fileID: 2719126339064359674}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43195,7 +43295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2719126340277858933}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -168.93199, y: 3.6340003, z: -159.531}
+  m_LocalPosition: {x: -54.324, y: 0.55, z: -101.405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45061,7 +45161,7 @@ MonoBehaviour:
   m_section: 1
   m_sweep: 13.5
   m_taper: 58.2
-  m_area: 0.37616655230522156
+  m_area: 0.3761683702468872
   m_controller: {fileID: 0}
   m_airfoil: {fileID: 11400000, guid: 6f65a272e9edfcc4f984d9daa898f1e6, type: 2}
   m_collider: {fileID: 4025123964261249550}
@@ -45135,7 +45235,7 @@ MonoBehaviour:
   m_section: -1
   m_sweep: 18.2
   m_taper: 51.2
-  m_area: 0.28859850764274597
+  m_area: 0.28858813643455505
   m_controller: {fileID: 0}
   m_airfoil: {fileID: 11400000, guid: 6f65a272e9edfcc4f984d9daa898f1e6, type: 2}
   m_collider: {fileID: 4025176446000255116}
@@ -45429,12 +45529,12 @@ MonoBehaviour:
   "\u03C4\u03BD": 0.20000000298023224
   "\u03C4\u03B43": 0.10000000149011612
   m_height: 1
-  rootLeadingEdge: {x: -103.83099, y: -0.30118218, z: -235.34222}
-  tipLeadingEdge: {x: -103.83099, y: -0.3011823, z: -234.71327}
-  rootTrailingEdge: {x: -103.83099, y: -0.44118217, z: -235.34222}
-  tipTrailingEdge: {x: -103.83099, y: -0.4411823, z: -234.71327}
-  quaterRootChordPoint: {x: -103.83099, y: -0.33618218, z: -235.34222}
-  quaterTipChordPoint: {x: -103.83099, y: -0.3361823, z: -234.71327}
+  rootLeadingEdge: {x: -218.571, y: 3.1088178, z: -293.31223}
+  tipLeadingEdge: {x: -218.571, y: 3.1088176, z: -292.6833}
+  rootTrailingEdge: {x: -218.571, y: 2.968818, z: -293.31223}
+  tipTrailingEdge: {x: -218.571, y: 2.9688177, z: -292.6833}
+  quaterRootChordPoint: {x: -218.571, y: 3.0738177, z: -293.31223}
+  quaterTipChordPoint: {x: -218.571, y: 3.0738177, z: -292.6833}
   skewDistance: {x: 0, y: -0, z: 0}
   m_controller: {fileID: 0}
   m_rootAirfoil: {fileID: 11400000, guid: ee5384cf9cdea3e48a41ed86c2f5c2bc, type: 2}
@@ -47197,12 +47297,12 @@ MonoBehaviour:
   "\u03C4\u03BD": 0.20000000298023224
   "\u03C4\u03B43": 0.10000000149011612
   m_height: 1
-  rootLeadingEdge: {x: -103.70976, y: 1.056, z: -229.2012}
-  tipLeadingEdge: {x: -103.70808, y: 1.0319235, z: -224.42099}
-  rootTrailingEdge: {x: -103.36377, y: 1.056, z: -229.2012}
-  tipTrailingEdge: {x: -103.365456, y: 1.0800765, z: -224.42099}
-  quaterRootChordPoint: {x: -103.62326, y: 1.056, z: -229.2012}
-  quaterTipChordPoint: {x: -103.62242, y: 1.0439618, z: -224.42099}
+  rootLeadingEdge: {x: -218.44978, y: 4.466, z: -287.1712}
+  tipLeadingEdge: {x: -218.4481, y: 4.4419227, z: -282.39096}
+  rootTrailingEdge: {x: -218.10378, y: 4.466, z: -287.1712}
+  tipTrailingEdge: {x: -218.10545, y: 4.4900775, z: -282.39096}
+  quaterRootChordPoint: {x: -218.36328, y: 4.466, z: -287.1712}
+  quaterTipChordPoint: {x: -218.36244, y: 4.4539614, z: -282.39096}
   skewDistance: {x: 0, y: 0, z: 0}
   m_controller: {fileID: 0}
   m_rootAirfoil: {fileID: 11400000, guid: 0b9e5749ed690be4c8c0ac6cd9139115, type: 2}
@@ -47537,7 +47637,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3977579515757861136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -103.55999, y: -1.22, z: -229.32}
+  m_LocalPosition: {x: -218.3, y: 2.19, z: -287.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
