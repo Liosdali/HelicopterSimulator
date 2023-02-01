@@ -22,13 +22,23 @@ public class FadeScript : MonoBehaviour
         _renderer = GetComponent<Renderer>();
         
         instance = this;
+        
+    }
+
+    private void Update()
+    {
         if (_fadeOnStart)
         {
-            TeleportPlayer.Instance.teleportPlayer();
-            FadeOut();
-            
+            EndCutscene();
+            _fadeOnStart = false;
         }
     }
+
+    public void EndCutscene()
+    {
+        FadeOut();
+    }
+
 
     public void FadeIn()
     {
@@ -70,6 +80,11 @@ public class FadeScript : MonoBehaviour
 
         _renderer.material.SetColor("_Color", fadeColor2);
 
+        TeleportPlayer.Instance.teleportPlayer();
+
+        TrackOn.Instance.EnableTracking();
+
+        FadeIn();
 
     }
 }
