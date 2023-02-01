@@ -18,7 +18,9 @@ public class AnimationTrigger : MonoBehaviour
     {
         pilot.transform.position = pilotSeat.position;
         pilot.transform.rotation = pilotSeat.rotation;
+        teleport = false;
     }
+
     private void Update()
     {
         if (teleport)
@@ -31,7 +33,6 @@ public class AnimationTrigger : MonoBehaviour
                 waitSeconds -= Time.deltaTime;
         }
     }
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -54,7 +55,7 @@ public class AnimationTrigger : MonoBehaviour
             GetComponent<BoxCollider>().enabled = false;
 
             // Destroying object to free some memory space
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 
     }
