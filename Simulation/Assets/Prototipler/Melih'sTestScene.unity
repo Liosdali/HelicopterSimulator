@@ -3522,7 +3522,7 @@ MonoBehaviour:
   m_ChoicesBoxTransform: {fileID: 551367392}
   m_ChoiceControllerPrefab: {fileID: 3057477018375645277, guid: fbafd6f58c8056e4f8b5c3b71bbeb806, type: 3}
   m_DialogueChannel: {fileID: 11400000, guid: 20e76ab5c4289f240b52438dbb95e083, type: 2}
-  _FadeAway: {fileID: 0}
+  _FadeAway: {fileID: 793674925}
   inputActions: {fileID: -944628639613478452, guid: e961173cc5f3a654f82bb8706cdd68a4, type: 3}
   m_DialogueSource: {fileID: 0}
 --- !u!114 &202349521
@@ -22716,7 +22716,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545278520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -103.38, y: -0.56, z: -248.561}
+  m_LocalPosition: {x: -275.76, y: 1.3, z: -390.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
