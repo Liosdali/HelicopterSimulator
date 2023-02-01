@@ -20,6 +20,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     [SerializeField]
     private DialogueChannel m_DialogueChannel;
 
+    [SerializeField]
+    private FadeScript _FadeAway;
+
     //-------------------------------------------------------------InputMapping
     private InputAction _selectmenu;
     public InputActionAsset inputActions;
@@ -58,7 +61,6 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
     public void ToggleSelectMenu(InputAction.CallbackContext context)
     {
-
         if (m_ListenToInput)
         {
             PlayAudio();
@@ -79,6 +81,10 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
             Debug.Log("Ýsim burada = " + m_NextNode.GetAudioClip().name);
             m_DialogueSource.clip = m_NextNode.GetAudioClip();
             m_DialogueSource.Play();
+        }
+        else if (m_NextNode == null)
+        {
+            _FadeAway.EndCutscene();
         }
         Debug.Log("Next Dialogue");
         m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);

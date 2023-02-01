@@ -7,7 +7,7 @@ public class FadeScript : MonoBehaviour
 
     [SerializeField] private float _FadeDuration = 2f;
     [SerializeField] private Color _FadeColor = Color.black;
-    [SerializeField] private bool _fadeOnStart = true;
+    [SerializeField] private bool _fadeOnStart = false;
 
     private float _time;
     
@@ -22,13 +22,23 @@ public class FadeScript : MonoBehaviour
         _renderer = GetComponent<Renderer>();
         
         instance = this;
+        
+    }
+
+    private void Update()
+    {
         if (_fadeOnStart)
         {
-            TeleportPlayer.Instance.teleportPlayer();
-            FadeOut();
-            
+            EndCutscene();
+            _fadeOnStart = false;
         }
     }
+
+    public void EndCutscene()
+    {
+        FadeOut();
+    }
+
 
     public void FadeIn()
     {
@@ -70,6 +80,11 @@ public class FadeScript : MonoBehaviour
 
         _renderer.material.SetColor("_Color", fadeColor2);
 
+        TeleportPlayer.Instance.teleportPlayer();
 
+        TrackOn.Instance.EnableTracking();
+
+        FadeIn();
+        Destroy(gameObject);
     }
 }
