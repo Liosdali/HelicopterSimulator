@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abaa1d01ebe65f6469c9f7f9cd89f2dc, type: 3}
-  m_Name: Dialogue1Node1
+  m_Name: Dialogue1Node7
   m_EditorClassIdentifier: 
-  m_DialogueLine: {fileID: 11400000, guid: ca71ffef1a9b4d3438fee923f9fbf46e, type: 2}
-  m_AudioClip: {fileID: 8300000, guid: 40a96932569ad194182beb366596b2a0, type: 3}
-  m_NextNode: {fileID: 11400000, guid: 7fa286906464c5049a4e28145f465a32, type: 2}
+  m_DialogueLine: {fileID: 11400000, guid: 722d62c6b30018e409567daf69da2dcd, type: 2}
+  m_AudioClip: {fileID: 8300000, guid: 28f640b9a7605bd44984278995d78889, type: 3}
+  m_NextNode: {fileID: 11400000, guid: d28ea5be8f86b49499faec8149c527f2, type: 2}
