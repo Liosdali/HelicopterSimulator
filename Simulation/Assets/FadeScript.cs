@@ -7,7 +7,7 @@ public class FadeScript : MonoBehaviour
 
     [SerializeField] private float _FadeDuration = 2f;
     [SerializeField] private Color _FadeColor = Color.black;
-    [SerializeField] private bool _fadeOnStart = true;
+    [SerializeField] private bool _fadeOnStart = false;
 
     private float _time;
     
@@ -85,6 +85,6 @@ public class FadeScript : MonoBehaviour
         TrackOn.Instance.EnableTracking();
 
         FadeIn();
-
+        Destroy(gameObject);
     }
 }
