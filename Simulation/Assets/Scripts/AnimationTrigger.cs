@@ -23,6 +23,7 @@ public class AnimationTrigger : MonoBehaviour
         pilot.transform.position = pilotSeat.position;
         pilot.transform.rotation = pilotSeat.rotation;
         m_PilotOutsideModel.SetActive(false);
+        //Destroy(m_PilotOutsideModel);
         m_PilotInsideModel.SetActive(true);
         m_UICanvas.SetActive(true);
         teleport = false;

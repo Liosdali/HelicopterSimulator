@@ -30,6 +30,7 @@ namespace Oyedoyin.Common
 
         public Animator _PilotAnimator;
 
+        public Animator _PilotInsideAnimator;
 
 
         [Header("Animator Keys")]
@@ -94,6 +95,7 @@ namespace Oyedoyin.Common
 
                     m_animator.SetFloat(m_gripName, m_currentGrip);
                     _PilotAnimator.SetFloat(_GripName, m_currentGrip);
+                    _PilotInsideAnimator.SetFloat(_GripName, m_currentGrip);
                 }
 
                 //-------------------------------------------- Trigger
@@ -105,6 +107,7 @@ namespace Oyedoyin.Common
                     
                     m_animator.SetFloat(m_triggerName, m_currentTrigger);
                     _PilotAnimator.SetFloat(_TriggerName, m_currentTrigger);
+                    _PilotInsideAnimator.SetFloat(_TriggerName, m_currentTrigger);
                 }
             }
         }
