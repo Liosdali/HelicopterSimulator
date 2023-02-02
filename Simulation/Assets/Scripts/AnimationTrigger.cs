@@ -27,7 +27,7 @@ public class AnimationTrigger : MonoBehaviour
         m_PilotOutsideModel.SetActive(false);
         //Destroy(m_PilotOutsideModel);
         m_PilotInsideModel.SetActive(true);
-        m_UICanvas.SetActive(true);
+        //m_UICanvas.SetActive(true);
         teleport = false;
     }
 
