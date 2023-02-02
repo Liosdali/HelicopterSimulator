@@ -32,6 +32,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     //-------------------------------------------------------------Audio
     public AudioSource m_DialogueSource;
 
+
+    [SerializeField] private Animator _SoldierAnimator;
+
     private void Awake()
     {
         m_DialogueChannel.OnDialogueNodeStart += OnDialogueNodeStart;
@@ -63,6 +66,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     {
         if (m_ListenToInput)
         {
+            _SoldierAnimator.SetBool("S_Pose", true);
             PlayAudio();
         }
     }

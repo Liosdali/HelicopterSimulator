@@ -21,6 +21,8 @@ public class AnimationTrigger : MonoBehaviour
     public void teleportPlayer()
     {
         pilot.transform.position = pilotSeat.position;
+        pilot.transform.localPosition = pilotSeat.localPosition;
+        //pilot.transform.localPosition = pilotSeat.localPosition;
         pilot.transform.rotation = pilotSeat.rotation;
         m_PilotOutsideModel.SetActive(false);
         //Destroy(m_PilotOutsideModel);
