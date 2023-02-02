@@ -6760,6 +6760,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66a7b21b9d082fb4ebe7dde8450ca465, type: 3}
+--- !u!95 &387254972 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5356403106057518579, guid: 66a7b21b9d082fb4ebe7dde8450ca465, type: 3}
+  m_PrefabInstance: {fileID: 387254971}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &388394075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19087,7 +19092,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314716714}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.272, y: -0.794, z: 0.426}
+  m_LocalPosition: {x: 0.272, y: -0.794, z: 0.488}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50501,6 +50506,7 @@ MonoBehaviour:
   m_handType: 0
   m_animator: {fileID: 1951208115}
   _PilotAnimator: {fileID: 31081402}
+  _PilotInsideAnimator: {fileID: 387254972}
   m_gripName: Grip
   m_triggerName: Trigger
   m_speed: 10
@@ -50636,6 +50642,7 @@ MonoBehaviour:
   m_handType: 1
   m_animator: {fileID: 1937672834}
   _PilotAnimator: {fileID: 31081402}
+  _PilotInsideAnimator: {fileID: 387254972}
   m_gripName: Grip
   m_triggerName: Trigger
   m_speed: 10
