@@ -35,12 +35,7 @@ public class AnimationTrigger : MonoBehaviour
     {
         if (teleport)
         {
-            if (waitSeconds <= 0)
-            {
                 teleportPlayer();
-            } 
-            else
-                waitSeconds -= Time.deltaTime;
         }
     }
 
