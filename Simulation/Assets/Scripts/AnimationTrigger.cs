@@ -10,6 +10,10 @@ public class AnimationTrigger : MonoBehaviour
     [SerializeField] private GameObject pilot;
     [SerializeField] private GameObject locomotionSystem;
 
+    [SerializeField] private GameObject m_PilotOutsideModel;
+    [SerializeField] private GameObject m_PilotInsideModel;
+
+
 
     private float waitSeconds = 3.0f;
     private bool teleport = false;
@@ -18,6 +22,8 @@ public class AnimationTrigger : MonoBehaviour
     {
         pilot.transform.position = pilotSeat.position;
         pilot.transform.rotation = pilotSeat.rotation;
+        m_PilotOutsideModel.SetActive(false);
+        m_PilotInsideModel.SetActive(true);
         teleport = false;
     }
 
