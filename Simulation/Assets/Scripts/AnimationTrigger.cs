@@ -54,11 +54,12 @@ public class AnimationTrigger : MonoBehaviour
            myDoor.SetTrigger("Open");
            Destroy(locomotionSystem.GetComponent<DeviceBasedContinuousMoveProvider>());
         }
-
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("PlayerHand"))
+
+            // Function needs to be fixed
         {
             teleport = false;
             waitSeconds = 3.0f;
