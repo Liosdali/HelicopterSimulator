@@ -12,7 +12,7 @@ public class AnimationTrigger : MonoBehaviour
 
     [SerializeField] private GameObject m_PilotOutsideModel;
     [SerializeField] private GameObject m_PilotInsideModel;
-
+    [SerializeField] private GameObject m_UICanvas;
 
 
     private float waitSeconds = 3.0f;
@@ -24,6 +24,7 @@ public class AnimationTrigger : MonoBehaviour
         pilot.transform.rotation = pilotSeat.rotation;
         m_PilotOutsideModel.SetActive(false);
         m_PilotInsideModel.SetActive(true);
+        m_UICanvas.SetActive(true);
         teleport = false;
     }
 
