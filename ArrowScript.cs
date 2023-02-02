@@ -48,17 +48,4 @@ public class ArrowScript : MonoBehaviour
             Spinner.transform.Rotate(0,0,_TurnSpeed * Time.deltaTime);
         }
     }
-
-
-    public void EndArrow ()
-    {
-        SetTarget(null);
-        this.gameObject.SetActive(false);
-    }
-
-    public void StartArrow(Transform target)
-    {
-        this.gameObject.SetActive(true);
-        SetTarget(target);
-    }
 }
