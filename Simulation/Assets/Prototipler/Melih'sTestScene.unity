@@ -6960,7 +6960,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5356403104692644067, guid: b37a1b1f54eb0924d8054da100696c40, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.512
+      value: 0.423
       objectReference: {fileID: 0}
     - target: {fileID: 5356403104797072574, guid: b37a1b1f54eb0924d8054da100696c40, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7021,6 +7021,38 @@ PrefabInstance:
     - target: {fileID: 5356403106057518578, guid: b37a1b1f54eb0924d8054da100696c40, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356403106057518580, guid: b37a1b1f54eb0924d8054da100696c40, type: 3}
+      propertyPath: references.leftCalf
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356403106057518580, guid: b37a1b1f54eb0924d8054da100696c40, type: 3}
+      propertyPath: references.leftFoot
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356403106057518580, guid: b37a1b1f54eb0924d8054da100696c40, type: 3}
+      propertyPath: references.leftToes
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356403106057518580, guid: b37a1b1f54eb0924d8054da100696c40, type: 3}
+      propertyPath: references.leftThigh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356403106057518580, guid: b37a1b1f54eb0924d8054da100696c40, type: 3}
+      propertyPath: references.rightCalf
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356403106057518580, guid: b37a1b1f54eb0924d8054da100696c40, type: 3}
+      propertyPath: references.rightFoot
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356403106057518580, guid: b37a1b1f54eb0924d8054da100696c40, type: 3}
+      propertyPath: references.rightToes
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5356403106057518580, guid: b37a1b1f54eb0924d8054da100696c40, type: 3}
+      propertyPath: references.rightThigh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5356403106057518580, guid: b37a1b1f54eb0924d8054da100696c40, type: 3}
       propertyPath: solver.leftArm.target
@@ -18324,6 +18356,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1134448267572650552, guid: 4699ee91adf24d54ea6f99ccbac527bb, type: 3}
+      propertyPath: m_display.m_vehicle
+      value: 
+      objectReference: {fileID: 3977579515757861137}
     - target: {fileID: 1134448267572650559, guid: 4699ee91adf24d54ea6f99ccbac527bb, type: 3}
       propertyPath: m_Name
       value: AttributesCanvas
