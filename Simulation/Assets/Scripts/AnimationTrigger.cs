@@ -10,6 +10,10 @@ public class AnimationTrigger : MonoBehaviour
     [SerializeField] private GameObject pilot;
     [SerializeField] private GameObject locomotionSystem;
 
+    [SerializeField] private GameObject m_PilotOutsideModel;
+    [SerializeField] private GameObject m_PilotInsideModel;
+    [SerializeField] private GameObject m_UICanvas;
+
 
     private float waitSeconds = 3.0f;
     private bool teleport = false;
@@ -17,7 +21,14 @@ public class AnimationTrigger : MonoBehaviour
     public void teleportPlayer()
     {
         pilot.transform.position = pilotSeat.position;
+        //pilot.transform.localPosition = pilotSeat.localPosition;
+        //pilot.transform.localPosition = pilotSeat.localPosition;
         pilot.transform.rotation = pilotSeat.rotation;
+        m_PilotOutsideModel.SetActive(false);
+        //Destroy(m_PilotOutsideModel);
+        //
+        m_PilotInsideModel.SetActive(true);
+        //m_UICanvas.SetActive(true);
         teleport = false;
     }
 
@@ -43,11 +54,12 @@ public class AnimationTrigger : MonoBehaviour
            myDoor.SetTrigger("Open");
            Destroy(locomotionSystem.GetComponent<DeviceBasedContinuousMoveProvider>());
         }
-
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("PlayerHand"))
+
+            // Function needs to be fixed
         {
             teleport = false;
             waitSeconds = 3.0f;

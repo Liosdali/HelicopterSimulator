@@ -98,8 +98,16 @@ namespace Oyedoyin.Common
                         leverHeld = false;
                     }
                 }
+
                 //Hand Data
-                if (leverHeld) { handPosition = other.transform.position; }
+                if (leverHeld) { 
+                    handPosition = other.transform.position; 
+
+                    // Hand snapping needs to be added possibly here
+                    // Hand position will be updated accordingly to the lever or stick
+                    // Or a special animation will be updated through VRIK
+
+                }
             }
         }
         /// <summary>
