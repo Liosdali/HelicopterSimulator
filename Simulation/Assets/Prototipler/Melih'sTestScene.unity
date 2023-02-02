@@ -5843,9 +5843,9 @@ MonoBehaviour:
   pilotSeat: {fileID: 1314716715}
   pilot: {fileID: 2719126340277858933}
   locomotionSystem: {fileID: 1918860381}
-  m_PilotOutsideModel: {fileID: 0}
-  m_PilotInsideModel: {fileID: 0}
-  m_UICanvas: {fileID: 0}
+  m_PilotOutsideModel: {fileID: 1924698390}
+  m_PilotInsideModel: {fileID: 708909712}
+  m_UICanvas: {fileID: 1011122015}
 --- !u!65 &306967195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10524,6 +10524,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MeshRenderer: {fileID: 704717498}
+--- !u!1 &708909712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5356403106057518581, guid: b37a1b1f54eb0924d8054da100696c40, type: 3}
+  m_PrefabInstance: {fileID: 446814133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &710859923
 GameObject:
   m_ObjectHideFlags: 0
@@ -14591,6 +14596,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f011986bc36690b4d934f2708930e3a1, type: 3}
+--- !u!1 &1011122015 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1134448267572650559, guid: 4699ee91adf24d54ea6f99ccbac527bb, type: 3}
+  m_PrefabInstance: {fileID: 1283968713}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1015554750
 GameObject:
   m_ObjectHideFlags: 0
@@ -28837,6 +28847,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a8a77a07da1ab74bb3d34fe70501b7d, type: 3}
+--- !u!1 &1924698390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5356403106057518581, guid: 66a7b21b9d082fb4ebe7dde8450ca465, type: 3}
+  m_PrefabInstance: {fileID: 1376121073}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1931018512
 PrefabInstance:
   m_ObjectHideFlags: 0

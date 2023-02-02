@@ -44,6 +44,8 @@ public class HookScript : MonoBehaviour
                 other.gameObject.GetComponent<CapsuleCollider>().gameObject.SetActive(false);
                 dropObject.SetActive(true);
                 //hookTransform = other.gameObject.transform;
+
+                ArrowScript.Instance.SetTarget(dropObject.transform);
             }
         }
         else if (other.CompareTag("Drop"))
