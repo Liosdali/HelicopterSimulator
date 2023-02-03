@@ -71,11 +71,6 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         }
     }
 
-    private void Update()
-    {
-       // waitSeconds -= Time.deltaTime; 
-    }
-
     public void PlayAudio()
     {
         m_DialogueSource.Stop();
