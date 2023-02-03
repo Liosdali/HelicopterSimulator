@@ -34,6 +34,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
 
     [SerializeField] private Animator _SoldierAnimator;
+    [SerializeField] private Animator _DoorAnimator;
 
     private void Awake()
     {
@@ -67,13 +68,9 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         if (m_ListenToInput)
         {
             _SoldierAnimator.SetBool("S_Pose", true);
+            _DoorAnimator.SetBool("DoorOpen", true);
             PlayAudio();
         }
-    }
-
-    private void Update()
-    {
-       // waitSeconds -= Time.deltaTime; 
     }
 
     public void PlayAudio()
