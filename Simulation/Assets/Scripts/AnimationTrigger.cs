@@ -17,6 +17,8 @@ public class AnimationTrigger : MonoBehaviour
 
     private float waitSeconds = 3.0f;
     private bool teleport = false;
+    private bool m_AnimationPlay = false;
+
 
     public void teleportPlayer()
     {
@@ -36,7 +38,15 @@ public class AnimationTrigger : MonoBehaviour
     {
         if (teleport)
         {
+            if (waitSeconds <= 0)
+            {
                 teleportPlayer();
+                teleport = false;
+                waitSeconds = 2.0f;
+                GetComponent<AnimationTrigger>().enabled = false;
+            }
+            else
+                waitSeconds -= Time.deltaTime;
         }
     }
 
@@ -45,22 +55,22 @@ public class AnimationTrigger : MonoBehaviour
 
         if (other.CompareTag("PlayerHand"))
         {
-           teleport = true;
-           myDoor.SetTrigger("Open");
-           Destroy(locomotionSystem.GetComponent<DeviceBasedContinuousMoveProvider>());
+            teleport = true;
+            if (!m_AnimationPlay)
+            {
+                m_AnimationPlay = true;
+                myDoor.SetTrigger("Open");
+            }
+            Destroy(locomotionSystem.GetComponent<DeviceBasedContinuousMoveProvider>());
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("PlayerHand"))
-
-            // Function needs to be fixed
         {
-            teleport = false;
-            waitSeconds = 3.0f;
-            myDoor.SetTrigger("Close");
+            //teleport = false;
+            //myDoor.SetTrigger("Close");
             GetComponent<BoxCollider>().enabled = false;
-
             // Destroying object to free some memory space
             //Destroy(gameObject);
         }
