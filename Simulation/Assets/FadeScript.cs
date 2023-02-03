@@ -85,6 +85,6 @@ public class FadeScript : MonoBehaviour
         TrackOn.Instance.EnableTracking();
 
         FadeIn();
-        
+        Destroy(gameObject);
     }
 }
