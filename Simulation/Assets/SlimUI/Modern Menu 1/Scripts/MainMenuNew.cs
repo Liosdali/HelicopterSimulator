@@ -134,6 +134,9 @@ namespace SlimUI.ModernMenu{
 			}
 		}
 */
+
+		// New game uses this coroutine 
+		// Load and continue can use this func if more than one scene will be added
 		public void LoadScene(string scene){
 			if(scene != ""){
 				StartCoroutine(LoadAsynchronously(scene));
