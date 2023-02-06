@@ -258,6 +258,8 @@ namespace SlimUI.ModernMenu{
 			#endif
 		}
 
+
+		// Should create a primitive scene loader function to see if silantro scripts get broken
 		IEnumerator LoadAsynchronously(string sceneName){ // scene name is just the name of the current scene being loaded
 			AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
 			operation.allowSceneActivation = false;
