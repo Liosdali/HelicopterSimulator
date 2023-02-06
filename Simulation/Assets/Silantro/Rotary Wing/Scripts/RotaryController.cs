@@ -281,7 +281,16 @@ namespace Oyedoyin.RotaryWing
                         } 
                     } 
                 }
-                if (m_engineType == EngineType.Jet) { foreach (SilantroTurboshaft engine in m_shafts) { if (engine.state != SilantroTurboshaft.State.RUN) { engine.StartEngine(); } } }
+                if (m_engineType == EngineType.Jet) 
+                { 
+                    foreach (SilantroTurboshaft engine in m_shafts) 
+                    { 
+                        if (engine.state != SilantroTurboshaft.State.RUN) {
+                            Debug.Log("\t--Starting Engine--");
+                            engine.StartEngine(); 
+                        } 
+                    } 
+                }
             }
         }
         /// <summary>
