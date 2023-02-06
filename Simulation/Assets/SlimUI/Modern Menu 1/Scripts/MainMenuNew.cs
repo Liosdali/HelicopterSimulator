@@ -273,6 +273,10 @@ namespace SlimUI.ModernMenu{
 			AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
 			operation.allowSceneActivation = false;
 			mainCanvas.SetActive(false);
+
+			// Does not work needs to be checked
+			// Maybe this part brokes the physics
+
 			loadingMenu.SetActive(true);
 
 			while (!operation.isDone){
