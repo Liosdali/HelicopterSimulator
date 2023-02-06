@@ -279,7 +279,6 @@ namespace SlimUI.ModernMenu{
 						operation.allowSceneActivation = true;
 					}
 				}
-				
 				yield return null;
 			}
 		}
