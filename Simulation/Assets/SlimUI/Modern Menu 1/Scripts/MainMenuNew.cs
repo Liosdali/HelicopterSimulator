@@ -261,6 +261,8 @@ namespace SlimUI.ModernMenu{
 
 
 		// Very primitive only for testing
+		// Can be updated with a loading menu 
+		// This can be used from the asset
 		public void LoadNewScene(string sceneName)
         {
 			SceneManager.LoadScene(sceneName);
