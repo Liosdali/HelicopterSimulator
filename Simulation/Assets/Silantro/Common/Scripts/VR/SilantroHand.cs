@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 #if (ENABLE_INPUT_SYSTEM)
 using UnityEngine.InputSystem;
 #endif
@@ -28,9 +28,9 @@ namespace Oyedoyin.Common
         public Animator m_animator;
 
 
-        public Animator _PilotAnimator;
+        public Animator _PilotAnimator = null;
 
-        public Animator _PilotInsideAnimator;
+        public Animator _PilotInsideAnimator = null;
 
 
         [Header("Animator Keys")]
@@ -94,8 +94,11 @@ namespace Oyedoyin.Common
 
 
                     m_animator.SetFloat(m_gripName, m_currentGrip);
-                    _PilotAnimator.SetFloat(_GripName, m_currentGrip);
-                    _PilotInsideAnimator.SetFloat(_GripName, m_currentGrip);
+                    if (_PilotAnimator != null && _PilotInsideAnimator != null)
+                    {
+                        _PilotAnimator.SetFloat(_GripName, m_currentGrip);
+                        _PilotInsideAnimator.SetFloat(_GripName, m_currentGrip);
+                    }
                 }
 
                 //-------------------------------------------- Trigger
@@ -106,8 +109,11 @@ namespace Oyedoyin.Common
                     _TriggerValue = Mathf.MoveTowards(_TriggerValue,triggerValue, Time.deltaTime * m_speed);
                     
                     m_animator.SetFloat(m_triggerName, m_currentTrigger);
-                    _PilotAnimator.SetFloat(_TriggerName, m_currentTrigger);
-                    _PilotInsideAnimator.SetFloat(_TriggerName, m_currentTrigger);
+                    if (_PilotAnimator != null && _PilotInsideAnimator != null)
+                    {
+                        _PilotAnimator.SetFloat(_TriggerName, m_currentTrigger);
+                        _PilotInsideAnimator.SetFloat(_TriggerName, m_currentTrigger);
+                    }
                 }
             }
         }
