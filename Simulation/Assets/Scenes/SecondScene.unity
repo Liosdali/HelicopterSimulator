@@ -1939,7 +1939,7 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
-  coolTimer: 0
+  resetTimer: 0
 --- !u!65 &87055169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2768,7 +2768,7 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
-  coolTimer: 0
+  resetTimer: 0
 --- !u!65 &146784337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12619,7 +12619,7 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
-  coolTimer: 0
+  resetTimer: 0
 --- !u!65 &841701508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15474,7 +15474,7 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
-  coolTimer: 0
+  resetTimer: 0
 --- !u!65 &1041499005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16804,7 +16804,7 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
-  coolTimer: 0
+  resetTimer: 0
 --- !u!65 &1136015074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19242,7 +19242,7 @@ GameObject:
   m_Layer: 11
   m_Name: TeleportPos
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -19254,7 +19254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314716714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.289, y: -0.754, z: 0.412}
+  m_LocalPosition: {x: 0.289, y: -0.904, z: 0.398}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
