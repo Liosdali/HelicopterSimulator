@@ -92,6 +92,14 @@ namespace SlimUI.ModernMenu{
 			SetThemeColors();
 		}
 
+		public bool startGame = false;
+		void Update() { 
+		
+			if (startGame)
+            {
+				LoadNewScene("SecondScene");
+            }
+		}
 		void SetThemeColors(){
 			if(theme == Theme.custom1){
 				themeController.currentColor = themeController.custom1.graphic1;
