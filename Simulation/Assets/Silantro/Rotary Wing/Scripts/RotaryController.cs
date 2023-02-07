@@ -278,7 +278,8 @@ namespace Oyedoyin.RotaryWing
                 if (m_engineType == EngineType.Piston) { 
                     foreach (SilantroPiston engine in m_pistons) 
                     { if (!engine.core.active) 
-                        { engine.core.StartEngine(); 
+                        { 
+                            engine.core.StartEngine(); 
                         } 
                     } 
                 }
@@ -286,7 +287,8 @@ namespace Oyedoyin.RotaryWing
                 { 
                     foreach (SilantroTurboshaft engine in m_shafts) 
                     { 
-                        if (engine.state != SilantroTurboshaft.State.RUN) {
+                        if (engine.state != SilantroTurboshaft.State.RUN) 
+                        {
                             Debug.Log("\t--Starting Engine--");
                             engine.StartEngine(); 
                         } 
