@@ -137,12 +137,16 @@ namespace SlimUI.ModernMenu{
 
 		// New game uses this coroutine 
 		// Load and continue can use this func if more than one scene will be added
-		public void LoadScene(string scene){
-			if(scene != ""){
-				StartCoroutine(LoadAsynchronously(scene));
-			}
-		}
+		//public void LoadScene(string scene){
+		//	if(scene != ""){
+		//		StartCoroutine(LoadAsynchronously(scene));
+		//	}
+		//}
 
+		public void LoadScene(string scene)
+		{
+			LoadNewScene(scene);
+		}
 		public void  DisablePlayCampaign(){
 			playMenu.SetActive(false);
 		}
@@ -270,6 +274,7 @@ namespace SlimUI.ModernMenu{
         {
 			SceneManager.LoadScene(sceneName);
         }
+
 
 		// Should create a primitive scene loader function to see if silantro scripts get broken
 		IEnumerator LoadAsynchronously(string sceneName){ // scene name is just the name of the current scene being loaded
