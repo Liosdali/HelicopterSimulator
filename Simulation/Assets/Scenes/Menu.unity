@@ -6372,7 +6372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1579533313
 Transform:
   m_ObjectHideFlags: 0
@@ -6490,6 +6490,7 @@ MonoBehaviour:
   loadBar: {fileID: 393972673185966967}
   finishedLoadingText: {fileID: 393764845782403275}
   requireInputForNextScene: 1
+  startGame: 0
 --- !u!95 &1579533318
 Animator:
   serializedVersion: 4
@@ -27224,6 +27225,7 @@ MonoBehaviour:
   loadBar: {fileID: 393972673185966967}
   finishedLoadingText: {fileID: 393764845782403275}
   requireInputForNextScene: 1
+  startGame: 0
 --- !u!114 &393194899891421667
 MonoBehaviour:
   m_ObjectHideFlags: 0

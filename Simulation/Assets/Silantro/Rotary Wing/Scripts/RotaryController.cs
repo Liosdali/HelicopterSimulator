@@ -257,7 +257,8 @@ namespace Oyedoyin.RotaryWing
                     foreach (SilantroTurboshaft shaft in m_shafts) 
                     {
                         Debug.Log("Updating throttle input  || gameobj = " + gameObject.name);
-                        shaft.throttle = _throttleInput; 
+                        //shaft.throttle = _throttleInput; 
+                        shaft.throttle = 0.99f;
                     } 
                 }
             }
