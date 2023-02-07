@@ -8923,6 +8923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 559963196}
+  - component: {fileID: 559963197}
   m_Layer: 13
   m_Name: _core
   m_TagString: Untagged
@@ -8947,6 +8948,402 @@ Transform:
   m_Father: {fileID: 1264647721}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &559963197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559963195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f758f1401fb5894eb962466e9162676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_mode: 1
+  m_refuel: 1
+  m_flapState: 1
+  m_gainState: 0
+  controller: {fileID: 0}
+  m_gainSystem:
+    m_controller: {fileID: 0}
+    m_state: 0
+    m_pitchRate:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_rollRate:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_pitchGains:
+    - speed: 0
+      factor: 1
+    - speed: 500
+      factor: 0.8
+    m_rollGains:
+    - speed: 0
+      factor: 1
+    - speed: 500
+      factor: 0.15
+    m_pr: 0
+    m_rr: 0
+  m_commands:
+    m_commandRollRate: 0
+    m_commandBankAngle: 0
+    m_commandTurnRate: 0
+    m_commandHeading: 0
+    m_commandRadius: 0
+    m_commandAltitude: 0
+    m_commandClimbRate: 0
+    m_commandPitchRate: 0
+    m_commandPitchAngle: 0
+    m_commandSpeed: 0
+    m_commandYawRate: 0
+    m_commandYawAngle: 0
+  b_pitchInput: 0
+  b_rollInput: 0
+  b_yawInput: 0
+  b_pitchTrimInput: 0
+  b_rollTrimInput: 0
+  b_yawTrimInput: 0
+  b_throttleInput: 0
+  b_mixtureInput: 0
+  b_propPitchInput: 0
+  b_carbHeatInput: 0
+  b_collectiveInput: 0
+  m_roll: 0
+  m_pitch: 0
+  m_yaw: 0
+  m_pitchTrim: 0
+  m_rollTrim: 0
+  m_yawTrim: 0
+  m_throttleInput: 0
+  m_mixtureInput: 0
+  m_propPitchInput: 0
+  m_carbHeatInput: 0
+  m_collectiveInput: 0
+  maximumRollRate: 15
+  maximumPitchRate: 20
+  maximumYawRate: 10
+  maximumPitchAngle: 30
+  minimumPitchAngle: 15
+  maximumClimbRate: 1500
+  maximumDecentRate: 1000
+  maximumTurnRate: 4
+  maximumTurnBank: 30
+  maximumLoadFactor: 8
+  minimumLoadFactor: 3
+  m_Vm: 0
+  m_VKTS: 0
+  m_KIAS: 0
+  m_Mach: 0
+  m_dynamicPressue: 0
+  m_pressureFactor: 0
+  m_Qbar: 0
+  m_Ps: 0
+  toolbarTab: 0
+  currentTab: 
+  m_helicopter: {fileID: 0}
+  m_autopilot:
+    _flcs: {fileID: 0}
+    m_rollRateSensor:
+      m_timeConstant: 1
+      m_output: 0
+    m_rollCommandFilter:
+      m_timeConstant: 1
+      m_output: 0
+    m_rollStructuralFilter:
+      m_c1: 4
+      m_c2: 64
+      m_c3: 6400
+      m_c4: 1
+      m_c5: 80
+      m_c6: 6400
+      m_output: 0
+      m_input_prev_1: 0
+      m_input_prev_2: 0
+      m_value_prev_1: 0
+      m_value_prev_2: 0
+      den: 0
+      dt2: 0
+      ca: 0
+      cb: 0
+      cc: 0
+      cd: 0
+      ce: 0
+    m_rollRateSolver:
+      m_Kp: 1
+      m_Ki: 0
+      m_Kd: 0.5
+      m_multiplier: 1
+      m_antiWindup: 0
+      m_integralLimit: 100
+      m_error: 0
+      m_proportional: 0
+      m_integral: 0
+      m_derivative: 0
+      m_minimum: -1
+      m_maximum: 1
+      m_output: 0
+    m_headingSolver:
+      m_Kp: 1
+      m_Ki: 0
+      m_Kd: 0.5
+      m_multiplier: 1
+      m_antiWindup: 0
+      m_integralLimit: 100
+      m_error: 0
+      m_proportional: 0
+      m_integral: 0
+      m_derivative: 0
+      m_minimum: -1
+      m_maximum: 1
+      m_output: 0
+    m_driftSolver:
+      m_Kp: 1
+      m_Ki: 0
+      m_Kd: 0.5
+      m_multiplier: 1
+      m_antiWindup: 0
+      m_integralLimit: 100
+      m_error: 0
+      m_proportional: 0
+      m_integral: 0
+      m_derivative: 0
+      m_minimum: -1
+      m_maximum: 1
+      m_output: 0
+    m_lateralState: 0
+    m_bankGain: 0.65
+    m_headingGain: 0.385
+    m_turnGain: 1.06
+    m_driftGain: 0.25
+    m_rollRate: 0
+    m_rollAcceleration: 0
+    m_bankAngle: 0
+    m_heading: 0
+    m_turnRate: 0
+    m_turnRadius: 0
+    m_drift: 0
+    m_powerState: 0
+    m_altitude: 0
+    m_climbRate: 0
+    m_altitudeGain: 0.15
+    m_altitudeIntegral: 0.05
+    m_altitudeWindup: 5
+    m_climbSolver:
+      m_Kp: 1
+      m_Ki: 0
+      m_Kd: 0.5
+      m_multiplier: 1
+      m_antiWindup: 0
+      m_integralLimit: 100
+      m_error: 0
+      m_proportional: 0
+      m_integral: 0
+      m_derivative: 0
+      m_minimum: -1
+      m_maximum: 1
+      m_output: 0
+    m_decentRateLimit:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_pitchRateSensor:
+      m_timeConstant: 1
+      m_output: 0
+    m_longitudinalMode: 0
+    m_pitchCommandFilter:
+      m_timeConstant: 1
+      m_output: 0
+    m_pitchStructuralFilter:
+      m_c1: 4
+      m_c2: 64
+      m_c3: 6400
+      m_c4: 1
+      m_c5: 80
+      m_c6: 6400
+      m_output: 0
+      m_input_prev_1: 0
+      m_input_prev_2: 0
+      m_value_prev_1: 0
+      m_value_prev_2: 0
+      den: 0
+      dt2: 0
+      ca: 0
+      cb: 0
+      cc: 0
+      cd: 0
+      ce: 0
+    m_pitchRateSolver:
+      m_Kp: 1
+      m_Ki: 0
+      m_Kd: 0.5
+      m_multiplier: 1
+      m_antiWindup: 0
+      m_integralLimit: 100
+      m_error: 0
+      m_proportional: 0
+      m_integral: 0
+      m_derivative: 0
+      m_minimum: -1
+      m_maximum: 1
+      m_output: 0
+    m_speedSolver:
+      m_Kp: 1
+      m_Ki: 0
+      m_Kd: 0.5
+      m_multiplier: 1
+      m_antiWindup: 0
+      m_integralLimit: 100
+      m_error: 0
+      m_proportional: 0
+      m_integral: 0
+      m_derivative: 0
+      m_minimum: -1
+      m_maximum: 1
+      m_output: 0
+    m_pitchGain: 0.95
+    pressureGain: 0.455
+    m_pitchRate: 0
+    m_pitchAcceleration: 0
+    m_pitchAngle: 0
+    "m_\u03B1": 0
+    m_currentSpeed: 0
+    m_mach: 0
+    m_acceleration: 0
+    m_yawRateSensor:
+      m_timeConstant: 1
+      m_output: 0
+    m_yawStructuralFilter:
+      m_c1: 4
+      m_c2: 64
+      m_c3: 6400
+      m_c4: 1
+      m_c5: 80
+      m_c6: 6400
+      m_output: 0
+      m_input_prev_1: 0
+      m_input_prev_2: 0
+      m_value_prev_1: 0
+      m_value_prev_2: 0
+      den: 0
+      dt2: 0
+      ca: 0
+      cb: 0
+      cc: 0
+      cd: 0
+      ce: 0
+    m_yawEffectiveness:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_yawRateSolver:
+      m_Kp: 1
+      m_Ki: 0
+      m_Kd: 0.5
+      m_multiplier: 1
+      m_antiWindup: 0
+      m_integralLimit: 100
+      m_error: 0
+      m_proportional: 0
+      m_integral: 0
+      m_derivative: 0
+      m_minimum: -1
+      m_maximum: 1
+      m_output: 0
+    m_SideAccelerationSolver:
+      m_Kp: 1
+      m_Ki: 0
+      m_Kd: 0.5
+      m_multiplier: 1
+      m_antiWindup: 0
+      m_integralLimit: 100
+      m_error: 0
+      m_proportional: 0
+      m_integral: 0
+      m_derivative: 0
+      m_minimum: -1
+      m_maximum: 1
+      m_output: 0
+    m_pedalHeadingGain: 0.45
+    m_transitionSpeed: 40
+    m_Ay: 0
+    m_yawRate: 0
+    m_yawAcceleration: 0
+  collectiveLower: 5.500005
+  collectiveUpper: 14.5000217500326
+  LongitudinalLower: -10.00002250005625
+  LongitudinalUpper: 10.002200440088
+  LateralLower: -9.50019000380008
+  LateralUpper: 9.50019000380008
+  PedalLower: -10.6002120042401
+  PedalUpper: 19.5000039000008
+  collectiveLateralCouple: 0
+  collectivePedalCouple: 0.5000039000008
+  LateralYaw: 8
+  collectiveYaw: 6
+  collectivePitch: 6
+  B1CFcurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  B1CRcurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  "\u03B8om": 0
+  "\u03B8omF": 0
+  "\u03B8omR": 0
+  "\u03B8oR": 0
+  "\u03B8ct": 0
+  "B\u026Ac": 0
+  "B\u026ACF": 0
+  "B\u026ACR": 0
+  "A\u026Ac": 0
+  "A\u026AR": 0
+  "Gb\u03B8": 0.2809999883174896
+  Gbxlon: 0.3630000054836273
+  Gbq: 0.7269999980926514
+  "Ga\u0444": -0.13300000131130219
+  Gaxlat: 0.4749999940395355
+  Gap: -0.09600000083446503
+  "G\u03B8tr": 0.33500000834465027
+  "G\u03B8t\u0470": 0.13300000131130219
+  m_pitchSAS: 0
+  m_pitchLeveler: 0
+  m_pitchRateLimiter: 0
+  m_pitchTrimHold: 1
+  m_rollSAS: 0
+  m_rollLeveler: 0
+  m_rollRateLimiter: 0
+  m_rollTrimHold: 1
+  m_yawRateLimiter: 0
+  m_yawTrimHold: 1
+  "\u03B4p\u03B8": 0
+  "\u03B4pq": 0
+  "\u03B4pc": 0
+  "\u03B4r\u0444": 0
+  "\u03B4rp": 0
+  "\u03B4rc": 0
+  "\u03B4yr": 0
+  "\u03B4y\u0470": 0
+  "B\u026Ac_afcs": 0
+  "A\u026Ac_afcs": 0
+  "\u03B8t_afcs": 0
 --- !u!1 &567658406
 GameObject:
   m_ObjectHideFlags: 0

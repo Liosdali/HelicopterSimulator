@@ -284,6 +284,7 @@ namespace Oyedoyin.RotaryWing
             }
             if (interiorSource != null)
             {
+
                 if (m_controller != null && m_controller.m_view != null) { mxtv = m_interiorVolume * m_controller.m_view.maximumInteriorVolume; }
                 else { mxtv = m_interiorVolume; }
                 interiorSource.volume = mxtv;
