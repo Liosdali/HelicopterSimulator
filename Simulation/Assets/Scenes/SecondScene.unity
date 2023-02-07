@@ -23506,7 +23506,7 @@ PrefabInstance:
     - target: {fileID: -7604561236916010465, guid: dbaaed9dd995f5d4bba9b5256587289c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 6071477566412462192, guid: df1b545459f5b604f9e309d48fad499a, type: 3}
+      objectReference: {fileID: 2100000, guid: 5a94bbfe50a8a3541a324a6821da8839, type: 2}
     - target: {fileID: 919132149155446097, guid: dbaaed9dd995f5d4bba9b5256587289c, type: 3}
       propertyPath: m_Name
       value: Helicopter1
