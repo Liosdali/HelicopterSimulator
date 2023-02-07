@@ -1841,7 +1841,7 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
-  coolTimer: 0
+  resetTimer: 0
 --- !u!65 &87055169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2445,7 +2445,7 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
-  coolTimer: 0
+  resetTimer: 0
 --- !u!65 &146784337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3281,6 +3281,8 @@ MonoBehaviour:
   _FadeAway: {fileID: 0}
   inputActions: {fileID: -944628639613478452, guid: e961173cc5f3a654f82bb8706cdd68a4, type: 3}
   m_DialogueSource: {fileID: 0}
+  _SoldierAnimator: {fileID: 0}
+  _DoorAnimator: {fileID: 0}
 --- !u!114 &202349521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5483,6 +5485,9 @@ MonoBehaviour:
   pilotSeat: {fileID: 1314716715}
   pilot: {fileID: 2719126340277858933}
   locomotionSystem: {fileID: 1918860381}
+  m_PilotOutsideModel: {fileID: 0}
+  m_PilotInsideModel: {fileID: 0}
+  m_UICanvas: {fileID: 0}
 --- !u!65 &306967195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9665,7 +9670,7 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
-  coolTimer: 0
+  resetTimer: 0
 --- !u!65 &841701508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11780,7 +11785,7 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
-  coolTimer: 0
+  resetTimer: 0
 --- !u!65 &1041499005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12666,7 +12671,7 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
-  coolTimer: 0
+  resetTimer: 0
 --- !u!65 &1136015074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26656,7 +26661,7 @@ MonoBehaviour:
   distortionEmissionLimit: 20
   start: 0
   stop: 0
-  throttle: 0
+  throttle: 0.6
   m_runTime: 0
   m_corePower: 0
   load: 0
@@ -38036,6 +38041,7 @@ MonoBehaviour:
   m_handType: 0
   m_animator: {fileID: 1951208115}
   _PilotAnimator: {fileID: 0}
+  _PilotInsideAnimator: {fileID: 0}
   m_gripName: Grip
   m_triggerName: Trigger
   m_speed: 10
@@ -38169,6 +38175,7 @@ MonoBehaviour:
   m_handType: 1
   m_animator: {fileID: 1937672834}
   _PilotAnimator: {fileID: 0}
+  _PilotInsideAnimator: {fileID: 0}
   m_gripName: Grip
   m_triggerName: Trigger
   m_speed: 10
