@@ -92,14 +92,6 @@ namespace SlimUI.ModernMenu{
 			SetThemeColors();
 		}
 
-		public bool startGame = false;
-		void Update() { 
-		
-			if (startGame)
-            {
-				LoadNewScene("SecondScene");
-            }
-		}
 		void SetThemeColors(){
 			if(theme == Theme.custom1){
 				themeController.currentColor = themeController.custom1.graphic1;
@@ -142,19 +134,12 @@ namespace SlimUI.ModernMenu{
 			}
 		}
 */
-
-		// New game uses this coroutine 
-		// Load and continue can use this func if more than one scene will be added
-		//public void LoadScene(string scene){
-		//	if(scene != ""){
-		//		StartCoroutine(LoadAsynchronously(scene));
-		//	}
-		//}
-
-		public void LoadScene(string scene)
-		{
-			LoadNewScene(scene);
+		public void LoadScene(string scene){
+			if(scene != ""){
+				StartCoroutine(LoadAsynchronously(scene));
+			}
 		}
+
 		public void  DisablePlayCampaign(){
 			playMenu.SetActive(false);
 		}
@@ -273,26 +258,10 @@ namespace SlimUI.ModernMenu{
 			#endif
 		}
 
-
-
-		// Very primitive only for testing
-		// Can be updated with a loading menu 
-		// This can be used from the asset
-		public void LoadNewScene(string sceneName)
-        {
-			SceneManager.LoadScene(sceneName);
-        }
-
-
-		// Should create a primitive scene loader function to see if silantro scripts get broken
 		IEnumerator LoadAsynchronously(string sceneName){ // scene name is just the name of the current scene being loaded
 			AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
 			operation.allowSceneActivation = false;
 			mainCanvas.SetActive(false);
-
-			// Does not work needs to be checked
-			// Maybe this part brokes the physics
-
 			loadingMenu.SetActive(true);
 
 			while (!operation.isDone){
@@ -310,6 +279,7 @@ namespace SlimUI.ModernMenu{
 						operation.allowSceneActivation = true;
 					}
 				}
+				
 				yield return null;
 			}
 		}
