@@ -258,6 +258,7 @@ namespace Oyedoyin.RotaryWing
                     {
                         Debug.Log("Updating throttle input  || gameobj = " + gameObject.name);
                         shaft.throttle = _throttleInput; 
+                        
                     } 
                 }
             }
@@ -300,7 +301,6 @@ namespace Oyedoyin.RotaryWing
         #endregion
     }
     #endregion
-
     #region Editor
 
 #if UNITY_EDITOR
