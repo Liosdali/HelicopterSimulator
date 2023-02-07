@@ -78,7 +78,8 @@ public class SilantroButton : MonoBehaviour
     public float pressDistance = 100f;
     public float flipAmount = 20f;
     public float coolDownTime = 4f;
-    public float coolTimer; 
+    private float coolTimer;
+    public float resetTimer;
 
 
 
@@ -127,25 +128,15 @@ public class SilantroButton : MonoBehaviour
         }
         if (buttonAction == ButtonAction.Press)
         {
-            if (this.transform.localPosition != targetPosition) { this.transform.localPosition = Vector3.MoveTowards(this.transform.localPosition, targetPosition, Time.deltaTime * 3); }
+            if (this.transform.localPosition != targetPosition) 
+            { 
+                this.transform.localPosition = Vector3.MoveTowards(this.transform.localPosition, targetPosition, Time.deltaTime * 3); 
+            }
         }
-        coolTimer += Time.deltaTime;
+
+        coolTimer -= Time.deltaTime;
+    
     }
-
-
-
-    // ----------------------------------------------------------------------------------------------------------------------------------------------------------
-    void OnMouseEnter()
-    {
-        //Cursor.SetCursor(buttonCursor, offset, CursorMode.Auto);
-    }
-
-    // ----------------------------------------------------------------------------------------------------------------------------------------------------------
-    void OnMouseExit()
-    {
-        //  Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-    }
-
 
     // ----------------------------------------------------------------------------------------------------------------------------------------------------------
     public void TurnButtonOff()
@@ -186,6 +177,7 @@ public class SilantroButton : MonoBehaviour
     // ----------------------------------------------------------------------------------------------------------------------------------------------------------
     public void ToggleButton()
     {
+        coolTimer = resetTimer; 
         if (state == CurrentState.ButtonOn) { TurnButtonOff(); }
         else { TurnButtonOn(); }
     }
@@ -249,7 +241,8 @@ public class SilantroButton : MonoBehaviour
         {
             //If Player Touches it will change the 
             //switch_Hit = true;
-            ToggleButton();
+            if (coolTimer <= 0)
+                ToggleButton();
         }
     }
 }
@@ -301,6 +294,7 @@ public class SilantroButtonEditor : Editor
             EditorGUILayout.PropertyField(serializedObject.FindProperty("pressDistance"), new GUIContent("Press Distance"));
             GUILayout.Space(3f);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("clickSound"), new GUIContent("Press Sound"));
+
         }
         if (button.buttonAction == SilantroButton.ButtonAction.Flip)
         {
@@ -321,7 +315,8 @@ public class SilantroButtonEditor : Editor
 
         GUILayout.Space(5f);
         EditorGUILayout.PropertyField(serializedObject.FindProperty("coolDownTime"), new GUIContent("Press Timer"));
-
+        GUILayout.Space(5f);
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("resetTimer"), new GUIContent("Button Press Time"));
 
         GUILayout.Space(10f);
         GUI.color = silantroColor;
