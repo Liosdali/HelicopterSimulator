@@ -227,7 +227,6 @@ namespace Oyedoyin.Common
                 {
                     if (leverAxis == RotationAxis.X) { leverOutput = leverAxisState == AxisState.Inverted ? 1 - ((-value.x + 1) / 2) : (-value.x + 1) / 2; }
                     if (leverAxis == RotationAxis.Y) { leverOutput = leverAxisState == AxisState.Inverted ? 1 - ((-value.y + 1) / 2) : (-value.y + 1) / 2; }
-                    Debug.Log("Lever Output is = " + leverOutput);
                 }
             }
             if (m_mode == LeverMode.SlideOnly)

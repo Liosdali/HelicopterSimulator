@@ -143,7 +143,9 @@ namespace Oyedoyin.Common
             currentSpeed = (float)controller.m_core.Vkts;
 
             // ---------------------------------------------- SURFACE CHECK
-            if (checkingSurfaces) { CheckControlSurfaces(inputCheckFactor); }
+            if (checkingSurfaces) { //CheckControlSurfaces(inputCheckFactor);
+
+            }
         }
 
 
@@ -247,6 +249,7 @@ namespace Oyedoyin.Common
         {
             if (checkingSurfaces)
             {
+                Debug.Log("Checking is in disable it ");
                 currentTestTime -= Time.deltaTime;
                 if (currentTestTime < 0) { currentTestTime = 0f; }
 

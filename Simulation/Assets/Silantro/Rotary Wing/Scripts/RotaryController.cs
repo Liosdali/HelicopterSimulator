@@ -256,10 +256,11 @@ namespace Oyedoyin.RotaryWing
                 { 
                     foreach (SilantroTurboshaft shaft in m_shafts) 
                     {
-                        
-                        shaft.throttle = _throttleInput;
-                        Debug.Log("Updating throttle input  || _throttleInput = " + _throttleInput);
-                        Debug.Log("Updating throttle input  || gameobj = " + gameObject.name);
+
+                        if (_throttleInput > 0.8f)
+                            shaft.throttle = 1f;
+                        else
+                            shaft.throttle = _throttleInput;
                         Debug.Log("Updating throttle input  || shaft.throttle = " + shaft.throttle);
                     } 
                 }
