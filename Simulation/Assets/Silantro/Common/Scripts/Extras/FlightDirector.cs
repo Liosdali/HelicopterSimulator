@@ -249,7 +249,6 @@ namespace Oyedoyin.Common
         {
             if (checkingSurfaces)
             {
-                Debug.Log("Checking is in disable it ");
                 currentTestTime -= Time.deltaTime;
                 if (currentTestTime < 0) { currentTestTime = 0f; }
 
