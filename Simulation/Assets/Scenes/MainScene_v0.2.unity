@@ -11814,7 +11814,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-312574
+  m_Name: pb_Mesh-6238
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27604,7 +27604,7 @@ GameObject:
   - component: {fileID: 1659706822}
   - component: {fileID: 1659706821}
   m_Layer: 13
-  m_Name: throttle
+  m_Name: Collective (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27664,7 +27664,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659706820}
-  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.047, y: -0.27086186, z: 0.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -27672,7 +27672,7 @@ Transform:
   - {fileID: 1097543002}
   m_Father: {fileID: 1976388458}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1001 &1664230755
 PrefabInstance:
   m_ObjectHideFlags: 0
