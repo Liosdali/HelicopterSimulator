@@ -227,7 +227,18 @@ namespace Oyedoyin.Common
             {
                 // Collect and Send Inputs
                 if (m_collectiveLever != null) { _collectiveInput = m_collectiveLever.leverOutput; }
-                if (m_throttleLever != null) { _throttleInput = m_throttleLever.leverOutput; } else { _throttleInput = 1; }
+
+                if (m_throttleLever != null) 
+                {
+                    
+                    _throttleInput = m_throttleLever.leverOutput;
+                    Debug.Log("Throttle level is = " + _throttleInput);
+                } 
+                else 
+                { 
+                    _throttleInput = 1; 
+                }
+
                 if (m_propPitchLever != null) { _propPitchInput = m_propPitchLever.leverOutput; }
                 if (m_mixtureLever != null) { _mixtureInput = m_mixtureLever.leverOutput; }
 
