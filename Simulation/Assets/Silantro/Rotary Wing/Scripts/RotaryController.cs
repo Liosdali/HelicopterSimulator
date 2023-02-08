@@ -250,15 +250,17 @@ namespace Oyedoyin.RotaryWing
             if(allOk)
             {
                 base.UpdateComponentInputs();
-                Debug.Log("Updating throttle inputs = " + allOk);
+                
                 // Turboshaft
                 if (m_shafts != null) 
                 { 
                     foreach (SilantroTurboshaft shaft in m_shafts) 
                     {
-                        Debug.Log("Updating throttle input  || gameobj = " + gameObject.name);
-                        shaft.throttle = _throttleInput; 
                         
+                        shaft.throttle = _throttleInput;
+                        Debug.Log("Updating throttle input  || _throttleInput = " + _throttleInput);
+                        Debug.Log("Updating throttle input  || gameobj = " + gameObject.name);
+                        Debug.Log("Updating throttle input  || shaft.throttle = " + shaft.throttle);
                     } 
                 }
             }
