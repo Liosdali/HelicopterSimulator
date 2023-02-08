@@ -634,7 +634,9 @@ namespace Oyedoyin.Common
         protected virtual void UpdateComponentInputs()
         {
             if (_mixtureInput < 0.01f) { _mixtureInput = 0.01f; }
-            if (_throttleInput < 0.01f) { _throttleInput = 0.01f; }
+            if (_throttleInput < 0.01f) { 
+                _throttleInput = 0.01f; 
+            }
             if (_propPitchInput < 0.01f) { _propPitchInput = 0.01f; }
             // Cockpit Instruments
             foreach (SilantroInstrument instrument in m_instruments)

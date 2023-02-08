@@ -230,9 +230,7 @@ namespace Oyedoyin.Common
 
                 if (m_throttleLever != null) 
                 {
-                    
                     _throttleInput = m_throttleLever.leverOutput;
-                    Debug.Log("Throttle level is = " + _throttleInput);
                 } 
                 else 
                 { 
