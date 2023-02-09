@@ -806,6 +806,10 @@ namespace Oyedoyin.Common
         /// <param name="input_throttle"></param>
         /// <param name="input_propellerPitch"></param>
         /// <param name="input_mixture"></param>
+        /// 
+
+        //Input system will be changed 
+
         public void SendCustomAircraftInputs(float input_pitch, float input_roll, float input_yaw, float input_throttle, float input_propellerPitch, float input_mixture)
         {
             if (m_inputType != InputType.Custom) { m_inputType = InputType.Custom; }
