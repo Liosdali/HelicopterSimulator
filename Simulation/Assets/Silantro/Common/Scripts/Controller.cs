@@ -880,6 +880,8 @@ namespace Oyedoyin.Common
         /// <summary>
         /// 
         /// </summary>
+        /// 
+        // Is'nt needed 
         public void SwitchWeapon()
         {
             m_weaponState += 1;
