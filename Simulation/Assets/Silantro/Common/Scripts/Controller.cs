@@ -223,6 +223,8 @@ namespace Oyedoyin.Common
         /// <summary>
         /// 
         /// </summary>
+        /// 
+        //Git speedrun
         protected virtual void Initialize()
         {
             // Collect base components
