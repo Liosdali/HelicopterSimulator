@@ -23,6 +23,9 @@ namespace Oyedoyin.RotaryWing
         public Fuselage m_fuselage;
         public SilantroGearbox m_gearbox;
 
+        
+        public SilantroLever throttleLeverAssign;
+
         public SilantroRotor[] m_rotors;
         public SilantroTurboshaft[] m_shafts;
         public SilantroStabilizer[] m_stabilizers;
@@ -51,6 +54,8 @@ namespace Oyedoyin.RotaryWing
         protected override void Initialize()
         {
             base.Initialize();
+
+            base.InitializeThrottle();
 
             // Collect Components
             m_helicopter = GetComponent<RotaryController>();
@@ -256,11 +261,12 @@ namespace Oyedoyin.RotaryWing
                 { 
                     foreach (SilantroTurboshaft shaft in m_shafts) 
                     {
-                        if (_throttleInput > 0.8f)
-                            shaft.throttle = 1f;
-                        else
-                            shaft.throttle = _throttleInput;
+                        //if (_throttleInput > 0.8f)
+                        //    shaft.throttle = 1f;
+                        //else
 
+                        shaft.throttle = _throttleInput;
+                        Debug.Log("Throttle Input = " + _throttleInput + " Shaft Throttle = " + shaft.throttle);
 
                         //Works
                         //shaft.throttle = _collectiveInput;

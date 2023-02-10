@@ -167,7 +167,7 @@ namespace Oyedoyin.RotaryWing
             if (state == State.RUN) 
             {
                 Ωtarget = Ω0 * (idleRatio + (1.0 - idleRatio) * throttle);
-                Debug.Log("Throttle level = " + throttle + "\nTarget Omega = " + Ωtarget);
+                //Debug.Log("Throttle level = " + throttle + "\nTarget Omega = " + Ωtarget);
             }
             else { Ωtarget = 0; }
             m_state.y = Ω - Ωtarget;
@@ -425,7 +425,8 @@ namespace Oyedoyin.RotaryWing
             GUILayout.Space(3f);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("accelerationTorque"), new GUIContent("Acceleration Torque (Nm)"));
             GUILayout.Space(3f);
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("throttle"), new GUIContent("Throttle"));
+            //EditorGUILayout.PropertyField(serializedObject.FindProperty("throttle"), new GUIContent("Throttle"));
+            EditorGUILayout.LabelField("Throttle", prop.throttle.ToString("0.00") + " --");
             GUILayout.Space(3f);
             EditorGUILayout.LabelField("Start RPM Threshold ", prop.accelerationRPM.ToString("0.00") + " RPM");
             GUILayout.Space(3f);
