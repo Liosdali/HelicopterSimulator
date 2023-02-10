@@ -223,6 +223,8 @@ namespace Oyedoyin.Common
         /// <summary>
         /// 
         /// </summary>
+        /// 
+        //Git speedrun
         protected virtual void Initialize()
         {
             // Collect base components
@@ -634,7 +636,9 @@ namespace Oyedoyin.Common
         protected virtual void UpdateComponentInputs()
         {
             if (_mixtureInput < 0.01f) { _mixtureInput = 0.01f; }
-            if (_throttleInput < 0.01f) { _throttleInput = 0.01f; }
+            if (_throttleInput < 0.01f) { 
+                _throttleInput = 0.01f; 
+            }
             if (_propPitchInput < 0.01f) { _propPitchInput = 0.01f; }
             // Cockpit Instruments
             foreach (SilantroInstrument instrument in m_instruments)
@@ -804,6 +808,10 @@ namespace Oyedoyin.Common
         /// <param name="input_throttle"></param>
         /// <param name="input_propellerPitch"></param>
         /// <param name="input_mixture"></param>
+        /// 
+
+        //Input system will be changed 
+
         public void SendCustomAircraftInputs(float input_pitch, float input_roll, float input_yaw, float input_throttle, float input_propellerPitch, float input_mixture)
         {
             if (m_inputType != InputType.Custom) { m_inputType = InputType.Custom; }
@@ -874,6 +882,8 @@ namespace Oyedoyin.Common
         /// <summary>
         /// 
         /// </summary>
+        /// 
+        // Is'nt needed 
         public void SwitchWeapon()
         {
             m_weaponState += 1;
