@@ -94,9 +94,13 @@ namespace Oyedoyin.Common
 
 
                     m_animator.SetFloat(m_gripName, m_currentGrip);
-                    if (_PilotAnimator != null && _PilotInsideAnimator != null)
+                    if (_PilotAnimator != null)
                     {
                         _PilotAnimator.SetFloat(_GripName, m_currentGrip);
+                    }
+
+                    if (_PilotInsideAnimator != null)
+                    {
                         _PilotInsideAnimator.SetFloat(_GripName, m_currentGrip);
                     }
                 }
@@ -109,9 +113,17 @@ namespace Oyedoyin.Common
                     _TriggerValue = Mathf.MoveTowards(_TriggerValue,triggerValue, Time.deltaTime * m_speed);
                     
                     m_animator.SetFloat(m_triggerName, m_currentTrigger);
-                    if (_PilotAnimator != null && _PilotInsideAnimator != null)
+
+                    if (_PilotAnimator != null)
                     {
+                        // Easter egg murat hocam anıl gey
                         _PilotAnimator.SetFloat(_TriggerName, m_currentTrigger);
+                    }
+
+
+                    if (_PilotInsideAnimator != null)
+                    {
+                        
                         _PilotInsideAnimator.SetFloat(_TriggerName, m_currentTrigger);
                     }
                 }
