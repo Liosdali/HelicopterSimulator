@@ -105,12 +105,12 @@ namespace Oyedoyin.Common
 
                             break;
                         case LeverAnimType.ControlStick:
-
+                            m_animator
                             break;
 
-                            default:
+                        default:
 
-                            Debug.Log("Hand Anim Fail");
+                        Debug.Log("Hand Anim Fail");
                     }
                 }
             }
