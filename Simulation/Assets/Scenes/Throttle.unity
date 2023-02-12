@@ -3109,7 +3109,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166964599}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -18404,6 +18404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66cb9973f00b1f94394c6023ea42640f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationType: 0
   m_mode: 0
   leverType: 2
   leverAction: 1
@@ -25599,6 +25600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66cb9973f00b1f94394c6023ea42640f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationType: 0
   m_mode: 0
   leverType: 0
   leverAction: 0
@@ -26215,6 +26217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66cb9973f00b1f94394c6023ea42640f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationType: 0
   m_mode: 0
   leverType: 3
   leverAction: 1
@@ -34241,6 +34244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66cb9973f00b1f94394c6023ea42640f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationType: 0
   m_mode: 0
   leverType: 2
   leverAction: 1
@@ -47849,12 +47853,13 @@ MonoBehaviour:
   m_handType: 0
   m_animator: {fileID: 1951208115}
   _PilotAnimator: {fileID: 0}
-  _PilotInsideAnimator: {fileID: 0}
+  _PilotSnapAnimator: {fileID: 0}
   m_gripName: Grip
   m_triggerName: Trigger
   m_speed: 10
   gripValue: 0
   triggerValue: 0
+  m_animatorType: 0
 --- !u!65 &2719126339666897809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47985,12 +47990,13 @@ MonoBehaviour:
   m_handType: 1
   m_animator: {fileID: 1937672834}
   _PilotAnimator: {fileID: 0}
-  _PilotInsideAnimator: {fileID: 0}
+  _PilotSnapAnimator: {fileID: 0}
   m_gripName: Grip
   m_triggerName: Trigger
   m_speed: 10
   gripValue: 0
   triggerValue: 0
+  m_animatorType: 0
 --- !u!1 &2719126339958320701
 GameObject:
   m_ObjectHideFlags: 0
