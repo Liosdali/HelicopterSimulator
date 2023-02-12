@@ -138,17 +138,6 @@ namespace Oyedoyin.Common
 
                 m_animator.SetFloat(m_gripName, m_currentGrip);
                 _PilotAnimator.SetFloat(_GripName, m_currentGrip);
-
-
-                //if (_PilotAnimator != null)
-                //{
-                //    _PilotAnimator.SetFloat(_GripName, m_currentGrip);
-                //}
-
-                //if (_PilotInsideAnimator != null)
-                //{
-                //    _PilotInsideAnimator.SetFloat(_GripName, m_currentGrip);
-                //}
             }
         }
 
