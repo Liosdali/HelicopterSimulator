@@ -50,12 +50,21 @@ namespace Oyedoyin.Common
         /// </summary>
         /// 
 
+        public LeverAnimType m_animatorType;
+
 
         private string _GripName;
         private float _GripValue;
 
         private string _TriggerName;
         private float _TriggerValue;
+
+        private bool _AnimEnabled;
+
+        public void SetAnimBool(bool anim)
+        {
+            _AnimEnabled = anim;
+        }
 
 
         private void Start()
@@ -73,13 +82,13 @@ namespace Oyedoyin.Common
         protected void Update()
         {
 
-#if VR_ACTIVE
-        if (m_controller != null)
-        {
-            m_controller.inputDevice.TryReadSingleValue(m_gripButton, out gripValue);
-            m_controller.inputDevice.TryReadSingleValue(m_triggerButton, out triggerValue);
-        } 
-#endif
+        #if VR_ACTIVE
+            if (m_controller != null)
+            {
+                m_controller.inputDevice.TryReadSingleValue(m_gripButton, out gripValue);
+                m_controller.inputDevice.TryReadSingleValue(m_triggerButton, out triggerValue);
+            } 
+        #endif
 
             if (m_animator != null)
             { 
@@ -116,7 +125,6 @@ namespace Oyedoyin.Common
 
                     if (_PilotAnimator != null)
                     {
-                        // Easter egg murat hocam anıl gey
                         _PilotAnimator.SetFloat(_TriggerName, m_currentTrigger);
                     }
 

@@ -3,9 +3,16 @@
 using UnityEditor;
 #endif
 
+
+
+
 namespace Oyedoyin.Common
 {
+
+
     #region Component
+
+    public enum LeverAnimType { Lever, ControlStick }
 
     /// <summary>
     /// 
