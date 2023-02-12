@@ -93,7 +93,7 @@ namespace Oyedoyin.Common
             {
                 if (!_AnimEnabled)
                 {
-                    _PilotSnapAnimator.gameObject.SetActive(false);
+                    if (_PilotSnapAnimator != null) { _PilotSnapAnimator.gameObject.SetActive(false); }
                     _PilotAnimator.gameObject.SetActive(true);
                     GripValues();
                     TriggerValues();
@@ -101,7 +101,7 @@ namespace Oyedoyin.Common
                 else
                 {
 
-                    _PilotSnapAnimator.gameObject.SetActive(true);
+                    if (_PilotSnapAnimator != null) { _PilotSnapAnimator.gameObject.SetActive(true); }
                     _PilotAnimator.gameObject.SetActive(false);
 
                     switch (m_animatorType)
@@ -164,15 +164,6 @@ namespace Oyedoyin.Common
 
                 m_animator.SetFloat(m_triggerName, m_currentTrigger);
                 _PilotAnimator.SetFloat(_TriggerName, m_currentTrigger);
-
-                //if (_PilotAnimator != null)
-                //{
-                //    _PilotAnimator.SetFloat(_TriggerName, m_currentTrigger);
-                //}
-                //if (_PilotInsideAnimator != null)
-                //{                       
-                //    _PilotInsideAnimator.SetFloat(_TriggerName, m_currentTrigger);
-                //}
             }
         }
     }
