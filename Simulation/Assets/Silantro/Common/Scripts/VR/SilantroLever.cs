@@ -26,7 +26,6 @@ namespace Oyedoyin.Common
         public enum LeverAction { SelfCentering, NonCentering }
         public enum RotationAxis { X, Y, Z }
 
-        public enum LeverAnimType { Lever, ControlStick }
 
 
         public LeverAnimType animationType = LeverAnimType.Lever;
@@ -103,10 +102,16 @@ namespace Oyedoyin.Common
                     if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
                     {
                         leverHeld = true;
+                        m_controller.SetAnimBool(true);
+
+
+
                     }
                     else
                     {
+                        m_controller.SetAnimBool(false);
                         leverHeld = false;
+                        
                     }
                 }
 
@@ -130,7 +135,9 @@ namespace Oyedoyin.Common
             if (other.CompareTag("PlayerHand"))
             {
                 leverHeld = false;
+                m_controller.SetAnimBool(false);
                 m_controller = null;
+                
             }
         }
         /// <summary>
