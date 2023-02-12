@@ -19,6 +19,10 @@ namespace Oyedoyin.Common
         public enum LeverAction { SelfCentering, NonCentering }
         public enum RotationAxis { X, Y, Z }
 
+        public enum LeverAnimType { Lever, ControlStick }
+
+
+        public LeverAnimType animationType = LeverAnimType.Lever;
         public LeverMode m_mode = LeverMode.RotateOnly;
         public LeverType leverType = LeverType.ControlStick;
         public LeverAction leverAction = LeverAction.NonCentering;
@@ -288,6 +292,11 @@ namespace Oyedoyin.Common
             GUILayout.Space(3f);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("leverType"), new GUIContent("Type"));
             GUILayout.Space(3f);
+
+
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("animationType"), new GUIContent("Hand Snap Anim Type"));
+            GUILayout.Space(3f);
+
             EditorGUILayout.PropertyField(serializedObject.FindProperty("m_mode"), new GUIContent("Mode"));
             if (lever.leverType == SilantroLever.LeverType.ControlStick ||
                lever.leverType == SilantroLever.LeverType.ControlYoke)
