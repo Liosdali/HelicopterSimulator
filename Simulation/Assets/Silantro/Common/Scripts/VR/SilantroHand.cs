@@ -29,7 +29,6 @@ namespace Oyedoyin.Common
 
 
         public Animator _PilotAnimator = null;
-
         public Animator _PilotSnapAnimator = null;
 
 
@@ -94,11 +93,17 @@ namespace Oyedoyin.Common
             {
                 if (!_AnimEnabled)
                 {
+                    _PilotSnapAnimator.gameObject.SetActive(false);
+                    _PilotAnimator.gameObject.SetActive(true);
                     GripValues();
                     TriggerValues();
                 }
                 else
                 {
+
+                    _PilotSnapAnimator.gameObject.SetActive(true);
+                    _PilotAnimator.gameObject.SetActive(false);
+
                     switch (m_animatorType)
                     {
                         case LeverAnimType.Lever:
