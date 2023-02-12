@@ -91,50 +91,78 @@ namespace Oyedoyin.Common
         #endif
 
             if (m_animator != null)
-            { 
-                //-------------------------------------------- Grip
-                if (m_currentGrip != gripValue)
+            {
+                if (!_AnimEnabled)
                 {
-                    m_currentGrip = Mathf.MoveTowards(m_currentGrip,
-                        gripValue, Time.deltaTime * m_speed);
-
-                    _GripValue = Mathf.MoveTowards(_GripValue,
-                        gripValue, Time.deltaTime * m_speed);
-
-
-                    m_animator.SetFloat(m_gripName, m_currentGrip);
-                    if (_PilotAnimator != null)
+                    GripValues();
+                    TriggerValues();
+                }
+                else
+                {
+                    switch (m_animatorType)
                     {
-                        _PilotAnimator.SetFloat(_GripName, m_currentGrip);
-                    }
+                        case LeverAnimType.Lever:
 
-                    if (_PilotInsideAnimator != null)
-                    {
-                        _PilotInsideAnimator.SetFloat(_GripName, m_currentGrip);
+                            break;
+                        case LeverAnimType.ControlStick:
+
+                            break;
+
+                            default:
+
+                            Debug.Log("Hand Anim Fail");
                     }
                 }
-
-                //-------------------------------------------- Trigger
-                if (m_currentTrigger != triggerValue)
-                {
-                    // Setting trigger value for the hand  
-                    m_currentTrigger = Mathf.MoveTowards(m_currentTrigger,triggerValue, Time.deltaTime * m_speed);           
-                    _TriggerValue = Mathf.MoveTowards(_TriggerValue,triggerValue, Time.deltaTime * m_speed);
-                    
-                    m_animator.SetFloat(m_triggerName, m_currentTrigger);
-
-                    if (_PilotAnimator != null)
-                    {
-                        _PilotAnimator.SetFloat(_TriggerName, m_currentTrigger);
-                    }
+            }
+        }
 
 
-                    if (_PilotInsideAnimator != null)
-                    {
-                        
-                        _PilotInsideAnimator.SetFloat(_TriggerName, m_currentTrigger);
-                    }
-                }
+
+
+        private void GripValues()
+        {
+            //-------------------------------------------- Grip
+            if (m_currentGrip != gripValue)
+            {
+                m_currentGrip = Mathf.MoveTowards(m_currentGrip,
+                    gripValue, Time.deltaTime * m_speed);
+
+                _GripValue = Mathf.MoveTowards(_GripValue,
+                    gripValue, Time.deltaTime * m_speed);
+
+
+                m_animator.SetFloat(m_gripName, m_currentGrip);
+                //if (_PilotAnimator != null)
+                //{
+                //    _PilotAnimator.SetFloat(_GripName, m_currentGrip);
+                //}
+
+                //if (_PilotInsideAnimator != null)
+                //{
+                //    _PilotInsideAnimator.SetFloat(_GripName, m_currentGrip);
+                //}
+            }
+        }
+
+
+        private void TriggerValues()
+        {
+            //-------------------------------------------- Trigger
+            if (m_currentTrigger != triggerValue)
+            {
+                // Setting trigger value for the hand  
+                m_currentTrigger = Mathf.MoveTowards(m_currentTrigger, triggerValue, Time.deltaTime * m_speed);
+                _TriggerValue = Mathf.MoveTowards(_TriggerValue, triggerValue, Time.deltaTime * m_speed);
+
+                m_animator.SetFloat(m_triggerName, m_currentTrigger);
+                //if (_PilotAnimator != null)
+                //{
+                //    _PilotAnimator.SetFloat(_TriggerName, m_currentTrigger);
+                //}
+                //if (_PilotInsideAnimator != null)
+                //{                       
+                //    _PilotInsideAnimator.SetFloat(_TriggerName, m_currentTrigger);
+                //}
             }
         }
     }
