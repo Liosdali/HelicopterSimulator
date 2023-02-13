@@ -107,10 +107,12 @@ namespace Oyedoyin.Common
                     switch (m_animatorType)
                     {
                         case LeverAnimType.Lever:
-                            _PilotSnapAnimator.SetTrigger("");
+                            //_PilotSnapAnimator.SetTrigger("");
+                            Debug.Log("Lever Animation");
                             break;
                         case LeverAnimType.ControlStick:
-                            _PilotSnapAnimator.SetTrigger("");
+                            Debug.Log("Control stick animation");
+                            //_PilotSnapAnimator.SetTrigger("");
                             break;
 
                         default:
@@ -137,7 +139,8 @@ namespace Oyedoyin.Common
 
 
                 m_animator.SetFloat(m_gripName, m_currentGrip);
-                _PilotAnimator.SetFloat(_GripName, m_currentGrip);
+
+                if ( _PilotAnimator != null ) _PilotAnimator.SetFloat(_GripName, m_currentGrip);
             }
         }
 
@@ -152,7 +155,8 @@ namespace Oyedoyin.Common
                 _TriggerValue = Mathf.MoveTowards(_TriggerValue, triggerValue, Time.deltaTime * m_speed);
 
                 m_animator.SetFloat(m_triggerName, m_currentTrigger);
-                _PilotAnimator.SetFloat(_TriggerName, m_currentTrigger);
+
+                if (_PilotAnimator != null) _PilotAnimator.SetFloat(_TriggerName, m_currentTrigger);
             }
         }
     }
