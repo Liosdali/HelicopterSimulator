@@ -467,7 +467,7 @@ namespace Oyedoyin.Common
                 if (m_input != null)
                 {
                     if (m_input.m_collectiveLever != null) { m_input.m_collectiveLever.Initialize(); }
-                    //if (m_input.m_throttleLever != null) { m_input.m_throttleLever.Initialize(); }
+                    if (m_input.m_throttleLever != null) { m_input.m_throttleLever.Initialize(); }
                     if (m_input.m_propPitchLever != null) { m_input.m_propPitchLever.Initialize(); }
                     if (m_input.m_mixtureLever != null) { m_input.m_mixtureLever.Initialize(); }
                     if (m_input.m_joystickLever != null) { m_input.m_joystickLever.Initialize(); }
