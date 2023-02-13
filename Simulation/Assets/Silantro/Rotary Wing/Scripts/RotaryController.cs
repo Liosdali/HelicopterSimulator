@@ -267,8 +267,6 @@ namespace Oyedoyin.RotaryWing
                         //else
 
                         shaft.throttle = _throttleLever.leverOutput;
-                        Debug.Log("Throttle Input = " + _throttleLever.leverOutput + " Shaft Throttle = " + shaft.throttle);
-
                         //Works
                         //shaft.throttle = _collectiveInput;
                     } 
