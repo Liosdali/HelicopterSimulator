@@ -31,7 +31,7 @@ namespace Oyedoyin.Common
         public Animator _PilotAnimator = null;
         public Animator _PilotSnapAnimator = null;
 
-        private GameObject m_Hand;
+        public GameObject m_Hand;
 
         [Header("Animator Keys")]
         public string m_gripName = "Grip";
@@ -79,7 +79,7 @@ namespace Oyedoyin.Common
             _GripName = "Grip_Left";
             _TriggerName = "Trigger_Left";
 
-            m_Hand = _PilotAnimator.gameObject;
+            //m_Hand = _PilotAnimator.gameObject;
         }
         protected void Update()
         {

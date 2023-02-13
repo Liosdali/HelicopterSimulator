@@ -7132,6 +7132,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4274526753779858, guid: 6a8a77a07da1ab74bb3d34fe70501b7d, type: 3}
   m_PrefabInstance: {fileID: 1920412117}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &407364225 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1166743473973309265, guid: 6b7982aafe428594da65bea2d17f560e, type: 3}
+  m_PrefabInstance: {fileID: 120266404}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &424223140
 GameObject:
   m_ObjectHideFlags: 0
@@ -21669,6 +21674,11 @@ Transform:
   m_Father: {fileID: 553894138}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -77.70786, y: -115.4668, z: -20.958973}
+--- !u!1 &1417811611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7958735734776309004, guid: e519aab37da83c7489e53b9a28c78482, type: 3}
+  m_PrefabInstance: {fileID: 1341358446}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1421702406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50480,6 +50490,7 @@ MonoBehaviour:
   m_animator: {fileID: 1951208115}
   _PilotAnimator: {fileID: 1975339769}
   _PilotSnapAnimator: {fileID: 0}
+  m_Hand: {fileID: 407364225}
   m_gripName: Grip
   m_triggerName: Trigger
   m_speed: 10
@@ -50617,6 +50628,7 @@ MonoBehaviour:
   m_animator: {fileID: 1937672834}
   _PilotAnimator: {fileID: 1080877615}
   _PilotSnapAnimator: {fileID: 0}
+  m_Hand: {fileID: 1417811611}
   m_gripName: Grip
   m_triggerName: Trigger
   m_speed: 10
