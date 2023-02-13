@@ -56,7 +56,7 @@ namespace Oyedoyin.RotaryWing
         {
             base.Initialize();
 
-            base.InitializeThrottle();
+            //base.InitializeThrottle();
 
             // Collect Components
             m_helicopter = GetComponent<RotaryController>();

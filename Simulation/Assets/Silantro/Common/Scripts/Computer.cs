@@ -160,6 +160,10 @@ namespace Oyedoyin.Common
             b_yawTrimInput = controller.m_input._yawTrimInput;
             b_pitchInput = -controller.m_input.m_pitchInput;
             b_rollInput = -controller.m_input.m_rollInput;
+
+            Debug.Log("Pitch input " + b_pitchInput + " Roll Input = " + b_rollInput);
+
+
             b_yawInput = controller.m_input.m_yawInput;
 
             b_throttleInput = controller.m_input._throttleInput;

@@ -92,6 +92,11 @@ namespace Oyedoyin.Common
                 m_baseLeverRotation = m_hinge.localRotation;
             }
 
+            if (m_Hand != null)
+            {
+                m_Hand.SetActive(false);
+            }
+
         }
         /// <summary>
         /// 

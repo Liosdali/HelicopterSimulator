@@ -29,8 +29,6 @@ namespace Oyedoyin.Common
 
 
         public Animator _PilotAnimator = null;
-        public Animator _PilotSnapAnimator = null;
-
         public GameObject m_Hand;
 
         [Header("Animator Keys")]
