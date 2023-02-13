@@ -31,6 +31,7 @@ namespace Oyedoyin.Common
         public Animator _PilotAnimator = null;
         public Animator _PilotSnapAnimator = null;
 
+        private GameObject m_Hand;
 
         [Header("Animator Keys")]
         public string m_gripName = "Grip";
@@ -77,6 +78,8 @@ namespace Oyedoyin.Common
 
             _GripName = "Grip_Left";
             _TriggerName = "Trigger_Left";
+
+            m_Hand = _PilotAnimator.gameObject;
         }
         protected void Update()
         {
@@ -93,32 +96,13 @@ namespace Oyedoyin.Common
             {
                 if (!_AnimEnabled)
                 {
-                    if (_PilotSnapAnimator != null) { _PilotSnapAnimator.gameObject.SetActive(false); }
-                    _PilotAnimator.gameObject.SetActive(true);
+                    m_Hand.SetActive(true);
                     GripValues();
                     TriggerValues();
                 }
                 else
                 {
-
-                    if (_PilotSnapAnimator != null) { _PilotSnapAnimator.gameObject.SetActive(true); }
-                    _PilotAnimator.gameObject.SetActive(false);
-
-                    switch (m_animatorType)
-                    {
-                        case LeverAnimType.Lever:
-                            //_PilotSnapAnimator.SetTrigger("");
-                            Debug.Log("Lever Animation");
-                            break;
-                        case LeverAnimType.ControlStick:
-                            Debug.Log("Control stick animation");
-                            //_PilotSnapAnimator.SetTrigger("");
-                            break;
-
-                        default:
-                            Debug.Log("Hand Anim Fail");
-                            break;
-                    }
+                    m_Hand.SetActive(false);               
                 }
             }
         }

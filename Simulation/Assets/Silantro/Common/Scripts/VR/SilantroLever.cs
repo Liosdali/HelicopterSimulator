@@ -62,6 +62,12 @@ namespace Oyedoyin.Common
         private Vector3 localHandPosition;
         Vector3 m_yokeAxisRoll;
 
+
+        public GameObject m_Hand;
+
+
+
+
         /// <summary>
         /// 
         /// </summary>
@@ -103,26 +109,21 @@ namespace Oyedoyin.Common
                     {
                         leverHeld = true;
                         m_controller.SetAnimBool(true);
+                        //m_controller._snapScript.NewTargetTransform(transform);
+                        m_Hand.SetActive(true);
 
-
-
-                    }
+                                 }
                     else
                     {
                         m_controller.SetAnimBool(false);
                         leverHeld = false;
-                        
+                        m_Hand.SetActive(false);
                     }
                 }
 
                 //Hand Data
                 if (leverHeld) { 
-                    handPosition = other.transform.position; 
-
-                    // Hand snapping needs to be added possibly here
-                    // Hand position will be updated accordingly to the lever or stick
-                    // Or a special animation will be updated through VRIK
-                    
+                    handPosition = other.transform.position;
                 }
             }
         }
@@ -135,7 +136,7 @@ namespace Oyedoyin.Common
             if (other.CompareTag("PlayerHand"))
             {
                 leverHeld = false;
-                m_controller.SetAnimBool(false);
+                //m_controller.SetAnimBool(false);
                 m_controller = null;
                 
             }
@@ -330,7 +331,8 @@ namespace Oyedoyin.Common
             GUI.color = backgroundColor;
             GUILayout.Space(3f);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("m_hinge"), new GUIContent("Hinge"));
-
+            GUILayout.Space(3f);
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("m_Hand"), new GUIContent("Hand"));
             GUILayout.Space(10f);
             GUI.color = silantroColor;
             EditorGUILayout.HelpBox("Rotation Config", MessageType.None);
