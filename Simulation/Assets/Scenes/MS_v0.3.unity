@@ -17206,6 +17206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66cb9973f00b1f94394c6023ea42640f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationType: 0
   m_mode: 0
   leverType: 2
   leverAction: 1
@@ -17225,6 +17226,7 @@ MonoBehaviour:
   leverOutput: 0
   pitchOutput: 0
   rollOutput: 0
+  m_Hand: {fileID: 0}
 --- !u!54 &1264647723
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24600,6 +24602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66cb9973f00b1f94394c6023ea42640f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationType: 0
   m_mode: 0
   leverType: 0
   leverAction: 0
@@ -24619,6 +24622,7 @@ MonoBehaviour:
   leverOutput: 0
   pitchOutput: 0
   rollOutput: 0
+  m_Hand: {fileID: 0}
 --- !u!54 &1794716460
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -45248,7 +45252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4189606229110657499, guid: 3ecf224c652545843a51ecfc54a17d5c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ecf224c652545843a51ecfc54a17d5c, type: 3}
@@ -50496,6 +50500,7 @@ MonoBehaviour:
     singleLoad: 0
     Inertia: 0
     m_powerLevel: 0
+  _throttleLever: {fileID: 0}
   throttleLeverAssign: {fileID: 0}
   m_rotors: []
   m_shafts: []
