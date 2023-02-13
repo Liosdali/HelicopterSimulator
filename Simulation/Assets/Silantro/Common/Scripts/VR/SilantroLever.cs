@@ -122,7 +122,7 @@ namespace Oyedoyin.Common
                     // Hand snapping needs to be added possibly here
                     // Hand position will be updated accordingly to the lever or stick
                     // Or a special animation will be updated through VRIK
-
+                    
                 }
             }
         }
