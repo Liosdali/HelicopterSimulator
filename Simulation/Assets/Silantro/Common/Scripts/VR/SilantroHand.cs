@@ -29,9 +29,9 @@ namespace Oyedoyin.Common
 
 
         public Animator _PilotAnimator = null;
+        public Animator _PilotSnapAnimator = null;
 
-        public Animator _PilotInsideAnimator = null;
-
+        private GameObject m_Hand;
 
         [Header("Animator Keys")]
         public string m_gripName = "Grip";
@@ -50,12 +50,21 @@ namespace Oyedoyin.Common
         /// </summary>
         /// 
 
+        public LeverAnimType m_animatorType;
+
 
         private string _GripName;
         private float _GripValue;
 
         private string _TriggerName;
         private float _TriggerValue;
+
+        private bool _AnimEnabled;
+
+        public void SetAnimBool(bool anim)
+        {
+            _AnimEnabled = anim;
+        }
 
 
         private void Start()
@@ -69,64 +78,69 @@ namespace Oyedoyin.Common
 
             _GripName = "Grip_Left";
             _TriggerName = "Trigger_Left";
+
+            m_Hand = _PilotAnimator.gameObject;
         }
         protected void Update()
         {
 
-#if VR_ACTIVE
-        if (m_controller != null)
-        {
-            m_controller.inputDevice.TryReadSingleValue(m_gripButton, out gripValue);
-            m_controller.inputDevice.TryReadSingleValue(m_triggerButton, out triggerValue);
-        } 
-#endif
+        #if VR_ACTIVE
+            if (m_controller != null)
+            {
+                m_controller.inputDevice.TryReadSingleValue(m_gripButton, out gripValue);
+                m_controller.inputDevice.TryReadSingleValue(m_triggerButton, out triggerValue);
+            } 
+        #endif
 
             if (m_animator != null)
-            { 
-                //-------------------------------------------- Grip
-                if (m_currentGrip != gripValue)
+            {
+                if (!_AnimEnabled)
                 {
-                    m_currentGrip = Mathf.MoveTowards(m_currentGrip,
-                        gripValue, Time.deltaTime * m_speed);
-
-                    _GripValue = Mathf.MoveTowards(_GripValue,
-                        gripValue, Time.deltaTime * m_speed);
-
-
-                    m_animator.SetFloat(m_gripName, m_currentGrip);
-                    if (_PilotAnimator != null)
-                    {
-                        _PilotAnimator.SetFloat(_GripName, m_currentGrip);
-                    }
-
-                    if (_PilotInsideAnimator != null)
-                    {
-                        _PilotInsideAnimator.SetFloat(_GripName, m_currentGrip);
-                    }
+                    m_Hand.SetActive(true);
+                    GripValues();
+                    TriggerValues();
                 }
-
-                //-------------------------------------------- Trigger
-                if (m_currentTrigger != triggerValue)
+                else
                 {
-                    // Setting trigger value for the hand  
-                    m_currentTrigger = Mathf.MoveTowards(m_currentTrigger,triggerValue, Time.deltaTime * m_speed);           
-                    _TriggerValue = Mathf.MoveTowards(_TriggerValue,triggerValue, Time.deltaTime * m_speed);
-                    
-                    m_animator.SetFloat(m_triggerName, m_currentTrigger);
-
-                    if (_PilotAnimator != null)
-                    {
-                        // Easter egg murat hocam anıl gey
-                        _PilotAnimator.SetFloat(_TriggerName, m_currentTrigger);
-                    }
-
-
-                    if (_PilotInsideAnimator != null)
-                    {
-                        
-                        _PilotInsideAnimator.SetFloat(_TriggerName, m_currentTrigger);
-                    }
+                    m_Hand.SetActive(false);               
                 }
+            }
+        }
+
+
+
+
+        private void GripValues()
+        {
+            //-------------------------------------------- Grip
+            if (m_currentGrip != gripValue)
+            {
+                m_currentGrip = Mathf.MoveTowards(m_currentGrip,
+                    gripValue, Time.deltaTime * m_speed);
+
+                _GripValue = Mathf.MoveTowards(_GripValue,
+                    gripValue, Time.deltaTime * m_speed);
+
+
+                m_animator.SetFloat(m_gripName, m_currentGrip);
+
+                if ( _PilotAnimator != null ) _PilotAnimator.SetFloat(_GripName, m_currentGrip);
+            }
+        }
+
+
+        private void TriggerValues()
+        {
+            //-------------------------------------------- Trigger
+            if (m_currentTrigger != triggerValue)
+            {
+                // Setting trigger value for the hand  
+                m_currentTrigger = Mathf.MoveTowards(m_currentTrigger, triggerValue, Time.deltaTime * m_speed);
+                _TriggerValue = Mathf.MoveTowards(_TriggerValue, triggerValue, Time.deltaTime * m_speed);
+
+                m_animator.SetFloat(m_triggerName, m_currentTrigger);
+
+                if (_PilotAnimator != null) _PilotAnimator.SetFloat(_TriggerName, m_currentTrigger);
             }
         }
     }

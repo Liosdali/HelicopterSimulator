@@ -23,7 +23,8 @@ namespace Oyedoyin.RotaryWing
         public Fuselage m_fuselage;
         public SilantroGearbox m_gearbox;
 
-        
+        public SilantroLever _throttleLever;
+
         public SilantroLever throttleLeverAssign;
 
         public SilantroRotor[] m_rotors;
@@ -265,9 +266,7 @@ namespace Oyedoyin.RotaryWing
                         //    shaft.throttle = 1f;
                         //else
 
-                        shaft.throttle = _throttleInput;
-                        Debug.Log("Throttle Input = " + _throttleInput + " Shaft Throttle = " + shaft.throttle);
-
+                        shaft.throttle = _throttleLever.leverOutput;
                         //Works
                         //shaft.throttle = _collectiveInput;
                     } 
@@ -421,6 +420,8 @@ namespace Oyedoyin.RotaryWing
                 EditorGUILayout.PropertyField(input.FindPropertyRelative("m_joystickLever"), new GUIContent("Control Stick"));
                 GUILayout.Space(3f);
                 EditorGUILayout.PropertyField(input.FindPropertyRelative("m_throttleLever"), new GUIContent("Throttle Lever"));
+                GUILayout.Space(3f);
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("_throttleLever"), new GUIContent("Throttle Lever Rotary Controller"));
                 GUILayout.Space(3f);
                 EditorGUILayout.PropertyField(input.FindPropertyRelative("m_collectiveLever"), new GUIContent("Collective Lever"));
                 GUILayout.Space(8f);

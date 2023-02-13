@@ -3,9 +3,16 @@
 using UnityEditor;
 #endif
 
+
+
+
 namespace Oyedoyin.Common
 {
+
+
     #region Component
+
+    public enum LeverAnimType { Lever, ControlStick }
 
     /// <summary>
     /// 
@@ -19,6 +26,9 @@ namespace Oyedoyin.Common
         public enum LeverAction { SelfCentering, NonCentering }
         public enum RotationAxis { X, Y, Z }
 
+
+
+        public LeverAnimType animationType = LeverAnimType.Lever;
         public LeverMode m_mode = LeverMode.RotateOnly;
         public LeverType leverType = LeverType.ControlStick;
         public LeverAction leverAction = LeverAction.NonCentering;
@@ -51,6 +61,12 @@ namespace Oyedoyin.Common
         private Vector3 handPosition;
         private Vector3 localHandPosition;
         Vector3 m_yokeAxisRoll;
+
+
+        public GameObject m_Hand;
+
+
+
 
         /// <summary>
         /// 
@@ -92,21 +108,22 @@ namespace Oyedoyin.Common
                     if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
                     {
                         leverHeld = true;
-                    }
+                        m_controller.SetAnimBool(true);
+                        //m_controller._snapScript.NewTargetTransform(transform);
+                        m_Hand.SetActive(true);
+
+                                 }
                     else
                     {
+                        m_controller.SetAnimBool(false);
                         leverHeld = false;
+                        m_Hand.SetActive(false);
                     }
                 }
 
                 //Hand Data
                 if (leverHeld) { 
-                    handPosition = other.transform.position; 
-
-                    // Hand snapping needs to be added possibly here
-                    // Hand position will be updated accordingly to the lever or stick
-                    // Or a special animation will be updated through VRIK
-
+                    handPosition = other.transform.position;
                 }
             }
         }
@@ -119,7 +136,9 @@ namespace Oyedoyin.Common
             if (other.CompareTag("PlayerHand"))
             {
                 leverHeld = false;
+                //m_controller.SetAnimBool(false);
                 m_controller = null;
+                
             }
         }
         /// <summary>
@@ -288,6 +307,11 @@ namespace Oyedoyin.Common
             GUILayout.Space(3f);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("leverType"), new GUIContent("Type"));
             GUILayout.Space(3f);
+
+
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("animationType"), new GUIContent("Hand Snap Anim Type"));
+            GUILayout.Space(3f);
+
             EditorGUILayout.PropertyField(serializedObject.FindProperty("m_mode"), new GUIContent("Mode"));
             if (lever.leverType == SilantroLever.LeverType.ControlStick ||
                lever.leverType == SilantroLever.LeverType.ControlYoke)
@@ -307,7 +331,8 @@ namespace Oyedoyin.Common
             GUI.color = backgroundColor;
             GUILayout.Space(3f);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("m_hinge"), new GUIContent("Hinge"));
-
+            GUILayout.Space(3f);
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("m_Hand"), new GUIContent("Hand"));
             GUILayout.Space(10f);
             GUI.color = silantroColor;
             EditorGUILayout.HelpBox("Rotation Config", MessageType.None);
