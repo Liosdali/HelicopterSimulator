@@ -15542,7 +15542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1018735088
 Transform:
   m_ObjectHideFlags: 0
@@ -19320,6 +19320,8 @@ MonoBehaviour:
   pitchOutput: 0
   rollOutput: 0
   m_Hand: {fileID: 6169335786091126579}
+  m_LeftHand: {fileID: 0}
+  m_RightHand: {fileID: 0}
 --- !u!54 &1264647723
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26923,7 +26925,9 @@ MonoBehaviour:
   leverOutput: 0
   pitchOutput: 0
   rollOutput: 0
-  m_Hand: {fileID: 2123861740}
+  m_Hand: {fileID: 0}
+  m_LeftHand: {fileID: 2123861740}
+  m_RightHand: {fileID: 1018735087}
 --- !u!54 &1794716460
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27600,6 +27604,8 @@ MonoBehaviour:
   pitchOutput: 0
   rollOutput: 0
   m_Hand: {fileID: 0}
+  m_LeftHand: {fileID: 0}
+  m_RightHand: {fileID: 0}
 --- !u!54 &1852933622
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31861,7 +31867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &2123861742
 Animator:
   serializedVersion: 4
@@ -49820,7 +49826,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876795124912346703}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0.036, y: -0.27086186, z: 0.4945}
+  m_LocalPosition: {x: 0.021, y: -0.27086186, z: 0.4945}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -54137,6 +54143,8 @@ MonoBehaviour:
   pitchOutput: 0
   rollOutput: 0
   m_Hand: {fileID: 343547185}
+  m_LeftHand: {fileID: 0}
+  m_RightHand: {fileID: 0}
 --- !u!23 &4677338140030503031
 MeshRenderer:
   m_ObjectHideFlags: 0

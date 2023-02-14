@@ -106,14 +106,14 @@ namespace Oyedoyin.Common
 
         private void Update()
         {
-            Debug.Log("Lever =" + gameObject.name + " = " + leverHeld + " ref = " + _referenceTransform);
+            
 
             if (leverHeld)
             {
-                Debug.Log("Holding Hand");
                 handPosition = _referenceTransform.position;
                 if (m_controller.gripValue < 0.9f)   //if (m_controller.triggerValue < 0.9f && m_controller.gripValue < 0.9f)
                 {
+                    Debug.Log("Lever =" + gameObject.name + " ref = " + m_controller.gameObject.name);
                     m_Hand.SetActive(false);
                     m_controller.SetAnimBool(false);
                     leverHeld = false;
@@ -148,7 +148,7 @@ namespace Oyedoyin.Common
                         m_controller.SetAnimBool(true);
 
                         if(m_LeftHand != null && m_RightHand != null) {
-                            if(m_controller.m_handType == HandType.Left) {
+                            if(m_controller.m_handType == SilantroHand.HandType.Left) {
                                 m_Hand = m_LeftHand;
                             }
                             else
@@ -156,7 +156,6 @@ namespace Oyedoyin.Common
                                 m_Hand = m_RightHand;
                             }
                         }
-                        //m_controller._snapScript.NewTargetTransform(transform);
                         m_Hand.SetActive(true);
                     }
                     else
@@ -221,8 +220,8 @@ namespace Oyedoyin.Common
                 {
                     // Roll Axis 
                     float m_hf = 1;
-                    if (m_controller != null && m_controller.m_handType == HandType.Right) { m_hf = 1; }
-                    if (m_controller != null && m_controller.m_handType == HandType.Left) { m_hf = -1; }
+                    if (m_controller != null && m_controller.m_handType == SilantroHand.HandType.Right) { m_hf = 1; }
+                    if (m_controller != null && m_controller.m_handType == SilantroHand.HandType.Left) { m_hf = -1; }
                     angle.x = Vector2.SignedAngle(new Vector2(localHandPosition.x, Mathf.Abs(localHandPosition.y)), Vector2.up);
                     float rollInput = angle.x / deflectionLimit.x + Mathf.Epsilon;
                     rollInput = Mathf.Clamp(rollInput, -1, 1);
