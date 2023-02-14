@@ -20,9 +20,6 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     [SerializeField]
     private DialogueChannel m_DialogueChannel;
 
-    [SerializeField]
-    private FadeScript _FadeAway;
-
     //-------------------------------------------------------------InputMapping
     private InputAction _selectmenu;
     public InputActionAsset inputActions;
@@ -31,10 +28,6 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     private DialogueNode m_NextNode = null;
     //-------------------------------------------------------------Audio
     public AudioSource m_DialogueSource;
-
-
-    [SerializeField] private Animator _SoldierAnimator;
-    [SerializeField] private Animator _DoorAnimator;
 
     private void Awake()
     {
@@ -67,8 +60,6 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     {
         if (m_ListenToInput)
         {
-            _SoldierAnimator.SetBool("S_Pose", true);
-            _DoorAnimator.SetBool("DoorOpen", true);
             PlayAudio();
         }
     }
@@ -82,10 +73,6 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
             Debug.Log("Ýsim burada = " + m_NextNode.GetAudioClip().name);
             m_DialogueSource.clip = m_NextNode.GetAudioClip();
             m_DialogueSource.Play();
-        }
-        else if (m_NextNode == null)
-        {
-            _FadeAway.EndCutscene();
         }
         Debug.Log("Next Dialogue");
         m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
