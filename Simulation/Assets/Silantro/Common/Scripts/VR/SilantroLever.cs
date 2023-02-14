@@ -41,6 +41,7 @@ namespace Oyedoyin.Common
 
         // Connections
         public Transform m_hinge;
+        [SerializeField]
         private SilantroHand m_controller;
 
         // Properties
@@ -102,24 +103,31 @@ namespace Oyedoyin.Common
 
         }
 
-
+        public bool keyTest = false;
 
         private void Update()
         {
-            
+            if (keyTest)
+            {
+                Compute();
+            }
 
+            // LeverHeld Doğru Alınıyor Debug.Log(gameObject.name + " = Lever Held = " + leverHeld);
             if (leverHeld)
             {
-                handPosition = _referenceTransform.position;
+                handPosition = _referenceTransform.position;                                                      
+            }
+
+            if (m_controller != null)
+            {
                 if (m_controller.gripValue < 0.9f)   //if (m_controller.triggerValue < 0.9f && m_controller.gripValue < 0.9f)
                 {
                     Debug.Log("Lever =" + gameObject.name + " ref = " + m_controller.gameObject.name);
-                    m_Hand.SetActive(false);
                     m_controller.SetAnimBool(false);
+                    m_Hand.SetActive(false);
                     leverHeld = false;
-                    m_controller = null;                    
-                }                                   
-                
+                    m_controller = null;
+                }
             }
         }
 
@@ -180,13 +188,16 @@ namespace Oyedoyin.Common
         /// <param name="other"></param>
         private void OnTriggerExit(Collider other)
         {
-            //if (other.CompareTag("PlayerHand"))
-            //{
-            //    leverHeld = false;
-            //    //m_controller.SetAnimBool(false);
-            //    m_controller = null;
-                
-            //}
+            if (other.CompareTag("PlayerHand"))
+            {
+                if (m_controller != null && m_controller.gripValue < 0.9f)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
+                {
+                    leverHeld = false;
+                    m_controller.SetAnimBool(false);
+                    m_Hand.SetActive(false);
+                    m_controller = null;
+                }
+            }
         }
         /// <summary>
         /// 
@@ -384,6 +395,11 @@ namespace Oyedoyin.Common
             EditorGUILayout.PropertyField(serializedObject.FindProperty("m_LeftHand"), new GUIContent("Left Hand"));
             GUILayout.Space(10f);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("m_RightHand"), new GUIContent("Right Hand"));
+            GUILayout.Space(10f);
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("m_controller"), new GUIContent("Controller"));
+            GUILayout.Space(10f);
+
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("keyTest"), new GUIContent("Key Boolean Test"));
             GUILayout.Space(10f);
             GUI.color = silantroColor;
             EditorGUILayout.HelpBox("Rotation Config", MessageType.None);

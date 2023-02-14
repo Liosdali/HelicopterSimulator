@@ -49,7 +49,7 @@ public class InteractionInstigator : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log(" Trigger got activated by" +other.gameObject.name);
+        //Debug.Log(" Trigger got activated by" +other.gameObject.name);
     }
     private void OnTriggerExit(Collider other)
     {
