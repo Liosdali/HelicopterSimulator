@@ -64,9 +64,10 @@ namespace Oyedoyin.Common
 
 
         public GameObject m_Hand;
+        public GameObject m_LeftHand = null;
+        public GameObject m_RightHand =null;
 
-
-
+        private Transform _referenceTransform = null;
 
         /// <summary>
         /// 
@@ -123,7 +124,10 @@ namespace Oyedoyin.Common
         }
 
 
-        private Transform _referenceTransform = null;
+
+
+
+
 
         /// <summary>
         /// 
@@ -142,9 +146,18 @@ namespace Oyedoyin.Common
                     {
                         leverHeld = true;
                         m_controller.SetAnimBool(true);
+
+                        if(m_LeftHand != null && m_RightHand != null) {
+                            if(m_controller.m_handType == HandType.Left) {
+                                m_Hand = m_LeftHand;
+                            }
+                            else
+                            {
+                                m_Hand = m_RightHand;
+                            }
+                        }
                         //m_controller._snapScript.NewTargetTransform(transform);
                         m_Hand.SetActive(true);
-
                     }
                     else
                     {
@@ -208,8 +221,8 @@ namespace Oyedoyin.Common
                 {
                     // Roll Axis 
                     float m_hf = 1;
-                    if (m_controller != null && m_controller.m_handType == SilantroHand.HandType.Right) { m_hf = 1; }
-                    if (m_controller != null && m_controller.m_handType == SilantroHand.HandType.Left) { m_hf = -1; }
+                    if (m_controller != null && m_controller.m_handType == HandType.Right) { m_hf = 1; }
+                    if (m_controller != null && m_controller.m_handType == HandType.Left) { m_hf = -1; }
                     angle.x = Vector2.SignedAngle(new Vector2(localHandPosition.x, Mathf.Abs(localHandPosition.y)), Vector2.up);
                     float rollInput = angle.x / deflectionLimit.x + Mathf.Epsilon;
                     rollInput = Mathf.Clamp(rollInput, -1, 1);
@@ -368,6 +381,10 @@ namespace Oyedoyin.Common
             EditorGUILayout.PropertyField(serializedObject.FindProperty("m_hinge"), new GUIContent("Hinge"));
             GUILayout.Space(3f);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("m_Hand"), new GUIContent("Hand"));
+            GUILayout.Space(10f);
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("m_LeftHand"), new GUIContent("Left Hand"));
+            GUILayout.Space(10f);
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("m_RightHand"), new GUIContent("Right Hand"));
             GUILayout.Space(10f);
             GUI.color = silantroColor;
             EditorGUILayout.HelpBox("Rotation Config", MessageType.None);

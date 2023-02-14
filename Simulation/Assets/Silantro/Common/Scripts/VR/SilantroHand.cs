@@ -13,9 +13,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 /// </summary>
 namespace Oyedoyin.Common
 {
+
+    public enum HandType { Right, Left }
+
     public class SilantroHand : MonoBehaviour
     {
-        public enum HandType { Right, Left }
+       
 
         [Header("Connections")]
 #if VR_ACTIVE
