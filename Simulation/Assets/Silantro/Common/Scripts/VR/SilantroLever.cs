@@ -113,8 +113,10 @@ namespace Oyedoyin.Common
                 handPosition = _referenceTransform.position;
                 if (m_controller.gripValue < 0.9f)   //if (m_controller.triggerValue < 0.9f && m_controller.gripValue < 0.9f)
                 {
+                    m_Hand.SetActive(false);
+                    m_controller.SetAnimBool(false);
                     leverHeld = false;
-                    m_controller = null;
+                    m_controller = null;                    
                 }                                   
                 
             }
