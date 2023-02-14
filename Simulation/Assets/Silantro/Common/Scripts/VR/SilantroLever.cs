@@ -105,10 +105,13 @@ namespace Oyedoyin.Common
 
         private void Update()
         {
+            Debug.Log("Lever =" + gameObject.name + " = " + leverHeld + " ref = " + _referenceTransform);
+
             if (leverHeld)
             {
+                Debug.Log("Holding Hand");
                 handPosition = _referenceTransform.position;
-                if (m_controller.gripValue > 0.9f)   //if (m_controller.triggerValue < 0.9f && m_controller.gripValue < 0.9f)
+                if (m_controller.gripValue < 0.9f)   //if (m_controller.triggerValue < 0.9f && m_controller.gripValue < 0.9f)
                 {
                     leverHeld = false;
                     m_controller = null;
