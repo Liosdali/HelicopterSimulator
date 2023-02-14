@@ -73,6 +73,11 @@ namespace Oyedoyin.Common
         /// </summary>
         public void Initialize()
         {
+            if (m_Hand != null)
+            {
+                m_Hand.SetActive(false);
+            }
+
             if (leverType == LeverType.ControlStick || leverType == LeverType.ControlYoke)
             { deflectionLimit = new Vector2(maximumRollDeflection, maximumPitchDeflection); }
             if (leverType == LeverType.SingleAxis)
@@ -92,16 +97,34 @@ namespace Oyedoyin.Common
                 m_baseLeverRotation = m_hinge.localRotation;
             }
 
-            if (m_Hand != null)
-            {
-                m_Hand.SetActive(false);
-            }
+            
 
         }
+
+
+
+        private void Update()
+        {
+            if (leverHeld)
+            {
+                handPosition = _referenceTransform.position;
+                if (m_controller.gripValue > 0.9f)   //if (m_controller.triggerValue < 0.9f && m_controller.gripValue < 0.9f)
+                {
+                    leverHeld = false;
+                    m_controller = null;
+                }                                   
+                
+            }
+        }
+
+
+        private Transform _referenceTransform = null;
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="other"></param>
+        /// 
         private void OnTriggerStay(Collider other)
         {
             if (other.CompareTag("PlayerHand"))
@@ -110,14 +133,14 @@ namespace Oyedoyin.Common
                 // Input State
                 if (m_controller != null)
                 {
-                    if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
+                    if (m_controller.gripValue > 0.9f)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
                     {
                         leverHeld = true;
                         m_controller.SetAnimBool(true);
                         //m_controller._snapScript.NewTargetTransform(transform);
                         m_Hand.SetActive(true);
 
-                                 }
+                    }
                     else
                     {
                         m_controller.SetAnimBool(false);
@@ -128,7 +151,9 @@ namespace Oyedoyin.Common
 
                 //Hand Data
                 if (leverHeld) { 
-                    handPosition = other.transform.position;
+                    //handPosition = other.transform.position;
+                    _referenceTransform = other.transform;
+                    handPosition = _referenceTransform.position;
                 }
             }
         }
@@ -138,13 +163,13 @@ namespace Oyedoyin.Common
         /// <param name="other"></param>
         private void OnTriggerExit(Collider other)
         {
-            if (other.CompareTag("PlayerHand"))
-            {
-                leverHeld = false;
-                //m_controller.SetAnimBool(false);
-                m_controller = null;
+            //if (other.CompareTag("PlayerHand"))
+            //{
+            //    leverHeld = false;
+            //    //m_controller.SetAnimBool(false);
+            //    m_controller = null;
                 
-            }
+            //}
         }
         /// <summary>
         /// 
