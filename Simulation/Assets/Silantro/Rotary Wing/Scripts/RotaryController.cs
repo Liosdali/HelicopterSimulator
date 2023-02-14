@@ -255,6 +255,10 @@ namespace Oyedoyin.RotaryWing
 
             if(allOk)
             {
+
+                // Get lever outputs if stick still fails
+                //a
+
                 base.UpdateComponentInputs();
                 
                 // Turboshaft
@@ -271,6 +275,10 @@ namespace Oyedoyin.RotaryWing
                         //shaft.throttle = _collectiveInput;
                     } 
                 }
+
+
+
+                //base.SendCustomHelicopterInputs(_pitchInput, _rollInput, _yawInput, _throttleLever.leverOutput, _collectiveInput);
             }
         }
 
