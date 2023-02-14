@@ -124,7 +124,8 @@ namespace Oyedoyin.Common
                 {
                     Debug.Log("Lever =" + gameObject.name + " ref = " + m_controller.gameObject.name);
                     m_controller.SetAnimBool(false);
-                    m_Hand.SetActive(false);
+                    if (m_Hand != null)
+                        m_Hand.SetActive(false);
                     leverHeld = false;
                     m_controller = null;
                 }
@@ -170,7 +171,8 @@ namespace Oyedoyin.Common
                     {
                         m_controller.SetAnimBool(false);
                         leverHeld = false;
-                        m_Hand.SetActive(false);
+                        if (m_Hand != null)
+                            m_Hand.SetActive(false);
                     }
                 }
 
