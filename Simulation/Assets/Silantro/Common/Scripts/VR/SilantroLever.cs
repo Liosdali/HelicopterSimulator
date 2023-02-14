@@ -118,7 +118,7 @@ namespace Oyedoyin.Common
                 handPosition = _referenceTransform.position;                                                      
             }
 
-            if (m_controller != null)
+            if (leverHeld && m_controller != null)
             {
                 if (m_controller.gripValue < 0.9f)   //if (m_controller.triggerValue < 0.9f && m_controller.gripValue < 0.9f)
                 {
@@ -126,16 +126,12 @@ namespace Oyedoyin.Common
                     m_controller.SetAnimBool(false);
                     m_Hand.SetActive(false);
                     leverHeld = false;
+                    m_controller._isBeingUsed = false;
                     m_controller = null;
+
                 }
             }
         }
-
-
-
-
-
-
 
         /// <summary>
         /// 
@@ -148,37 +144,49 @@ namespace Oyedoyin.Common
             {
                 if (m_controller == null) { m_controller = other.GetComponent<SilantroHand>(); }
                 // Input State
-                if (m_controller != null)
+                if (!m_controller._isBeingUsed)
                 {
-                    if (m_controller.gripValue > 0.9f)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
-                    {
-                        leverHeld = true;
-                        m_controller.SetAnimBool(true);
 
-                        if(m_LeftHand != null && m_RightHand != null) {
-                            if(m_controller.m_handType == SilantroHand.HandType.Left) {
-                                m_Hand = m_LeftHand;
-                            }
-                            else
+                    m_controller._isBeingUsed = true;
+
+                    if (m_controller != null)
+                    {
+                        if (m_controller.gripValue > 0.9f)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
+                        {
+                            leverHeld = true;
+                            m_controller.SetAnimBool(true);
+
+                            if (m_LeftHand != null && m_RightHand != null)
                             {
-                                m_Hand = m_RightHand;
+                                if (m_controller.m_handType == SilantroHand.HandType.Left)
+                                {
+                                    m_Hand = m_LeftHand;
+                                }
+                                else
+                                {
+                                    m_Hand = m_RightHand;
+                                }
                             }
+                            m_Hand.SetActive(true);
                         }
-                        m_Hand.SetActive(true);
-                    }
-                    else
-                    {
-                        m_controller.SetAnimBool(false);
-                        leverHeld = false;
-                        m_Hand.SetActive(false);
-                    }
-                }
+                        else
+                        {
+                            m_controller.SetAnimBool(false);
+                            leverHeld = false;
 
-                //Hand Data
-                if (leverHeld) { 
-                    //handPosition = other.transform.position;
-                    _referenceTransform = other.transform;
-                    handPosition = _referenceTransform.position;
+
+                            if (m_Hand != null)
+                                m_Hand.SetActive(false);
+                        }
+                    }
+
+                    //Hand Data
+                    if (leverHeld)
+                    {
+                        //handPosition = other.transform.position;
+                        _referenceTransform = other.transform;
+                        handPosition = _referenceTransform.position;
+                    }
                 }
             }
         }

@@ -62,6 +62,9 @@ namespace Oyedoyin.Common
 
         private bool _AnimEnabled;
 
+        public bool _isBeingUsed = false;
+
+
         public void SetAnimBool(bool anim)
         {
             _AnimEnabled = anim;
