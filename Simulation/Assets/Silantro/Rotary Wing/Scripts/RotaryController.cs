@@ -274,9 +274,9 @@ namespace Oyedoyin.RotaryWing
                         //Works
                         //shaft.throttle = _collectiveInput;
 
-                        //_collectiveInput = m_input.m_throttleLever.leverOutput;
-                        //_rollInput = m_input.m_joystickLever.rollOutput;
-                        //_pitchInput = m_input.m_joystickLever.pitchOutput;
+                        _collectiveInput = m_input.m_throttleLever.leverOutput;
+                        _rollInput = m_input.m_joystickLever.rollOutput;
+                        _pitchInput = m_input.m_joystickLever.pitchOutput;
 
                     } 
                 }
