@@ -15,15 +15,15 @@ public class PlayerCamTeleportTest : MonoBehaviour
     private bool m_isTeleporting = false;
 
 
-    //public void LateUpdate()
-    //{
-    //    if (!m_isTeleporting)
-    //    {
-    //        ResetPosition();
-    //        m_isTeleporting=true;
-    //        //gameObject.SetActive(false);
-    //    }
-    //}
+    public void LateUpdate()
+    {
+        if (!m_isTeleporting)
+        {
+            ResetPosition();
+            m_isTeleporting = true;
+            //gameObject.SetActive(false);
+        }
+    }
 
 
     [ContextMenu("Reset Position")]
