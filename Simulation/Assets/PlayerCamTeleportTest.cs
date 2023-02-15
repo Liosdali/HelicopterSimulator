@@ -7,15 +7,24 @@ public class PlayerCamTeleportTest : MonoBehaviour
     [SerializeField] private Transform m_resetTransform;
     [SerializeField] private Transform m_player;
     [SerializeField] private Camera m_playerCam;
-    public Transform playerCamTarget;
-
 
 
     // Start is called before the first frame update
-    void Start()
+
+
+    private bool m_isTeleporting = false;
+
+
+    public void LateUpdate()
     {
-        
+        if (!m_isTeleporting)
+        {
+            ResetPosition();
+            m_isTeleporting = true;
+            //gameObject.SetActive(false);
+        }
     }
+
 
     [ContextMenu("Reset Position")]
     public void ResetPosition()

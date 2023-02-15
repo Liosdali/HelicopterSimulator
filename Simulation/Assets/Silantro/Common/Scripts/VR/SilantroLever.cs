@@ -107,12 +107,6 @@ namespace Oyedoyin.Common
 
         public bool keyTest = false;
 
-        private void Start()
-        {
-            if (keyTest)
-                Initialize();
-        }
-
 
         private void Update()
         {
@@ -121,7 +115,6 @@ namespace Oyedoyin.Common
                 Compute();
             }
 
-            // LeverHeld Doğru Alınıyor Debug.Log(gameObject.name + " = Lever Held = " + leverHeld);
             if (leverHeld)
             {
                 handPosition = _referenceTransform.position;                                                      
@@ -133,7 +126,8 @@ namespace Oyedoyin.Common
                 {
                     Debug.Log("Lever =" + gameObject.name + " ref = " + m_controller.gameObject.name);
                     m_controller.SetAnimBool(false);
-                    m_Hand.SetActive(false);
+                    if (m_Hand != null)
+                        m_Hand.SetActive(false);
                     leverHeld = false;
                     m_controller._isBeingUsed = false;
                     m_controller = null;
