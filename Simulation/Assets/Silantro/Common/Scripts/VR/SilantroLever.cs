@@ -91,6 +91,8 @@ namespace Oyedoyin.Common
             {
                 if (leverAxis == RotationAxis.X) { deflectionLimit = new Vector2(maximumDeflection / 2, 0); }
                 if (leverAxis == RotationAxis.Y) { deflectionLimit = new Vector2(0, maximumDeflection / 2); }
+               // if (leverAxis == RotationAxis.Z) { deflectionLimit = new Vector2(0, maximumDeflection / 2); }  //sil
+
             }
 
             if (m_hinge != null)
