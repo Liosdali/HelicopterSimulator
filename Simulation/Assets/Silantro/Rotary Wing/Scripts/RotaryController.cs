@@ -279,7 +279,7 @@ namespace Oyedoyin.RotaryWing
                         _pitchInput = m_input.m_joystickLever.pitchOutput;
                         
                         _yawInput = m_input.m_yawInput;
-                        Debug.Log(m_input.m_yawInput);
+                        Debug.Log("Testing yaw input =" + m_input.m_yawInput);
                     } 
                 }
 
