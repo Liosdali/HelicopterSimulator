@@ -105,6 +105,13 @@ namespace Oyedoyin.Common
 
         public bool keyTest = false;
 
+        private void Start()
+        {
+            if (keyTest)
+                Initialize();
+        }
+
+
         private void Update()
         {
             if (keyTest)
@@ -118,7 +125,7 @@ namespace Oyedoyin.Common
                 handPosition = _referenceTransform.position;                                                      
             }
 
-            if (leverHeld && m_controller != null)
+            if (m_controller != null)
             {
                 if (m_controller.gripValue < 0.9f)   //if (m_controller.triggerValue < 0.9f && m_controller.gripValue < 0.9f)
                 {
@@ -142,51 +149,54 @@ namespace Oyedoyin.Common
         {
             if (other.CompareTag("PlayerHand"))
             {
-                if (m_controller == null) { m_controller = other.GetComponent<SilantroHand>(); }
-                // Input State
-                if (!m_controller._isBeingUsed)
+                if (m_controller == null) {
+
+                    if (!other.GetComponent<SilantroHand>()._isBeingUsed)
+                    {
+                        m_controller = other.GetComponent<SilantroHand>();
+                        m_controller._isBeingUsed = true;
+                    }
+                    else
+                        return;
+                }
+
+                if (m_controller != null)
                 {
-
-                    m_controller._isBeingUsed = true;
-
-                    if (m_controller != null)
+                    if (m_controller.gripValue > 0.9f)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
                     {
-                        if (m_controller.gripValue > 0.9f)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
-                        {
-                            leverHeld = true;
-                            m_controller.SetAnimBool(true);
+                        leverHeld = true;
+                        m_controller.SetAnimBool(true);
 
-                            if (m_LeftHand != null && m_RightHand != null)
+                        if (m_LeftHand != null && m_RightHand != null)
+                        {
+                            if (m_controller.m_handType == SilantroHand.HandType.Left)
                             {
-                                if (m_controller.m_handType == SilantroHand.HandType.Left)
-                                {
-                                    m_Hand = m_LeftHand;
-                                }
-                                else
-                                {
-                                    m_Hand = m_RightHand;
-                                }
+                                m_Hand = m_LeftHand;
                             }
-                            m_Hand.SetActive(true);
+                            else
+                            {
+                                m_Hand = m_RightHand;
+                            }
                         }
-                        else
-                        {
-                            m_controller.SetAnimBool(false);
-                            leverHeld = false;
-
-
-                            if (m_Hand != null)
-                                m_Hand.SetActive(false);
-                        }
+                        m_Hand.SetActive(true);
                     }
-
-                    //Hand Data
-                    if (leverHeld)
+                    else
                     {
-                        //handPosition = other.transform.position;
-                        _referenceTransform = other.transform;
-                        handPosition = _referenceTransform.position;
+                        m_controller.SetAnimBool(false);
+                        leverHeld = false;
+
+
+                        if (m_Hand != null)
+                            m_Hand.SetActive(false);
                     }
+                }
+
+                //Hand Data
+                if (leverHeld)
+                {
+                    //handPosition = other.transform.position;
+                    _referenceTransform = other.transform;
+                    handPosition = _referenceTransform.position;
                 }
             }
         }
@@ -198,7 +208,7 @@ namespace Oyedoyin.Common
         {
             if (other.CompareTag("PlayerHand"))
             {
-                if (m_controller != null && m_controller.gripValue < 0.9f)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
+                if (m_controller != null && m_controller.gripValue < 0.9f ) // && leverHeld)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
                 {
                     leverHeld = false;
                     m_controller.SetAnimBool(false);
