@@ -644,6 +644,11 @@ namespace Oyedoyin.Common
             // Cockpit Instruments
             foreach (SilantroInstrument instrument in m_instruments)
             {
+
+                // Eğer kontroller doğru çalışmaya devam ediyorsa 
+                // Instrument kısmı güncellenmesi değiştirilebilir
+
+
                 instrument.m_pitch = _pitchInput;
                 instrument.m_roll = _rollInput;
                 instrument.m_yaw = _yawInput;
