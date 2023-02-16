@@ -656,6 +656,21 @@ namespace Oyedoyin.Common
                 instrument.m_throttle = _throttleInput;
                 instrument.m_prop = _propPitchInput;
                 instrument.m_mixture = _mixtureInput;
+
+
+
+                Debug.Log("Instrument Inputs =" +
+                          "Pitch / Roll" + 
+                          instrument.m_pitch + "/" + instrument.m_roll +
+                          "Collective Input" + 
+                          instrument.m_lever
+
+
+
+
+
+                    );
+
             }
             // Piston Engines
             foreach (SilantroPiston piston in m_pistons)
