@@ -132,7 +132,7 @@ namespace Oyedoyin.Common
                     if (m_Hand != null)
                         m_Hand.SetActive(false);
                     leverHeld = false;
-                    //m_controller._isBeingUsed = false;
+                    m_controller._isBeingUsed = false;
                     m_beingUsed = false;
                     m_controller = null;
 
@@ -151,10 +151,11 @@ namespace Oyedoyin.Common
             {
                 if (m_controller == null) {
 
-                    if (!m_beingUsed)
+                    if (!m_beingUsed && !other.GetComponent<SilantroHand>()._isBeingUsed)
                     {
                         m_controller = other.GetComponent<SilantroHand>();
                         m_beingUsed = true;
+                        m_controller._isBeingUsed = true;
                     }
                     else
                         return;
@@ -214,13 +215,16 @@ namespace Oyedoyin.Common
         {
             if (other.CompareTag("PlayerHand"))
             {
-                if (m_controller != null && m_controller.gripValue < 0.9f ) // && leverHeld)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
+                if (m_controller != null && m_controller.gripValue < 0.9f ) 
+                // && leverHeld)    Gerek yok leverHeld == gripVal > 0.9f
+                //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
                 {
                     leverHeld = false;
                     m_controller.SetAnimBool(false);
                     m_Hand.SetActive(false);
 
                     m_beingUsed = false;
+                    m_controller._isBeingUsed = false;
                     m_controller = null;
                 }
             }
