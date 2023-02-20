@@ -644,6 +644,11 @@ namespace Oyedoyin.Common
             // Cockpit Instruments
             foreach (SilantroInstrument instrument in m_instruments)
             {
+
+                // Eğer kontroller doğru çalışmaya devam ediyorsa 
+                // Instrument kısmı güncellenmesi değiştirilebilir
+
+
                 instrument.m_pitch = _pitchInput;
                 instrument.m_roll = _rollInput;
                 instrument.m_yaw = _yawInput;
@@ -651,6 +656,21 @@ namespace Oyedoyin.Common
                 instrument.m_throttle = _throttleInput;
                 instrument.m_prop = _propPitchInput;
                 instrument.m_mixture = _mixtureInput;
+
+
+
+                Debug.Log("Instrument Inputs =" +
+                          "Pitch / Roll" + 
+                          instrument.m_pitch + "/" + instrument.m_roll +
+                          "Collective Input" + 
+                          instrument.m_lever
+
+
+
+
+
+                    );
+
             }
             // Piston Engines
             foreach (SilantroPiston piston in m_pistons)

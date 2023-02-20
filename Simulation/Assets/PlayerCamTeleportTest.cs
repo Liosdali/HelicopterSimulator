@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerCamTeleportTest : MonoBehaviour
 {
     [SerializeField] private Transform m_resetTransform;
-    [SerializeField] private Transform m_player;
+    [SerializeField] private GameObject m_player;
     [SerializeField] private Camera m_playerCam;
 
 
