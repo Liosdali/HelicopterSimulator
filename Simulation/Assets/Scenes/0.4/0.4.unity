@@ -17585,7 +17585,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1163932853}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DeBug, Assembly-CSharp
         m_MethodName: deBug
         m_Mode: 1
@@ -18159,7 +18159,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1163932852}
-  - component: {fileID: 1163932853}
   m_Layer: 13
   m_Name: Buttons (2)
   m_TagString: Untagged
@@ -18174,8 +18173,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163932851}
-  m_LocalRotation: {x: 0.00000014117009, y: 0.4468513, z: 0.00000023853045, w: 0.8946083}
-  m_LocalPosition: {x: -0.22536203, y: 0.68954027, z: 0.15273532}
+  m_LocalRotation: {x: -0, y: -0, z: 1.4210853e-14, w: 1}
+  m_LocalPosition: {x: -0.039665222, y: -0.045613408, z: 0.4276123}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18185,21 +18184,9 @@ Transform:
   - {fileID: 841701505}
   - {fileID: 4001059093948396853}
   - {fileID: 1136015071}
-  m_Father: {fileID: 2719126340277858930}
-  m_RootOrder: 1
+  m_Father: {fileID: 1976388458}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1163932853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163932851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59638dab4d275d4419584044502fa850, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1164554850 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1474031241851742189, guid: c7439120b060b624592b9301b7050780, type: 3}
@@ -29293,6 +29280,7 @@ Transform:
   - {fileID: 5884953978115879202}
   - {fileID: 1387906858}
   - {fileID: 3508073483719834730}
+  - {fileID: 1163932852}
   m_Father: {fileID: 3979717988349681680}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48226,7 +48214,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2719126339064359674}
-  - {fileID: 1163932852}
   m_Father: {fileID: 1976388458}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 190.042, z: 0}
