@@ -77,6 +77,8 @@ public class SilantroButton : MonoBehaviour
     public AudioClip clickSound;
     public float pressDistance = 100f;
     public float flipAmount = 20f;
+
+
     public float coolDownTime = 4f;
     private float coolTimer;
     public float resetTimer;
@@ -189,13 +191,6 @@ public class SilantroButton : MonoBehaviour
         buttonSource.PlayOneShot(clickSound);
     }
 
-
-
-
-
-
-
-
     // ----------------------------------------------------------------------------------------------------------------------------------------------------------
     public void TurnKnobOff()
     {
@@ -231,6 +226,8 @@ public class SilantroButton : MonoBehaviour
     // ----------------------------------------------------------------------------------------------------------------------------------------------------------
     public void ToggleKnob()
     {
+        coolTimer = resetTimer;
+
         if (state == CurrentState.ButtonOn) { TurnKnobOff(); }
         else { TurnKnobOn(); }
     }
@@ -317,6 +314,10 @@ public class SilantroButtonEditor : Editor
         EditorGUILayout.PropertyField(serializedObject.FindProperty("coolDownTime"), new GUIContent("Press Timer"));
         GUILayout.Space(5f);
         EditorGUILayout.PropertyField(serializedObject.FindProperty("resetTimer"), new GUIContent("Button Press Time"));
+        GUILayout.Space(5f);
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("coolTimer"), new GUIContent("Cooldown"));
+
+
 
         GUILayout.Space(10f);
         GUI.color = silantroColor;
