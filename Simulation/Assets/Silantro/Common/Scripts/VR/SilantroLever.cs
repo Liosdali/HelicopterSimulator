@@ -70,6 +70,9 @@ namespace Oyedoyin.Common
 
         private Transform _referenceTransform = null;
 
+        private bool m_beingUsed = false;
+
+
         /// <summary>
         /// 
         /// </summary>
@@ -129,7 +132,8 @@ namespace Oyedoyin.Common
                     if (m_Hand != null)
                         m_Hand.SetActive(false);
                     leverHeld = false;
-                    m_controller._isBeingUsed = false;
+                    //m_controller._isBeingUsed = false;
+                    m_beingUsed = false;
                     m_controller = null;
 
                 }
@@ -147,16 +151,22 @@ namespace Oyedoyin.Common
             {
                 if (m_controller == null) {
 
-                    if (!other.GetComponent<SilantroHand>()._isBeingUsed)
+                    if (!m_beingUsed)
                     {
                         m_controller = other.GetComponent<SilantroHand>();
-                        m_controller._isBeingUsed = true;
+                        m_beingUsed = true;
                     }
                     else
                         return;
                 }
 
-                if (m_controller != null)
+
+                if (m_controller == other.GetComponent<SilantroHand>()) 
+                {
+                    Debug.LogWarning("Same Hand ");          
+                }
+
+                if (m_controller != null )
                 {
                     if (m_controller.gripValue > 0.9f)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
                     {
@@ -209,6 +219,8 @@ namespace Oyedoyin.Common
                     leverHeld = false;
                     m_controller.SetAnimBool(false);
                     m_Hand.SetActive(false);
+
+                    m_beingUsed = false;
                     m_controller = null;
                 }
             }
