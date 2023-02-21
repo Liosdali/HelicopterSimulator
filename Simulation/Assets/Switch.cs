@@ -299,9 +299,7 @@ public class Switch : MonoBehaviour
 
         if (m_controller != null && m_controller.triggerValue < 0.9f && m_controller.gripValue < 0.9f && leverHeld) { leverHeld = false; }
     }
-    /// <summary>
-    /// 
-    /// </summary>
+
     private void AnalyseLeverInput()
     {
         if (m_mode == LeverMode.RotateOnly)
@@ -331,9 +329,7 @@ public class Switch : MonoBehaviour
             if (rollAxisState == AxisState.Normal) { rollOutput = value.y; } else { rollOutput = -value.y; }
         }
     }
-    /// <summary>
-    /// 
-    /// </summary>
+
     public void Compute()
     {
         AnalyseLeverState();
