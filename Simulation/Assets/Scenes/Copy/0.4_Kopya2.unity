@@ -36636,7 +36636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1007064023423202013
 GameObject:
   m_ObjectHideFlags: 0
@@ -60565,7 +60565,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4181ab6199d1dc84f9e7e8aca981a4c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationType: 0
   m_mode: 0
   leverType: 2
   leverAction: 1
