@@ -244,6 +244,7 @@ public class Switch : MonoBehaviour
                 m_hinge.localRotation = Quaternion.LookRotation(Vector3.SlerpUnclamped(Vector3.SlerpUnclamped(new Vector3(-1, -1, 1),
                     new Vector3(-1, 1, 1), value.x * deflectionLimit.x / 90 + .5f), Vector3.SlerpUnclamped(new Vector3(1, -1, 1),
                     new Vector3(1, 1, 1), value.x * deflectionLimit.x / 90 + .5f), value.y * deflectionLimit.y / 90 + .5f), Vector3.up);
+                //m_hinge.rotation = new Quaternion(-90f, m_hinge.rotation.y, m_hinge.rotation.z, 0);
             }
             else if (m_mode == LeverMode.SlideAndRotate && leverType == LeverType.ControlYoke)
             {
