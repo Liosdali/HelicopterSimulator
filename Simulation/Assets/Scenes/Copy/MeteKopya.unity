@@ -14824,8 +14824,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.1, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.09999997, y: 0.09999997, z: 0.029284813}
+  m_Center: {x: 0, y: 0, z: -0.035357576}
 --- !u!1001 &936248751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25989,7 +25989,7 @@ MonoBehaviour:
   m_Hand: {fileID: 530560453}
   m_LeftHand: {fileID: 0}
   m_RightHand: {fileID: 0}
-  keyTest: 0
+  keyTest: 1
 --- !u!54 &1670876580
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -110,7 +110,13 @@ namespace Oyedoyin.Common
 
         public bool keyTest = false;
 
-
+        private void Start()
+        {
+            if (keyTest)
+            {
+                Initialize();
+            }
+        }
         private void Update()
         {
             if (keyTest)
