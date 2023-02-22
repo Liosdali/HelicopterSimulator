@@ -210,8 +210,10 @@ public class Switch : MonoBehaviour
             {
                 leverHeld = false;
                 m_controller.SetAnimBool(false);
-                m_Hand.SetActive(false);
-                m_controller = null;
+                if (m_Hand != null)
+                    m_Hand.SetActive(false);
+                m_controller._isBeingUsed = false;
+                m_controller = null;            
             }
         }
     }

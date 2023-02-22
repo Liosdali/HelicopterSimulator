@@ -37,7 +37,7 @@ public class SwitchSingleAxis : MonoBehaviour
     private Vector2 deflectionLimit = new Vector2(30, 30);
     private Vector3 handPosition;
     private Vector3 localHandPosition;
-    Vector3 m_yokeAxisRoll;
+    //Vector3 m_yokeAxisRoll;
 
 
     public GameObject m_Hand;
