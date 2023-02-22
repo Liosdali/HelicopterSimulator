@@ -127,7 +127,7 @@ namespace Oyedoyin.Common
             {
                 if (m_controller.gripValue < 0.9f)   //if (m_controller.triggerValue < 0.9f && m_controller.gripValue < 0.9f)
                 {
-                    Debug.Log("Lever =" + gameObject.name + " ref = " + m_controller.gameObject.name);
+                    //Debug.Log("Lever =" + gameObject.name + " ref = " + m_controller.gameObject.name);
                     m_controller.SetAnimBool(false);
                     if (m_Hand != null)
                         m_Hand.SetActive(false);

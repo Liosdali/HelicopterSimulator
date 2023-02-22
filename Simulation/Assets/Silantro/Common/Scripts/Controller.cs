@@ -664,12 +664,9 @@ namespace Oyedoyin.Common
                           instrument.m_pitch + "/" + instrument.m_roll +
                           "Collective Input" + 
                           instrument.m_lever
-
-
-
-
-
-                    );
+                          
+                          
+                          );
 
             }
             // Piston Engines
