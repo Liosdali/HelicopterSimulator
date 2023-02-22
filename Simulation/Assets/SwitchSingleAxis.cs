@@ -4,6 +4,8 @@ using UnityEngine;
 using Oyedoyin.Common;
 
 
+
+// Test Script
 [RequireComponent(typeof(Rigidbody))]
 public class SwitchSingleAxis : MonoBehaviour
 {
