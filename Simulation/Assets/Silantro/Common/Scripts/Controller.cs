@@ -659,14 +659,14 @@ namespace Oyedoyin.Common
 
 
 
-                Debug.Log("Instrument Inputs =" +
-                          "Pitch / Roll" + 
-                          instrument.m_pitch + "/" + instrument.m_roll +
-                          "Collective Input" + 
-                          instrument.m_lever
+                //Debug.Log("Instrument Inputs =" +
+                //          "Pitch / Roll" + 
+                //          instrument.m_pitch + "/" + instrument.m_roll +
+                //          "Collective Input" + 
+                //          instrument.m_lever
                           
                           
-                          );
+                //          );
 
             }
             // Piston Engines
