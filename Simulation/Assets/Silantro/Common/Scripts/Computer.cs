@@ -161,7 +161,9 @@ namespace Oyedoyin.Common
             b_pitchInput = -controller.m_input.m_pitchInput;
             b_rollInput = -controller.m_input.m_rollInput;
 
-            Debug.Log("Pitch input " + b_pitchInput + " Roll Input = " + b_rollInput);
+
+            // Works fine
+            //Debug.Log("Pitch input " + b_pitchInput + " Roll Input = " + b_rollInput);
 
 
             b_yawInput = controller.m_input.m_yawInput;
