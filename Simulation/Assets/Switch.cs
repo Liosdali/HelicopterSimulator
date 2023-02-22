@@ -96,13 +96,18 @@ public class Switch : MonoBehaviour
             m_baseLeverPosition = transform.parent.InverseTransformPoint(m_hinge.position);
             m_baseLeverRotation = m_hinge.localRotation;
         }
-
-
-
     }
 
     public bool keyTest = false;
 
+
+    private void Start()
+    {
+        if (keyTest)
+        {
+            Initialize();
+        }
+    }
 
     private void Update()
     {
