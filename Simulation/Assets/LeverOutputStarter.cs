@@ -9,30 +9,18 @@ public class LeverOutputStarter : MonoBehaviour
 {
 
 
-
+    [SerializeField]
+    private SilantroLever m_lever;
     // ---------------------------- Events
     public UnityEvent onFlipOn = new UnityEvent();
     public UnityEvent onFlipOff = new UnityEvent();
 
-    [SerializeField]
-    private SilantroLever m_lever;
 
-
-    private bool m_Open;
+    private bool m_Open = false;
 
     // Update is called once per frame
     void Update()
     {
-        if (m_lever.leverOutput > 0.8f)
-        {
-            onFlipOn.Invoke();
-        }
-        else
-        {
-            onFlipOff.Invoke();
-        }
-
-
         if (!m_Open)
         {
             OutputOnCheck();
@@ -41,8 +29,6 @@ public class LeverOutputStarter : MonoBehaviour
         {
             OutputOffCheck();
         }
-
-
     }
 
     private void OutputOffCheck()
@@ -50,7 +36,7 @@ public class LeverOutputStarter : MonoBehaviour
         if (m_lever.leverOutput < 0.78f)
         {
             m_Open = false;
-            onFlipOn.Invoke();
+            onFlipOn?.Invoke();
         }
     }
     private void OutputOnCheck()
@@ -58,7 +44,7 @@ public class LeverOutputStarter : MonoBehaviour
         if (m_lever.leverOutput > 0.8f)
         {
             m_Open = true;
-            onFlipOn.Invoke();
+            onFlipOn?.Invoke();
         }
     }
 }
