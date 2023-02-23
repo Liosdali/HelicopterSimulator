@@ -10083,6 +10083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 542006798}
+  - component: {fileID: 542006799}
   m_Layer: 10
   m_Name: HandChild
   m_TagString: Untagged
@@ -10107,6 +10108,26 @@ Transform:
   m_Father: {fileID: 1738052941}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 3.295, y: -8.289, z: -0.239}
+--- !u!95 &542006799
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542006797}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9b194588e8928684184cc79d107a2b3d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &551367392 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3057477018375645276, guid: fbafd6f58c8056e4f8b5c3b71bbeb806, type: 3}
@@ -30404,7 +30425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1738052941
 Transform:
   m_ObjectHideFlags: 0
