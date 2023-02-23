@@ -8,6 +8,9 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 #endif
 
+using Oyedoyin.Common;
+
+
 /// <summary>
 /// Handles the functioning of VR Buttons
 /// </summary>
@@ -80,7 +83,7 @@ public class SilantroButton : MonoBehaviour
 
 
     public float coolDownTime = 4f;
-    private float coolTimer;
+    [SerializeField] private float coolTimer;
     public float resetTimer;
 
 
@@ -232,14 +235,59 @@ public class SilantroButton : MonoBehaviour
         else { TurnKnobOn(); }
     }
 
-    private void OnTriggerEnter(Collider other)
+
+    public GameObject m_Hand;
+
+    [SerializeField]
+    private SilantroHand m_controller;
+
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("PlayerHand"))
         {
+
+            if (m_controller == null)
+            {
+                m_controller = other.GetComponent<SilantroHand>();
+            }
             //If Player Touches it will change the 
             //switch_Hit = true;
-            if (coolTimer <= 0)
-                ToggleButton();
+            if (m_controller != null)
+            {
+
+
+                    if (m_controller.m_handType == SilantroHand.HandType.Left)
+                    {
+                        // Scale times * -1
+                        //m_Hand = m_LeftHand;
+                        m_Hand.transform.localScale = new Vector3(1,-1,1);
+                    }
+                    else
+                    {
+                        m_Hand.transform.localScale = new Vector3(1, 1, 1);
+                    }
+
+                m_controller.SetAnimBool(true);
+                m_Hand.SetActive(true);
+
+                if (m_controller.triggerValue > 0.9f)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
+                {
+                    if (coolTimer <= 0)
+                        ToggleButton();
+                }
+            }
+        }
+    }
+
+
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("PlayerHand"))
+        {
+            m_controller.SetAnimBool(false);
+            m_Hand.SetActive(false);
+            m_controller = null;
         }
     }
 }
@@ -313,9 +361,15 @@ public class SilantroButtonEditor : Editor
         GUILayout.Space(5f);
         EditorGUILayout.PropertyField(serializedObject.FindProperty("coolDownTime"), new GUIContent("Press Timer"));
         GUILayout.Space(5f);
+
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_Hand"), new GUIContent("Hand"));
+        GUILayout.Space(10f);
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("coolTimer"), new GUIContent("Cooldown (Test)"));
+        GUILayout.Space(10f);
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_controller"), new GUIContent("Controller (Test)"));
+        GUILayout.Space(10f);
         EditorGUILayout.PropertyField(serializedObject.FindProperty("resetTimer"), new GUIContent("Button Press Time"));
         GUILayout.Space(5f);
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("coolTimer"), new GUIContent("Cooldown"));
 
 
 
