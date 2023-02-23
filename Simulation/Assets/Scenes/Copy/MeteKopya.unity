@@ -1866,7 +1866,10 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
+  coolTimer: 0
   resetTimer: 0
+  m_Hand: {fileID: 0}
+  m_controller: {fileID: 0}
 --- !u!65 &87055169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2666,7 +2669,10 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
+  coolTimer: 0
   resetTimer: 0
+  m_Hand: {fileID: 0}
+  m_controller: {fileID: 0}
 --- !u!65 &146784337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8684,7 +8690,7 @@ GameObject:
   - component: {fileID: 530560455}
   - component: {fileID: 530560454}
   m_Layer: 10
-  m_Name: Left_HandSnap
+  m_Name: Left_HandSwitch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8700,7 +8706,7 @@ Animator:
   m_GameObject: {fileID: 530560453}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 641e9d2f5c6b4cb438161abef3be8300, type: 3}
-  m_Controller: {fileID: 9100000, guid: 45aabc7484fc9cf4c85daa7aa0fa7bb4, type: 2}
+  m_Controller: {fileID: 9100000, guid: d0df711c04d84424f9988b2fefaef4fa, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -13550,7 +13556,10 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
+  coolTimer: 0
   resetTimer: 0
+  m_Hand: {fileID: 0}
+  m_controller: {fileID: 0}
 --- !u!65 &841701508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16796,7 +16805,10 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
+  coolTimer: 0
   resetTimer: 0
+  m_Hand: {fileID: 0}
+  m_controller: {fileID: 0}
 --- !u!65 &1041499005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18350,7 +18362,10 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
+  coolTimer: 0
   resetTimer: 0
+  m_Hand: {fileID: 0}
+  m_controller: {fileID: 0}
 --- !u!65 &1136015074
 BoxCollider:
   m_ObjectHideFlags: 0
