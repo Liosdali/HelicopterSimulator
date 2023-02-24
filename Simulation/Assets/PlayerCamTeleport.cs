@@ -2,29 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCamTeleportTest : MonoBehaviour
+public class PlayerCamTeleport : MonoBehaviour
 {
     [SerializeField] private Transform m_resetTransform;
     [SerializeField] private GameObject m_player;
     [SerializeField] private Camera m_playerCam;
 
-
+    public static PlayerCamTeleport instance;
     // Start is called before the first frame update
 
 
     private bool m_isTeleporting = false;
 
 
-    public void LateUpdate()
+    private void Start()
     {
-        if (!m_isTeleporting)
-        {
-            ResetPosition();
-            Debug.Log("Reset Pos");
-            m_isTeleporting = true;
-            //gameObject.SetActive(false);
-        }
+        instance = this;
     }
+
+    //public void LateUpdate()
+    //{
+    //    if (!m_isTeleporting)
+    //    {
+    //        ResetPosition();
+    //        Debug.Log("Reset Pos");
+    //        m_isTeleporting = true;
+    //        //gameObject.SetActive(false);
+    //    }
+    //}
 
 
     [ContextMenu("Reset Position")]
