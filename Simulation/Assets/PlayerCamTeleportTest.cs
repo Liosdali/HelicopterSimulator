@@ -20,6 +20,7 @@ public class PlayerCamTeleportTest : MonoBehaviour
         if (!m_isTeleporting)
         {
             ResetPosition();
+            Debug.Log("Reset Pos");
             m_isTeleporting = true;
             //gameObject.SetActive(false);
         }
