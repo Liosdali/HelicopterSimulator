@@ -61,11 +61,7 @@ public class FadeScript : MonoBehaviour
         float timer = 0f;
         Color _fadeColor = _FadeColor;
         _fadeColor.a = 1;
-
-        //_fadeColor.a = Mathf.Lerp(alphaIn, alphaOut, timer / _FadeDuration);
-
         _renderer.material.SetColor("_Color", _fadeColor);
-
 
         while (timer <= _FadeDuration)
         {
@@ -76,8 +72,6 @@ public class FadeScript : MonoBehaviour
         PlayerCamTeleport.instance.ResetPosition();
         FadeIn();
     }
-
-
 
 
     private IEnumerator FadeCourutine(float alphaIn, float alphaOut)
@@ -106,11 +100,6 @@ public class FadeScript : MonoBehaviour
 
         _renderer.material.SetColor("_Color", fadeColor2);
 
-        //TeleportPlayer.Instance.teleportPlayer();
-
-        //TrackOn.Instance.EnableTracking();
-
-        //FadeIn();
         Destroy(gameObject);
     }
 }
