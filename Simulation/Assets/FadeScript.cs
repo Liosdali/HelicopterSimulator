@@ -55,7 +55,8 @@ public class FadeScript : MonoBehaviour
     }
 
 
-
+    // Making the first scene black
+     
     private IEnumerator BlackCourutine()
     {
         float timer = 0f;

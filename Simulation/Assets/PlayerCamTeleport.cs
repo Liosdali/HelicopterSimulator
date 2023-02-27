@@ -9,8 +9,6 @@ public class PlayerCamTeleport : MonoBehaviour
     [SerializeField] private Camera m_playerCam;
 
     public static PlayerCamTeleport instance;
-    // Start is called before the first frame update
-
 
     private bool m_isTeleporting = false;
 
@@ -19,18 +17,6 @@ public class PlayerCamTeleport : MonoBehaviour
     {
         instance = this;
     }
-
-    //public void LateUpdate()
-    //{
-    //    if (!m_isTeleporting)
-    //    {
-    //        ResetPosition();
-    //        Debug.Log("Reset Pos");
-    //        m_isTeleporting = true;
-    //        //gameObject.SetActive(false);
-    //    }
-    //}
-
 
     [ContextMenu("Reset Position")]
     public void ResetPosition()
