@@ -14414,7 +14414,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6238
+  m_Name: pb_Mesh-8496
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15220,7 +15220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86fd3c968ba873f4c9651da70411dd74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _FadeDuration: 2
+  _FadeDuration: 1
   _FadeColor: {r: 0, g: 0, b: 0, a: 1}
   _fadeOnStart: 1
 --- !u!23 &793674926
