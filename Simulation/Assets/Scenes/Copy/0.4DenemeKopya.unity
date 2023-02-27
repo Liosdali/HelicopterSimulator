@@ -10983,7 +10983,6 @@ Transform:
   m_Children:
   - {fileID: 4804872531636388802}
   - {fileID: 8500693965260458601}
-  - {fileID: 2042535400}
   - {fileID: 6169335786091126580}
   m_Father: {fileID: 1264647721}
   m_RootOrder: 1
@@ -37532,13 +37531,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042535399}
-  m_LocalRotation: {x: 0.000000044703473, y: 0.40341058, z: -0.00000009080393, w: 0.91501904}
-  m_LocalPosition: {x: 0.2204, y: -0.0014, z: 0.2756}
-  m_LocalScale: {x: 0.6463075, y: 0.7188685, z: 1.9169014}
+  m_LocalRotation: {x: 0.4979869, y: 0.4979869, z: -0.5020051, w: 0.502005}
+  m_LocalPosition: {x: 0.3501881, y: -19.94121, z: 4.0557275}
+  m_LocalScale: {x: 32.315372, y: 35.94344, z: 95.845055}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 559963196}
-  m_RootOrder: 2
+  m_Father: {fileID: 4804872531636388802}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 47.583, z: 0}
 --- !u!65 &2042535401
 BoxCollider:
@@ -62672,14 +62671,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6323173607828745900}
-  m_LocalRotation: {x: -0.2531534, y: -0.2531534, z: 0.6602374, w: 0.6602374}
+  m_LocalRotation: {x: -0.42550218, y: -0.42550218, z: 0.5647548, w: 0.5647548}
   m_LocalPosition: {x: -0.021960266, y: -0.008398447, z: -0.051362857}
   m_LocalScale: {x: 0.019999992, y: 0.020000001, z: 0.02}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2042535400}
   m_Father: {fileID: 559963196}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -91.956, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -73.991, z: 90}
 --- !u!23 &4820295043519780288
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -62803,7 +62803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!33 &4886341661095705453
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -65767,7 +65767,7 @@ Transform:
   - {fileID: 6169335785318776942}
   - {fileID: 6169335786071465969}
   m_Father: {fileID: 559963196}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -13.974, y: -116.089, z: -525.374}
 --- !u!95 &6169335786091126581
 Animator:
