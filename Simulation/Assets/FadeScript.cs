@@ -106,7 +106,7 @@ public class FadeScript : MonoBehaviour
         _renderer.material.SetColor("_Color", fadeColor2);
 
         //TeleportPlayer.Instance.teleportPlayer();
-        //PlayerCamTeleport.instance.ResetPosition();
+        PlayerCamTeleport.instance.ResetPosition();
         //TrackOn.Instance.EnableTracking();
 
         //FadeIn();
