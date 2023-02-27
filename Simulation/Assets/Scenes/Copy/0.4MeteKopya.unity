@@ -15186,14 +15186,13 @@ GameObject:
   - component: {fileID: 793674927}
   - component: {fileID: 793674926}
   - component: {fileID: 793674925}
-  - component: {fileID: 793674928}
   m_Layer: 11
   m_Name: FaderScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &793674924
 Transform:
   m_ObjectHideFlags: 0
@@ -15221,9 +15220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86fd3c968ba873f4c9651da70411dd74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _FadeDuration: 4
+  _FadeDuration: 2
   _FadeColor: {r: 0, g: 0, b: 0, a: 1}
-  _fadeOnStart: 0
+  _fadeOnStart: 1
 --- !u!23 &793674926
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15274,22 +15273,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793674923}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &793674928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793674923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d24ada4c67ebef144bdbae72bd034c2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetTransform: {fileID: 0}
-  _pilot: {fileID: 2719126340277858933}
-  locomotionSystem: {fileID: 1918860381}
-  _locomotiveStatus: 1
 --- !u!1 &798637353
 GameObject:
   m_ObjectHideFlags: 0
@@ -57915,6 +57898,7 @@ GameObject:
   - component: {fileID: 2719126340277858940}
   - component: {fileID: 2719126340277858942}
   - component: {fileID: 2719126340277858943}
+  - component: {fileID: 2719126340277858944}
   m_Layer: 11
   m_Name: XR Pilot
   m_TagString: Player
@@ -58176,6 +58160,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2719126340277858944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2719126340277858933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19f4057dfc51cf4988695df950b4eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_resetTransform: {fileID: 0}
+  m_player: {fileID: 0}
+  m_playerCam: {fileID: 2719126338292808903}
 --- !u!1 &2730266085751722734
 GameObject:
   m_ObjectHideFlags: 0

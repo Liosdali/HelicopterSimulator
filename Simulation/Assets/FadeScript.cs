@@ -36,7 +36,7 @@ public class FadeScript : MonoBehaviour
 
     public void EndCutscene()
     {
-        FadeOut();
+        StartCoroutine(BlackCourutine());
     }
 
 
@@ -53,6 +53,31 @@ public class FadeScript : MonoBehaviour
     {
         StartCoroutine(FadeCourutine(alphaIn, alphaOut));
     }
+
+
+
+    private IEnumerator BlackCourutine()
+    {
+        float timer = 0f;
+        Color _fadeColor = _FadeColor;
+        _fadeColor.a = 1;
+
+        //_fadeColor.a = Mathf.Lerp(alphaIn, alphaOut, timer / _FadeDuration);
+
+        _renderer.material.SetColor("_Color", _fadeColor);
+
+
+        while (timer <= _FadeDuration)
+        {
+            Debug.Log("Starting the Project");
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        FadeIn();
+    }
+
+
+
 
     private IEnumerator FadeCourutine(float alphaIn, float alphaOut)
     {
@@ -84,7 +109,7 @@ public class FadeScript : MonoBehaviour
         PlayerCamTeleport.instance.ResetPosition();
         TrackOn.Instance.EnableTracking();
 
-        FadeIn();
+        //FadeIn();
         Destroy(gameObject);
     }
 }
