@@ -19,10 +19,12 @@ public class TutorialArrow : MonoBehaviour
         if (missionTransforms == null)
             Destroy(gameObject);
 
-        transform.position = missionTransforms[1].transform.position;
-
+        transform.position = missionTransforms[m_counter].transform.position;
+        //GoToNextObjective(-1);
     }
 
+
+    
     void DestroyAllObjects()
     {
         Debug.Log("Destroying tutorial objects");
@@ -35,6 +37,22 @@ public class TutorialArrow : MonoBehaviour
 
     // Starts with 0 
 
+    [ContextMenu("Next")]
+    public void NextTest()
+    {
+        if (missionTransforms.Length == m_counter)
+        {
+            Debug.Log("Tutorial has finished");
+            return;
+        }
+        //missionTransforms[m_counter].gameObject.SetActive(true);
+        m_counter++;
+        if (m_counter != missionTransforms.Length)
+        {
+            Debug.LogWarning("Updating Transform of Arrow");
+            transform.position = missionTransforms[m_counter].transform.position;
+        }
+    }
 
     public void GoToNextObjective(int objectNumber)
     {
@@ -51,7 +69,7 @@ public class TutorialArrow : MonoBehaviour
         m_counter++;
         if (m_counter != missionTransforms.Length) 
         {
-            Debug.LogWarning("Updating Transform of Arrow");
+            //Debug.LogWarning("Updating Transform of Arrow");
             transform.position = missionTransforms[m_counter].transform.position;
         }
     }
