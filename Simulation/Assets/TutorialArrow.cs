@@ -20,6 +20,8 @@ public class TutorialArrow : MonoBehaviour
 
         if (missionTransforms == null)
             Destroy(gameObject);
+        gameObject.transform.position = missionTransforms[m_counter].transform.position;
+
     }
 
     void DestroyAllObjects()
@@ -41,7 +43,7 @@ public class TutorialArrow : MonoBehaviour
             return;
         }
 
-        if (missionTransforms.Length != objectNumber)
+        if (m_counter != objectNumber)
             return;
 
         //missionTransforms[m_counter].gameObject.SetActive(true);
