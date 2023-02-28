@@ -36,7 +36,7 @@ public class LeverOutputStarter : MonoBehaviour
         if (m_lever.leverOutput < 0.78f)
         {
             m_Open = false;
-            onFlipOn?.Invoke();
+            onFlipOff?.Invoke();
         }
     }
     private void OutputOnCheck()
