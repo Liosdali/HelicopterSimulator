@@ -5,21 +5,22 @@ using UnityEngine;
 public class TutorialArrow : MonoBehaviour
 {
 
-
-
     public Transform[] missionTransforms;
-
     public static TutorialArrow instance;
-
     private int m_counter = 0;
 
     // Start is called before the first frame update
+
     void Start()
     {
+
         instance = this;
 
         if (missionTransforms == null)
             Destroy(gameObject);
+
+        gameObject.transform.position = missionTransforms[m_counter].transform.position;
+
     }
 
     void DestroyAllObjects()
@@ -32,16 +33,18 @@ public class TutorialArrow : MonoBehaviour
     }
 
 
+    // Starts with 0 
+
+
     public void GoToNextObjective(int objectNumber)
     {
         if (missionTransforms.Length == m_counter )
         {
             Debug.Log("Tutorial has finished");
-            //Destroy(gameObject);
             return;
         }
 
-        if (missionTransforms.Length != objectNumber)
+        if (m_counter != objectNumber)
             return;
 
         //missionTransforms[m_counter].gameObject.SetActive(true);
