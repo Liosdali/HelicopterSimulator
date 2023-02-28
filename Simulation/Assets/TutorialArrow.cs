@@ -32,7 +32,7 @@ public class TutorialArrow : MonoBehaviour
     }
 
 
-    public void GoToNextObjective()
+    public void GoToNextObjective(int objectNumber)
     {
         if (missionTransforms.Length - 1 == m_counter )
         {
@@ -40,6 +40,9 @@ public class TutorialArrow : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        if (missionTransforms.Length != objectNumber)
+            return;
 
         //missionTransforms[m_counter].gameObject.SetActive(true);
         m_counter++;
