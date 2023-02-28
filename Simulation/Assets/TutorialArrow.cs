@@ -34,10 +34,10 @@ public class TutorialArrow : MonoBehaviour
 
     public void GoToNextObjective(int objectNumber)
     {
-        if (missionTransforms.Length - 1 == m_counter )
+        if (missionTransforms.Length == m_counter )
         {
             Debug.Log("Tutorial has finished");
-            Destroy(gameObject);
+            //Destroy(gameObject);
             return;
         }
 
