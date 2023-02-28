@@ -13,6 +13,7 @@ public class HookScript : MonoBehaviour
     [SerializeField]
     private GameObject dropObject;
 
+    private bool triggered = false;
 
     // Update is called once per frame
     void Update()
@@ -26,11 +27,16 @@ public class HookScript : MonoBehaviour
 
     public void HookFunction ()
     {
-        Debug.Log(hook_Enabled);
         hook_Enabled = true;
     }
 
-    private bool triggered = false;
+
+
+
+    // Mission needs to be configured 
+
+    // A primitive version of mission event handler 
+    // Needs to be changed to suit better and become easier to add or remove missions
 
     private void OnTriggerStay(Collider other)
     {

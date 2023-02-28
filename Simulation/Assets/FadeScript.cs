@@ -75,6 +75,8 @@ public class FadeScript : MonoBehaviour
     }
 
 
+    // 
+
     private IEnumerator FadeCourutine(float alphaIn, float alphaOut)
     {
 
