@@ -7,7 +7,7 @@ public class TutorialArrow : MonoBehaviour
 
     public Transform[] missionTransforms;
     public static TutorialArrow instance;
-    private int m_counter = 0;
+    public int m_counter = 0;
 
     // Start is called before the first frame update
 
@@ -19,7 +19,7 @@ public class TutorialArrow : MonoBehaviour
         if (missionTransforms == null)
             Destroy(gameObject);
 
-        gameObject.transform.position = missionTransforms[m_counter].transform.position;
+        transform.position = missionTransforms[1].transform.position;
 
     }
 
@@ -38,7 +38,7 @@ public class TutorialArrow : MonoBehaviour
 
     public void GoToNextObjective(int objectNumber)
     {
-        if (missionTransforms.Length == m_counter )
+        if (missionTransforms.Length == m_counter)
         {
             Debug.Log("Tutorial has finished");
             return;
@@ -49,7 +49,11 @@ public class TutorialArrow : MonoBehaviour
 
         //missionTransforms[m_counter].gameObject.SetActive(true);
         m_counter++;
-        gameObject.transform.position = missionTransforms[m_counter].transform.position;
+        if (m_counter != missionTransforms.Length) 
+        {
+            Debug.LogWarning("Updating Transform of Arrow");
+            transform.position = missionTransforms[m_counter].transform.position;
+        }
     }
 
 }

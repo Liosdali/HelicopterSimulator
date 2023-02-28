@@ -166,7 +166,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh334926
+  m_Name: pb_Mesh439392
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3684,18 +3684,6 @@ MonoBehaviour:
   onPress:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 325334415}
-        m_TargetAssemblyTypeName: Oyedoyin.RotaryWing.RotaryController, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 325334420}
         m_TargetAssemblyTypeName: TutorialArrow, Assembly-CSharp
         m_MethodName: GoToNextObjective
@@ -3706,6 +3694,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 0
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3977579515757861137}
+        m_TargetAssemblyTypeName: Oyedoyin.RotaryWing.RotaryController, Assembly-CSharp
+        m_MethodName: TurnOnEngines
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   onFlipOn:
@@ -7906,7 +7906,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325334415}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -218.2114, y: 2.3028, z: -285.679}
+  m_LocalPosition: {x: -218.0738, y: 2.2175, z: -285.6076}
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7927,8 +7927,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missionTransforms:
-  - {fileID: 769730204}
-  - {fileID: 1089067407}
+  - {fileID: 2068445373}
+  - {fileID: 2068445373}
+  m_counter: 0
 --- !u!95 &325334421
 Animator:
   serializedVersion: 4
@@ -16025,7 +16026,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 769730203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1048, z: 0.0885}
+  m_LocalPosition: {x: 0, y: 0.2517, z: 0.0885}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21125,7 +21126,7 @@ Transform:
   m_Children:
   - {fileID: 346081242}
   - {fileID: 1516768541}
-  - {fileID: 1089067407}
+  - {fileID: 2068445373}
   m_Father: {fileID: 1163932852}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -31.067, y: 0, z: 0}
@@ -22151,37 +22152,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 469168, guid: 5d058a89282af8141ab9f004bbafc22d, type: 3}
   m_PrefabInstance: {fileID: 1088982917}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1089067406
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1089067407}
-  m_Layer: 13
-  m_Name: TutorialTransform
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1089067407
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089067406}
-  m_LocalRotation: {x: -0.0034935772, y: -0, z: -0, w: 0.999994}
-  m_LocalPosition: {x: -0.005, y: 0.1062, z: 0.0839}
-  m_LocalScale: {x: 1, y: 1.0000135, z: 0.99997723}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1041499003}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1091397295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39864,6 +39834,37 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1142345043845896586, guid: 9e0c673d48e395a40b77748917bf407d, type: 3}
   m_PrefabInstance: {fileID: 2067406282}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2068445372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2068445373}
+  m_Layer: 13
+  m_Name: TutorialTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2068445373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068445372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.457, y: 0.0802, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1041499003}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2070039026
 GameObject:
   m_ObjectHideFlags: 0
