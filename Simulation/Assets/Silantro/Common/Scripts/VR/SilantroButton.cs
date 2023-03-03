@@ -255,18 +255,6 @@ public class SilantroButton : MonoBehaviour
             if (m_controller != null)
             {
 
-
-                //if (m_controller.m_handType == SilantroHand.HandType.Left)
-                //{
-                //    // Scale times * -1
-                //    //m_Hand = m_LeftHand;
-                //    m_Hand.transform.localScale = new Vector3(1,-1,1);
-                //}
-                //else
-                //{
-                //    m_Hand.transform.localScale = new Vector3(1, 1, 1);
-                //}
-
                 m_controller.SetAnimBool(true);
                 m_Hand.SetActive(true);
 

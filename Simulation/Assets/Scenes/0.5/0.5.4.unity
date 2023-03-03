@@ -1657,7 +1657,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62197612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07200384, y: 2.3433228, z: -0.12573242}
+  m_LocalPosition: {x: -0.1, y: 2.3, z: -0.1}
   m_LocalScale: {x: 0.594, y: 0.594, z: 0.594}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16878,8 +16878,8 @@ MonoBehaviour:
   clickSound: {fileID: 8300000, guid: 8ae9275782371264ea08043f1a1f5482, type: 3}
   pressDistance: -133
   flipAmount: 20
-  coolDownTime: 4
-  coolTimer: 0
+  coolDownTime: 1
+  coolTimer: 1
   resetTimer: 0
   m_Hand: {fileID: 1851872304}
   m_controller: {fileID: 0}
@@ -22665,7 +22665,7 @@ MonoBehaviour:
   pressDistance: -133
   flipAmount: 20
   coolDownTime: 4
-  coolTimer: 0
+  coolTimer: 1
   resetTimer: 0
   m_Hand: {fileID: 1300528403}
   m_controller: {fileID: 0}
@@ -45193,8 +45193,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9019068964676197746}
   m_LocalRotation: {x: 0.704171, y: -0, z: -0, w: 0.7100305}
-  m_LocalPosition: {x: -0.006, y: -0.009, z: 0.73}
-  m_LocalScale: {x: 0.07090861, y: 1.4986067, z: 0.10318654}
+  m_LocalPosition: {x: -0.89, y: -1.439, z: 4.4}
+  m_LocalScale: {x: 0.02, y: 0.42268676, z: 0.029104091}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1164991997}
