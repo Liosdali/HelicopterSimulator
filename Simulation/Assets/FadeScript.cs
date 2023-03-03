@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class FadeScript : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class FadeScript : MonoBehaviour
     void Start()
     {
         _renderer = GetComponent<Renderer>();
-        
+        XRSettings.gameViewRenderMode = GameViewRenderMode.BothEyes;
         instance = this;
         
     }
