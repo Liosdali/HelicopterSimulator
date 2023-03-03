@@ -39,7 +39,9 @@ PlayerSettings:
     y: 0
     width: 1
     height: 1
-  m_SplashScreenLogos: []
+  m_SplashScreenLogos:
+  - logo: {fileID: 0}
+    duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
@@ -140,9 +142,6 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: 442314c62e615fb4a8eabf5311316c00, type: 2}
-  - {fileID: 3139994905956699712, guid: 4afaf9223db5a1e4d97cb3a230314d02, type: 2}
-  - {fileID: 1853716859644095726, guid: 0638d91b68b93a743b64918871ceebca, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -162,7 +161,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Standalone: com.Fist-Full-of-Shrimp.VR-Shrimp-Template
+    Standalone: com.VrHelicopter.VR-Helikopter-Build-V0.4
   buildNumber:
     Standalone: 0
     iPhone: 0
