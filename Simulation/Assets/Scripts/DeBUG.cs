@@ -21,4 +21,9 @@ public class DeBUG : MonoBehaviour
     }
 
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
 }
