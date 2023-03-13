@@ -21,7 +21,7 @@ public class FadeScript : MonoBehaviour
     void Start()
     {
         _renderer = GetComponent<Renderer>();
-        XRSettings.gameViewRenderMode = GameViewRenderMode.OcclusionMesh;
+        XRSettings.gameViewRenderMode = GameViewRenderMode.BothEyes;
         instance = this;
         
     }
