@@ -44242,7 +44242,6 @@ GameObject:
   - component: {fileID: 1142345043192235075}
   - component: {fileID: 1142345043192235084}
   - component: {fileID: 2144821916}
-  - component: {fileID: 1142345043192235086}
   m_Layer: 5
   m_Name: WristMenu
   m_TagString: Untagged
@@ -44250,18 +44249,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1142345043192235086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142345043192235085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66e2d60e5b616a94e90b5cf8d275ac08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1150569510395813414
 Transform:
   m_ObjectHideFlags: 0
@@ -55119,13 +55106,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1142345043192235086}
-        m_TargetAssemblyTypeName: DeBUG, Assembly-CSharp
-        m_MethodName: reStartLevel
-        m_Mode: 1
+      - m_Target: {fileID: 11400000, guid: 20e76ab5c4289f240b52438dbb95e083, type: 2}
+        m_TargetAssemblyTypeName: DialogueChannel, Assembly-CSharp
+        m_MethodName: RaiseRequestDialogue
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: c266af96f268bed46b18c23032877791, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Dialogue, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -57055,6 +57042,7 @@ GameObject:
   - component: {fileID: 2719126340277858942}
   - component: {fileID: 2719126340277858943}
   - component: {fileID: 2719126340277858944}
+  - component: {fileID: 2719126340277858945}
   m_Layer: 11
   m_Name: XR Pilot
   m_TagString: Player
@@ -57316,6 +57304,18 @@ MonoBehaviour:
   m_resetTransform: {fileID: 306190425}
   m_player: {fileID: 2719126340277858933}
   m_playerCam: {fileID: 2719126338292808903}
+--- !u!114 &2719126340277858945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2719126340277858933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e2d60e5b616a94e90b5cf8d275ac08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2721350863760996010
 RectTransform:
   m_ObjectHideFlags: 0
@@ -58727,7 +58727,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Restart
+  m_text: 'Dialogue
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -63632,7 +63634,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit Game
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -63927,10 +63929,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1142345043192235086}
-        m_TargetAssemblyTypeName: DeBUG, Assembly-CSharp
-        m_MethodName: ExitGame
-        m_Mode: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

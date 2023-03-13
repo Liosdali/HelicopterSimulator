@@ -7,26 +7,21 @@ public class AltituteIndıcator : MonoBehaviour
 
     [SerializeField]
     private Transform helicopter;
+    public Transform objectToLookAt;
 
 
-    // x * -1
-    // y directly
-
-    // Update is called once per frame
     void Update()
     {
-        //transform.rotation = new Quaternion(helicopter.rotation.x, helicopter.rotation.y, 0, 0);
-
-        //Vector3 eulerRotation = new Vector3(-helicopter.rotation.x, helicopter.rotation.y, helicopter.rotation.z);
-        //transform.rotation = Quaternion.Euler(eulerRotation);
-
-
-
-        Test();
+        float degreesPerSecond = 90 * Time.deltaTime;
+        Vector3 direction = objectToLookAt.transform.position - transform.position;
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, degreesPerSecond);
     }
+   
 
     void Test()
     {
         transform.LookAt(helicopter.transform);
     }
 }
+ 
