@@ -6,15 +6,19 @@ using Oyedoyin.Common;
 public class AltituteIndıcator : MonoBehaviour
 {
 
-    [SerializeField]
-    private Transform helicopter;
-    public Transform objectToLookAt;
+
 
     public static AltituteIndıcator instance;
+
+    //public Controller m_silantroController;
+
+    private float feet;
 
     private float m_rollInput;
     private float m_pitchInput;
 
+    [SerializeField]
+    private float m_degreesPerSecond = 45f;
 
     private void Start()
     {
@@ -27,23 +31,30 @@ public class AltituteIndıcator : MonoBehaviour
         m_pitchInput = pitch;
     }
 
-
-    void Update()
+    public void SetFeet(float feet)
     {
-        float degreesPerSecond = 90 * Time.deltaTime;
-        Vector3 direction = objectToLookAt.transform.position - transform.position;
-        Quaternion targetRotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, degreesPerSecond);
+        this.feet = feet;
+    }
+
+    // X altitute
+    // Y left right tilt
+    // Z horizontal rotation 
+    void LateUpdate()
+    {
+
+
+
+        // 
+        //float Altitude = (float)(m_silantroController.m_core.z * Oyedoyin.Mathematics.Constants.m2ft);
+        //FEEET
         
-        //transform.rotation.x       
-       
+        Debug.Log("Altitude check = " + feet + "ft");
+        Vector3 ballRotation = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z + m_pitchInput);
+        
+        Quaternion targetRotation = Quaternion.LookRotation(ballRotation); 
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, m_degreesPerSecond);
 
     }
    
-
-    void Test()
-    {
-        transform.LookAt(helicopter.transform);
-    }
 }
  
