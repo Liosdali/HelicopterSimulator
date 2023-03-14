@@ -42,7 +42,8 @@ public class AltitudeIndicator : MonoBehaviour
     void LateUpdate()
     {
 
-
+        AltitudeChange();
+        RotationChange();
 
         // 
         //float Altitude = (float)(m_silantroController.m_core.z * Oyedoyin.Mathematics.Constants.m2ft);
@@ -54,7 +55,23 @@ public class AltitudeIndicator : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(ballRotation); 
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, m_degreesPerSecond);
 
+
+
+
     }
    
+
+
+
+    void AltitudeChange()
+    {
+
+    }
+
+    void RotationChange()
+    {
+
+    }
+
 }
  
