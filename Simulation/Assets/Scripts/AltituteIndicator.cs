@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Oyedoyin.Common;
 
-public class AltituteIndıcator : MonoBehaviour
+public class AltituteIndicator : MonoBehaviour
 {
 
 
 
-    public static AltituteIndıcator instance;
+    public static AltituteIndicator instance;
 
     //public Controller m_silantroController;
 
