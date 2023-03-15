@@ -62,7 +62,8 @@ public class AltitudeIndicator : MonoBehaviour
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, m_degreesPerSecond);
 
 
-
+          // Need an implementation of a function to prevent gimbal lock 
+        // ----------------------------------------------------------- //
 
     }
    

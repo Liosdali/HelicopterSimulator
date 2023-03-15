@@ -58,6 +58,8 @@ public class AirControl : MonoBehaviour
 		CameraRigPivot.rotation = Quaternion.Euler( Pitch, Yaw, Roll);
 
 		// return to normal pitch and roll to avoid gimbal lock
+
+        // Gimbal lock 
 		Pitch -= Pitch * Time.deltaTime;
 		Roll -= Roll * Time.deltaTime;
 	}
