@@ -56,7 +56,7 @@ public class AltitudeIndicator : MonoBehaviour
 
 
 
-        Vector3 ballRotation = new Vector3(transform.rotation.x, 0, 0);
+        Vector3 ballRotation = new Vector3(m_TargetXRotation, 0, 0);
         
         Quaternion targetRotation = Quaternion.LookRotation(ballRotation); 
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, m_degreesPerSecond);
@@ -78,14 +78,15 @@ public class AltitudeIndicator : MonoBehaviour
         m_XRotationChange = feet / 80f;
         m_XRotationChange *= 4.5f;
 
-        
-
-
         if (transform.rotation.x != m_XRotationChange)
         {
+            m_TargetXRotation = m_XRotationChange;
 
         }
-
+        else
+        {
+            m_TargetXRotation = transform.rotation.x;
+        }
     }
 
     void RotationChange()
