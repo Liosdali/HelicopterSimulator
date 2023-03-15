@@ -55,6 +55,7 @@ public class AirControl : MonoBehaviour
 		if (Input.GetKey( KeyCode.Alpha1)) Roll += Time.deltaTime * RollRate;
 		if (Input.GetKey( KeyCode.Alpha2)) Roll -= Time.deltaTime * RollRate;
 
+        //Implementing 
 		CameraRigPivot.rotation = Quaternion.Euler( Pitch, Yaw, Roll);
 
 		// return to normal pitch and roll to avoid gimbal lock
