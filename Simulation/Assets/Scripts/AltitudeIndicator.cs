@@ -16,7 +16,7 @@ public class AltitudeIndicator : MonoBehaviour
 
     private float m_rollInput;
     private float m_pitchInput;
-
+    private float m_XrotationChange;
     [SerializeField]
     private float m_degreesPerSecond = 45f;
 
@@ -50,6 +50,11 @@ public class AltitudeIndicator : MonoBehaviour
         //FEEET
         
         Debug.Log("Altitude check = " + feet + "ft");
+
+
+
+
+
         Vector3 ballRotation = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z + m_pitchInput);
         
         Quaternion targetRotation = Quaternion.LookRotation(ballRotation); 
@@ -62,9 +67,16 @@ public class AltitudeIndicator : MonoBehaviour
    
 
 
+    // FEET 800 TOPS
+    // 800 / 80
 
+    // +45  -45
+    //90/ 10 => 10 
     void AltitudeChange()
     {
+        m_XrotationChange = feet / 80f;
+        m_XrotationChange *= 4.5f;
+
 
     }
 
