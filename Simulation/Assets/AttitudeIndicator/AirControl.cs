@@ -46,6 +46,7 @@ public class AirControl : MonoBehaviour
 
     private float m_RollInput;
     private float m_PitchInput;
+
 	const float YawRate = 30.0f;
 	const float PitchRate = 30.0f;
 	const float RollRate = 45.0f;
