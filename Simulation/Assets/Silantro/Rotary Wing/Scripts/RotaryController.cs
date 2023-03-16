@@ -215,7 +215,6 @@ namespace Oyedoyin.RotaryWing
 
             if (allOk && isInitialized && isControllable)
             {
-                Debug.Log("Updating Inputs");
                 UpdateComponentInputs();
             }
         }

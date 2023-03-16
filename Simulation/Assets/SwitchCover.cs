@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.InputSystem;
+using UnityEditor;
+using Oyedoyin.Common;
+using Oyedoyin;
 
 public class SwitchCover : MonoBehaviour
 {
     public Animator anim;
     public GameObject switchTargetCollider;
-
     private bool inColl = false;
-    
+    public SilantroHand m_controller;
 
-    // Start is called before the first frame update
     void Start()
     {
+
         switchTargetCollider.SetActive(false);
     }
 
@@ -22,22 +25,52 @@ public class SwitchCover : MonoBehaviour
     {
         if (other.CompareTag("PlayerHand"))
         {
-            if (!inColl)
+
+            if (m_controller == null)
             {
-                anim.SetBool("IsHandInCollision", true);
+                m_controller = other.GetComponent<SilantroHand>();
             }
-            else if(inColl)
+            //If Player Touches it will change the 
+            //switch_Hit = true;
+            if (m_controller != null)
             {
-                anim.SetBool("IsHandInCollision", false);
+
+                //m_controller.SetAnimBool(true);
+                //m_Hand.SetActive(true);
+
+                if (m_controller.gripValue > 0.9f)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
+                {
+                    Debug.Log("AAAAAAXXXAXXAXAXA");
+                        ToggleTrigger();
+                }
             }
-                 
+
         }
     }
         
+    public void ToggleTrigger()
+    {
+
+        Debug.LogWarning("Uyarý");
+        
+        if (!inColl)
+        {
+            anim.SetBool("IsHandInCollision", true);
+            Debug.LogWarning("True");
+        }
+        else if (inColl)
+        {
+            anim.SetBool("IsHandInCollision", false);
+            Debug.LogWarning("False");
+        }   
+
+    }
+
+
            // anim.SetBool("IsHandInCollision", false);
     public void OpenSwitch()
     {
-      GetComponent<BoxCollider>().enabled = false;
+      //GetComponent<BoxCollider>().enabled = false;
       switchTargetCollider.SetActive(true);
         inColl = !inColl;
     }
