@@ -78,7 +78,7 @@ public class AirControl : MonoBehaviour
 
 		// return to normal pitch and roll to avoid gimbal lock
 
-        // Gimbal lock 
+        // Gimbal lock preventation
 		m_PitchInput -= m_PitchInput * Time.deltaTime;
 		m_RollInput -= m_RollInput * Time.deltaTime;
 	}
