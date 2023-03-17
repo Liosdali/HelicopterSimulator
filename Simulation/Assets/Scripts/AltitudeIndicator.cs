@@ -52,10 +52,6 @@ public class AltitudeIndicator : MonoBehaviour
         
         Debug.Log("Altitude check = " + feet + "ft");
 
-
-
-
-
         Vector3 ballRotation = new Vector3(m_TargetXRotation, 0, 0);
         
         Quaternion targetRotation = Quaternion.LookRotation(ballRotation); 
@@ -90,6 +86,24 @@ public class AltitudeIndicator : MonoBehaviour
         }
     }
 
+
+    void DenemeTest()
+    {
+        float denemeX;
+        // I dont know why i wrote this function
+        // But this tactic works out if you ask me
+        // If you are reading this little thing
+        // Then you are just one big little fat fuckin negro
+        // Just like those vietnamese cucks
+
+
+        // God help me i cant hold the urge to cringe
+
+        // Im going to bust a quick nut 
+        // Just like drake said i liek em 18
+        // Not less not more
+        // Just the way i like child po 
+    }
     void RotationChange()
     {
 
