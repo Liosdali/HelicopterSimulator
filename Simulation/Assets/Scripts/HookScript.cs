@@ -94,6 +94,9 @@ public class HookScript : MonoBehaviour
     }
 
     /*
+     * 
+     * Testing function 
+     * Works in a way that if the collided object 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Deliverable"))
@@ -104,4 +107,7 @@ public class HookScript : MonoBehaviour
     }
 
     */
+
+
+
 }
