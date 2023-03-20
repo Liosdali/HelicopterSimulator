@@ -17,7 +17,6 @@ public class SwitchCover : MonoBehaviour
 
     void Start()
     {
-
         switchTargetCollider.SetActive(false);
     }
 
