@@ -258,6 +258,7 @@ namespace Oyedoyin.RotaryWing
 
                 // Get lever outputs if stick still fails
                 //a
+                //im bussin
 
                 base.UpdateComponentInputs();
                 
