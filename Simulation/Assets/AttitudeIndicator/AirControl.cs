@@ -35,7 +35,6 @@ public class AirControl : MonoBehaviour
 	{
         //Yaw += Input.GetAxis( "Horizontal") * Time.deltaTime * YawRate;
         //Pitch += Input.GetAxis( "Vertical") * Time.deltaTime * PitchRate;
-
         //if (Input.GetKey( KeyCode.Alpha1)) Roll += Time.deltaTime * RollRate;
         //if (Input.GetKey( KeyCode.Alpha2)) Roll -= Time.deltaTime * RollRate;
 
