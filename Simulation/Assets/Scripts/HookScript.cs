@@ -13,6 +13,9 @@ public class HookScript : MonoBehaviour
     [SerializeField]
     private GameObject dropObject;
 
+    [SerializeField]
+    private GameObject fireObject;
+
     private bool triggered = false;
 
     // Update is called once per frame
@@ -40,20 +43,7 @@ public class HookScript : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        // I just try to write dumb shit 
-        // Oh help me god why did we even write this thing
-        // LET THE CHEEZUS HELP YOU YOU SICK FUCKS 
-        // YOU WILL BE CLEANSED IN CHEESE NUTS 
-        // THESE LINES ARE NOTHING BUT FIRE 
-        // I AM GOING TO BUST JUST LIKE MY LORD 
-        // THE CHEESE LORD THe Jizz Lord
-        // Scoopity poop Poopitty poopp
-        // Coo
 
-
-
-        //Flaþlandýk amk
-        // Murat 
         if (other.CompareTag("Deliverable"))
         {
             if (hook_Enabled)
@@ -82,6 +72,8 @@ public class HookScript : MonoBehaviour
                 hookTransform.gameObject.GetComponent<Rigidbody>().useGravity = true;
                 dropObject.GetComponent<Rigidbody>().useGravity = true;
                 dropObject.SetActive(false);
+                fireObject.SetActive(false);
+                
             }
         }
     }
