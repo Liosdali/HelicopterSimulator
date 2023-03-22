@@ -72,7 +72,7 @@ public class FadeScript : MonoBehaviour
             yield return null;
         }
         //
-        PlayerCamTeleport.instance.ResetPosition();
+        //PlayerCamTeleport.instance.ResetPosition();
         
         
         

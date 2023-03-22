@@ -26,24 +26,36 @@ public class PlayerCheck : MonoBehaviour
 
     void Update()
     {
-        var inputDevices = new List<InputDevice>();
-        InputDevices.GetDevices(inputDevices);
-        Debug.Log(inputDevices.Count);
-        if (inputDevices.Count > 0)
+        if (m_PlayerUpdate)
         {
-            Debug.Log("Checking Xr device");
+            var inputDevices = new List<InputDevice>();
+            InputDevices.GetDevices(inputDevices);
+            Debug.Log(inputDevices.Count);
 
-            //ResetPosition();
+            if (inputDevices.Count > 0)
+            {
+                Debug.LogError("XR device present");
+                //ResetPosition();
+            }
+            else
+            {
+                Debug.LogError("No XR devices Present ");
+            }
+
+
         }
-
-        
     }
 
 
 
     void ResetPosition()
     {
-        if (m_PlayerUpdate)
+        var inputDevices = new List<InputDevice>();
+        InputDevices.GetDevices(inputDevices);
+        Debug.Log(inputDevices.Count);
+        
+        
+        if (inputDevices.Count > 0)
         {
             if (_player.transform.position.y > _checkY)
                 PlayerCamTeleport.instance.ResetPosition();
