@@ -38,7 +38,7 @@ public class PlayerCheck : MonoBehaviour
             if (inputDevices.Count > 0)
             {
                 Debug.LogError("XR device present");
-                if (DeviceOn())
+                if (IsHMDMounted())
                     ResetPosition();
                 else
                     Debug.LogError("Device is not mounted");
@@ -69,9 +69,52 @@ public class PlayerCheck : MonoBehaviour
         {
             if (xrDisplay.running)
             {
+                Debug.LogError("Device is Mounted");
                 return true;
             }
         }
+        
+        Debug.LogError("Device is not mounted");
         return false;
+    }
+
+
+
+
+    private static InputDevice headDevice;
+    private void Start()
+    {
+        if (headDevice == null)
+        {
+            headDevice = InputDevices.GetDeviceAtXRNode(XRNode.Head);
+        }
+    }
+
+    /// <summary>
+    /// returns true if the HMD is mounted on the users head. Returns false if the current headset does not support this feature or if the HMD is not mounted.
+    /// </summary>
+    /// <returns></returns>
+    public static bool IsHMDMounted()
+    {
+        if (headDevice == null || headDevice.isValid == false)
+        {
+            headDevice = InputDevices.GetDeviceAtXRNode(XRNode.Head);
+        }
+        if (headDevice != null)
+        {
+            bool presenceFeatureSupported = headDevice.TryGetFeatureValue(CommonUsages.userPresence, out bool userPresent);
+            if (headDevice.isValid && presenceFeatureSupported)
+            {
+                return userPresent;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
     }
 }
