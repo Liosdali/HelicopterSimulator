@@ -66,7 +66,7 @@ public class SwitchCover : MonoBehaviour
     }
 
 
-           // anim.SetBool("IsHandInCollision", false);
+    // anim.SetBool("IsHandInCollision", false);
     public void OpenSwitch()
     {
       //GetComponent<BoxCollider>().enabled = false;

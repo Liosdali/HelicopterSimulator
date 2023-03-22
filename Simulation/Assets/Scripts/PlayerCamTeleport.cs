@@ -13,6 +13,12 @@ public class PlayerCamTeleport : MonoBehaviour
     private bool m_isTeleporting = false;
 
 
+
+    public Transform GetResPosition()
+    {
+        return m_resetTransform;
+    }
+
     private void Start()
     {
         instance = this;
