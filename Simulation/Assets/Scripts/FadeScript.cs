@@ -71,7 +71,7 @@ public class FadeScript : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
-        PlayerCamTeleport.instance.ResetPosition();
+        //PlayerCamTeleport.instance.ResetPosition();
         FadeIn();
     }
 
