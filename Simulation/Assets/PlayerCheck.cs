@@ -10,12 +10,12 @@ public class PlayerCheck : MonoBehaviour
     [SerializeField] private Transform _player;
     [SerializeField]
     private Vector3 m_PlayerResetPos = Vector3.zero;
-    // Vector3(0.25,0.336600006,0.411000013);
+    // Vector3(0.327526718,-0.777336061,0.257475019)
     // Update is called once per frame
 
 
 
-    private float _checkY = 0.650f;
+    private float _checkY = 0.300f;
     private static bool m_PlayerUpdate = false;
 
     public static void FlipUpdate()
@@ -28,6 +28,9 @@ public class PlayerCheck : MonoBehaviour
     {
         if (m_PlayerUpdate)
         {
+
+            // Checking if the device connected 
+
             var inputDevices = new List<InputDevice>();
             InputDevices.GetDevices(inputDevices);
             Debug.Log(inputDevices.Count);
@@ -35,7 +38,10 @@ public class PlayerCheck : MonoBehaviour
             if (inputDevices.Count > 0)
             {
                 Debug.LogError("XR device present");
-                //ResetPosition();
+                if (DeviceOn())
+                    ResetPosition();
+                else
+                    Debug.LogError("Device is not mounted");
             }
             else
             {
@@ -46,20 +52,26 @@ public class PlayerCheck : MonoBehaviour
         }
     }
 
-
-
     void ResetPosition()
     {
-        var inputDevices = new List<InputDevice>();
-        InputDevices.GetDevices(inputDevices);
-        Debug.Log(inputDevices.Count);
         
-        
-        if (inputDevices.Count > 0)
-        {
             if (_player.transform.position.y > _checkY)
                 PlayerCamTeleport.instance.ResetPosition();
             Destroy(gameObject); // Free memory
+    }
+
+
+    public static bool DeviceOn()
+    {
+        var xrDisplaySubsystems = new List<XRDisplaySubsystem>();
+        SubsystemManager.GetInstances<XRDisplaySubsystem>(xrDisplaySubsystems);
+        foreach (var xrDisplay in xrDisplaySubsystems)
+        {
+            if (xrDisplay.running)
+            {
+                return true;
+            }
         }
+        return false;
     }
 }
