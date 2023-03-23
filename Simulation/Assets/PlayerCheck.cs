@@ -6,6 +6,7 @@ using UnityEngine.XR;
 public class PlayerCheck : MonoBehaviour
 {
 
+
     [SerializeField] private Transform _player;
     
     private float _checkY = 0.300f;
@@ -78,6 +79,7 @@ public class PlayerCheck : MonoBehaviour
         }
         if (headDevice != null)
         {
+            // C
             bool presenceFeatureSupported = headDevice.TryGetFeatureValue(CommonUsages.userPresence, out bool userPresent);
             if (headDevice.isValid && presenceFeatureSupported)
             {
