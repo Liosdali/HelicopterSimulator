@@ -8,19 +8,18 @@ public class PlayerCheck : MonoBehaviour
 
 
     [SerializeField] private Transform _player;
-    [SerializeField]
-    private Vector3 m_PlayerResetPos = Vector3.zero;
-    // Vector3(0.327526718,-0.777336061,0.257475019)
-    // Update is called once per frame
-
-
-
+    
     private float _checkY = 0.300f;
     private static bool m_PlayerUpdate = false;
 
-    public static void FlipUpdate()
+
+    private static InputDevice headDevice;
+    private void Start()
     {
-        m_PlayerUpdate = !m_PlayerUpdate;
+        if (headDevice == null)
+        {
+            headDevice = InputDevices.GetDeviceAtXRNode(XRNode.Head);
+        }
     }
 
 
@@ -52,6 +51,12 @@ public class PlayerCheck : MonoBehaviour
         }
     }
 
+    public static void FlipUpdate()
+    {
+        m_PlayerUpdate = !m_PlayerUpdate;
+    }
+
+
     void ResetPosition()
     {
         
@@ -61,35 +66,7 @@ public class PlayerCheck : MonoBehaviour
     }
 
 
-    public static bool DeviceOn()
-    {
-        var xrDisplaySubsystems = new List<XRDisplaySubsystem>();
-        SubsystemManager.GetInstances<XRDisplaySubsystem>(xrDisplaySubsystems);
-        foreach (var xrDisplay in xrDisplaySubsystems)
-        {
-            if (xrDisplay.running)
-            {
-                Debug.LogError("Device is Mounted");
-                return true;
-            }
-        }
-        
-        Debug.LogError("Device is not mounted");
-        return false;
-    }
-
-
-
-
-    private static InputDevice headDevice;
-    private void Start()
-    {
-        if (headDevice == null)
-        {
-            headDevice = InputDevices.GetDeviceAtXRNode(XRNode.Head);
-        }
-    }
-
+    
     /// <summary>
     /// returns true if the HMD is mounted on the users head. Returns false if the current headset does not support this feature or if the HMD is not mounted.
     /// </summary>
@@ -102,6 +79,7 @@ public class PlayerCheck : MonoBehaviour
         }
         if (headDevice != null)
         {
+            // C
             bool presenceFeatureSupported = headDevice.TryGetFeatureValue(CommonUsages.userPresence, out bool userPresent);
             if (headDevice.isValid && presenceFeatureSupported)
             {
