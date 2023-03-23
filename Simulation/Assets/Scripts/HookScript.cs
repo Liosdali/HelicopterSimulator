@@ -16,6 +16,12 @@ public class HookScript : MonoBehaviour
     [SerializeField]
     private GameObject fireObject;
 
+    [SerializeField]
+    private bool test;
+
+    [SerializeField]
+    private GameObject postSmoke;
+
     private bool triggered = false;
 
     // Update is called once per frame
@@ -24,6 +30,12 @@ public class HookScript : MonoBehaviour
         if (hookTransform != null)
         {
             hookTransform.position = new Vector3(transform.position.x, transform.position.y -15, transform.position.z);
+        }
+        if (test)
+        {
+            Destroy(fireObject);
+            postSmoke.SetActive(true);
+            Destroy(postSmoke, 2);
         }
 
     }
@@ -56,7 +68,7 @@ public class HookScript : MonoBehaviour
                 //hookTransform = other.gameObject.transform;
 
                 // Needs to change 
-
+                
                 ArrowScript.Instance.SetTarget(dropObject.transform);
             }
         }
@@ -66,13 +78,13 @@ public class HookScript : MonoBehaviour
             {
                 triggered = true;
                 hookTransform = dropPos;
-
                 hookTransform = null;
-                hookTransform.gameObject.GetComponent<Rigidbody>().isKinematic = false;
-                hookTransform.gameObject.GetComponent<Rigidbody>().useGravity = true;
-                dropObject.GetComponent<Rigidbody>().useGravity = true;
-                dropObject.SetActive(false);
-                fireObject.SetActive(false);
+                //hookTransform.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                //hookTransform.gameObject.GetComponent<Rigidbody>().useGravity = true;
+                //dropObject.GetComponent<Rigidbody>().useGravity = true;
+                
+                //dropObject.SetActive(false);
+                
                 
             }
         }
