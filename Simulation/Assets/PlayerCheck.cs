@@ -60,27 +60,6 @@ public class PlayerCheck : MonoBehaviour
             Destroy(gameObject); // Free memory
     }
 
-
-    public static bool DeviceOn()
-    {
-        var xrDisplaySubsystems = new List<XRDisplaySubsystem>();
-        SubsystemManager.GetInstances<XRDisplaySubsystem>(xrDisplaySubsystems);
-        foreach (var xrDisplay in xrDisplaySubsystems)
-        {
-            if (xrDisplay.running)
-            {
-                Debug.LogError("Device is Mounted");
-                return true;
-            }
-        }
-        
-        Debug.LogError("Device is not mounted");
-        return false;
-    }
-
-
-
-
     private static InputDevice headDevice;
     private void Start()
     {
@@ -89,7 +68,7 @@ public class PlayerCheck : MonoBehaviour
             headDevice = InputDevices.GetDeviceAtXRNode(XRNode.Head);
         }
     }
-
+    
     /// <summary>
     /// returns true if the HMD is mounted on the users head. Returns false if the current headset does not support this feature or if the HMD is not mounted.
     /// </summary>
