@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class ParticleSystem : MonoBehaviour
+public class ParticleSystemScripts : MonoBehaviour
 
 
 {
@@ -13,15 +13,24 @@ public class ParticleSystem : MonoBehaviour
     private bool test;
 
     // Start is called before the first frame update
-    private ParticleSystem ps;
+    private ParticleSystem [] ps;
     void Start()
     {
-        ps = GetComponent<ParticleSystem>();
+        ps = GetComponentsInChildren<ParticleSystem>();
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (test)
+        {
+            var main = ps.main;
+            main.loop = false;
+
+        }
+
         
     }
 
