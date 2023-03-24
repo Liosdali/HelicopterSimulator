@@ -50,6 +50,7 @@ public class PlayerCheck : MonoBehaviour
 
         }
     }
+ 
 
     public static void FlipUpdate()
     {
