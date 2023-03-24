@@ -13,6 +13,18 @@ public class HookScript : MonoBehaviour
     [SerializeField]
     private GameObject dropObject;
 
+    [SerializeField]
+    private GameObject fireObject;
+
+    [SerializeField]
+    private bool test;
+
+    [SerializeField]
+    private GameObject postSmoke;
+
+    [SerializeField]
+    private GameObject smoke;
+
     private bool triggered = false;
 
     // Update is called once per frame
@@ -21,6 +33,12 @@ public class HookScript : MonoBehaviour
         if (hookTransform != null)
         {
             hookTransform.position = new Vector3(transform.position.x, transform.position.y -15, transform.position.z);
+        }
+        if (test)
+        {
+            Destroy(fireObject);
+            postSmoke.SetActive(true);
+            Destroy(smoke, 4);
         }
 
     }
@@ -40,20 +58,7 @@ public class HookScript : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        // I just try to write dumb shit 
-        // Oh help me god why did we even write this thing
-        // LET THE CHEEZUS HELP YOU YOU SICK FUCKS 
-        // YOU WILL BE CLEANSED IN CHEESE NUTS 
-        // THESE LINES ARE NOTHING BUT FIRE 
-        // I AM GOING TO BUST JUST LIKE MY LORD 
-        // THE CHEESE LORD THe Jizz Lord
-        // Scoopity poop Poopitty poopp
-        // Coo
 
-
-
-        //Flaþlandýk amk
-        // Murat 
         if (other.CompareTag("Deliverable"))
         {
             if (hook_Enabled)
@@ -66,7 +71,7 @@ public class HookScript : MonoBehaviour
                 //hookTransform = other.gameObject.transform;
 
                 // Needs to change 
-
+                
                 ArrowScript.Instance.SetTarget(dropObject.transform);
             }
         }
@@ -76,12 +81,14 @@ public class HookScript : MonoBehaviour
             {
                 triggered = true;
                 hookTransform = dropPos;
-
                 hookTransform = null;
-                hookTransform.gameObject.GetComponent<Rigidbody>().isKinematic = false;
-                hookTransform.gameObject.GetComponent<Rigidbody>().useGravity = true;
-                dropObject.GetComponent<Rigidbody>().useGravity = true;
-                dropObject.SetActive(false);
+                //hookTransform.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                //hookTransform.gameObject.GetComponent<Rigidbody>().useGravity = true;
+                //dropObject.GetComponent<Rigidbody>().useGravity = true;
+                
+                //dropObject.SetActive(false);
+                
+                
             }
         }
     }
