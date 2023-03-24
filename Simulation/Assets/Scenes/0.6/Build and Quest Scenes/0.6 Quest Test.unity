@@ -322,6 +322,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 256806352}
     m_Modifications:
+    - target: {fileID: 2488799713830201480, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc83afc35b311964fb0331e3bf06edd8, type: 2}
     - target: {fileID: 2488799713830201481, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
       propertyPath: m_Name
       value: Smoke Particle System Prefab (2)
@@ -5634,6 +5638,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 256806352}
     m_Modifications:
+    - target: {fileID: 2488799713830201480, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc83afc35b311964fb0331e3bf06edd8, type: 2}
     - target: {fileID: 2488799713830201481, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
       propertyPath: m_Name
       value: Smoke Particle System Prefab (8)
@@ -7751,6 +7759,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 256806352}
     m_Modifications:
+    - target: {fileID: 2488799713830201480, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc83afc35b311964fb0331e3bf06edd8, type: 2}
     - target: {fileID: 2488799713830201481, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
       propertyPath: m_Name
       value: Smoke Particle System Prefab (4)
@@ -9333,6 +9345,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 256806352}
     m_Modifications:
+    - target: {fileID: 2488799713830201480, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc83afc35b311964fb0331e3bf06edd8, type: 2}
     - target: {fileID: 2488799713830201481, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
       propertyPath: m_Name
       value: Smoke Particle System Prefab (3)
@@ -12112,6 +12128,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 256806352}
     m_Modifications:
+    - target: {fileID: 2488799713830201480, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc83afc35b311964fb0331e3bf06edd8, type: 2}
     - target: {fileID: 2488799713830201481, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
       propertyPath: m_Name
       value: Smoke Particle System Prefab (7)
@@ -12715,6 +12735,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 256806352}
     m_Modifications:
+    - target: {fileID: 2488799713830201480, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc83afc35b311964fb0331e3bf06edd8, type: 2}
     - target: {fileID: 2488799713830201481, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
       propertyPath: m_Name
       value: Smoke Particle System Prefab
@@ -13546,6 +13570,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 256806352}
     m_Modifications:
+    - target: {fileID: 2488799713830201480, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc83afc35b311964fb0331e3bf06edd8, type: 2}
     - target: {fileID: 2488799713830201481, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
       propertyPath: m_Name
       value: Smoke Particle System Prefab (6)
@@ -17833,6 +17861,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 256806352}
     m_Modifications:
+    - target: {fileID: 2488799713830201480, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc83afc35b311964fb0331e3bf06edd8, type: 2}
     - target: {fileID: 2488799713830201481, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
       propertyPath: m_Name
       value: Smoke Particle System Prefab (5)
@@ -21935,6 +21967,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 256806352}
     m_Modifications:
+    - target: {fileID: 2488799713830201480, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc83afc35b311964fb0331e3bf06edd8, type: 2}
     - target: {fileID: 2488799713830201481, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
       propertyPath: m_Name
       value: Smoke Particle System Prefab (9)
@@ -26657,6 +26693,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 256806352}
     m_Modifications:
+    - target: {fileID: 2488799713830201480, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc83afc35b311964fb0331e3bf06edd8, type: 2}
     - target: {fileID: 2488799713830201481, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
       propertyPath: m_Name
       value: Smoke Particle System Prefab (1)
@@ -29994,6 +30034,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 256806352}
     m_Modifications:
+    - target: {fileID: 2488799713830201480, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc83afc35b311964fb0331e3bf06edd8, type: 2}
     - target: {fileID: 2488799713830201481, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
       propertyPath: m_Name
       value: Smoke Particle System Prefab (11)
@@ -31050,6 +31094,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 256806352}
     m_Modifications:
+    - target: {fileID: 2488799713830201480, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc83afc35b311964fb0331e3bf06edd8, type: 2}
     - target: {fileID: 2488799713830201481, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
       propertyPath: m_Name
       value: Smoke Particle System Prefab (13)
@@ -37013,6 +37061,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7031616590934463497, guid: 3f68ea2cb566a2e41adaab6f0c7ee087, type: 3}
+      propertyPath: smoke
+      value: 
+      objectReference: {fileID: 459757024}
+    - target: {fileID: 7031616590934463497, guid: 3f68ea2cb566a2e41adaab6f0c7ee087, type: 3}
       propertyPath: dropPos
       value: 
       objectReference: {fileID: 1571417444}
@@ -38562,6 +38614,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 256806352}
     m_Modifications:
+    - target: {fileID: 2488799713830201480, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc83afc35b311964fb0331e3bf06edd8, type: 2}
     - target: {fileID: 2488799713830201481, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
       propertyPath: m_Name
       value: Smoke Particle System Prefab (10)
@@ -42221,6 +42277,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 256806352}
     m_Modifications:
+    - target: {fileID: 2488799713830201480, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc83afc35b311964fb0331e3bf06edd8, type: 2}
     - target: {fileID: 2488799713830201481, guid: bf52c5cd40e202c479860c4229dea345, type: 3}
       propertyPath: m_Name
       value: Smoke Particle System Prefab (12)

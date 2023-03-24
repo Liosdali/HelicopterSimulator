@@ -22,6 +22,9 @@ public class HookScript : MonoBehaviour
     [SerializeField]
     private GameObject postSmoke;
 
+    [SerializeField]
+    private GameObject smoke;
+
     private bool triggered = false;
 
     // Update is called once per frame
@@ -35,7 +38,7 @@ public class HookScript : MonoBehaviour
         {
             Destroy(fireObject);
             postSmoke.SetActive(true);
-            Destroy(postSmoke, 2);
+            Destroy(smoke, 4);
         }
 
     }
