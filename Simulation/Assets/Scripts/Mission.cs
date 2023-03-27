@@ -5,7 +5,8 @@ using UnityEngine;
 public class Mission : MonoBehaviour
 {
 
-
+    // To do
+    // - update required stuff after event completed
 
     public Transform missionTransform;
 
@@ -20,4 +21,27 @@ public class Mission : MonoBehaviour
     {
         
     }
+
+
+    public void MissionEventStart()
+    {
+
+    }
+
+    public void MissionEventEnd()
+    {
+
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag ==" TAG GOES HERE")
+        {
+            // Handling mission stuff
+        }
+    }
+
+
+
 }
