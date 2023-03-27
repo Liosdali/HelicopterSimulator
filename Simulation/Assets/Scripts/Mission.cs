@@ -7,7 +7,8 @@ public class Mission : MonoBehaviour
 
     // To do
     // - update required stuff after event completed
-
+    // - Create Two different childs 
+    // - Fire Mission - Mission End
     public Transform missionTransform;
 
     // Start is called before the first frame update
