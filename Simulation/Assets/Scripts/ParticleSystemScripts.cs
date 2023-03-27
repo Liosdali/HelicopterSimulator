@@ -12,6 +12,12 @@ public class ParticleSystemScripts : MonoBehaviour
     [SerializeField]
     private bool test;
 
+    [SerializeField]
+    private GameObject postSmoke;
+
+    [SerializeField]
+    private GameObject fireObject;
+
     // Start is called before the first frame update
     private ParticleSystem [] ps;
     void Start()
@@ -26,8 +32,22 @@ public class ParticleSystemScripts : MonoBehaviour
     {
         if (test)
         {
-            var main = ps.main;
-            main.loop = false;
+            for(int i = 0; i < ps.Length; i++)
+            {
+                var main = ps[i].main;
+                main.loop = false;
+             if(i == ps.Length -1)
+                {
+                    fireObject.SetActive(false);
+                    postSmoke.SetActive(true);
+                    
+                }
+            }
+            /*foreach (ParticleSystem particle in ps)
+            {
+                var main = ps[particle].main;
+                main.loop = false;
+            }*/
 
         }
 
