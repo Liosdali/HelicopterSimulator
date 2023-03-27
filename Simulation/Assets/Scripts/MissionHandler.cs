@@ -11,22 +11,6 @@ public class MissionHandler : MonoBehaviour
     [SerializeField]
     private List<Mission> m_Missions = new List<Mission>();
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
-
-
-
     public void NextMission()
     {
         // Check if the mission list is not empty also
