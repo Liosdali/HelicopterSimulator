@@ -5,6 +5,9 @@ using UnityEngine;
 public class MissionHandler : MonoBehaviour
 {
    
+    // To-do
+    // -handling required stuff explained in function comments
+
     [SerializeField]
     private List<Mission> m_Missions = new List<Mission>();
 
@@ -19,6 +22,8 @@ public class MissionHandler : MonoBehaviour
     {
         
     }
+
+
 
 
 
