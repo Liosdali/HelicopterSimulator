@@ -20,7 +20,7 @@ public class MissionHandler : MonoBehaviour
             //Mission handler -> next mission -> open necessary stuff 
             // Mission event complete -> Remove Mission ( Function Handles Necessary stuff)
             // Things like box collider, activating or deactivating objects
-           
+           //
         }
 
     }
