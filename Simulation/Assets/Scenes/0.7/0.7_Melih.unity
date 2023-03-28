@@ -7877,7 +7877,6 @@ GameObject:
   - component: {fileID: 288764655}
   - component: {fileID: 288764658}
   - component: {fileID: 288764657}
-  - component: {fileID: 288764656}
   m_Layer: 0
   m_Name: "Anabak\u0131m"
   m_TagString: Untagged
@@ -7900,20 +7899,6 @@ Transform:
   m_Father: {fileID: 1164991997}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 104.22699, y: 180, z: 180}
---- !u!64 &288764656
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288764654}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &288764657
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -70359,20 +70344,6 @@ Transform:
   m_Father: {fileID: 7269805404100492625}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &4711546968569399250
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9019068964676197746}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &4741489594946652587
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -80423,7 +80394,6 @@ GameObject:
   - component: {fileID: 1150569510395813414}
   - component: {fileID: 9034972211983601487}
   - component: {fileID: 5556219982595255438}
-  - component: {fileID: 4711546968569399250}
   m_Layer: 0
   m_Name: GaziLogo
   m_TagString: Untagged
