@@ -459,7 +459,7 @@ namespace Oyedoyin.Common
                         float Altitude = (float)(m_vehicle.m_core.z * Oyedoyin.Mathematics.Constants.m2ft);
 
                         //AltituteIndıcator.instance.feet = Altitude;
-                        AltitudeIndicator.instance.SetFeet(Altitude);
+                        //AltitudeIndicator.instance.SetFeet(Altitude);
                         if (altitudeUnit == AltitudeUnit.Feet)
                         {
                             float distance = Altitude;
