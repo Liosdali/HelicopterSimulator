@@ -1078,17 +1078,6 @@ Transform:
   m_Father: {fileID: 2719126339958320698}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &52783879 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7031616590934463497, guid: 3f68ea2cb566a2e41adaab6f0c7ee087, type: 3}
-  m_PrefabInstance: {fileID: 1852939757}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320267743}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dfb371f34dcd094ea97933f6fd8a395, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &56173949
 GameObject:
   m_ObjectHideFlags: 0
@@ -17625,8 +17614,8 @@ MonoBehaviour:
   onPress:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 52783879}
-        m_TargetAssemblyTypeName: HookScript, Assembly-CSharp
+      - m_Target: {fileID: 320267745}
+        m_TargetAssemblyTypeName: FireMission, Assembly-CSharp
         m_MethodName: HookFunction
         m_Mode: 1
         m_Arguments:
