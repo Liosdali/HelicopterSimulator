@@ -14,7 +14,7 @@ public class FireMission : Mission
     private float flowRate;
 
 
-    private bool hook_enabled = true;
+    private bool hook_enabled;
 
     private bool trigger = false;
 
@@ -39,6 +39,11 @@ public class FireMission : Mission
             }
             particleSys.stopParticles();
         }
+    }
+
+    public void HookFunction()
+    {
+        hook_enabled = true;
     }
 
     private void OnTriggerStay(Collider other)
