@@ -54123,7 +54123,7 @@ MonoBehaviour:
   m_section: 1
   m_sweep: 13.5
   m_taper: 58.2
-  m_area: 0.37616854906082153
+  m_area: 0.37616845965385437
   m_controller: {fileID: 0}
   m_airfoil: {fileID: 11400000, guid: 6f65a272e9edfcc4f984d9daa898f1e6, type: 2}
   m_collider: {fileID: 4025123964261249550}
@@ -54197,7 +54197,7 @@ MonoBehaviour:
   m_section: -1
   m_sweep: 18.2
   m_taper: 51.2
-  m_area: 0.28858813643455505
+  m_area: 0.2885880470275879
   m_controller: {fileID: 0}
   m_airfoil: {fileID: 11400000, guid: 6f65a272e9edfcc4f984d9daa898f1e6, type: 2}
   m_collider: {fileID: 4025176446000255116}
@@ -54491,12 +54491,12 @@ MonoBehaviour:
   "\u03C4\u03BD": 0.20000000298023224
   "\u03C4\u03B43": 0.10000000149011612
   m_height: 1
-  rootLeadingEdge: {x: -218.571, y: 3.2888176, z: -293.31223}
-  tipLeadingEdge: {x: -218.571, y: 3.2888174, z: -292.6833}
-  rootTrailingEdge: {x: -218.571, y: 3.1488178, z: -293.31223}
-  tipTrailingEdge: {x: -218.571, y: 3.1488175, z: -292.6833}
-  quaterRootChordPoint: {x: -218.571, y: 3.2538176, z: -293.31223}
-  quaterTipChordPoint: {x: -218.571, y: 3.2538176, z: -292.6833}
+  rootLeadingEdge: {x: -218.571, y: -4.781182, z: -293.31223}
+  tipLeadingEdge: {x: -218.571, y: -4.781182, z: -292.6833}
+  rootTrailingEdge: {x: -218.571, y: -4.921182, z: -293.31223}
+  tipTrailingEdge: {x: -218.571, y: -4.921182, z: -292.6833}
+  quaterRootChordPoint: {x: -218.571, y: -4.816182, z: -293.31223}
+  quaterTipChordPoint: {x: -218.571, y: -4.816182, z: -292.6833}
   skewDistance: {x: 0, y: -0, z: 0}
   m_controller: {fileID: 0}
   m_rootAirfoil: {fileID: 11400000, guid: ee5384cf9cdea3e48a41ed86c2f5c2bc, type: 2}
@@ -56261,12 +56261,12 @@ MonoBehaviour:
   "\u03C4\u03BD": 0.20000000298023224
   "\u03C4\u03B43": 0.10000000149011612
   m_height: 1
-  rootLeadingEdge: {x: -218.44978, y: 4.646, z: -287.1712}
-  tipLeadingEdge: {x: -218.4481, y: 4.6219225, z: -282.39096}
-  rootTrailingEdge: {x: -218.10378, y: 4.646, z: -287.1712}
-  tipTrailingEdge: {x: -218.10545, y: 4.6700773, z: -282.39096}
-  quaterRootChordPoint: {x: -218.36328, y: 4.646, z: -287.1712}
-  quaterTipChordPoint: {x: -218.36244, y: 4.633961, z: -282.39096}
+  rootLeadingEdge: {x: -218.44978, y: -3.4239998, z: -287.1712}
+  tipLeadingEdge: {x: -218.4481, y: -3.4480772, z: -282.39096}
+  rootTrailingEdge: {x: -218.10378, y: -3.4239998, z: -287.1712}
+  tipTrailingEdge: {x: -218.10545, y: -3.3999224, z: -282.39096}
+  quaterRootChordPoint: {x: -218.36328, y: -3.4239998, z: -287.1712}
+  quaterTipChordPoint: {x: -218.36244, y: -3.4360385, z: -282.39096}
   skewDistance: {x: 0, y: 0, z: 0}
   m_controller: {fileID: 0}
   m_rootAirfoil: {fileID: 11400000, guid: 0b9e5749ed690be4c8c0ac6cd9139115, type: 2}
@@ -60601,15 +60601,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5542846787395882033}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: SlimUI.ModernMenu.MainMenuNew, Assembly-CSharp
         m_MethodName: NewGame
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: OpeningText
+          m_StringArgument: 0.7_Melih
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &5539871014622430895
