@@ -11166,7 +11166,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6244
+  m_Name: pb_Mesh-154058
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25586,7 +25586,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1163932853}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DeBug, Assembly-CSharp
         m_MethodName: deBug
         m_Mode: 1
@@ -26162,7 +26162,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1163932852}
-  - component: {fileID: 1163932853}
   m_Layer: 13
   m_Name: Buttons
   m_TagString: Untagged
@@ -26191,18 +26190,6 @@ Transform:
   m_Father: {fileID: 1976388458}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1163932853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163932851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59638dab4d275d4419584044502fa850, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1164991995
 GameObject:
   m_ObjectHideFlags: 0
