@@ -8159,6 +8159,7 @@ MonoBehaviour:
   waterPercentage: 1
   test: 0
   flowRate: 1
+  hook_enabled: 1
   particleSys: {fileID: 459757026}
 --- !u!1 &324407706
 GameObject:
