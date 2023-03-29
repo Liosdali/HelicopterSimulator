@@ -171,10 +171,10 @@ namespace Oyedoyin.Common
                 }
 
 
-                if (m_controller == other.GetComponent<SilantroHand>()) 
-                {
-                    Debug.LogWarning("Same Hand ");          
-                }
+                //if (m_controller == other.GetComponent<SilantroHand>()) 
+                //{
+                //    Debug.LogWarning("Same Hand ");          
+                //}
 
                 if (m_controller != null )
                 {
