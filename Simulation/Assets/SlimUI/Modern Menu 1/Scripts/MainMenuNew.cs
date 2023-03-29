@@ -86,8 +86,8 @@ namespace SlimUI.ModernMenu{
 			playMenu.SetActive(false);
 			exitMenu.SetActive(false);
 			if(extrasMenu) extrasMenu.SetActive(false);
-			firstMenu.SetActive(true);
-			mainMenu.SetActive(true);
+			//firstMenu.SetActive(true);
+			//mainMenu.SetActive(true);
 
 			SetThemeColors();
 		}

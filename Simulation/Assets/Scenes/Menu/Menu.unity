@@ -3389,7 +3389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &158910476
 Transform:
   m_ObjectHideFlags: 0
@@ -15956,7 +15956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &978293258
 Transform:
   m_ObjectHideFlags: 0
@@ -30051,7 +30051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1971995353
 Transform:
   m_ObjectHideFlags: 0
@@ -62781,7 +62781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theme: 0
-  themeController: {fileID: 0}
+  themeController: {fileID: 11400000, guid: e00c7d2bc58a2424b8dc09ecdafdb067, type: 2}
   mainCanvas: {fileID: 5584390325190826893}
   PanelControls: {fileID: 5584347257477265891}
   PanelVideo: {fileID: 5583736517567121489}
@@ -62790,9 +62790,9 @@ MonoBehaviour:
   PanelMovement: {fileID: 5583712882749324785}
   PanelCombat: {fileID: 5583410191960916085}
   PanelGeneral: {fileID: 5583525772988286021}
-  hoverSound: {fileID: 5583642205503687307}
-  sliderSound: {fileID: 5583609582080386019}
-  swooshSound: {fileID: 5584396285420255947}
+  hoverSound: {fileID: 5503346486985517943}
+  sliderSound: {fileID: 5502533791334991841}
+  swooshSound: {fileID: 5502740157809531793}
   mainMenu: {fileID: 0}
   firstMenu: {fileID: 0}
   playMenu: {fileID: 5583595672225152219}
@@ -68092,18 +68092,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5543437530405575801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5583841818954364119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5543441453568472403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80179,8 +80167,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5583876363904365311}
   m_LocalRotation: {x: 0.015714929, y: 0.153975, z: -0.0059860386, w: -0.9879317}
-  m_LocalPosition: {x: -0.12702784, y: 0.023136642, z: 0.27443096}
-  m_LocalScale: {x: 0.99999994, y: 0.99999976, z: 0.9999999}
+  m_LocalPosition: {x: -0.12703021, y: 0.023133868, z: 0.27436534}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5578132196053545953}
@@ -83003,7 +82991,6 @@ GameObject:
   - component: {fileID: 5488634346268151469}
   - component: {fileID: 5542846787395882033}
   - component: {fileID: 5543828791758518209}
-  - component: {fileID: 5543437530405575801}
   - component: {fileID: 5583841818954364120}
   m_Layer: 5
   m_Name: Camera
@@ -84165,7 +84152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &5584328511035754353
 GameObject:
   m_ObjectHideFlags: 0
@@ -89116,7 +89103,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -2.5, y: 0}
   m_SizeDelta: {x: 4.9999, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -100006,7 +99993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &8902749920437443810
 MeshFilter:
   m_ObjectHideFlags: 0
