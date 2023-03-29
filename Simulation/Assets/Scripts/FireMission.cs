@@ -13,7 +13,7 @@ public class FireMission : Mission
     [SerializeField]
     private float flowRate;
 
-
+    [SerializeField]
     private bool hook_enabled;
 
     private bool trigger = false;
@@ -41,10 +41,10 @@ public class FireMission : Mission
         }
     }
 
-    public void HookFunction()
-    {
-        hook_enabled = true;
-    }
+    //public void HookFunction()
+    //{
+    //    hook_enabled = true;
+    //}
 
     private void OnTriggerStay(Collider other)
     {
