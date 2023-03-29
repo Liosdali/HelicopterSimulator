@@ -127,13 +127,13 @@ namespace SlimUI.ModernMenu{
 			exitMenu.SetActive(false);
 			mainMenu.SetActive(true);
 		}
-/*
-		public void NewGame(string){
-			if(sceneName != ""){
-				StartCoroutine(LoadAsynchronously(sceneName));
+
+		public void NewGame(string nextScene){
+			if(SceneManager.GetActiveScene().name != "CurrentVersion"){
+				StartCoroutine(LoadAsynchronously(nextScene));
 			}
 		}
-*/
+
 		public void LoadScene(string scene){
 			if(scene != ""){
 				StartCoroutine(LoadAsynchronously(scene));
