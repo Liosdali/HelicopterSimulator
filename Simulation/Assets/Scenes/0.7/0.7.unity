@@ -35422,7 +35422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1670876579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63504,7 +63504,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   clickSound: {fileID: 0}
-  pressDistance: 100
+  pressDistance: 0
   flipAmount: 20
   coolDownTime: 4
   coolTimer: 0
