@@ -86,8 +86,8 @@ namespace SlimUI.ModernMenu{
 			playMenu.SetActive(false);
 			exitMenu.SetActive(false);
 			if(extrasMenu) extrasMenu.SetActive(false);
-			firstMenu.SetActive(true);
-			mainMenu.SetActive(true);
+			//firstMenu.SetActive(true);
+			//mainMenu.SetActive(true);
 
 			SetThemeColors();
 		}
@@ -129,11 +129,17 @@ namespace SlimUI.ModernMenu{
 		}
 
 		public void NewGame(string nextScene){
-			if(SceneManager.GetActiveScene().name != "CurrentVersion"){
+			//if(SceneManager.GetActiveScene().name != "CurrentVersion"){
 				StartCoroutine(LoadAsynchronously(nextScene));
-			}
+			//}
 		}
-
+		[ContextMenu("TEST NEW GAME")]
+		public void NewGameTest()
+		{
+			//if(SceneManager.GetActiveScene().name != "CurrentVersion"){
+			StartCoroutine(LoadAsynchronously("0.7_Melih"));
+			//}
+		}
 		public void LoadScene(string scene){
 			if(scene != ""){
 				StartCoroutine(LoadAsynchronously(scene));

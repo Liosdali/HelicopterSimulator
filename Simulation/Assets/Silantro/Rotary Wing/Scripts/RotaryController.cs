@@ -281,7 +281,7 @@ namespace Oyedoyin.RotaryWing
                         
                         // Needs to be changed to collective input only when touching 
                         //AltitudeIndicator.instance.SetInputs(_rollInput, _pitchInput);
-                        AirControl.Instance.SetInputs(_rollInput, _pitchInput);
+                        //AirControl.Instance.SetInputs(_rollInput, _pitchInput);
                     } 
                 }
 
