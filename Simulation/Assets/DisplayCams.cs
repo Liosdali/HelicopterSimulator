@@ -21,7 +21,7 @@ public class DisplayCams : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown(KeyCode.Space.ToString()))
+        if (Input.GetButtonDown("Jump"))
         {
             cameras[count].gameObject.SetActive(false);
             count++;
