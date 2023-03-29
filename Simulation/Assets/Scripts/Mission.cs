@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mission : MonoBehaviour
 {
-    [SerializeField]
+   /* [SerializeField]
     private Transform startPos;
 
     [SerializeField]
@@ -12,7 +12,7 @@ public class Mission : MonoBehaviour
 
     [SerializeField]
     private GameObject delivObj;
-
+   */
     // To do
     // - update required stuff after event completed
     // - Create Two different childs 
