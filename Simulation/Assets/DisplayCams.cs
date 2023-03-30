@@ -29,7 +29,8 @@ public class DisplayCams : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            cameras[count].gameObject.SetActive(false);
+            if (count != 0) 
+                cameras[count].gameObject.SetActive(false); // If the object is not vr camera then disable
             count++;
             if (count == cameras.Length)
                 count = 0;
