@@ -51,6 +51,7 @@ public class FireMission : Mission
 
         if (other.CompareTag("InitialPosition"))
         {
+            Debug.Log(other);
             if (hook_enabled)
             {
                 if (waterPercentage<100f) { 
