@@ -8,26 +8,16 @@ public class KeyAnimationScript : MonoBehaviour
     public Animator anim;
 
 
-    // Start is called before the first frame update
-    void Start()
+    public void PlayKeyStartAnim()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void PlayStartAnim()
-    {
-        anim.SetTrigger("KeyStart");
-    }
-
-    public void PlayStopAnim()
-    {
-        anim.SetTrigger("KeyStop");
+        if(anim.GetBool("KeyStart") != true)
+        {
+            anim.SetBool("KeyStart", true);
+        }
+        else
+        {
+            anim.SetBool("KeyStart", false);
+        }
     }
 
 }
