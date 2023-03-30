@@ -13692,7 +13692,7 @@ MonoBehaviour:
   m_StopNaN: 0
   m_Dithering: 0
   m_ClearDepth: 1
-  m_AllowXRRendering: 0
+  m_AllowXRRendering: 1
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
@@ -13729,7 +13729,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 10000
-  field of view: 60.8
+  field of view: 72.6
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -29869,19 +29869,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: daf7017c749200f429f6d32f6eef40c9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9998784
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: daf7017c749200f429f6d32f6eef40c9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: daf7017c749200f429f6d32f6eef40c9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: daf7017c749200f429f6d32f6eef40c9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.015596872
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: daf7017c749200f429f6d32f6eef40c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -29893,7 +29893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: daf7017c749200f429f6d32f6eef40c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 1.787
       objectReference: {fileID: 0}
     - target: {fileID: -3931662757819479695, guid: daf7017c749200f429f6d32f6eef40c9, type: 3}
       propertyPath: m_LocalRotation.w
