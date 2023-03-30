@@ -10249,7 +10249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e82d8ff4485fd184a84c6e467ad0712b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  postSmoke: {fileID: 256806351}
+  postSmoke: {fileID: 0}
+  test: 0
   fireObject: {fileID: 465495994}
 --- !u!1 &459833754
 GameObject:
@@ -22190,6 +22191,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109731575}
     m_Modifications:
+    - target: {fileID: 6815553172556953309, guid: 58e774da75522474fa2c42f3abcad4dc, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6815553172556953310, guid: 58e774da75522474fa2c42f3abcad4dc, type: 3}
       propertyPath: m_Name
       value: Cylinder
@@ -30497,19 +30502,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6815553172556953308, guid: 58e774da75522474fa2c42f3abcad4dc, type: 3}
       propertyPath: m_Radius
-      value: 0.79108256
+      value: 0.50885004
       objectReference: {fileID: 0}
     - target: {fileID: 6815553172556953308, guid: 58e774da75522474fa2c42f3abcad4dc, type: 3}
       propertyPath: m_Center.x
-      value: 0.2910834
+      value: 0.005700604
       objectReference: {fileID: 0}
     - target: {fileID: 6815553172556953308, guid: 58e774da75522474fa2c42f3abcad4dc, type: 3}
       propertyPath: m_Center.y
-      value: -4.6438342e-10
+      value: 2.4316498e-11
       objectReference: {fileID: 0}
     - target: {fileID: 6815553172556953308, guid: 58e774da75522474fa2c42f3abcad4dc, type: 3}
       propertyPath: m_Center.z
-      value: -0.000000077458424
+      value: 0.0787019
       objectReference: {fileID: 0}
     - target: {fileID: 6815553172556953309, guid: 58e774da75522474fa2c42f3abcad4dc, type: 3}
       propertyPath: m_CastShadows
@@ -30549,11 +30554,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6815553172556953311, guid: 58e774da75522474fa2c42f3abcad4dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 133.7
+      value: 133.4
       objectReference: {fileID: 0}
     - target: {fileID: 6815553172556953311, guid: 58e774da75522474fa2c42f3abcad4dc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.8
+      value: -11.8
       objectReference: {fileID: 0}
     - target: {fileID: 6815553172556953311, guid: 58e774da75522474fa2c42f3abcad4dc, type: 3}
       propertyPath: m_LocalRotation.w

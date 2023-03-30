@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class ParticleSystemScripts : MonoBehaviour
 {
-    [SerializeField]
+   [SerializeField]
     private GameObject postSmoke;
+
+    [SerializeField]
+    private bool test;
 
     [SerializeField]
     private GameObject fireObject;
@@ -39,8 +42,7 @@ public class ParticleSystemScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
+      
     }
     
 
