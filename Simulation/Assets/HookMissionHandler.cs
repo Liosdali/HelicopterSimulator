@@ -32,6 +32,7 @@ public class HookMissionHandler : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        // Works with inheritance
         if ( other.gameObject.TryGetComponent<Mission>(out Mission component))
         {
             Mission mission = component;

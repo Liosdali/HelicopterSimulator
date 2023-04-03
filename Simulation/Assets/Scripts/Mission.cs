@@ -19,6 +19,8 @@ public class Mission : MonoBehaviour
     // - Fire Mission - Mission End
     public Transform missionTransform;
 
+    public MissionType type = MissionType.empty;
+
     // Start is called before the first frame update
     void Start()
     {
