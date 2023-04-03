@@ -12,9 +12,15 @@ public enum MissionType
 
 public class HookMissionHandler : MonoBehaviour
 {
-
+    
     [SerializeField]
     private MissionType missionType;
+
+    [SerializeField]
+    private float m_waterPercentage;
+
+    [SerializeField]
+    private float m_flowRate;
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +34,6 @@ public class HookMissionHandler : MonoBehaviour
         
     }
 
-
-
     private void OnTriggerStay(Collider other)
     {
         // Works with inheritance
@@ -39,14 +43,40 @@ public class HookMissionHandler : MonoBehaviour
 
             switch (mission.type)
             {
-                case MissionType.Fire:
-
-                    break;
-
                 default:
-
+                    Debug.Log("No mission Is Present");
                     break;
+                case MissionType.Fire:
+                    if (m_waterPercentage < 0)
+                    {
+                        //trigger = true;
+                        if (m_waterPercentage > 0)
+                        {
+                            m_waterPercentage -= m_waterPercentage * Time.deltaTime * m_flowRate;
+                            
+                        }
+                        FireMission fire = other.GetComponent<FireMission>();
+                        fire.reduceHp();
+                    }
+                    break;
+
+                
             }
         }
+        else if (other.tag == "Water")
+        {
+            Debug.Log(other);
+            //if (hook_enabled)
+            //{
+            //    if (waterPercentage < 100f)
+            //    {
+            //        //waterPercentage += waterPercentage * Time.deltaTime * flowRate;
+            //        //Debug.Log(waterPercentage);
+            //    }
+            //    other.gameObject.GetComponent<CapsuleCollider>().gameObject.SetActive(false);
+            //}
+            
+        }
+
     }
 }
