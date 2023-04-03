@@ -13,6 +13,8 @@ public class FireMission : Mission
     [SerializeField]
     private float extingRate;
 
+    [SerializeField]
+    private GameObject postSmoke;
 
     [SerializeField]
     private ParticleSystemScripts particleSys;
@@ -49,6 +51,7 @@ public class FireMission : Mission
         if(fireHp < 0)
         {
             particleSys.stopParticles();
+            postSmoke.SetActive(true);
         }
     }
 
