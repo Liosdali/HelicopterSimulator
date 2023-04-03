@@ -18,7 +18,7 @@ public class Mission : MonoBehaviour
     // - Create Two different childs 
     // - Fire Mission - Mission End
     public Transform missionTransform;
-
+    //Update
     public MissionType type = MissionType.empty;
 
     // Start is called before the first frame update
