@@ -8177,6 +8177,7 @@ MonoBehaviour:
   missionType: 0
   m_waterPercentage: 0
   m_flowRate: 0
+  m_hookEnabled: 0
 --- !u!1 &324407706
 GameObject:
   m_ObjectHideFlags: 0
@@ -22241,15 +22242,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6815553172556953311, guid: 58e774da75522474fa2c42f3abcad4dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.069992
+      value: -43.6
       objectReference: {fileID: 0}
     - target: {fileID: 6815553172556953311, guid: 58e774da75522474fa2c42f3abcad4dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 131.66559
+      value: 130.6
       objectReference: {fileID: 0}
     - target: {fileID: 6815553172556953311, guid: 58e774da75522474fa2c42f3abcad4dc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5317359
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6815553172556953311, guid: 58e774da75522474fa2c42f3abcad4dc, type: 3}
       propertyPath: m_LocalRotation.w
