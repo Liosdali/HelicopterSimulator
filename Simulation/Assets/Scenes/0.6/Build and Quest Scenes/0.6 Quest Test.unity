@@ -30844,6 +30844,7 @@ MonoBehaviour:
   missionTransform: {fileID: 0}
   type: 0
   m_fireHp: 99
+  _isExt: 0
   extingRate: 15
   postSmoke: {fileID: 256806351}
   particleSys: {fileID: 459757026}
@@ -37589,12 +37590,16 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4185886239569820566, guid: 3f68ea2cb566a2e41adaab6f0c7ee087, type: 3}
+      propertyPath: m_hookEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185886239569820566, guid: 3f68ea2cb566a2e41adaab6f0c7ee087, type: 3}
       propertyPath: m_waterSlider
       value: 
       objectReference: {fileID: 557253302}
     - target: {fileID: 4185886239569820566, guid: 3f68ea2cb566a2e41adaab6f0c7ee087, type: 3}
       propertyPath: m_waterPercentage
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7031616590260052241, guid: 3f68ea2cb566a2e41adaab6f0c7ee087, type: 3}
       propertyPath: m_TagString
