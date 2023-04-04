@@ -27,9 +27,7 @@ public class PlayerCheck : MonoBehaviour
     {
         if (m_PlayerUpdate)
         {
-
             // Checking if the device connected 
-
             var inputDevices = new List<InputDevice>();
             InputDevices.GetDevices(inputDevices);
             Debug.Log(inputDevices.Count);
@@ -46,8 +44,6 @@ public class PlayerCheck : MonoBehaviour
             {
                 Debug.LogError("No XR devices Present ");
             }
-
-
         }
     }
  

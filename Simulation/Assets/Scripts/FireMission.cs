@@ -5,7 +5,7 @@ using UnityEngine;
 public class FireMission : Mission
 {
     [SerializeField]
-    private float fireHp;
+    private float m_fireHp;
 
     [SerializeField]
     private bool isExt;
@@ -19,10 +19,6 @@ public class FireMission : Mission
     [SerializeField]
     private ParticleSystemScripts particleSys;
     // Start is called before the first frame update
-
-
-
-
 
 
     void Start()
@@ -45,10 +41,10 @@ public class FireMission : Mission
         }*/
     }
 
-    void reduceHp()
+    public void reduceHp()
     {
-        fireHp -= fireHp * Time.deltaTime * extingRate; 
-        if(fireHp < 0)
+        m_fireHp -= m_fireHp * Time.deltaTime * extingRate; 
+        if(m_fireHp < 0)
         {
             particleSys.stopParticles();
             postSmoke.SetActive(true);
