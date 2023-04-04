@@ -58,6 +58,7 @@ public class HookMissionHandler : MonoBehaviour
                     Debug.Log("No mission Is Present");
                     break;
                 case MissionType.Fire:
+                    missionType = MissionType.Fire;
                     if (m_waterPercentage < 0)
                     {
                         //trigger = true;
