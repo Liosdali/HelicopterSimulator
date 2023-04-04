@@ -8,7 +8,7 @@ public class FireMission : Mission
     private float m_fireHp;
 
     [SerializeField]
-    private bool isExt;
+    public bool _isExt;
 
     [SerializeField]
     private float extingRate;
@@ -23,6 +23,7 @@ public class FireMission : Mission
 
     void Start()
     {
+        _isExt = false;
         type = MissionType.Fire;
     }
 
@@ -43,12 +44,13 @@ public class FireMission : Mission
 
     public void reduceHp()
     {
-        m_fireHp -= m_fireHp * Time.deltaTime * extingRate; 
+        m_fireHp -= Time.deltaTime * extingRate; 
         if(m_fireHp < 0)
         {
             particleSys.stopParticles();
             postSmoke.SetActive(true);
-        }
+            _isExt = true;
+        }       
     }
 
 
