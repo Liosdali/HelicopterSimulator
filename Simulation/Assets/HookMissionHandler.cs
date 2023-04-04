@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public enum MissionType
 {
@@ -26,9 +26,17 @@ public class HookMissionHandler : MonoBehaviour
     [SerializeField]
     private bool m_hookEnabled;
 
+    [SerializeField]
+    private Slider m_waterSlider;
 
     Mission mission;
     FireMission fire;
+
+
+    private void Start()
+    {
+        m_waterSlider.value = 0f;
+    }
 
     public void EnableHook()
     {
@@ -47,6 +55,8 @@ public class HookMissionHandler : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        //Debug.Log(other.gameObject.name);
+        
         // Works with inheritance
         if ( other.gameObject.TryGetComponent<Mission>(out Mission component))
         {
@@ -59,14 +69,20 @@ public class HookMissionHandler : MonoBehaviour
                     break;
                 case MissionType.Fire:
                     missionType = MissionType.Fire;
-                    if (m_waterPercentage < 0)
+                    if (m_waterPercentage > 0)
                     {
                         //trigger = true;
-                        if (m_waterPercentage > 0)
+                        if (m_hookEnabled)
                         {
-                            m_waterPercentage -= m_waterPercentage * Time.deltaTime * m_flowRate;
                             fire = other.GetComponent<FireMission>();
-                            fire.reduceHp();
+                            if (!fire._isExt)
+                            {
+                                m_waterPercentage -= Time.deltaTime * m_flowRate;
+                                m_waterSlider.value = m_waterPercentage * 0.01f;
+                                fire.reduceHp();
+
+                                Debug.Log("Extinguishing");
+                            }
                         }
                         
                     }
@@ -77,16 +93,17 @@ public class HookMissionHandler : MonoBehaviour
         }
         else if (other.tag == "Water")  // Other gameobject layer 
         {
-            Debug.Log(other);
+            
             if (m_hookEnabled)
             {
                 if (m_waterPercentage < 100f)
                 {
                     //m_waterPercentage += m_waterPercentage * Time.deltaTime * m_flowRate;
                     m_waterPercentage += Time.deltaTime * m_flowRate;
+                    m_waterSlider.value = m_waterPercentage * 0.01f;
                     //Debug.Log(waterPercentage);
                 }
-                other.gameObject.GetComponent<CapsuleCollider>().gameObject.SetActive(false);
+                //other.gameObject.GetComponent<CapsuleCollider>().gameObject.SetActive(false);
             }
 
         }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7031616590934463497}
   - component: {fileID: 7031616590934463494}
   - component: {fileID: 7031616590934463493}
+  - component: {fileID: 4185886239569820566}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Hook
@@ -112,6 +113,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dfb371f34dcd094ea97933f6fd8a395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropPos: {fileID: 0}
+  dropObject: {fileID: 0}
+  fireObject: {fileID: 0}
+  test: 0
+  postSmoke: {fileID: 0}
+  smoke: {fileID: 0}
 --- !u!54 &7031616590934463494
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -164,6 +171,22 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4185886239569820566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7031616590934463503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e2719e83adb8dc41b454e7b4cfc4aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionType: 0
+  m_waterPercentage: 0
+  m_flowRate: 0
+  m_hookEnabled: 0
 --- !u!1 &7031616591572977647
 GameObject:
   m_ObjectHideFlags: 0
