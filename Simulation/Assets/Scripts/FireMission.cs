@@ -18,9 +18,9 @@ public class FireMission : Mission
 
     [SerializeField]
     private ParticleSystemScripts particleSys;
-    // Start is called before the first frame update
 
 
+    // Initializing variables;
     void Start()
     {
         _isExt = false;
@@ -42,6 +42,8 @@ public class FireMission : Mission
         }*/
     }
 
+    // Function to put out fire by reducing its strenght
+    // Particles size or number may be lowered after getting some hits to hp
     public void reduceHp()
     {
         m_fireHp -= Time.deltaTime * extingRate; 

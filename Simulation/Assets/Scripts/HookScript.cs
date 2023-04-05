@@ -48,9 +48,6 @@ public class HookScript : MonoBehaviour
         hook_Enabled = true;
     }
 
-
-
-
     // Mission needs to be configured 
 
     // A primitive version of mission event handler 
