@@ -43402,6 +43402,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireMission
       objectReference: {fileID: 0}
+    - target: {fileID: 2933650685640906748, guid: 476836f0a80d45e4daa4b1dc1a3b14ae, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 0.9732666
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933650685640906748, guid: 476836f0a80d45e4daa4b1dc1a3b14ae, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 476836f0a80d45e4daa4b1dc1a3b14ae, type: 3}
 --- !u!4 &788468213134518923
