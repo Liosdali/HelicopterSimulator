@@ -22,29 +22,11 @@ public class SwitchCover : MonoBehaviour
         if (!inColl)
         {
             anim.SetBool("IsHandInCollision", true);
-           Debug.LogWarning("True");
         }
-
-        //if (!inColl)
-        //{
-        //    anim.SetBool("IsHandInCollision", true);
-        //    Debug.LogWarning("True");
-        //}
-        //else if (inColl)
-        //{
-        //    anim.SetBool("IsHandInCollision", false);
-        //    Debug.LogWarning("False");
-        //}
-    }
-
-    public void OffTrigger()
-    {
-        if (inColl)
+        else
         {
             anim.SetBool("IsHandInCollision", false);
-            Debug.LogWarning("False");
         }
-
     }
 
     public void OpenSwitch()
