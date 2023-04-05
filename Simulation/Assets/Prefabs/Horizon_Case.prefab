@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3072497008179625946}
-  - component: {fileID: 3072497008179625947}
   - component: {fileID: 3072497008179625944}
   m_Layer: 0
   m_Name: Horizon_Case
@@ -34,20 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3072497008179625947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3072497008179625949}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1f345b1497544279b62fa18b2720da3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AICamera: {fileID: 3072497009390362667}
-  MainCamera: {fileID: 3072497009547614896}
 --- !u!114 &3072497008179625944
 MonoBehaviour:
   m_ObjectHideFlags: 0

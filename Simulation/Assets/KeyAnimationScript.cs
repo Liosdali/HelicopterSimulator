@@ -1,3 +1,4 @@
+using Oyedoyin.RotaryWing;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,28 +7,30 @@ public class KeyAnimationScript : MonoBehaviour
 {
 
     public Animator anim;
+    public GameObject _helicopter;
+    public bool _oilButton = false;
 
+    
 
-    // Start is called before the first frame update
-    void Start()
+    public void OilOpen()
     {
-        
+        _oilButton = !_oilButton;
+        Debug.Log(_oilButton);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    public void PlayStartAnim()
+    public void PlayKeyStartAnim()
     {
-        anim.SetTrigger("KeyStart");
-    }
-
-    public void PlayStopAnim()
-    {
-        anim.SetTrigger("KeyStop");
+        if(anim.GetBool("KeyStart") != true && _oilButton)
+        {
+            _helicopter.GetComponent<RotaryController>().TurnOnEngines();
+            anim.SetBool("KeyStart", true);
+        }
+        else
+        {
+            _helicopter.GetComponent<RotaryController>().TurnOffEngines();
+            anim.SetBool("KeyStart", false);
+        }
     }
 
 }
