@@ -284,9 +284,6 @@ namespace Oyedoyin.RotaryWing
                         //AirControl.Instance.SetInputs(_rollInput, _pitchInput);
                     } 
                 }
-
-
-
                 //base.SendCustomHelicopterInputs(_pitchInput, _rollInput, _yawInput, _throttleLever.leverOutput, _collectiveInput);
             }
         }
