@@ -14,11 +14,12 @@ public class MissionHandler : MonoBehaviour
     [SerializeField]
     private GameObject m_MissionArrow;
 
-
+    public static MissionHandler Instance;
 
     private void Start()
     {
         m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
+        Instance = this;
     }
 
 
