@@ -24,7 +24,7 @@ public class MissionHandler : MonoBehaviour
             // Mission event complete -> Remove Mission ( Function Handles Necessary stuff)
             // Things like box collider, activating or deactivating objects
             //
-            m_MissionArrow.transform.position = m_Missions[0].gameObject.transform.position;
+            m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
         }
 
     }
