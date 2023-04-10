@@ -14,6 +14,14 @@ public class MissionHandler : MonoBehaviour
     [SerializeField]
     private GameObject m_MissionArrow;
 
+
+
+    private void Start()
+    {
+        m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
+    }
+
+
     public void NextMission()
     {
         // Check if the mission list is not empty also
