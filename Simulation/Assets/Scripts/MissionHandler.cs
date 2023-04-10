@@ -55,7 +55,7 @@ public class MissionHandler : MonoBehaviour
         return true;
     }
     
-    void RemoveSpecifiedMission(Mission mission)
+    void RemoveSpecificMission(Mission mission)
     {
         if (m_Missions.Count < 0)
             m_Missions.Remove(mission);
