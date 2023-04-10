@@ -35,6 +35,13 @@ public class FadeScript : MonoBehaviour
         }
     }
 
+    public void ChangeFadeStart()
+    {
+        _fadeOnStart = true;
+    }
+
+
+
     public void EndCutscene()
     {
         StartCoroutine(BlackCourutine());
