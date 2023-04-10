@@ -10,6 +10,10 @@ public class MissionHandler : MonoBehaviour
     [SerializeField]
     private List<Mission> m_Missions = new List<Mission>();
 
+
+    [SerializeField]
+    private GameObject m_MissionArrow;
+
     public void NextMission()
     {
         // Check if the mission list is not empty also
@@ -19,7 +23,8 @@ public class MissionHandler : MonoBehaviour
             //Mission handler -> next mission -> open necessary stuff 
             // Mission event complete -> Remove Mission ( Function Handles Necessary stuff)
             // Things like box collider, activating or deactivating objects
-           //
+            //
+            m_MissionArrow.transform.position = m_Missions[0].gameObject.transform.position;
         }
 
     }
