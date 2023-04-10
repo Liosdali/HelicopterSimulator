@@ -52,6 +52,7 @@ public class FireMission : Mission
             particleSys.stopParticles();
             postSmoke.SetActive(true);
             _isExt = true;
+            MissionHandler.Instance.NextMission();
         }       
     }
 
