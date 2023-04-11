@@ -53,6 +53,8 @@ public class HookMissionHandler : MonoBehaviour
         m_hookEnabled = !m_hookEnabled;
     }
 
+    // Sepetin calismasini saglayan kod blogu
+    // Collision tabanli bir bicimde calisiyor
     private void OnTriggerStay(Collider other)
     {
         //Debug.Log(other.gameObject.name);

@@ -52,40 +52,9 @@ public class FireMission : Mission
             particleSys.stopParticles();
             postSmoke.SetActive(true);
             _isExt = true;
+            
+            // Finishing the mission and removing it from the list
             MissionHandler.Instance.NextMission();
         }       
     }
-
-
-    //private void OnTriggerStay(Collider other)
-    //{
-
-    //    if (other.CompareTag("InitialPosition"))
-    //    {
-    //        Debug.Log(other);
-    //        if (hook_enabled)
-    //        {
-    //            if (waterPercentage<100f) { 
-    //            waterPercentage += waterPercentage *Time.deltaTime * flowRate;
-    //            Debug.Log(waterPercentage);
-    //            }
-    //            other.gameObject.GetComponent<CapsuleCollider>().gameObject.SetActive(false);
-
-    //        }
-    //    }
-    //    else if (other.CompareTag("FinalPosition"))
-    //    {
-    //        if (!trigger)
-    //        {
-                
-    //            trigger = true;
-    //            if (waterPercentage>0) { 
-    //            waterPercentage -= waterPercentage * Time.deltaTime * flowRate;
-    //            }
-    //            particleSys.stopParticles();
-
-
-    //        }
-    //    }
-    //}a
 }
