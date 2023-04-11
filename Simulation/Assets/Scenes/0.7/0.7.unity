@@ -2611,7 +2611,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-57124
+  m_Name: pb_Mesh-16548
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11766,6 +11766,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2048102843758986768, guid: 9fa055723c6e61b43a85053030973424, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8285833656892127588, guid: 9fa055723c6e61b43a85053030973424, type: 3}
       propertyPath: cameras.Array.data[0]
       value: 
