@@ -22,18 +22,16 @@ public class MissionHandler : MonoBehaviour
         Instance = this;
     }
 
-
+    // Removing mission from the list
     public void NextMission()
     {
-        // Check if the mission list is not empty also
-        // remove the current mission from the list
         if (RemoveMission())
         {
-            //Mission handler -> next mission -> open necessary stuff 
-            // Mission event complete -> Remove Mission ( Function Handles Necessary stuff)
-            // Things like box collider, activating or deactivating objects
-            //
             m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
+        }
+        else
+        {
+            Debug.Log("");
         }
 
     }
