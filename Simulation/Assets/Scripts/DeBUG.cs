@@ -23,7 +23,7 @@ public class DeBUG : MonoBehaviour
 
     public void ReturnMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Menu");
     }
 
 
