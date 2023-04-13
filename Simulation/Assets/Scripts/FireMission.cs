@@ -18,9 +18,9 @@ public class FireMission : Mission
 
     [SerializeField]
     private ParticleSystemScripts particleSys;
-    // Start is called before the first frame update
 
 
+    // Initializing variables;
     void Start()
     {
         _isExt = false;
@@ -42,6 +42,8 @@ public class FireMission : Mission
         }*/
     }
 
+    // Function to put out fire by reducing its strenght
+    // Particles size or number may be lowered after getting some hits to hp
     public void reduceHp()
     {
         m_fireHp -= Time.deltaTime * extingRate; 
@@ -50,39 +52,9 @@ public class FireMission : Mission
             particleSys.stopParticles();
             postSmoke.SetActive(true);
             _isExt = true;
+            
+            // Finishing the mission and removing it from the list
+            MissionHandler.Instance.NextMission();
         }       
     }
-
-
-    //private void OnTriggerStay(Collider other)
-    //{
-
-    //    if (other.CompareTag("InitialPosition"))
-    //    {
-    //        Debug.Log(other);
-    //        if (hook_enabled)
-    //        {
-    //            if (waterPercentage<100f) { 
-    //            waterPercentage += waterPercentage *Time.deltaTime * flowRate;
-    //            Debug.Log(waterPercentage);
-    //            }
-    //            other.gameObject.GetComponent<CapsuleCollider>().gameObject.SetActive(false);
-
-    //        }
-    //    }
-    //    else if (other.CompareTag("FinalPosition"))
-    //    {
-    //        if (!trigger)
-    //        {
-                
-    //            trigger = true;
-    //            if (waterPercentage>0) { 
-    //            waterPercentage -= waterPercentage * Time.deltaTime * flowRate;
-    //            }
-    //            particleSys.stopParticles();
-
-
-    //        }
-    //    }
-    //}a
 }
