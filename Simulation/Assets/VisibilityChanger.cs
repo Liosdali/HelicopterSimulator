@@ -5,14 +5,26 @@ using UnityEngine;
 public class VisibilityChanger : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private GameObject m_player;
+    [SerializeField]
+    private float m_scale = 0f;
+
+    private MeshRenderer m_renderer;
+
+
+    private void Start()
     {
-        
+        m_renderer = GetComponent<MeshRenderer>();
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Vector3.Distance(transform.position, m_player.transform.position) < m_scale)
+            m_renderer.enabled = false;
+        else
+            m_renderer.enabled = true;
     }
 }
