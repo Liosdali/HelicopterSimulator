@@ -18,7 +18,6 @@ public class VisibilityChanger : MonoBehaviour
         m_renderer = GetComponent<MeshRenderer>();
     }
 
-
     // Update is called once per frame
     void Update()
     {

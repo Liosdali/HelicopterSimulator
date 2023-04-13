@@ -2611,7 +2611,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16548
+  m_Name: pb_Mesh-3324
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19606,9 +19606,17 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1460905121}
+    - target: {fileID: 948643000093495688, guid: 22e37bebc1af5e747a8a5a0c58789a4a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 948643000093495689, guid: 22e37bebc1af5e747a8a5a0c58789a4a, type: 3}
       propertyPath: m_Name
       value: Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 948643000093495690, guid: 22e37bebc1af5e747a8a5a0c58789a4a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 948643000093495691, guid: 22e37bebc1af5e747a8a5a0c58789a4a, type: 3}
       propertyPath: m_Mesh
@@ -27962,6 +27970,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f214e68056de3e14da978fe76c7acbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_player: {fileID: 0}
+  m_range: 30
 --- !u!1 &1417811611 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7958735734776309004, guid: e519aab37da83c7489e53b9a28c78482, type: 3}
