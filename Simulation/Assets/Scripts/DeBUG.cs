@@ -20,7 +20,6 @@ public class DeBUG : MonoBehaviour
         SceneManager.LoadScene(scene.name);
     }
 
-
     public void ReturnMainMenu()
     {
         SceneManager.LoadScene("Menu");
