@@ -22,6 +22,11 @@ public class SwitchCover : MonoBehaviour
         if (!inColl)
         {
             anim.SetBool("IsHandInCollision", true);
+
+            // This can fix the collision problem but 
+            // There wont be the closing switch option
+            GetComponent<BoxCollider>().enabled = false;    
+
         }
         else
         {
