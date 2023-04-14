@@ -18,7 +18,7 @@ public class VisibilityChanger : MonoBehaviour
         m_renderer = GetComponent<MeshRenderer>();
     }
 
-    // Update is called once per frame
+    // This script makes the arrow cone disappear if the player is close to it
     void Update()
     {
         if (Vector3.Distance(transform.position, m_player.transform.position) < m_range)
