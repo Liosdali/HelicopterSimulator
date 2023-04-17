@@ -46,7 +46,10 @@ public class MissionHandler : MonoBehaviour
         else
         {
             m_MissionArrow.gameObject.SetActive(false);
-
+            foreach (var panel in m_Panels)
+            {
+                panel.UpdateText();
+            }
             Debug.Log("Missions finished");
         }
 
