@@ -4569,7 +4569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &192173020
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9124,6 +9124,7 @@ GameObject:
   - component: {fileID: 384777932}
   - component: {fileID: 384777934}
   - component: {fileID: 384777933}
+  - component: {fileID: 384777935}
   m_Layer: 5
   m_Name: MissionPanel
   m_TagString: Untagged
@@ -9149,11 +9150,11 @@ RectTransform:
   m_Father: {fileID: 547956808}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 930.1539, y: 246.61539}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -32, y: -16}
+  m_SizeDelta: {x: 2209, y: 600}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &384777933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9192,6 +9193,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384777931}
   m_CullTransparentMesh: 0
+--- !u!114 &384777935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384777931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5879744a87f9795499324adbb1e41d26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MissionCount: 0
+  m_Text: {fileID: 1243941099}
 --- !u!1001 &388394075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22608,6 +22623,7 @@ GameObject:
   - component: {fileID: 1053179273}
   - component: {fileID: 1053179275}
   - component: {fileID: 1053179274}
+  - component: {fileID: 1053179276}
   m_Layer: 5
   m_Name: MissionPanel
   m_TagString: Untagged
@@ -22633,11 +22649,11 @@ RectTransform:
   m_Father: {fileID: 192173020}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 604.6, y: 160.3}
-  m_SizeDelta: {x: 773.23096, y: 210}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -104, y: -148}
+  m_SizeDelta: {x: 2209.231, y: 600}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &1053179274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22676,6 +22692,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053179272}
   m_CullTransparentMesh: 0
+--- !u!114 &1053179276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053179272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5879744a87f9795499324adbb1e41d26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MissionCount: 0
+  m_Text: {fileID: 0}
 --- !u!1 &1054285974
 GameObject:
   m_ObjectHideFlags: 0
@@ -28459,7 +28489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f214e68056de3e14da978fe76c7acbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_player: {fileID: 0}
+  m_player: {fileID: 2719126338292808955}
   m_range: 30
 --- !u!1 &1417811611 stripped
 GameObject:
@@ -34694,6 +34724,7 @@ MonoBehaviour:
   m_Missions:
   - {fileID: 1926861320}
   - {fileID: 1926861320}
+  m_Panels: []
   m_MissionArrow: {fileID: 1416485353}
 --- !u!4 &1713980777
 Transform:
