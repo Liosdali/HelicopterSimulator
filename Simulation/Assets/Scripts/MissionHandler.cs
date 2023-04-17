@@ -46,6 +46,7 @@ public class MissionHandler : MonoBehaviour
         else
         {
             m_MissionArrow.gameObject.SetActive(false);
+
             Debug.Log("Missions finished");
         }
 
