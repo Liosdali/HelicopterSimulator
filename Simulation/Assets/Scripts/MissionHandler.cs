@@ -29,6 +29,7 @@ public class MissionHandler : MonoBehaviour
         foreach (var panel in m_Panels)
         {
             panel.MissionCount = m_Missions.Count;
+            panel.InitText();
         }
     }
 
