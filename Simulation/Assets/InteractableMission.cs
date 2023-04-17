@@ -15,14 +15,7 @@ public class InteractableMission : MonoBehaviour
     public void DoInteraction()
     {
         m_OnInteraction.Invoke();
-
     }
-
-    private void Start()
-    {
-        dialogueBox.SetActive(false);
-    }
-
 
     public void OpenDialoge()
     {
