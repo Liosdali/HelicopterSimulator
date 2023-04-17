@@ -1,18 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 public class InteractableMission : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private GameObject dialogueBox;
+
+    [SerializeField]
+    UnityEvent m_OnInteraction;
+
+    public void DoInteraction()
     {
-        
+        m_OnInteraction.Invoke();
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        dialogueBox.SetActive(false);
     }
+
+
+    public void OpenDialoge()
+    {
+        dialogueBox.SetActive(true);
+        DoInteraction();
+    }
+
+
 }
