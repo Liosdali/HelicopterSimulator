@@ -12,6 +12,9 @@ public class MissionHandler : MonoBehaviour
 
 
     [SerializeField]
+    private MissionPanel[] m_Panels;
+
+    [SerializeField]
     private GameObject m_MissionArrow;
 
     public static MissionHandler Instance;
@@ -20,6 +23,13 @@ public class MissionHandler : MonoBehaviour
     {
         m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
         Instance = this;
+
+        m_Panels = FindObjectsOfType<MissionPanel>();
+
+        foreach (var panel in m_Panels)
+        {
+            panel.MissionCount = m_Missions.Count;
+        }
     }
 
     // Removing mission from the list
@@ -27,11 +37,16 @@ public class MissionHandler : MonoBehaviour
     {
         if (RemoveMission())
         {
+            foreach (var panel in m_Panels)
+            {
+                panel.UpdateText();
+            }
             m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
         }
         else
         {
-            Debug.Log("");
+            m_MissionArrow.gameObject.SetActive(false);
+            Debug.Log("Missions finished");
         }
 
     }
