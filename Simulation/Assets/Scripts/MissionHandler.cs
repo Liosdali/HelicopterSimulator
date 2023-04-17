@@ -10,6 +10,8 @@ public class MissionHandler : MonoBehaviour
     [SerializeField]
     private List<Mission> m_Missions = new List<Mission>();
 
+    [SerializeField]
+    private List<InteractableMission> m_Interactables = new List<InteractableMission>();
 
     [SerializeField]
     private MissionPanel[] m_Panels;
@@ -64,7 +66,8 @@ public class MissionHandler : MonoBehaviour
             // Handle missions objects that are going to be changed
             //m_Missions[0].gameObject.SetActive(false);
             m_Missions.RemoveAt(0);
-
+            m_Interactables[0].OpenDialoge();
+            m_Interactables.RemoveAt(0);
         }
         else
             Debug.Log("Mission Over");

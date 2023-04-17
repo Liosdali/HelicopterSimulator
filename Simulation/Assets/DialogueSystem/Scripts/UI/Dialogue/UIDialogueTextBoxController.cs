@@ -70,7 +70,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
             
         }
     }
-    private void AudioTest()
+    private void PlayFirstAudio()
     {
         m_DialogueSource.Play();
     }
@@ -129,7 +129,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         if (m_NextNode == null)
         { 
             m_DialogueSource.clip = node.GetAudioClip();
-            AudioTest();
+            PlayFirstAudio();
         }
         //PlayAudio();
         m_ListenToInput = true;
