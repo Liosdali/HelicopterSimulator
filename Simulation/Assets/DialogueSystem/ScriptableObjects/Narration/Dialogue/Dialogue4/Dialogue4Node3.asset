@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abaa1d01ebe65f6469c9f7f9cd89f2dc, type: 3}
   m_Name: Dialogue4Node3
   m_EditorClassIdentifier: 
-  m_DialogueLine: {fileID: 11400000, guid: 31f78a07556f40c4ebc0ddd69196f679, type: 2}
+  m_DialogueLine: {fileID: 11400000, guid: c0e27516d9e31be48bff61831b64bbf3, type: 2}
   m_AudioClip: {fileID: 8300000, guid: 1b1f79f24efbb844f8ab10b1660546c7, type: 3}
-  m_NextNode: {fileID: 0}
+  m_NextNode: {fileID: 11400000, guid: bd8c862a0534f3f4da1ba0c9c2873085, type: 2}
