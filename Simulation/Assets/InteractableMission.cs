@@ -17,6 +17,7 @@ public class InteractableMission : MonoBehaviour
         m_OnInteraction.Invoke();
     }
 
+    [ContextMenu("Test")]
     public void OpenDialoge()
     {
         dialogueBox.SetActive(true);
