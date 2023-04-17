@@ -13,6 +13,11 @@ public class MissionPanel : MonoBehaviour
     private Text m_Text;
 
 
+    public void InitText()
+    {
+        m_Text.text = m_countNo.ToString() + "/" + MissionCount.ToString();
+    }
+
 
     public void UpdateText()
     {
