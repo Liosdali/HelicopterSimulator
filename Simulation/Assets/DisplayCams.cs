@@ -35,6 +35,7 @@ public class DisplayCams : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Dont forget to remove the VR main camera from here !!!
         if (Input.GetButtonDown("Jump"))
         {
             if (count != 0)
