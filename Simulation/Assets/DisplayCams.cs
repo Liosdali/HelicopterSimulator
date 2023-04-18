@@ -17,24 +17,37 @@ public class DisplayCams : MonoBehaviour
     {
         m_attributeCanvas = GetComponentInChildren<SilantroMisc>().gameObject;
         m_attributeCanvas.GetComponent<Canvas>().worldCamera = cameras[0];
-       foreach(Camera cam in cameras)
+       //foreach(Camera cam in cameras)
+       // {
+       //     cam.gameObject.SetActive(false);
+
+       // } 
+
+       for (int i = 1; i < cameras.Length; i++)
         {
-            cam.gameObject.SetActive(false);
-        } 
+            cameras[i].gameObject.SetActive(false);
+            cameras[i].enabled = false;
+        }
+
        cameras[0].gameObject.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Dont forget to remove the VR main camera from here !!!
         if (Input.GetButtonDown("Jump"))
         {
-            if (count != 0) 
+            if (count != 0)
+            {
                 cameras[count].gameObject.SetActive(false); // If the object is not vr camera then disable
+                cameras[count].enabled = false;
+            }
             count++;
             if (count == cameras.Length)
                 count = 0;
             cameras[count].gameObject.SetActive(true);
+            cameras[count].enabled = true;
             m_attributeCanvas.GetComponent<Canvas>().worldCamera = cameras[count];
         }
         if(Input.GetKeyDown(KeyCode.C))

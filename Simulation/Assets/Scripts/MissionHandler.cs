@@ -10,6 +10,11 @@ public class MissionHandler : MonoBehaviour
     [SerializeField]
     private List<Mission> m_Missions = new List<Mission>();
 
+    [SerializeField]
+    private List<InteractableMission> m_Interactables = new List<InteractableMission>();
+
+    [SerializeField]
+    private MissionPanel[] m_Panels;
 
     [SerializeField]
     private GameObject m_MissionArrow;
@@ -20,6 +25,14 @@ public class MissionHandler : MonoBehaviour
     {
         m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
         Instance = this;
+
+        m_Panels = FindObjectsOfType<MissionPanel>();
+
+        foreach (var panel in m_Panels)
+        {
+            panel.MissionCount = m_Missions.Count;
+            panel.InitText();
+        }
     }
 
     // Removing mission from the list
@@ -27,11 +40,20 @@ public class MissionHandler : MonoBehaviour
     {
         if (RemoveMission())
         {
+            foreach (var panel in m_Panels)
+            {
+                panel.UpdateText();
+            }
             m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
         }
         else
         {
-            Debug.Log("");
+            m_MissionArrow.gameObject.SetActive(false);
+            foreach (var panel in m_Panels)
+            {
+                panel.UpdateText();
+            }
+            Debug.Log("Missions finished");
         }
 
     }
@@ -44,7 +66,8 @@ public class MissionHandler : MonoBehaviour
             // Handle missions objects that are going to be changed
             //m_Missions[0].gameObject.SetActive(false);
             m_Missions.RemoveAt(0);
-
+            m_Interactables[0].OpenDialoge();
+            m_Interactables.RemoveAt(0);
         }
         else
             Debug.Log("Mission Over");

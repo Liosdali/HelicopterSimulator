@@ -51,37 +51,57 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
     private void Start()
     {
+
         _selectmenu = inputActions.FindActionMap("XRI Wrist Menu").FindAction("DialogueSkip");
         _selectmenu.Enable();
         _selectmenu.performed += ToggleSelectMenu;
+        //m_DialogueSource.clip = m_NextNode.GetAudioClip();
+        PlayAudio();
     }
 
     public void ToggleSelectMenu(InputAction.CallbackContext context)
     {
         if (m_ListenToInput)
         {
-            PlayAudio();
+            //PlayAudio();
+            Debug.Log("Next Dialogue");
+            PlayNextAudio();
+            m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
+            
         }
     }
-
+    private void PlayFirstAudio()
+    {
+        m_DialogueSource.Play();
+    }
     public void PlayAudio()
     {
         m_DialogueSource.Stop();
 
         if (m_NextNode != null)
         {
-            Debug.Log("Ýsim burada = " + m_NextNode.GetAudioClip().name);
+            //Debug.Log("Ýsim burada = " + m_NextNode.GetAudioClip().name);
+            //m_DialogueSource.clip = m_NextNode.GetAudioClip();
+            m_DialogueSource.Play();
+        }
+
+    }
+    public void PlayNextAudio()
+    {
+        m_DialogueSource.Stop();
+
+        if (m_NextNode != null)
+        {
+            //Debug.Log("Ýsim burada = " + m_NextNode.GetAudioClip().name);
             m_DialogueSource.clip = m_NextNode.GetAudioClip();
             m_DialogueSource.Play();
         }
-        Debug.Log("Next Dialogue");
-        m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
-    }
 
+    }
     private void OnDialogueNodeStart(DialogueNode node)
     {
+        //AudioTest();
         gameObject.SetActive(true);
-
         m_DialogueText.text = node.DialogueLine.Text;
         m_SpeakerText.text = node.DialogueLine.Speaker.CharacterName;
         
@@ -106,8 +126,13 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
     public void Visit(BasicDialogueNode node)
     {
+        if (m_NextNode == null)
+        { 
+            m_DialogueSource.clip = node.GetAudioClip();
+            PlayFirstAudio();
+        }
+        //PlayAudio();
         m_ListenToInput = true;
-        //node.DialogueLine.PlayAudio();
         m_NextNode = node.NextNode;
     }
 
