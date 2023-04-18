@@ -23,6 +23,11 @@ public class FPS_Counter : MonoBehaviour
         _frameDeltaTimeArray[_lastFrameIndex] = Time.deltaTime;
         _lastFrameIndex = (_lastFrameIndex + 1) % _frameDeltaTimeArray.Length;
         _fpsText.text = Mathf.RoundToInt(CalcFPS()).ToString();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     private float CalcFPS()
