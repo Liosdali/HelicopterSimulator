@@ -40,6 +40,7 @@ public class HookMissionHandler : MonoBehaviour
     private void Start()
     {
         m_waterSlider.value = m_waterPercentage;
+        m_waterText.text = "% " + ((int)m_waterPercentage).ToString();
     }
 
     public void EnableHook()
