@@ -6,8 +6,8 @@ public class NarrationLine : ScriptableObject
     [SerializeField]
     private NarrationCharacter m_Speaker;
 
-    [SerializeField]
-    public AudioClip audioClip;
+    //[SerializeField]
+    //public AudioClip audioClip;
     [SerializeField]
     private string m_Text;
 
