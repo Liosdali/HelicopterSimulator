@@ -33,4 +33,10 @@ public class KeyAnimationScript : MonoBehaviour
         }
     }
 
+    [ContextMenu("Test Engine On")]
+    public void TestFunction()
+    {
+        _helicopter.GetComponent<RotaryController>().TurnOnEngines();
+    }
+
 }
