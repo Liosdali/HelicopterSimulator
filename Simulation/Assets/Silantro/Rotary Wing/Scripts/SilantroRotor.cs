@@ -716,6 +716,7 @@ namespace Oyedoyin.RotaryWing
                 {
                     if (!m_soundPoint.isPlaying) { m_soundPoint.Play(); }
                     m_soundPoint.pitch = m_rotorPitch;
+                    // Can change the sound volume from here
                     m_soundPoint.volume = m_rotorVolume;
                 }
             }
