@@ -29,13 +29,17 @@ public class HookMissionHandler : MonoBehaviour
     [SerializeField]
     private Slider m_waterSlider;
 
+    [SerializeField]
+    private Text m_waterText;
+
+
     Mission mission;
     FireMission fire;
 
 
     private void Start()
     {
-        m_waterSlider.value = 0f;
+        m_waterSlider.value = m_waterPercentage;
     }
 
     public void EnableHook()
@@ -81,6 +85,7 @@ public class HookMissionHandler : MonoBehaviour
                             {
                                 m_waterPercentage -= Time.deltaTime * m_flowRate;
                                 m_waterSlider.value = m_waterPercentage * 0.01f;
+                                m_waterText.text = "% " + ((int)m_waterPercentage).ToString();
                                 fire.reduceHp();
 
                                 Debug.Log("Extinguishing");
@@ -103,6 +108,11 @@ public class HookMissionHandler : MonoBehaviour
                     //m_waterPercentage += m_waterPercentage * Time.deltaTime * m_flowRate;
                     m_waterPercentage += Time.deltaTime * m_flowRate;
                     m_waterSlider.value = m_waterPercentage * 0.01f;
+
+                    m_waterText.text = "% " + ((int)m_waterPercentage).ToString();
+
+
+                    
                     //Debug.Log(waterPercentage);
                 }
                 //other.gameObject.GetComponent<CapsuleCollider>().gameObject.SetActive(false);
