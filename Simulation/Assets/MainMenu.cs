@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     public GameObject _mainUICanvas;
     public GameObject _startUICanvas;
     public GameObject _exitUICanvas;
-
+    //
     public void ChangeMainCanvas()
     {
         if(_settingUICanvas.gameObject.activeSelf == false)
