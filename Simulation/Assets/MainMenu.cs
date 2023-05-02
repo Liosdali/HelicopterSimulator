@@ -8,19 +8,7 @@ public class MainMenu : MonoBehaviour
     public GameObject _mainUICanvas;
     public GameObject _startUICanvas;
     public GameObject _exitUICanvas;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    //
     public void ChangeMainCanvas()
     {
         if(_settingUICanvas.gameObject.activeSelf == false)
