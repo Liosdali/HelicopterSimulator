@@ -5,16 +5,20 @@ using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.InputSystem;
 using UnityEditor;
+using Oyedoyin.Common;
 
 public class SwitchCover : MonoBehaviour
 {
     public Animator anim;
     public GameObject switchTargetCollider;
     private bool inColl = false;
+    private SilantroButton m_SwitchScript;
+
 
     void Start()
     {
         switchTargetCollider.SetActive(false);
+        m_SwitchScript = GetComponent<SilantroButton>();
     }
     
     public void ToggleTrigger()
@@ -22,10 +26,10 @@ public class SwitchCover : MonoBehaviour
         if (!inColl)
         {
             anim.SetBool("IsHandInCollision", true);
-
+            m_SwitchScript.SwitchFunction();
             // This can fix the collision problem but 
             // There wont be the closing switch option
-            GetComponent<BoxCollider>().enabled = false;    
+            //GetComponent<BoxCollider>().enabled = false;    
 
         }
         else
