@@ -21,7 +21,7 @@ public class KeyAnimationScript : MonoBehaviour
 
     public void PlayKeyStartAnim()
     {
-        if(anim.GetBool("KeyStart") != true && _oilButton)
+        if (anim.GetBool("KeyStart") != true && _oilButton)
         {
             _helicopter.GetComponent<RotaryController>().TurnOnEngines();
             anim.SetBool("KeyStart", true);
