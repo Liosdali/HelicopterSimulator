@@ -41,6 +41,8 @@ public class HookMissionHandler : MonoBehaviour
     Mission mission;
     FireMission fire;
 
+    [SerializeField]
+    private GameObject m_Waterfall;
 
     private void Start()
     {
@@ -97,7 +99,7 @@ public class HookMissionHandler : MonoBehaviour
                                 m_waterSlider2.value = m_waterPercentage;
                                 m_waterText2.text = "% " + ((int)m_waterPercentage).ToString();
                                 fire.reduceHp();
-
+                                Instantiate(m_Waterfall);
                                 Debug.Log("Extinguishing");
                             }
                         }
@@ -130,5 +132,12 @@ public class HookMissionHandler : MonoBehaviour
 
         }
 
+    }
+
+
+    [ContextMenu("Test Water")]
+    public void TestWater()
+    {
+        Instantiate(m_Waterfall, transform.position, Quaternion.identity, this.transform);
     }
 }
