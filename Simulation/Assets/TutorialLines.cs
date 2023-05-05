@@ -36,7 +36,6 @@ public class TutorialLines : MonoBehaviour
 
     }
 
-
     private void FixPoints()
     {
         m_LineRenderer.SetPosition(0, m_PositionOne.position);
