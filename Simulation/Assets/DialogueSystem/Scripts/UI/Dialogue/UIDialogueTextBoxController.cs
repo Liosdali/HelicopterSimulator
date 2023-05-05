@@ -72,14 +72,15 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     //}
 
 
+    public bool tutorialPhase;
+
 
     private void Update()
     {
-        if (!m_DialogueSource.isPlaying)
+        if (!tutorialPhase)
         {
-
+            if (!m_DialogueSource.isPlaying) { NextDialogue(); }
         }
-
     }
     //public void ToggleSelectMenu(InputAction.CallbackContext context)
     //{
@@ -95,13 +96,16 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
     public void NextDialogue()
     {
-        if (!m_DialogueSource.isPlaying)
+        if (m_NextNode != null)
         {
-            //PlayAudio();
-            Debug.Log("Next Dialogue");
-            PlayNextAudio();
-            m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
+            if (!m_DialogueSource.isPlaying)
+            {
+                //PlayAudio();
+                Debug.Log("Next Dialogue");
+                PlayNextAudio();
+                m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
 
+            }
         }
     }
 
