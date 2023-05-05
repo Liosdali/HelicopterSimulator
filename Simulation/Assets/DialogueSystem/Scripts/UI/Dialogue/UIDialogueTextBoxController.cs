@@ -82,6 +82,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
             if (!m_DialogueSource.isPlaying) { NextDialogue(); }
         }
     }
+
     //public void ToggleSelectMenu(InputAction.CallbackContext context)
     //{
     //    if (!m_DialogueSource.isPlaying)
