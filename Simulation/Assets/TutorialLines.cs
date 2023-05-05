@@ -12,7 +12,7 @@ public class TutorialLines : MonoBehaviour
     private Transform m_PositionTwo;
 
     [SerializeField]
-    private Transform[] m_TutorialTransforms;
+    private List<Transform> m_TutorialTransforms;
 
 
 
@@ -44,10 +44,13 @@ public class TutorialLines : MonoBehaviour
     }
 
 
-
-    public void UpdateSecPos(Transform secPos)
+    public void UpdateSecPos()
     {
-        m_PositionTwo = secPos;
+        if (m_TutorialTransforms.Count > 0)
+        {
+            m_PositionTwo = m_TutorialTransforms[0];
+            m_TutorialTransforms.RemoveAt(0);
+        }
     }
 
 }
