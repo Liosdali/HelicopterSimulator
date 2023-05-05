@@ -54,7 +54,7 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
         _selectmenu = inputActions.FindActionMap("XRI Wrist Menu").FindAction("DialogueSkip");
         _selectmenu.Enable();
-        _selectmenu.performed += ToggleSelectMenu;
+        //_selectmenu.performed += ToggleSelectMenu;
         //m_DialogueSource.clip = m_NextNode.GetAudioClip();
         PlayAudio();
     }
@@ -70,17 +70,48 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
     //    }
     //}
-    public void ToggleSelectMenu(InputAction.CallbackContext context)
-    {
-        if (!m_DialogueSource.isPlaying)
-        {
-            //PlayAudio();
-            Debug.Log("Next Dialogue");
-            PlayNextAudio();
-            m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
 
+
+    public bool tutorialPhase;
+
+
+    private void Update()
+    {
+        if (!tutorialPhase)
+        {
+            if (!m_DialogueSource.isPlaying) { NextDialogue(); }
         }
     }
+
+    //public void ToggleSelectMenu(InputAction.CallbackContext context)
+    //{
+    //    if (!m_DialogueSource.isPlaying)
+    //    {
+    //        //PlayAudio();
+    //        Debug.Log("Next Dialogue");
+    //        PlayNextAudio();
+    //        m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
+
+    //    }
+    //}
+
+    public void NextDialogue()
+    {
+        if (m_NextNode != null)
+        {
+            if (!m_DialogueSource.isPlaying)
+            {
+                //PlayAudio();
+                Debug.Log("Next Dialogue");
+                PlayNextAudio();
+                m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
+
+            }
+        }
+    }
+
+
+
     private void PlayFirstAudio()
     {
         m_DialogueSource.Play();
