@@ -59,15 +59,26 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
         PlayAudio();
     }
 
+    //public void ToggleSelectMenu(InputAction.CallbackContext context)
+    //{
+    //    if (m_ListenToInput)
+    //    {
+    //        //PlayAudio();
+    //        Debug.Log("Next Dialogue");
+    //        PlayNextAudio();
+    //        m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
+
+    //    }
+    //}
     public void ToggleSelectMenu(InputAction.CallbackContext context)
     {
-        if (m_ListenToInput)
+        if (!m_DialogueSource.isPlaying)
         {
             //PlayAudio();
             Debug.Log("Next Dialogue");
             PlayNextAudio();
             m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
-            
+
         }
     }
     private void PlayFirstAudio()
