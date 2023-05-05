@@ -11,8 +11,16 @@ public class TutorialLines : MonoBehaviour
     [SerializeField]
     private Transform m_PositionTwo;
 
+    [SerializeField]
+    private List<Transform> m_TutorialTransforms;
+
+
 
     private LineRenderer m_LineRenderer;
+
+    [SerializeField]
+    private bool m_fixPoint = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +31,29 @@ public class TutorialLines : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (m_fixPoint) { FixPoints(); }
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            UpdateSecPos();
+        }
+
     }
+
+    private void FixPoints()
+    {
+        m_LineRenderer.SetPosition(0, m_PositionOne.position);
+        m_LineRenderer.SetPosition(1, m_PositionTwo.position);
+    }
+
+
+    public void UpdateSecPos()
+    {
+        if (m_TutorialTransforms.Count > 0)
+        {
+            m_PositionTwo = m_TutorialTransforms[0];
+            m_TutorialTransforms.RemoveAt(0);
+        }
+    }
+
 }

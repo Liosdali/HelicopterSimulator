@@ -169,6 +169,10 @@ MonoBehaviour:
   m_flowRate: 15
   m_hookEnabled: 1
   m_waterSlider: {fileID: 0}
+  m_waterText: {fileID: 0}
+  m_waterSlider2: {fileID: 0}
+  m_waterText2: {fileID: 0}
+  m_Waterfall: {fileID: 0}
 --- !u!1 &7031616591572977647
 GameObject:
   m_ObjectHideFlags: 0
