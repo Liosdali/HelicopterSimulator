@@ -31,8 +31,12 @@ public class TutorialLines : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (m_fixPoint) { FixPoints(); }
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            UpdateSecPos();
+        }
 
     }
 
