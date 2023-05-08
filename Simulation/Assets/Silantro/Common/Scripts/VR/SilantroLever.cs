@@ -26,7 +26,7 @@ namespace Oyedoyin.Common
         public enum LeverAction { SelfCentering, NonCentering }
         public enum RotationAxis { X, Y, Z }
 
-
+        public TutorialEnum type = TutorialEnum.throttlePower;
 
         public LeverAnimType animationType = LeverAnimType.Lever;
         public LeverMode m_mode = LeverMode.RotateOnly;
@@ -220,21 +220,31 @@ namespace Oyedoyin.Common
         /// 
         /// </summary>
         /// <param name="other"></param>
+        /// 
+        private bool m_tuto = false;
+
         private void OnTriggerExit(Collider other)
         {
             if (other.CompareTag("PlayerHand"))
             {
-                if (m_controller != null && m_controller.gripValue < 0.9f ) 
-                // && leverHeld)    Gerek yok leverHeld == gripVal > 0.9f
-                //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
+               
+                if (!m_tuto)
                 {
-                    leverHeld = false;
-                    m_controller.SetAnimBool(false);
-                    m_Hand.SetActive(false);
+                    m_tuto = Tutorial_Checker.Instance.NextTutorialObjective(type);
+                }
+                else if (m_tuto) { 
+                    if (m_controller != null && m_controller.gripValue < 0.9f ) 
+                    // && leverHeld)    Gerek yok leverHeld == gripVal > 0.9f
+                    //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
+                    {
+                        leverHeld = false;
+                        m_controller.SetAnimBool(false);
+                        m_Hand.SetActive(false);
 
-                    m_beingUsed = false;
-                    m_controller._isBeingUsed = false;
-                    m_controller = null;
+                        m_beingUsed = false;
+                        m_controller._isBeingUsed = false;
+                        m_controller = null;
+                    }
                 }
             }
         }
@@ -405,7 +415,8 @@ namespace Oyedoyin.Common
             EditorGUILayout.PropertyField(serializedObject.FindProperty("leverType"), new GUIContent("Type"));
             GUILayout.Space(3f);
 
-
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("type"), new GUIContent("Tuto Type"));
+            GUILayout.Space(3f);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("animationType"), new GUIContent("Hand Snap Anim Type"));
             GUILayout.Space(3f);
 

@@ -7,7 +7,7 @@ public enum TutorialEnum
     switchCover,
     switchOff,
     keyOff,
-    cycliclStick,
+    cyclicStick,
     throttlePower,
     collectiveLever
 }
@@ -34,6 +34,10 @@ public class Tutorial_Checker : MonoBehaviour
     // Helikopteri baþlatmak için Marþý açýn (Anahtarýn üstüne geldiðinde arka tuþa basýnýz)
 
 
+    private List<TutorialEnum> m_EnumList;
+
+    
+
     private TutorialEnum stepCase = TutorialEnum.switchCover;
 
 
@@ -54,6 +58,13 @@ public class Tutorial_Checker : MonoBehaviour
         m_LineRenderer.m_fixPoint = true;
         m_dialogues[0].OpenDialoge();
 
+        m_EnumList = new List<TutorialEnum>();
+
+        m_EnumList.Add(TutorialEnum.switchOff);      
+        m_EnumList.Add(TutorialEnum.throttlePower);
+        m_EnumList.Add(TutorialEnum.collectiveLever);
+        m_EnumList.Add(TutorialEnum.cycliclStick);
+        m_EnumList.Add(TutorialEnum.keyOff);
 
     }
     private int count = 0;
@@ -62,6 +73,8 @@ public class Tutorial_Checker : MonoBehaviour
     {
         if (type == stepCase)
         {
+            stepCase = m_EnumList[count];
+            count++;
             m_LineRenderer.UpdateSecPos();
             m_DialogueController.NextDialogueTuto(); //Next dialogue can be used too 
             return true;
