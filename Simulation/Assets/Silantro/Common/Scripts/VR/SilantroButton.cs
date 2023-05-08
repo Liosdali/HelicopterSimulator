@@ -258,7 +258,7 @@ public class SilantroButton : MonoBehaviour
                 m_controller.SetAnimBool(true);
                 m_Hand.SetActive(true);
 
-                if (m_controller.triggerValue > 0.9f)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
+                if (m_controller.triggerValue > 0.6f)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
                 {
                     if (coolTimer <= 0)
                         ToggleButton();
@@ -278,6 +278,15 @@ public class SilantroButton : MonoBehaviour
             m_controller = null;
         }
     }
+
+    public void SwitchFunction()
+    {
+        m_Hand.SetActive(false);
+        GetComponent<BoxCollider>().enabled = false;
+    }
+
+
+
 }
 
 
