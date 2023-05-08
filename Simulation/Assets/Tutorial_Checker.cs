@@ -26,7 +26,7 @@ public class Tutorial_Checker : MonoBehaviour
 
     private TutorialLines m_LineRenderer;
 
-    // Düðme kapaðýný kaldýrýn (Sol arka tuþa basabilirsiniz)
+    // Düðme kapaðýný kaldýrýn (arka tuþa basabilirsiniz)
     // Düðmeyi tuþa basýlý tutarken ileri doðru ittirin
     // Güç çarpanýný arttýrmak için sol üstteki gaz kolunu ileriye doðru ittirin
     // Ortanýzda bulunan kontrol çubuðunu tutun. Bu çubuk ile helikoptere yön verebilirsiniz
@@ -63,7 +63,7 @@ public class Tutorial_Checker : MonoBehaviour
         m_EnumList.Add(TutorialEnum.switchOff);      
         m_EnumList.Add(TutorialEnum.throttlePower);
         m_EnumList.Add(TutorialEnum.collectiveLever);
-        m_EnumList.Add(TutorialEnum.cycliclStick);
+        m_EnumList.Add(TutorialEnum.cyclicStick);
         m_EnumList.Add(TutorialEnum.keyOff);
 
     }
