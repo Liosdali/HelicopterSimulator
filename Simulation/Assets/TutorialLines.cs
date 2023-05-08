@@ -19,14 +19,28 @@ public class TutorialLines : MonoBehaviour
     private LineRenderer m_LineRenderer;
 
     [SerializeField]
-    private bool m_fixPoint = false;
+    public bool m_fixPoint = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
         m_LineRenderer = GetComponent<LineRenderer>();
+        m_LineRenderer.enabled = false;
     }
+
+
+
+    public void ActivateLineRenderer()
+    {
+        m_LineRenderer.enabled = true;
+    }
+    public void DeactivateLineRenderer()
+    {
+        m_LineRenderer.enabled = false;
+    }
+
+
 
     // Update is called once per frame
     void Update()
@@ -53,6 +67,12 @@ public class TutorialLines : MonoBehaviour
         {
             m_PositionTwo = m_TutorialTransforms[0];
             m_TutorialTransforms.RemoveAt(0);
+        }
+
+
+        if (m_TutorialTransforms.Count == 0)
+        {
+
         }
     }
 
