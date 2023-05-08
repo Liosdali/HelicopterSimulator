@@ -29,7 +29,7 @@ public class KeyAnimationScript : MonoBehaviour
         {
             if (!m_tuto)
             {
-                m_tuto = Tutorial_Checker.Instance.NextTutorialObjective(type);
+                m_tuto = Tutorial_Checker.Instance.KeyCheck(type);
             }
             else if (m_tuto)
             {

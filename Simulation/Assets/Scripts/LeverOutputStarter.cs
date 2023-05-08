@@ -45,10 +45,9 @@ public class LeverOutputStarter : MonoBehaviour
     }
     private void OutputOnCheck()
     {
-
         if (!m_tuto)
         {
-            m_tuto = Tutorial_Checker.Instance.NextTutorialObjective(type);
+            //m_tuto = Tutorial_Checker.Instance.NextTutorialObjective(type);
         }
         else if (m_tuto)
         {
