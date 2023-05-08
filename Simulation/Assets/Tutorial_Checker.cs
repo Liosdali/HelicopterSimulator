@@ -38,7 +38,7 @@ public class Tutorial_Checker : MonoBehaviour
 
     public void NextTutorialObjective()
     {
-
+        m_LineRenderer.UpdateSecPos();
     }
 
 
