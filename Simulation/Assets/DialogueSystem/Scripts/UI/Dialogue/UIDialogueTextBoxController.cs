@@ -72,7 +72,13 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     //}
 
 
-    public bool tutorialPhase = true;
+    private bool tutorialPhase = true;
+
+
+    public void FlipTutorial()
+    {
+        tutorialPhase = false;
+    }
 
 
     private void Update()

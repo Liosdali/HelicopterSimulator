@@ -15,6 +15,8 @@ public class Tutorial_Checker : MonoBehaviour
         collectiveLever
     }
 
+    [SerializeField]
+    private InteractableMission[] m_dialogues;
 
     [SerializeField]
     private UIDialogueTextBoxController m_DialogueController;
@@ -39,6 +41,16 @@ public class Tutorial_Checker : MonoBehaviour
 
     }
 
+    public void Instantiate()
+    {
+        Debug.LogError("Instantiating");
+        m_LineRenderer.ActivateLineRenderer();
+        m_LineRenderer.m_fixPoint = true;
+        m_dialogues[0].OpenDialoge();
+
+
+    }
+
 
     public void NextTutorialObjective()
     {
@@ -46,6 +58,20 @@ public class Tutorial_Checker : MonoBehaviour
         m_DialogueController.NextDialogueTuto(); //Next dialogue can be used too 
     }
 
+
+    public void EndTutorial()
+    {
+        m_DialogueController.FlipTutorial();
+        m_LineRenderer.DeactivateLineRenderer();
+
+
+        Destroy(gameObject);
+        // change dialogue
+    }
+
+
+
+    //interactable mission 
 
 
 }

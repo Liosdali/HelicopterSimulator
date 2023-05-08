@@ -17,7 +17,7 @@ public class LeverOutputStarter : MonoBehaviour
 
 
     private bool m_Open = false;
-
+    private bool m_tuto = false;
     // Update is called once per frame
     void Update()
     {
@@ -41,6 +41,13 @@ public class LeverOutputStarter : MonoBehaviour
     }
     private void OutputOnCheck()
     {
+
+        if (!m_tuto)
+        {
+            m_tuto = true;
+            Tutorial_Checker.Instance.NextTutorialObjective();
+        }
+
         if (m_lever.leverOutput > 0.8f)
         {
             m_Open = true;

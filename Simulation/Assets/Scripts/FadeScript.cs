@@ -116,6 +116,9 @@ public class FadeScript : MonoBehaviour
 
         _renderer.material.SetColor("_Color", fadeColor2);
 
+        gameObject.SetActive(false);
+        Tutorial_Checker.Instance.Instantiate();
+        
         Destroy(gameObject);
     }
 }
