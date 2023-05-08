@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum TutorialEnum
+{
+    switchCover,
+    switchOff,
+    keyOff,
+    cycliclStick,
+    throttlePower,
+    collectiveLever
+}
+
+
+
 public class Tutorial_Checker : MonoBehaviour
 {
 
-    enum Tutorial
-    {
-        switchCover,
-        switchOff,
-        keyOff,
-        cycliclStick,
-        throttlePower,
-        collectiveLever
-    }
 
     [SerializeField]
     private InteractableMission[] m_dialogues;
@@ -29,6 +32,9 @@ public class Tutorial_Checker : MonoBehaviour
     // Ortanýzda bulunan kontrol çubuðunu tutun. Bu çubuk ile helikoptere yön verebilirsiniz
     // Sol altýnýzda bulunan çubuk ile helikopterin yukarý veya aþaðý çýkmasýný saðlayabilirsiniz
     // Helikopteri baþlatmak için Marþý açýn (Anahtarýn üstüne geldiðinde arka tuþa basýnýz)
+
+
+    private TutorialEnum stepCase = TutorialEnum.switchCover;
 
 
     public static Tutorial_Checker Instance;
@@ -50,12 +56,17 @@ public class Tutorial_Checker : MonoBehaviour
 
 
     }
+    private int count = 0;
 
-
-    public void NextTutorialObjective()
+    public bool NextTutorialObjective(TutorialEnum type)
     {
-        m_LineRenderer.UpdateSecPos();
-        m_DialogueController.NextDialogueTuto(); //Next dialogue can be used too 
+        if (type == stepCase)
+        {
+            m_LineRenderer.UpdateSecPos();
+            m_DialogueController.NextDialogueTuto(); //Next dialogue can be used too 
+            return true;
+        }
+        return false;
     }
 
 

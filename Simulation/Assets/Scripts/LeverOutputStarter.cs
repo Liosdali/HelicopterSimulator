@@ -16,6 +16,10 @@ public class LeverOutputStarter : MonoBehaviour
     public UnityEvent onFlipOff = new UnityEvent();
 
 
+
+    private TutorialEnum type = TutorialEnum.switchOff;
+
+
     private bool m_Open = false;
     private bool m_tuto = false;
     // Update is called once per frame
@@ -44,14 +48,15 @@ public class LeverOutputStarter : MonoBehaviour
 
         if (!m_tuto)
         {
-            m_tuto = true;
-            Tutorial_Checker.Instance.NextTutorialObjective();
+            m_tuto = Tutorial_Checker.Instance.NextTutorialObjective(type);
         }
-
-        if (m_lever.leverOutput > 0.8f)
+        else if (m_tuto)
         {
-            m_Open = true;
-            onFlipOn?.Invoke();
+            if (m_lever.leverOutput > 0.8f)
+            {
+                m_Open = true;
+                onFlipOn?.Invoke();
+            }
         }
     }
 }

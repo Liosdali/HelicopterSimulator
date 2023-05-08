@@ -16,7 +16,7 @@ public class SwitchCover : MonoBehaviour
 
     private bool tutoCheck = false;
 
-
+    private TutorialEnum type = TutorialEnum.switchCover;
 
     void Start()
     {
@@ -30,11 +30,11 @@ public class SwitchCover : MonoBehaviour
         {
             if (!tutoCheck)
             {
-                Tutorial_Checker.Instance.NextTutorialObjective();
+                Tutorial_Checker.Instance.NextTutorialObjective(type);
                 tutoCheck = true;
             }
-            anim.SetBool("IsHandInCollision", true);
-            m_SwitchScript.SwitchFunction();
+                anim.SetBool("IsHandInCollision", true);
+                m_SwitchScript.SwitchFunction();
             // This can fix the collision problem but 
             // There wont be the closing switch option
             //GetComponent<BoxCollider>().enabled = false;    
