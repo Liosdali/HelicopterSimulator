@@ -30,7 +30,7 @@ public class SwitchCover : MonoBehaviour
         {
             if (!tutoCheck)
             {
-                Tutorial_Checker.Instance.aaa();
+                Tutorial_Checker.Instance.NextTutorialObjective();
                 tutoCheck = true;
             }
             anim.SetBool("IsHandInCollision", true);
