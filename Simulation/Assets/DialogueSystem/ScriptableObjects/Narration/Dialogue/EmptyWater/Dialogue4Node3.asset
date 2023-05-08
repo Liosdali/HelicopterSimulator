@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abaa1d01ebe65f6469c9f7f9cd89f2dc, type: 3}
+  m_Name: Dialogue4Node3
+  m_EditorClassIdentifier: 
+  m_DialogueLine: {fileID: 11400000, guid: c0e27516d9e31be48bff61831b64bbf3, type: 2}
+  m_AudioClip: {fileID: 8300000, guid: 7b763bfb8ac02fc46a019629959781b1, type: 3}
+  m_NextNode: {fileID: 11400000, guid: bd8c862a0534f3f4da1ba0c9c2873085, type: 2}
