@@ -14,6 +14,9 @@ public class SwitchCover : MonoBehaviour
     private bool inColl = false;
     private SilantroButton m_SwitchScript;
 
+    private bool tutoCheck = false;
+
+
 
     void Start()
     {
@@ -25,6 +28,11 @@ public class SwitchCover : MonoBehaviour
     {
         if (!inColl)
         {
+            if (!tutoCheck)
+            {
+                Tutorial_Checker.Instance.aaa();
+                tutoCheck = true;
+            }
             anim.SetBool("IsHandInCollision", true);
             m_SwitchScript.SwitchFunction();
             // This can fix the collision problem but 
