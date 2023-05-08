@@ -15,6 +15,10 @@ public class Tutorial_Checker : MonoBehaviour
         collectiveLever
     }
 
+
+    [SerializeField]
+    private UIDialogueTextBoxController m_DialogueController;
+
     private TutorialLines m_LineRenderer;
 
     // Düðme kapaðýný kaldýrýn (Sol arka tuþa basabilirsiniz)
@@ -39,6 +43,7 @@ public class Tutorial_Checker : MonoBehaviour
     public void NextTutorialObjective()
     {
         m_LineRenderer.UpdateSecPos();
+        m_DialogueController.NextDialogueTuto(); //Next dialogue can be used too 
     }
 
 
