@@ -46,6 +46,7 @@ public class LeverOutputStarter : MonoBehaviour
     private void OutputOnCheck()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         if (m_lever.leverOutput > 0.8f)
         {
@@ -61,9 +62,12 @@ public class LeverOutputStarter : MonoBehaviour
         }
 
 =======
+=======
+
+>>>>>>> parent of b87e5814 (Merge branch 'Melih0.7' into Mete)
         if (!m_tuto)
         {
-            //m_tuto = Tutorial_Checker.Instance.NextTutorialObjective(type);
+            m_tuto = Tutorial_Checker.Instance.NextTutorialObjective(type);
         }
         else if (m_tuto)
         {
