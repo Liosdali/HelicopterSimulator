@@ -6,6 +6,7 @@ using UnityEngine.XR;
 public class PlayerCheck : MonoBehaviour
 {
 
+
     [SerializeField] private Transform _player;
     
     private float _checkY = 0.300f;
