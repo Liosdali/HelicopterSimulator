@@ -26,7 +26,7 @@ namespace Oyedoyin.Common
         public enum LeverAction { SelfCentering, NonCentering }
         public enum RotationAxis { X, Y, Z }
 
-
+        public TutorialEnum type = TutorialEnum.throttlePower;
 
         public LeverAnimType animationType = LeverAnimType.Lever;
         public LeverMode m_mode = LeverMode.RotateOnly;
@@ -104,7 +104,7 @@ namespace Oyedoyin.Common
                 m_baseLeverRotation = m_hinge.localRotation;
             }
 
-            
+            m_tutoType = (type == TutorialEnum.switchOff);
 
         }
 
@@ -178,23 +178,31 @@ namespace Oyedoyin.Common
 
                 if (m_controller != null )
                 {
+                    
                     if (m_controller.gripValue > 0.9f)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
                     {
-                        leverHeld = true;
-                        m_controller.SetAnimBool(true);
-
-                        if (m_LeftHand != null && m_RightHand != null)
+                        if (!m_tuto && !m_tutoType)
                         {
-                            if (m_controller.m_handType == SilantroHand.HandType.Left)
-                            {
-                                m_Hand = m_LeftHand;
-                            }
-                            else
-                            {
-                                m_Hand = m_RightHand;
-                            }
+                            m_tuto = Tutorial_Checker.Instance.NextTutorialObjective(type);
                         }
-                        m_Hand.SetActive(true);
+                        else if (m_tuto || m_tutoType)
+                        {
+                            leverHeld = true;
+                            m_controller.SetAnimBool(true);
+
+                            if (m_LeftHand != null && m_RightHand != null)
+                            {
+                                if (m_controller.m_handType == SilantroHand.HandType.Left)
+                                {
+                                    m_Hand = m_LeftHand;
+                                }
+                                else
+                                {
+                                    m_Hand = m_RightHand;
+                                }
+                            }
+                            m_Hand.SetActive(true);
+                        }
                     }
                     else
                     {
@@ -220,10 +228,15 @@ namespace Oyedoyin.Common
         /// 
         /// </summary>
         /// <param name="other"></param>
+        /// 
+        private bool m_tuto = false;
+        private bool m_tutoType;
+
         private void OnTriggerExit(Collider other)
         {
             if (other.CompareTag("PlayerHand"))
             {
+
                 if (m_controller != null && m_controller.gripValue < 0.9f ) 
                 // && leverHeld)    Gerek yok leverHeld == gripVal > 0.9f
                 //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
@@ -236,6 +249,7 @@ namespace Oyedoyin.Common
                     m_controller._isBeingUsed = false;
                     m_controller = null;
                 }
+                
             }
         }
         /// <summary>
@@ -405,7 +419,8 @@ namespace Oyedoyin.Common
             EditorGUILayout.PropertyField(serializedObject.FindProperty("leverType"), new GUIContent("Type"));
             GUILayout.Space(3f);
 
-
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("type"), new GUIContent("Tuto Type"));
+            GUILayout.Space(3f);
             EditorGUILayout.PropertyField(serializedObject.FindProperty("animationType"), new GUIContent("Hand Snap Anim Type"));
             GUILayout.Space(3f);
 

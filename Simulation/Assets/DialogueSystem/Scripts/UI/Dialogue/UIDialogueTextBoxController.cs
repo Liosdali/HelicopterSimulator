@@ -72,7 +72,13 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     //}
 
 
-    public bool tutorialPhase;
+    private bool tutorialPhase = true;
+
+
+    public void FlipTutorial()
+    {
+        tutorialPhase = false;
+    }
 
 
     private void Update()
@@ -111,6 +117,33 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     }
 
 
+    public void NextDialogueTuto()
+    {
+        if (tutorialPhase)
+        {
+            m_DialogueSource.Stop();
+            //PlayAudio();
+            Debug.Log("Next Dialogue");
+            PlayNextAudio();
+            m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
+        }
+    }
+
+
+    public void ToggleSelectMenu(InputAction.CallbackContext context)
+    {
+        if (!tutorialPhase)
+        {
+            if (!m_DialogueSource.isPlaying)
+            {
+                //PlayAudio();
+                Debug.Log("Next Dialogue");
+                PlayNextAudio();
+                m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
+
+            }
+        }
+    }
 
     private void PlayFirstAudio()
     {

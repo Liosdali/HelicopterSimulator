@@ -6,6 +6,9 @@ using UnityEngine.Events;
 
 public class InteractableMission : MonoBehaviour
 {
+    //Dialogue Opener
+
+
     [SerializeField]
     private GameObject dialogueBox;
 
