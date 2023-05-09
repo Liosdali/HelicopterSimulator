@@ -54,22 +54,97 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
 
         _selectmenu = inputActions.FindActionMap("XRI Wrist Menu").FindAction("DialogueSkip");
         _selectmenu.Enable();
-        _selectmenu.performed += ToggleSelectMenu;
+        //_selectmenu.performed += ToggleSelectMenu;
         //m_DialogueSource.clip = m_NextNode.GetAudioClip();
         PlayAudio();
     }
 
-    public void ToggleSelectMenu(InputAction.CallbackContext context)
+    //public void ToggleSelectMenu(InputAction.CallbackContext context)
+    //{
+    //    if (m_ListenToInput)
+    //    {
+    //        //PlayAudio();
+    //        Debug.Log("Next Dialogue");
+    //        PlayNextAudio();
+    //        m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
+
+    //    }
+    //}
+
+
+    private bool tutorialPhase = true;
+
+
+    public void FlipTutorial()
     {
-        if (m_ListenToInput)
+        tutorialPhase = false;
+    }
+
+
+    private void Update()
+    {
+        if (!tutorialPhase)
         {
+            if (!m_DialogueSource.isPlaying) { NextDialogue(); }
+        }
+    }
+
+    //public void ToggleSelectMenu(InputAction.CallbackContext context)
+    //{
+    //    if (!m_DialogueSource.isPlaying)
+    //    {
+    //        //PlayAudio();
+    //        Debug.Log("Next Dialogue");
+    //        PlayNextAudio();
+    //        m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
+
+    //    }
+    //}
+
+    public void NextDialogue()
+    {
+        if (m_NextNode != null)
+        {
+            if (!m_DialogueSource.isPlaying)
+            {
+                //PlayAudio();
+                Debug.Log("Next Dialogue");
+                PlayNextAudio();
+                m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
+
+            }
+        }
+    }
+
+
+    public void NextDialogueTuto()
+    {
+        if (tutorialPhase)
+        {
+            m_DialogueSource.Stop();
             //PlayAudio();
             Debug.Log("Next Dialogue");
             PlayNextAudio();
             m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
-            
         }
     }
+
+
+    public void ToggleSelectMenu(InputAction.CallbackContext context)
+    {
+        if (!tutorialPhase)
+        {
+            if (!m_DialogueSource.isPlaying)
+            {
+                //PlayAudio();
+                Debug.Log("Next Dialogue");
+                PlayNextAudio();
+                m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
+
+            }
+        }
+    }
+
     private void PlayFirstAudio()
     {
         m_DialogueSource.Play();

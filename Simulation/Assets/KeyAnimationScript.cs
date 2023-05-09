@@ -18,13 +18,24 @@ public class KeyAnimationScript : MonoBehaviour
         Debug.Log(_oilButton);
     }
 
+    private TutorialEnum type = TutorialEnum.keyOff;
+
+
+    private bool m_tuto = false;
 
     public void PlayKeyStartAnim()
     {
         if (anim.GetBool("KeyStart") != true && _oilButton)
         {
-            _helicopter.GetComponent<RotaryController>().TurnOnEngines();
-            anim.SetBool("KeyStart", true);
+            if (!m_tuto)
+            {
+                m_tuto = Tutorial_Checker.Instance.KeyCheck(type);
+            }
+            else if (m_tuto)
+            {
+                _helicopter.GetComponent<RotaryController>().TurnOnEngines();
+                anim.SetBool("KeyStart", true);
+            }
         }
         else
         {
