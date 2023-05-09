@@ -47,6 +47,7 @@ public class LeverOutputStarter : MonoBehaviour
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         if (m_lever.leverOutput > 0.8f)
         {
@@ -62,6 +63,9 @@ public class LeverOutputStarter : MonoBehaviour
         }
 
 =======
+=======
+
+>>>>>>> parent of b87e5814 (Merge branch 'Melih0.7' into Mete)
 =======
 
 >>>>>>> parent of b87e5814 (Merge branch 'Melih0.7' into Mete)
