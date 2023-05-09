@@ -46,7 +46,8 @@ public class HookMissionHandler : MonoBehaviour
 
     private bool instantiationDone = false;
 
-
+    [SerializeField]
+    private FreezeHeliPos m_HeliPos;
 
     private void Start()
     {
@@ -125,6 +126,9 @@ public class HookMissionHandler : MonoBehaviour
             {
                 if (m_waterPercentage < 100f)
                 {
+
+                    m_HeliPos.FreezeHelicopterPos();
+
                     //m_waterPercentage += m_waterPercentage * Time.deltaTime * m_flowRate;
                     m_waterPercentage += Time.deltaTime * m_flowRate;
                     m_waterSlider.value = m_waterPercentage * 0.01f;
@@ -136,6 +140,11 @@ public class HookMissionHandler : MonoBehaviour
                     //Debug.Log(waterPercentage);
                 }
                 //other.gameObject.GetComponent<CapsuleCollider>().gameObject.SetActive(false);
+                else
+                    m_HeliPos.UnlockHeliPos();
+
+
+
             }
 
         }

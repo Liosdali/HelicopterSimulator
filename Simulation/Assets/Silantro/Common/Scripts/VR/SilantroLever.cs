@@ -185,7 +185,7 @@ namespace Oyedoyin.Common
                         {
                             m_tuto = Tutorial_Checker.Instance.NextTutorialObjective(type);
                         }
-                        else if (m_tuto || m_tutoType)
+                        if (m_tuto || m_tutoType)
                         {
                             leverHeld = true;
                             m_controller.SetAnimBool(true);

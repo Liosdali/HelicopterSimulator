@@ -97,7 +97,7 @@ public class Tutorial_Checker : MonoBehaviour
 
     public void EndTutorial()
     {
-
+        m_DialogueController.NextDialogueTuto();
         m_DialogueController.FlipTutorial();
         m_LineRenderer.DeactivateLineRenderer();
         m_DialogueController.NextDialogueTuto();
