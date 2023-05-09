@@ -85,6 +85,7 @@ public class Tutorial_Checker : MonoBehaviour
 
     public void EndTutorial()
     {
+
         m_DialogueController.FlipTutorial();
         m_LineRenderer.DeactivateLineRenderer();
 
