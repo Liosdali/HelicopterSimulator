@@ -121,10 +121,11 @@ public class UIDialogueTextBoxController : MonoBehaviour, DialogueNodeVisitor
     {
         if (tutorialPhase)
         {
-                //PlayAudio();
-                Debug.Log("Next Dialogue");
-                PlayNextAudio();
-                m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
+            m_DialogueSource.Stop();
+            //PlayAudio();
+            Debug.Log("Next Dialogue");
+            PlayNextAudio();
+            m_DialogueChannel.RaiseRequestDialogueNode(m_NextNode);
         }
     }
 

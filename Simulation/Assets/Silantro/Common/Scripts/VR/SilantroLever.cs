@@ -104,7 +104,7 @@ namespace Oyedoyin.Common
                 m_baseLeverRotation = m_hinge.localRotation;
             }
 
-            
+            m_tutoType = (type == TutorialEnum.switchOff);
 
         }
 
@@ -178,23 +178,31 @@ namespace Oyedoyin.Common
 
                 if (m_controller != null )
                 {
+                    
                     if (m_controller.gripValue > 0.9f)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
                     {
-                        leverHeld = true;
-                        m_controller.SetAnimBool(true);
-
-                        if (m_LeftHand != null && m_RightHand != null)
+                        if (!m_tuto && !m_tutoType)
                         {
-                            if (m_controller.m_handType == SilantroHand.HandType.Left)
-                            {
-                                m_Hand = m_LeftHand;
-                            }
-                            else
-                            {
-                                m_Hand = m_RightHand;
-                            }
+                            m_tuto = Tutorial_Checker.Instance.NextTutorialObjective(type);
                         }
-                        m_Hand.SetActive(true);
+                        else if (m_tuto || m_tutoType)
+                        {
+                            leverHeld = true;
+                            m_controller.SetAnimBool(true);
+
+                            if (m_LeftHand != null && m_RightHand != null)
+                            {
+                                if (m_controller.m_handType == SilantroHand.HandType.Left)
+                                {
+                                    m_Hand = m_LeftHand;
+                                }
+                                else
+                                {
+                                    m_Hand = m_RightHand;
+                                }
+                            }
+                            m_Hand.SetActive(true);
+                        }
                     }
                     else
                     {
@@ -222,30 +230,26 @@ namespace Oyedoyin.Common
         /// <param name="other"></param>
         /// 
         private bool m_tuto = false;
+        private bool m_tutoType;
 
         private void OnTriggerExit(Collider other)
         {
             if (other.CompareTag("PlayerHand"))
             {
-               
-                if (!m_tuto)
-                {
-                    m_tuto = Tutorial_Checker.Instance.NextTutorialObjective(type);
-                }
-                else if (m_tuto) { 
-                    if (m_controller != null && m_controller.gripValue < 0.9f ) 
-                    // && leverHeld)    Gerek yok leverHeld == gripVal > 0.9f
-                    //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
-                    {
-                        leverHeld = false;
-                        m_controller.SetAnimBool(false);
-                        m_Hand.SetActive(false);
 
-                        m_beingUsed = false;
-                        m_controller._isBeingUsed = false;
-                        m_controller = null;
-                    }
+                if (m_controller != null && m_controller.gripValue < 0.9f ) 
+                // && leverHeld)    Gerek yok leverHeld == gripVal > 0.9f
+                //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
+                {
+                    leverHeld = false;
+                    m_controller.SetAnimBool(false);
+                    m_Hand.SetActive(false);
+
+                    m_beingUsed = false;
+                    m_controller._isBeingUsed = false;
+                    m_controller = null;
                 }
+                
             }
         }
         /// <summary>

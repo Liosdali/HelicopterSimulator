@@ -46,18 +46,18 @@ public class LeverOutputStarter : MonoBehaviour
     private void OutputOnCheck()
     {
 
-            if (m_lever.leverOutput > 0.8f)
+        if (m_lever.leverOutput > 0.8f)
+        {
+            if (!m_tuto)
             {
-                if (!m_tuto)
-                {
-                    m_tuto = Tutorial_Checker.Instance.NextTutorialObjective(type);
-                }
-                else if (m_tuto)
-                {
-                    m_Open = true;
-                    onFlipOn?.Invoke();
-                }
+                m_tuto = Tutorial_Checker.Instance.NextTutorialObjective(type);
             }
+            else if (m_tuto)
+            {
+                m_Open = true;
+                onFlipOn?.Invoke();
+            }
+        }
 
     }
 }
