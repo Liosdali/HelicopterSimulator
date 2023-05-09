@@ -45,6 +45,7 @@ public class LeverOutputStarter : MonoBehaviour
     }
     private void OutputOnCheck()
     {
+<<<<<<< HEAD
 
         if (m_lever.leverOutput > 0.8f)
         {
@@ -59,5 +60,19 @@ public class LeverOutputStarter : MonoBehaviour
             }
         }
 
+=======
+        if (!m_tuto)
+        {
+            //m_tuto = Tutorial_Checker.Instance.NextTutorialObjective(type);
+        }
+        else if (m_tuto)
+        {
+            if (m_lever.leverOutput > 0.8f)
+            {
+                m_Open = true;
+                onFlipOn?.Invoke();
+            }
+        }
+>>>>>>> parent of d31a721a (Update)
     }
 }
