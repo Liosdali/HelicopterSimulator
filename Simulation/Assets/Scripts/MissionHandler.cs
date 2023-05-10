@@ -23,16 +23,16 @@ public class MissionHandler : MonoBehaviour
 
     private void Start()
     {
-        m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
-        Instance = this;
+        //m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
+        //Instance = this;
 
-        m_Panels = FindObjectsOfType<MissionPanel>();
+        //m_Panels = FindObjectsOfType<MissionPanel>();
 
-        foreach (var panel in m_Panels)
-        {
-            panel.MissionCount = m_Missions.Count;
-            panel.InitText();
-        }
+        //foreach (var panel in m_Panels)
+        //{
+        //    panel.MissionCount = m_Missions.Count;
+        //    panel.InitText();
+        //}
     }
 
     // Removing mission from the list
