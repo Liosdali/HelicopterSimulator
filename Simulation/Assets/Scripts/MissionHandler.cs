@@ -38,23 +38,23 @@ public class MissionHandler : MonoBehaviour
     // Removing mission from the list
     public void NextMission()
     {
-        if (RemoveMission())
-        {
-            foreach (var panel in m_Panels)
-            {
-                panel.UpdateText();
-            }
-            m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
-        }
-        else
-        {
-            m_MissionArrow.gameObject.SetActive(false);
-            foreach (var panel in m_Panels)
-            {
-                panel.UpdateText();
-            }
-            Debug.Log("Missions finished");
-        }
+        //if (RemoveMission())
+        //{
+        //    foreach (var panel in m_Panels)
+        //    {
+        //        panel.UpdateText();
+        //    }
+        //    m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
+        //}
+        //else
+        //{
+        //    m_MissionArrow.gameObject.SetActive(false);
+        //    foreach (var panel in m_Panels)
+        //    {
+        //        panel.UpdateText();
+        //    }
+        //    Debug.Log("Missions finished");
+        //}
 
     }
 
