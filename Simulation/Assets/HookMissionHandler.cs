@@ -132,7 +132,7 @@ public class HookMissionHandler : MonoBehaviour
                 if (m_waterPercentage < 100f)
                 {
 
-                    m_HeliPos.FreezeHelicopterPos();
+                    Invoke(nameof(FreezeHeliPos), 1f);
 
                     //m_waterPercentage += m_waterPercentage * Time.deltaTime * m_flowRate;
                     m_waterPercentage += Time.deltaTime * m_flowRate;
@@ -159,6 +159,11 @@ public class HookMissionHandler : MonoBehaviour
 
     }
 
+
+    private void FreezeHeliPos()
+    {
+        m_HeliPos.FreezeHelicopterPos();
+    }
 
     [ContextMenu("Test Water")]
     public void InstantiateWater()
