@@ -101,6 +101,7 @@ public class Tutorial_Checker : MonoBehaviour
         m_DialogueController.FlipTutorial();
         m_LineRenderer.DeactivateLineRenderer();
         m_DialogueController.NextDialogueTuto();
+        m_dialogues[1].OpenDialoge();
         Destroy(gameObject);
 
         // change dialogue to the newer one 
