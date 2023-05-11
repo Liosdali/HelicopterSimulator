@@ -41,12 +41,18 @@ public class HookMissionHandler : MonoBehaviour
     Mission mission;
     FireMission fire;
 
+
+    [SerializeField]
+    private InteractableMission[] m_Sounds;
+
+
     [SerializeField]
     private GameObject m_Waterfall;
 
     private bool instantiationDone = false;
 
-
+    [SerializeField]
+    private FreezeHeliPos m_HeliPos;
 
     private void Start()
     {
@@ -125,6 +131,9 @@ public class HookMissionHandler : MonoBehaviour
             {
                 if (m_waterPercentage < 100f)
                 {
+
+                    m_HeliPos.FreezeHelicopterPos();
+
                     //m_waterPercentage += m_waterPercentage * Time.deltaTime * m_flowRate;
                     m_waterPercentage += Time.deltaTime * m_flowRate;
                     m_waterSlider.value = m_waterPercentage * 0.01f;
@@ -132,10 +141,18 @@ public class HookMissionHandler : MonoBehaviour
 
                     m_waterSlider2.value = m_waterPercentage;
                     m_waterText2.text = "% " + ((int)m_waterPercentage).ToString();
-
+                    m_Sounds[0].OpenDialoge();
                     //Debug.Log(waterPercentage);
                 }
                 //other.gameObject.GetComponent<CapsuleCollider>().gameObject.SetActive(false);
+                else
+                {
+                    m_Sounds[1].OpenDialoge();
+                    m_HeliPos.UnlockHeliPos();
+                }
+
+
+
             }
 
         }
