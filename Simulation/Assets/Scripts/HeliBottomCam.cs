@@ -18,7 +18,26 @@ public class HeliBottomCam : MonoBehaviour
         DisableOrActivateRenderer();
     }
 
+
+
+    private void Update()
+    {
+        if ( altitude > 10f)
+        {
+            EnableCam();
+        }
+    }
+
     //public float _alti;
+
+    public float altitude = 0f;
+
+    private void EnableCam()
+    {
+        m_MeshRenderer.enabled = true;
+        active = true;
+    }
+
 
     public void DisableOrActivateRenderer()
     {

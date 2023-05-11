@@ -162,9 +162,6 @@ public class HookMissionHandler : MonoBehaviour
                         m_HeliPos.UnlockHeliPos();
                     }
                 }
-
-
-
             }
 
         }
