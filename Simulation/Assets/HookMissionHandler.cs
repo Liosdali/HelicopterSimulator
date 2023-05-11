@@ -45,6 +45,8 @@ public class HookMissionHandler : MonoBehaviour
     [SerializeField]
     private InteractableMission[] m_Sounds;
 
+    [SerializeField]
+    private Animator m_animator;
 
     [SerializeField]
     private GameObject m_Waterfall;
@@ -140,6 +142,7 @@ public class HookMissionHandler : MonoBehaviour
                         m_Sounds[0].OpenDialoge();
                         m_waterTake = true;
                         m_waterFinish = true;
+                        m_animator.SetTrigger("bucket");
                     }
                     //m_waterPercentage += m_waterPercentage * Time.deltaTime * m_flowRate;
                     m_waterPercentage += Time.deltaTime * m_flowRate;
