@@ -54,7 +54,7 @@ public class FireMission : Mission
             _isExt = true;
             
             // Finishing the mission and removing it from the list
-            MissionHandler.Instance.NextMission();
+            MissionHandler.Instance.NextMission(this);
         }       
     }
 }
