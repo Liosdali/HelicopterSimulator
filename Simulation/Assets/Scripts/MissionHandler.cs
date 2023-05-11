@@ -23,38 +23,59 @@ public class MissionHandler : MonoBehaviour
 
     private void Start()
     {
-        //m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
-        //Instance = this;
+        m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
+        Instance = this;
 
-        //m_Panels = FindObjectsOfType<MissionPanel>();
+        m_Panels = FindObjectsOfType<MissionPanel>();
 
-        //foreach (var panel in m_Panels)
-        //{
-        //    panel.MissionCount = m_Missions.Count;
-        //    panel.InitText();
-        //}
+        foreach (var panel in m_Panels)
+        {
+            panel.MissionCount = m_Missions.Count;
+            panel.InitText();
+        }
     }
 
     // Removing mission from the list
     public void NextMission()
     {
-        //if (RemoveMission())
-        //{
-        //    foreach (var panel in m_Panels)
-        //    {
-        //        panel.UpdateText();
-        //    }
-        //    m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
-        //}
-        //else
-        //{
-        //    m_MissionArrow.gameObject.SetActive(false);
-        //    foreach (var panel in m_Panels)
-        //    {
-        //        panel.UpdateText();
-        //    }
-        //    Debug.Log("Missions finished");
-        //}
+        if (RemoveMission())
+        {
+            foreach (var panel in m_Panels)
+            {
+                panel.UpdateText();
+            }
+            m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
+        }
+        else
+        {
+            m_MissionArrow.gameObject.SetActive(false);
+            foreach (var panel in m_Panels)
+            {
+                panel.UpdateText();
+            }
+            Debug.Log("Missions finished");
+        }
+
+    }
+    public void NextMission(Mission mission)
+    {
+        if (RemoveMission())
+        {
+            foreach (var panel in m_Panels)
+            {
+                panel.UpdateText();
+            }
+            m_MissionArrow.transform.position = m_Missions[0].gameObject.GetComponentInChildren<Transform>().position;
+        }
+        else
+        {
+            m_MissionArrow.gameObject.SetActive(false);
+            foreach (var panel in m_Panels)
+            {
+                panel.UpdateText();
+            }
+            Debug.Log("Missions finished");
+        }
 
     }
 
@@ -76,7 +97,23 @@ public class MissionHandler : MonoBehaviour
             return false;
         return true;
     }
-    
+    bool RemoveMission(Mission mission)
+    {
+        if (m_Missions.Count > 0)
+        {
+            // Handle missions objects that are going to be changed
+            //m_Missions[0].gameObject.SetActive(false);
+            m_Missions.Remove(mission);
+            m_Interactables[0].OpenDialoge();
+            m_Interactables.RemoveAt(0);
+        }
+        else
+            Debug.Log("Mission Over");
+
+        if (m_Missions.Count == 0)
+            return false;
+        return true;
+    }
     void RemoveSpecificMission(Mission mission)
     {
         if (m_Missions.Count < 0)

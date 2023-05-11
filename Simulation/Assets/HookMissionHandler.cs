@@ -41,6 +41,11 @@ public class HookMissionHandler : MonoBehaviour
     Mission mission;
     FireMission fire;
 
+
+    [SerializeField]
+    private InteractableMission[] m_Sounds;
+
+
     [SerializeField]
     private GameObject m_Waterfall;
 
@@ -136,12 +141,15 @@ public class HookMissionHandler : MonoBehaviour
 
                     m_waterSlider2.value = m_waterPercentage;
                     m_waterText2.text = "% " + ((int)m_waterPercentage).ToString();
-
+                    m_Sounds[0].OpenDialoge();
                     //Debug.Log(waterPercentage);
                 }
                 //other.gameObject.GetComponent<CapsuleCollider>().gameObject.SetActive(false);
                 else
+                {
+                    m_Sounds[1].OpenDialoge();
                     m_HeliPos.UnlockHeliPos();
+                }
 
 
 
