@@ -19,11 +19,11 @@ public class VisibilityChanger : MonoBehaviour
     }
 
     // This script makes the arrow cone disappear if the player is close to it
-    void Update()
-    {
-        if (Vector3.Distance(transform.position, m_player.transform.position) < m_range)
-            m_renderer.enabled = false;
-        else
-            m_renderer.enabled = true;
-    }
+    //void Update()
+    //{
+    //    if (Vector3.Distance(transform.position, m_player.transform.position) < m_range)
+    //        m_renderer.enabled = false;
+    //    else
+    //        m_renderer.enabled = true;
+    //}
 }

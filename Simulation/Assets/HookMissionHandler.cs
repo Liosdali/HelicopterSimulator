@@ -121,12 +121,21 @@ public class HookMissionHandler : MonoBehaviour
                                 }
                                 Debug.Log("Extinguishing");
                             }
+
+                            else if (fire._isExt)
+                            {
+                                instantiationDone = false;
+                            }
                         }
                         
                     }
                     break;
 
                 
+            }
+            if (fire._isExt)
+            {
+                instantiationDone = false;
             }
         }
         else if (other.tag == "Water")  // Other gameobject layer 
