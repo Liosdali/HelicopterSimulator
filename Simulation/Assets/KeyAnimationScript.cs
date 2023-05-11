@@ -22,6 +22,7 @@ public class KeyAnimationScript : MonoBehaviour
 
 
     private bool m_tuto = false;
+    private bool checkTuto = false;
 
     public void PlayKeyStartAnim()
     {
@@ -33,8 +34,17 @@ public class KeyAnimationScript : MonoBehaviour
             }
             else if (m_tuto)
             {
-                _helicopter.GetComponent<RotaryController>().TurnOnEngines();
-                anim.SetBool("KeyStart", true);
+                if (!checkTuto)
+                {
+                    checkTuto = true;
+                    anim.SetBool("KeyStart", true);
+                    Invoke(nameof(TestFunction), 3.25f);
+                }
+                else
+                {
+                    _helicopter.GetComponent<RotaryController>().TurnOnEngines();
+                }
+                
             }
         }
         else
