@@ -463,6 +463,7 @@ namespace Oyedoyin.Common
                         if (altitudeUnit == AltitudeUnit.Feet)
                         {
                             float distance = Altitude;
+                            HeliBottomCam.instance.altitude = distance;
                             altitude.text = "Altitude = " + distance.ToString("0.0") + " ft";
                         }
                         if (altitudeUnit == AltitudeUnit.NauticalMiles)

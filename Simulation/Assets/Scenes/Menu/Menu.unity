@@ -2211,6 +2211,7 @@ MonoBehaviour:
   resetTimer: 0
   m_Hand: {fileID: 196163795}
   m_controller: {fileID: 0}
+  m_SwitchCheck: 0
 --- !u!65 &87055169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3174,6 +3175,7 @@ MonoBehaviour:
   resetTimer: 0
   m_Hand: {fileID: 1738052940}
   m_controller: {fileID: 0}
+  m_SwitchCheck: 0
 --- !u!65 &146784337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9377,6 +9379,7 @@ MonoBehaviour:
   resetTimer: 0
   m_Hand: {fileID: 0}
   m_controller: {fileID: 0}
+  m_SwitchCheck: 0
 --- !u!65 &532559629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11414,6 +11417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MeshRenderer: {fileID: 704717498}
+  altitude: 0
 --- !u!1 &710859923
 GameObject:
   m_ObjectHideFlags: 0
@@ -14255,6 +14259,7 @@ MonoBehaviour:
   resetTimer: 0
   m_Hand: {fileID: 1851872304}
   m_controller: {fileID: 0}
+  m_SwitchCheck: 0
 --- !u!65 &841701508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17850,6 +17855,7 @@ MonoBehaviour:
   resetTimer: 0
   m_Hand: {fileID: 866112638}
   m_controller: {fileID: 0}
+  m_SwitchCheck: 0
 --- !u!65 &1041499005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19109,6 +19115,7 @@ MonoBehaviour:
   resetTimer: 0
   m_Hand: {fileID: 1300528403}
   m_controller: {fileID: 0}
+  m_SwitchCheck: 0
 --- !u!65 &1136015074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19749,6 +19756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MeshRenderer: {fileID: 704717498}
+  altitude: 0
 --- !u!4 &1164991997
 Transform:
   m_ObjectHideFlags: 0
@@ -51648,6 +51656,7 @@ MonoBehaviour:
   resetTimer: 0
   m_Hand: {fileID: 2977424875804551620}
   m_controller: {fileID: 0}
+  m_SwitchCheck: 0
 --- !u!54 &2977424875276015154
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -61353,16 +61362,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5583622822819931180}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: ChangeStartCanvas
-        m_Mode: 1
+      - m_Target: {fileID: 5542846787395882033}
+        m_TargetAssemblyTypeName: SlimUI.ModernMenu.MainMenuNew, Assembly-CSharp
+        m_MethodName: NewGame
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 0.8_Tuto
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &5539864356986808393
@@ -62136,7 +62145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SETTINGS
+  m_text: Ayarlar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2032339f567bde146b32a51cb1425adf, type: 2}
   m_sharedMaterial: {fileID: 21694689038030200, guid: 2032339f567bde146b32a51cb1425adf, type: 2}
@@ -63745,7 +63754,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY
+  m_text: Oyna
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2032339f567bde146b32a51cb1425adf, type: 2}
   m_sharedMaterial: {fileID: 21694689038030200, guid: 2032339f567bde146b32a51cb1425adf, type: 2}
@@ -64921,7 +64930,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: EXIT
+  m_text: "\xC7\u0131k\u0131\u015F"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2032339f567bde146b32a51cb1425adf, type: 2}
   m_sharedMaterial: {fileID: 21694689038030200, guid: 2032339f567bde146b32a51cb1425adf, type: 2}
@@ -93247,6 +93256,7 @@ MonoBehaviour:
   resetTimer: 0
   m_Hand: {fileID: 0}
   m_controller: {fileID: 0}
+  m_SwitchCheck: 0
 --- !u!114 &5948914112931877919
 MonoBehaviour:
   m_ObjectHideFlags: 0

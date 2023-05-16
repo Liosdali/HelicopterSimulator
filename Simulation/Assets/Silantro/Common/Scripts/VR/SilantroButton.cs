@@ -155,6 +155,7 @@ public class SilantroButton : MonoBehaviour
     }
 
 
+    private bool m_KeyCheck = false;
 
     // ----------------------------------------------------------------------------------------------------------------------------------------------------------
     public void TurnButtonOn()
@@ -261,12 +262,23 @@ public class SilantroButton : MonoBehaviour
                 if (m_controller.triggerValue > 0.6f)   //if (m_controller.triggerValue > 0.9f && m_controller.gripValue > 0.9f)
                 {
                     if (coolTimer <= 0)
+                    {
                         ToggleButton();
+                        if (m_SwitchCheck)
+                        {
+                            m_controller.SetAnimBool(false);
+                            m_Hand.SetActive(false);
+                            m_controller = null;
+                        }
+                    }
                 }
             }
         }
     }
 
+
+    [SerializeField]
+    private bool m_SwitchCheck = false;
 
 
     private void OnTriggerExit(Collider other)
@@ -355,6 +367,11 @@ public class SilantroButtonEditor : Editor
             EditorGUILayout.PropertyField(serializedObject.FindProperty("clickSound"), new GUIContent("Flip Sound"));
         }
 
+
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_SwitchCheck"), new GUIContent("Switch"));
+        GUILayout.Space(3f);
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_KeyCheck"), new GUIContent("Switch"));
+        GUILayout.Space(3f);
         GUILayout.Space(5f);
         EditorGUILayout.PropertyField(serializedObject.FindProperty("coolDownTime"), new GUIContent("Press Timer"));
         GUILayout.Space(5f);

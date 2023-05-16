@@ -8,7 +8,7 @@ public class KeyAnimationScript : MonoBehaviour
 
     public Animator anim;
     public GameObject _helicopter;
-    public bool _oilButton = false;
+    public bool _oilButton = true;
 
     
 
@@ -22,19 +22,23 @@ public class KeyAnimationScript : MonoBehaviour
 
 
     private bool m_tuto = false;
+    private bool checkTuto = false;
 
     public void PlayKeyStartAnim()
     {
-        if (anim.GetBool("KeyStart") != true && _oilButton)
+        if (!m_tuto)
         {
-            if (!m_tuto)
+            m_tuto = Tutorial_Checker.Instance.KeyCheck(type);
+            _oilButton = true;
+        }
+        if (anim.GetBool("KeyStart") != true && _oilButton)
+        {            
+            if (m_tuto)
             {
-                m_tuto = Tutorial_Checker.Instance.KeyCheck(type);
-            }
-            else if (m_tuto)
-            {
-                _helicopter.GetComponent<RotaryController>().TurnOnEngines();
-                anim.SetBool("KeyStart", true);
+                    checkTuto = true;
+                    anim.SetBool("KeyStart", true);
+                    Invoke(nameof(TestFunction), 3.25f);
+                    _helicopter.GetComponent<RotaryController>().TurnOnEngines();               
             }
         }
         else
