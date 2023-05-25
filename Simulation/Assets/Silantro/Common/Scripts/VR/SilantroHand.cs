@@ -15,7 +15,7 @@ namespace Oyedoyin.Common
 {
 
 
-
+    // Hand Class
     public class SilantroHand : MonoBehaviour
     {
         public enum HandType { Right, Left }
