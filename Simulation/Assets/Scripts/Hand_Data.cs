@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Hand_Data : MonoBehaviour
 {
+    // Basic hand data 
     public enum HandModelType {Right , Left}
 
      public HandModelType handType;
