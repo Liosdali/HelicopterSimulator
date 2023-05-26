@@ -26,7 +26,7 @@ public class FreezeHeliPos : MonoBehaviour
     //        m_rigidbody.constraints = RigidbodyConstraints.None;
     //    }
     //}
-
+    // Freezing helicopter position by the usage of rigidbody constraints
 
     public void  FreezeHelicopterPos()
     {

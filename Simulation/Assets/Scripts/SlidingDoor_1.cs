@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+// Redundant class not being used anymore
+
 public class SlidingDoor_1 : MonoBehaviour
 {
     public float duration = 1f;

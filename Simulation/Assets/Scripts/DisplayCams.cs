@@ -12,6 +12,14 @@ public class DisplayCams : MonoBehaviour
     private GameObject m_attributeCanvas;
 
     private int count = 0;
+
+    // Needing a both eye renderer 
+    // without doing much work
+
+    // Fixing required for the horizon case
+
+    // Multiple mission selector is required
+
     // Start is called before the first frame update
     void Start()
     {

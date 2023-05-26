@@ -22,6 +22,7 @@ public class PlayerCheck : MonoBehaviour
     }
 
 
+    // Checking if there is a vr device connected and ON in the computer environment
     void Update()
     {
         if (m_PlayerUpdate)
