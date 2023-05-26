@@ -12,6 +12,10 @@ public class DisplayCams : MonoBehaviour
     private GameObject m_attributeCanvas;
 
     private int count = 0;
+
+    // Needing a both eye renderer 
+    // without doing much work
+
     // Start is called before the first frame update
     void Start()
     {
