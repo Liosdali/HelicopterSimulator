@@ -5,7 +5,7 @@ using Oyedoyin.Common;
 public class HeliBottomCam : MonoBehaviour
 {
     // Bottom cam can be upgraded
-
+    // To allow the usage of control equipment
 
     [SerializeField]
     private MeshRenderer m_MeshRenderer;
