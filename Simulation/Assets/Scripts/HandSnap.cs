@@ -6,7 +6,7 @@ public class HandSnap : MonoBehaviour
 {
 
 
-
+    // Needs a snapping hand function 
     public Transform m_TargetTransform;
 
 

@@ -6,6 +6,9 @@ using UnityEngine.XR;
 public class FadeScript : MonoBehaviour
 {
 
+
+    //Fade script need refining
+
     [SerializeField] private float _FadeDuration = 2f;
     [SerializeField] private Color _FadeColor = Color.black;
     [SerializeField] private bool _fadeOnStart = false;
