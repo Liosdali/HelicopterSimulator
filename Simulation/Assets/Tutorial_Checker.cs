@@ -37,7 +37,7 @@ public class Tutorial_Checker : MonoBehaviour
     private List<TutorialEnum> m_EnumList;
 
     
-
+    [SerializeField]
     private TutorialEnum stepCase = TutorialEnum.switchCover;
 
 
@@ -73,8 +73,11 @@ public class Tutorial_Checker : MonoBehaviour
     {
         if (type == stepCase)
         {
-            stepCase = m_EnumList[count];
+            Debug.LogError(stepCase.ToString() + "next ");
+            if (count < m_EnumList.Count)
+                stepCase = m_EnumList[count];
             count++;
+            Debug.LogError(stepCase.ToString());
             m_LineRenderer.UpdateSecPos();
             m_DialogueController.NextDialogueTuto(); //Next dialogue can be used too 
             return true;
@@ -82,15 +85,33 @@ public class Tutorial_Checker : MonoBehaviour
         return false;
     }
 
+    public bool KeyCheck(TutorialEnum type)
+    {
+        if (type == stepCase)
+        {
+            EndTutorial();
+            return true;
+        }
+        return false;
+    }
 
     public void EndTutorial()
     {
+        m_DialogueController.NextDialogueTuto();
         m_DialogueController.FlipTutorial();
         m_LineRenderer.DeactivateLineRenderer();
+        m_DialogueController.NextDialogueTuto();
+        Invoke(nameof(EndInvoke), 1.5f);
 
 
+        // change dialogue to the newer one 
+    }
+
+
+    private void EndInvoke()
+    {
+        m_dialogues[1].OpenDialoge();
         Destroy(gameObject);
-        // change dialogue
     }
 
 

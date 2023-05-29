@@ -41,12 +41,20 @@ public class HookMissionHandler : MonoBehaviour
     Mission mission;
     FireMission fire;
 
+
+    [SerializeField]
+    private InteractableMission[] m_Sounds;
+
+    [SerializeField]
+    private Animator m_animator;
+
     [SerializeField]
     private GameObject m_Waterfall;
 
     private bool instantiationDone = false;
 
-
+    [SerializeField]
+    private FreezeHeliPos m_HeliPos;
 
     private void Start()
     {
@@ -70,6 +78,9 @@ public class HookMissionHandler : MonoBehaviour
     {
         m_hookEnabled = !m_hookEnabled;
     }
+
+    private bool m_waterTake = false;
+    private bool m_waterFinish = false;
 
     // Sepetin calismasini saglayan kod blogu
     // Collision tabanli bir bicimde calisiyor
@@ -110,12 +121,21 @@ public class HookMissionHandler : MonoBehaviour
                                 }
                                 Debug.Log("Extinguishing");
                             }
+
+                            else if (fire._isExt)
+                            {
+                                instantiationDone = false;
+                            }
                         }
                         
                     }
                     break;
 
                 
+            }
+            if (fire._isExt)
+            {
+                instantiationDone = false;
             }
         }
         else if (other.tag == "Water")  // Other gameobject layer 
@@ -125,6 +145,14 @@ public class HookMissionHandler : MonoBehaviour
             {
                 if (m_waterPercentage < 100f)
                 {
+                    if (!m_waterTake)
+                    {
+                        Invoke(nameof(FreezeHeliPos), 1f);
+                        m_Sounds[0].OpenDialoge();
+                        m_waterTake = true;
+                        m_waterFinish = true;
+                        m_animator.SetTrigger("bucket");
+                    }
                     //m_waterPercentage += m_waterPercentage * Time.deltaTime * m_flowRate;
                     m_waterPercentage += Time.deltaTime * m_flowRate;
                     m_waterSlider.value = m_waterPercentage * 0.01f;
@@ -132,16 +160,31 @@ public class HookMissionHandler : MonoBehaviour
 
                     m_waterSlider2.value = m_waterPercentage;
                     m_waterText2.text = "% " + ((int)m_waterPercentage).ToString();
-
+                    
                     //Debug.Log(waterPercentage);
                 }
                 //other.gameObject.GetComponent<CapsuleCollider>().gameObject.SetActive(false);
+                else
+                {
+                    if (m_waterFinish)
+                    {
+                        m_waterFinish = false;
+                        m_waterTake = false;
+                        m_Sounds[1].OpenDialoge();
+                        m_HeliPos.UnlockHeliPos();
+                    }
+                }
             }
 
         }
 
     }
 
+
+    private void FreezeHeliPos()
+    {
+        m_HeliPos.FreezeHelicopterPos();
+    }
 
     [ContextMenu("Test Water")]
     public void InstantiateWater()
