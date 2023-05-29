@@ -6,8 +6,9 @@ public class HeadSetScript : MonoBehaviour
 {
     [SerializeField]
     GameObject headset;
-
+    [SerializeField]
     AudioSource headsetAudioSource;
+    [SerializeField]
     AudioSource helicopterAudioSource;
 
     // Start is called before the first frame update
@@ -26,9 +27,9 @@ public class HeadSetScript : MonoBehaviour
     {
         if(other.gameObject.tag == "headset")
         {
-
             headsetAudioSource.volume = 100;
             helicopterAudioSource.volume = 20;
+            Debug.Log("GнRDннннннн");
             Destroy(headset);
 
         } 
