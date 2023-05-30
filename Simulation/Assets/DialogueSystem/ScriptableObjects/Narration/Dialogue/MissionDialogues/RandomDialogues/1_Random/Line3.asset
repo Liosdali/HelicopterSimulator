@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abaa1d01ebe65f6469c9f7f9cd89f2dc, type: 3}
-  m_Name: M2_1
+  m_Script: {fileID: 11500000, guid: bbd2c1887a808da4b8f0a6cec8d8b890, type: 3}
+  m_Name: Line3
   m_EditorClassIdentifier: 
-  m_DialogueLine: {fileID: 11400000, guid: be98db4ae033e2e44b8fc7cc3e99a4e8, type: 2}
-  m_AudioClip: {fileID: 8300000, guid: 9d3356e3db4cea64eb5d3d185e5ff8a7, type: 3}
-  m_NextNode: {fileID: 0}
+  m_Speaker: {fileID: 11400000, guid: 9dd3082631238414f8db3e72be080f21, type: 2}
+  m_Text: "\u0130lk G\xF6rev Tamamland\u0131! Cihaza Yeniden su doldurup di\u011Fer
+    g\xF6reve ge\xE7!"
