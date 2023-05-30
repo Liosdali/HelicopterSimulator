@@ -31,7 +31,7 @@ public class HeadSetScript : MonoBehaviour
             helicopterAudioSource.volume = 20;
             Debug.Log("GнRDннннннн");
             Destroy(headset);
-            other.gameObject.SetActive(false);
+            //other.gameObject.SetActive(false);
         } 
     }
 }
