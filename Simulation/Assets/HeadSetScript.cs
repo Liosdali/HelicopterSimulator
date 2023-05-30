@@ -15,9 +15,9 @@ public class HeadSetScript : MonoBehaviour
     {
         if(other.gameObject.tag == "headset")
         {
-            headsetAudioSource.volume = 100;
+            headsetAudioSource.volume = 80;
             helicopterAudioSource.volume = 20;
-            Debug.Log("GнRDннннннн");
+
             Destroy(headset);
             //other.gameObject.SetActive(false);
         } 
