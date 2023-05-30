@@ -709,6 +709,7 @@ namespace Oyedoyin.RotaryWing
                 float m_soundFactor = (float)(Ω / Ωmax);
                 m_rotorPitch = m_maximumPitch * m_soundFactor;
                 if (m_controller.m_cameraState == SilantroCamera.CameraState.Exterior) { m_rotorVolume = m_soundFactor; }
+                if (_soundState) { m_rotorVolume = _rotorVol; }
                 else { m_rotorVolume = m_interiorVolume * m_soundFactor; }
 
                 if (m_soundFactor < 0.01f) { m_soundPoint.Stop(); }
@@ -721,6 +722,17 @@ namespace Oyedoyin.RotaryWing
                 }
             }
         }
+
+
+        float _rotorVol = 0f;
+        bool _soundState = false;
+        public void ChangeRotorVolume(float volume)
+        {
+            _soundState = true;
+            _rotorVol = volume;
+        }
+
+
         /// <summary>
         /// 
         /// </summary>
