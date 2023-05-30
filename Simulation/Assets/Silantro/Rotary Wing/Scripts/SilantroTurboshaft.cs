@@ -272,11 +272,12 @@ namespace Oyedoyin.RotaryWing
             if (state == State.RUN && m_targetPitch < 0.3f) { m_targetPitch = 0.3f; }
             m_pitch = Mathf.Lerp(m_pitch, m_targetPitch, Time.fixedDeltaTime * 0.5f);
 
-            if (m_controller.m_cameraState == SilantroCamera.CameraState.Exterior) { m_exteriorVolume = 1; m_interiorVolume = 0; }
-            if (m_controller.m_cameraState == SilantroCamera.CameraState.Interior) { m_exteriorVolume = 0; m_interiorVolume = 1; }
+            if (m_controller.m_cameraState == SilantroCamera.CameraState.Exterior) { m_exteriorVolume = m_VolumeChange; m_interiorVolume = 0; }
+            if (m_controller.m_cameraState == SilantroCamera.CameraState.Interior) { m_exteriorVolume = 0; m_interiorVolume = m_VolumeChange; }
 
             if (exteriorSource != null)
             {
+                Debug.LogError("Volume is in extorior mode");
                 exteriorSource.volume = m_exteriorVolume * m_maximumVolume;
                 exteriorSource.pitch = 1;
                 exteriorBase.volume = m_exteriorVolume * m_maximumVolume;
@@ -284,15 +285,30 @@ namespace Oyedoyin.RotaryWing
             }
             if (interiorSource != null)
             {
-
+                Debug.LogError("Volume is interior mode");
                 if (m_controller != null && m_controller.m_view != null) { mxtv = m_interiorVolume * m_controller.m_view.maximumInteriorVolume; }
                 else { mxtv = m_interiorVolume; }
-                interiorSource.volume = mxtv;
-                interiorBase.volume = mxtv;
+                interiorSource.volume = mxtv * m_maximumVolume;
+                interiorBase.volume = mxtv * m_maximumVolume;
                 interiorBase.pitch = m_pitch;
                 interiorSource.pitch = 1;
             }
         }
+
+        float m_VolumeChange = 1f;
+        public void ChangeSoundVolume(float volume)
+        {
+
+            //mxtv
+            Debug.LogError("Changing volume" + m_VolumeChange);
+            m_VolumeChange = volume;
+            m_maximumVolume = volume;
+            mxtv = volume;
+
+        }
+
+
+
         /// <summary>
         /// 
         /// </summary>
