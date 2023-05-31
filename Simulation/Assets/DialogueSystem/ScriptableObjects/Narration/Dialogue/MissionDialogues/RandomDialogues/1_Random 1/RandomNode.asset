@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbd2c1887a808da4b8f0a6cec8d8b890, type: 3}
-  m_Name: Line3
+  m_Script: {fileID: 11500000, guid: d150190ca6408f1418b81dcb81e9f740, type: 3}
+  m_Name: RandomNode
   m_EditorClassIdentifier: 
-  m_Speaker: {fileID: 11400000, guid: 9dd3082631238414f8db3e72be080f21, type: 2}
-  m_Text: "\u0130lk G\xF6rev Tamamland\u0131! Cihaza Yeniden su doldurup di\u011Fer
-    g\xF6reve ge\xE7!"
+  m_FirstNode: {fileID: 11400000, guid: 8144ab1e56204c9419671cb7f4fb4949, type: 2}
