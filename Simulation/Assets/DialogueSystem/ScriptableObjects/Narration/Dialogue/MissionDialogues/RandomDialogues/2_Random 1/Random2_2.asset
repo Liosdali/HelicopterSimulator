@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d150190ca6408f1418b81dcb81e9f740, type: 3}
-  m_Name: RandomNode
+  m_Script: {fileID: 11500000, guid: abaa1d01ebe65f6469c9f7f9cd89f2dc, type: 3}
+  m_Name: Random2_2
   m_EditorClassIdentifier: 
-  m_FirstNode: {fileID: 11400000, guid: 8144ab1e56204c9419671cb7f4fb4949, type: 2}
+  m_DialogueLine: {fileID: 11400000, guid: 1e04765de12197646bc0ab95c75e0402, type: 2}
+  m_AudioClip: {fileID: 8300000, guid: 82f674ed1f9c1dd48aea6c9285cf1cfc, type: 3}
+  m_NextNode: {fileID: 0}
