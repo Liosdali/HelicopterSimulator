@@ -3,7 +3,52 @@ guid: 9fa60487c1144d54fba655869a17045f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Car_mat
+    second: {fileID: 2100000, guid: 832a5f41f21787d41976f88a51169b9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CleanWheel_Mat
+    second: {fileID: 2100000, guid: 3475567bf9ccc6a48930aa5573821689, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DirtyWheelMat
+    second: {fileID: 2100000, guid: d95a7c564a0100a479be57e9559f0159, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FireExtinguisher_Mat
+    second: {fileID: 2100000, guid: d929756892922ae47a6773b69105e307, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SataliteDish_Mat
+    second: {fileID: 2100000, guid: a54cf055feac97a498b6e6dc3e3582fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TV_Mat
+    second: {fileID: 2100000, guid: b66d69d096d28344692b00c0e14e86c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToolBox_Mat
+    second: {fileID: 2100000, guid: 8896417fcaeb3a9498ad45fe7cc9f99f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToolBox_NOAO_Mat
+    second: {fileID: 2100000, guid: 99c040fc0b06a31469cca2724ddc0275, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trophy_Mat
+    second: {fileID: 2100000, guid: b9bdf86a9ce592146932484ef7e62483, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
