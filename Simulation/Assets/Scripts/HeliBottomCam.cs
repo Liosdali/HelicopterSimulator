@@ -24,13 +24,9 @@ public class HeliBottomCam : MonoBehaviour
 
     private void Update()
     {
-        if ( altitude > 30f)
+        if ( altitude > 20f)
         {
             EnableCam();
-        }
-        else
-        {
-            DisableCam();
         }
     }
 

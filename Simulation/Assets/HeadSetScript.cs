@@ -21,6 +21,8 @@ public class HeadSetScript : MonoBehaviour
     [SerializeField]
     SilantroRotor m_turboRotor;
 
+    TutorialEnum type = TutorialEnum.headset;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "headset")
@@ -31,7 +33,7 @@ public class HeadSetScript : MonoBehaviour
 
             m_turboShaft.ChangeSoundVolume(0.2f);
             m_turboRotor.ChangeRotorVolume(0.2f);
-
+            Tutorial_Checker.Instance.NextTutorialObjective(type);
             Destroy(headset);
             //other.gameObject.SetActive(false);
         } 
