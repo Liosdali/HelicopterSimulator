@@ -9,7 +9,8 @@ public enum TutorialEnum
     keyOff,
     cyclicStick,
     throttlePower,
-    collectiveLever
+    collectiveLever,
+    headset
 }
 
 
@@ -64,6 +65,7 @@ public class Tutorial_Checker : MonoBehaviour
         m_EnumList.Add(TutorialEnum.throttlePower);
         m_EnumList.Add(TutorialEnum.collectiveLever);
         m_EnumList.Add(TutorialEnum.cyclicStick);
+        m_EnumList.Add(TutorialEnum.headset);
         m_EnumList.Add(TutorialEnum.keyOff);
 
     }
