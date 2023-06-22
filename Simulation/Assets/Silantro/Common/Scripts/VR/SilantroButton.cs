@@ -370,7 +370,7 @@ public class SilantroButtonEditor : Editor
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("m_SwitchCheck"), new GUIContent("Switch"));
         GUILayout.Space(3f);
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_KeyCheck"), new GUIContent("Switch"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_KeyCheck"), new GUIContent("KeySwitch"));
         GUILayout.Space(3f);
         GUILayout.Space(5f);
         EditorGUILayout.PropertyField(serializedObject.FindProperty("coolDownTime"), new GUIContent("Press Timer"));
