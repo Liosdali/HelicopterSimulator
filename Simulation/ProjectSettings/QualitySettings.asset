@@ -4,7 +4,7 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_CurrentQuality: 1
+  m_CurrentQuality: 5
   m_QualitySettings:
   - serializedVersion: 3
     name: Very Low
@@ -76,7 +76,7 @@ QualitySettings:
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
     useLegacyDetailDistribution: 1
-    vSyncCount: 1
+    vSyncCount: 0
     lodBias: 0.4
     maximumLODLevel: 0
     enableLODCrossFade: 1
@@ -296,7 +296,7 @@ QualitySettings:
     excludedTargetPlatforms: []
   m_TextureMipmapLimitGroupNames: []
   m_PerPlatformDefaultQuality:
-    Android: 1
+    Android: 0
     Lumin: 5
     Nintendo 3DS: 5
     Nintendo Switch: 5
@@ -304,7 +304,7 @@ QualitySettings:
     PSP2: 2
     Server: 0
     Stadia: 5
-    Standalone: 4
+    Standalone: 5
     WebGL: 3
     Windows Store Apps: 5
     XboxOne: 5
