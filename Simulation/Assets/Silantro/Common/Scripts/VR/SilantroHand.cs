@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 #endif
 
+
 /// <summary>
 /// 
 /// </summary>
@@ -29,9 +30,6 @@ namespace Oyedoyin.Common
 #endif
         public HandType m_handType = HandType.Right;
         public Animator m_animator;
-
-
-
 
 
         public Animator _PilotAnimator = null;
@@ -98,7 +96,6 @@ namespace Oyedoyin.Common
                 m_controller.inputDevice.TryReadSingleValue(m_triggerButton, out triggerValue);
             } 
         #endif
-
 
             if (m_animator != null)
             {
