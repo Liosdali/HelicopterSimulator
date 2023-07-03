@@ -155,7 +155,7 @@ public class SilantroButton : MonoBehaviour
     }
 
 
-    //private bool m_KeyCheck = false;
+    private bool m_KeyCheck = false;
 
     // ----------------------------------------------------------------------------------------------------------------------------------------------------------
     public void TurnButtonOn()
@@ -370,8 +370,8 @@ public class SilantroButtonEditor : Editor
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("m_SwitchCheck"), new GUIContent("Switch"));
         GUILayout.Space(3f);
-        //EditorGUILayout.PropertyField(serializedObject.FindProperty("m_KeyCheck"), new GUIContent("KeySwitch"));
-        //GUILayout.Space(3f);
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_KeyCheck"), new GUIContent("KeySwitch"));
+        GUILayout.Space(3f);
         GUILayout.Space(5f);
         EditorGUILayout.PropertyField(serializedObject.FindProperty("coolDownTime"), new GUIContent("Press Timer"));
         GUILayout.Space(5f);
