@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:editor="UnityEditor.UIElements" xmlns:engine="UnityEngine.UIElements" xmlns="UnityEditor.Overlays" elementFormDefault="qualified" targetNamespace="UnityEditor.VFX.UI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:editor="UnityEditor.UIElements" xmlns:engine="UnityEngine.UIElements" xmlns="UnityEditor.ShortcutManagement" elementFormDefault="qualified" targetNamespace="UnityEditor.VFX.UI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="UnityEngine.UIElements.xsd" namespace="UnityEngine.UIElements" />
-  <xs:complexType name="VFXComponentBoardEventUIType">
+  <xs:complexType name="VFXBoundsSelectorType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -21,7 +21,7 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="VFXComponentBoardEventUI" substitutionGroup="engine:VisualElement" xmlns:q1="UnityEditor.VFX.UI" type="q1:VFXComponentBoardEventUIType" />
+  <xs:element name="VFXBoundsSelector" substitutionGroup="engine:VisualElement" xmlns:q1="UnityEditor.VFX.UI" type="q1:VFXBoundsSelectorType" />
   <xs:complexType name="VFXComponentBoardBoundsSystemUIType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
@@ -43,7 +43,7 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="VFXComponentBoardBoundsSystemUI" substitutionGroup="engine:VisualElement" xmlns:q2="UnityEditor.VFX.UI" type="q2:VFXComponentBoardBoundsSystemUIType" />
-  <xs:complexType name="VFXContextBorderType">
+  <xs:complexType name="VFXComponentBoardEventUIType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -63,7 +63,7 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="VFXContextBorder" substitutionGroup="engine:VisualElement" xmlns:q3="UnityEditor.VFX.UI" type="q3:VFXContextBorderType" />
+  <xs:element name="VFXComponentBoardEventUI" substitutionGroup="engine:VisualElement" xmlns:q3="UnityEditor.VFX.UI" type="q3:VFXComponentBoardEventUIType" />
   <xs:complexType name="VFXSystemBorderType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
@@ -106,7 +106,7 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="VFXBoundsRecorderField" substitutionGroup="engine:VisualElement" xmlns:q5="UnityEditor.VFX.UI" type="q5:VFXBoundsRecorderFieldType" />
-  <xs:complexType name="VFXBoundsSelectorType">
+  <xs:complexType name="VFXContextBorderType">
     <xs:complexContent mixed="false">
       <xs:restriction base="engine:VisualElementType">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -126,5 +126,5 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="VFXBoundsSelector" substitutionGroup="engine:VisualElement" xmlns:q6="UnityEditor.VFX.UI" type="q6:VFXBoundsSelectorType" />
+  <xs:element name="VFXContextBorder" substitutionGroup="engine:VisualElement" xmlns:q6="UnityEditor.VFX.UI" type="q6:VFXContextBorderType" />
 </xs:schema>
