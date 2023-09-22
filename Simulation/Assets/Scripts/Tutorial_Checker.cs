@@ -75,11 +75,11 @@ public class Tutorial_Checker : MonoBehaviour
     {
         if (type == stepCase)
         {
-            Debug.LogError(stepCase.ToString() + "next ");
+            //Debug.LogError(stepCase.ToString() + "next ");
             if (count < m_EnumList.Count)
                 stepCase = m_EnumList[count];
             count++;
-            Debug.LogError(stepCase.ToString());
+           // Debug.LogError(stepCase.ToString());
             m_LineRenderer.UpdateSecPos();
             m_DialogueController.NextDialogueTuto(); //Next dialogue can be used too 
             return true;

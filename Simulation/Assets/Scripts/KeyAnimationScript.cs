@@ -33,13 +33,13 @@ public class KeyAnimationScript : MonoBehaviour
         }
         if (anim.GetBool("KeyStart") != true && _oilButton)
         {            
-            if (m_tuto)
-            {
+            //if (m_tuto)
+            //{
                     checkTuto = true;
                     anim.SetBool("KeyStart", true);
                     Invoke(nameof(TestFunction), 3.25f);
                     _helicopter.GetComponent<RotaryController>().TurnOnEngines();               
-            }
+         //   }
         }
         else
         {

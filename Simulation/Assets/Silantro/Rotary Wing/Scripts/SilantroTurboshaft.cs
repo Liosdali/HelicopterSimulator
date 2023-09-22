@@ -277,7 +277,7 @@ namespace Oyedoyin.RotaryWing
 
             if (exteriorSource != null)
             {
-                Debug.LogError("Volume is in extorior mode");
+                //Debug.LogError("Volume is in extorior mode");
                 exteriorSource.volume = m_exteriorVolume * m_maximumVolume;
                 exteriorSource.pitch = 1;
                 exteriorBase.volume = m_exteriorVolume * m_maximumVolume;
@@ -285,7 +285,7 @@ namespace Oyedoyin.RotaryWing
             }
             if (interiorSource != null)
             {
-                Debug.LogError("Volume is interior mode");
+                //Debug.LogError("Volume is interior mode");
                 if (m_controller != null && m_controller.m_view != null) { mxtv = m_interiorVolume * m_controller.m_view.maximumInteriorVolume; }
                 else { mxtv = m_interiorVolume; }
                 interiorSource.volume = mxtv * m_maximumVolume;
