@@ -35,10 +35,15 @@ public class PlayerCheck : MonoBehaviour
             if (inputDevices.Count > 0)
             {
                 Debug.Log("XR device present");
-                if (IsHMDMounted() )
+                if (IsHMDMounted())
                     ResetPosition();
                 else
-                    Debug.LogError("Device is not mounted");
+                {
+                    Debug.Log("Device is not mounted");
+                }
+                   
+                   
+                
             }
             else
             {
